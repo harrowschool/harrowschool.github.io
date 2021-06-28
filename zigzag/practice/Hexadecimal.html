@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #0B3861;
+	text-align: center;
+	font: 18px arial, sans-serif;
+	color: #fff;
+}
+h1 {
+    
+}
+h2 {
+    padding: 15px 0 0 0;
+	margin: 0;
+}
+h3 {
+    padding: 0;
+	margin: 0 0 5px 0;
+}
+#question {
+	margin: auto;
+	text-align: center;
+}
+input {
+	border: 1px dotted #fff;
+	font: 18px arial, sans-serif;
+	text-align: center;
+	background-color: #045FB4;
+	color: #fff;
+}
+.button {
+	background-color: #0B3861;
+	width: 150px;
+	height: 40px;
+	border: 1px solid #fff;
+	font: 18px arial, sans-serif;
+	color: #fff;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #045FB4;
+}
+
+th, .keyCol {
+	border: 1px solid #fff;
+}
+
+.rightBorder {
+	border-right: 1px solid #fff;
+}
+
+th {
+	color: #0B3861;
+	background-color:#ffffff;
+}
+
+td, th {
+	padding: 5px;
+	border-top: 1px solid #fff;
+	width: 50px;
+}
+table {
+    border-collapse: collapse;
+	border: 1px solid #fff;
+	margin: auto;
+}
+
+#feedback {
+	width: 400px;
+	margin:5px auto;
+	padding: 5px;
+}
+
+#score {
+	text-align: left;
+	font: 14px arial, sans-serif;
+}
+
+#container {
+	width: 700px;
+	margin: auto;
+	padding: 5px;
+	border: 1px solid #fff;
+	background-color: #045FB4;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<title>Hexadecimal Conversion Practice</title>
+</head>
+<body>
+<h1>Hexadecimal Conversion Practice</h1>
+<div id="container">
+<div id="question"></div>
+<p><button class="button">Submit</button></p>
+<div id="feedback"></div>
+<div id="score">Score:</div>
+</div>
+<script>
+var qNo=1;
+var score=0;
+
+function generateQuestion() {
+	var question=randomInt(0,1);
+	if (question==0) {
+		hexToBinary();
+	} else {
+		binaryToHex();
+	}
+}
+
+generateQuestion();
+function hexToBinary() {
+$(".button").show();
+var decNum=randomInt(1,255);
+var binNum=decToBin(decNum);
+var hexNum=decNum.toString(16).toUpperCase();
+if (hexNum.length==1) {
+	hexNum=0+hexNum;
+}
+$("#question").append("<h3>Question "+qNo+"</h3><p>Convert this hexadecimal number to binary.</p>");
+var rows="<table><tr><th colspan='4' class='rightBorder'>"+hexNum[0]+"</th><th colspan='4'>"+hexNum[1]+"</th></tr><tr>";
+for (i=0; i<8; i++) {
+	if(i==3) {
+		rows=rows+"<td class='rightBorder'><input type='text' id='c"+i+"' maxlength='1' size='1'></td>";
+	} else {
+		rows=rows+"<td><input type='text' id='c"+i+"' maxlength='1' size='1'></td>";
+	}
+}
+rows=rows+"</tr></table>";
+
+$("#question").append(rows);
+
+$(".button").unbind('click').click(function(){
+	$("#feedback").empty();
+	var usrAns="";
+	for (i=0; i<8; i++) {
+		if($("#c"+i).val()) {
+			usrAns = usrAns+$("#c"+i).val();
+		}
+	}
+	if(usrAns==binNum) {
+		greenFeedback("Well Done!");
+		qNo++;
+		updateScore(2);
+		$(".button").hide();
+		setTimeout(
+		function() 
+		{
+			$("#feedback").hide();
+			$("#question").empty();
+			if (qNo==11) {
+				$("#question").append("<h3>You have reached the end of the questions, well done!</h3>")
+			} else {
+				generateQuestion();
+			}
+		}, 2000);
+	} else if(usrAns.substring(0,4)==binNum.substring(0,4)) {
+		amberFeedback("The first nibble is correct, check your working on the second.");
+	} else if(usrAns.substring(4)==binNum.substring(4)) {
+		amberFeedback("The second nibble is correct, check your working on the first.");
+	} else {
+		redFeedback("Good try, why not have another go?");
+	}
+	});
+}
+function binaryToHex() {
+$(".button").show();
+var decNum=randomInt(1,255);
+var binNum=decToBin(decNum);
+var hexNum=decNum.toString(16).toUpperCase();
+if (hexNum.length==1) {
+	hexNum=0+hexNum;
+}
+$("#question").append("<h3>Question "+qNo+"</h3><p>Convert this binary number to hexadecimal.</p>");
+var rows="<table><tr>";
+for (i=0; i<8; i++) {
+		rows=rows+"<th>"+binNum[i]+"</th>";
+}
+
+rows=rows+"</tr><tr><td colspan='4' class='rightBorder'><input type='text' id='c1' maxlength='1' size='1'></td><td colspan='4'><input type='text' id='c2' maxlength='1' size='1'></td></tr><table>";
+
+$("#question").append(rows);
+
+$(".button").unbind('click').click(function(){
+	$("#feedback").empty();
+
+	if($('#c1').val()==hexNum[0] && $('#c2').val()==hexNum[1]) {
+		greenFeedback("Well Done!");
+		qNo++;
+		updateScore(2);
+		$(".button").hide();
+		setTimeout(
+		function() 
+		{
+			$("#feedback").hide();
+			$("#question").empty();
+			if (qNo==11) {
+				$("#question").append("<h3>You have reached the end of the questions, well done!</h3>")
+			} else {
+				generateQuestion();
+			}
+		}, 2000);
+	} else if($('#c1').val()==hexNum[0]) {
+		amberFeedback("The first hexadecimal digit is correct, check your working on the second.");
+	} else if($('#c2').val()==hexNum[1]) {
+		amberFeedback("The second hexadecimal digit is correct, check your working on the first.");
+	} else {
+		redFeedback("Good try, why not have another go?");
+	}
+	});
+}
+
+function shiftNumber(n,t,s) {
+	if (t==0) {
+		return n<<s;
+	} else {
+		return n>>>s;
+	}
+}
+function padBin(bin) {
+	var len = 8-bin.length;
+	for(i=0; i<len; i++) {
+		bin="0"+bin;
+	}
+	return bin
+}
+function genNumber(t,s) {
+	if (t==0) {
+		range=Math.pow(2,(8-s)-1);
+		return randomInt(1,range);
+	} else {
+		min=Math.pow(2,s);
+		return randomInt(min,255);
+	}
+}
+function randomInt(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+function decToBin(num)
+{
+    return padBin(num.toString(2));
+}
+function greenFeedback(message)
+{
+    $("#feedback").append(message);
+	$("#feedback").css("background-color","#F5FFEB");
+	$("#feedback").css("border","1px solid #339933");
+	$("#feedback").css("color","#339933");
+	$("#feedback").show();
+}
+function amberFeedback(message)
+{
+    $("#feedback").append(message);
+	$("#feedback").css("background-color","#FFFFCC");
+	$("#feedback").css("border","1px solid #FF9900");
+	$("#feedback").css("color","#FF9900");
+	$("#feedback").show();
+}
+function redFeedback(message)
+{
+    $("#feedback").append(message);
+	$("#feedback").css("background-color","#FFCCCC");
+	$("#feedback").css("border","1px solid #CC0000");
+	$("#feedback").css("color","#CC0000");
+	$("#feedback").show();
+}
+function updateScore(newScore)
+{
+		score=score+newScore;
+		$("#score").empty();
+		$("#score").append("Score: "+score);
+}
+
+</script>
+</body>
+</html>
