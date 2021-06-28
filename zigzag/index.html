@@ -1,112 +1,134 @@
-<html>
-<head>
-	<title>CIE IGCSE (9-1) Computer Science Technical Topics | ZigZag Education</title>
-	<style>
-		body {font-family: 'Squada One', cursive; text-align:center; margin:0; background:#DDD; font-size:14pt; font-weight:400}
-		div.container {border:1px solid #000; width:960px; background: #FFF url(images/background.jpg) no-repeat; margin:0 auto; padding:20px 0px;}
-		div.header{margin-top:180px;}		
-		div.footer {font-size:0.9em;}		
-		ol li {margin-top:15px;}
-		ul li {margin-top:4px; }
-		table {width:800px; margin:5 auto; border:1px solid; font-size:11pt;font-size:1em; border-collapse:collapse }		
-		th {background: #000; color:#FFF; font-weight:400}
-		th a {color:#808080; }
-		th a:hover {color:#808080; text-decoration:none;}		
-		td, th {padding:4px 6px;vertical-align:middle; }		
-		td {border:1px solid}
-		td.topic {width:150px;}		
-		td.topic a {font-weight:normal; }		
-		td.worksheet {text-align:center;}
-		td.specref {text-align:center;}
-		td.presentation {width:150px; text-align:center;}
-		td.level {text-align:center; width:30px;}
-		ul {margin:0px; padding-left:15px;}
-		ul li {margin:0px;}
-		tr.practice	{background:lightblue;}
-		tr.even	{background:lightyellow;}
-		tr.odd	{background:#E3F0F7;}	
-		h1 {margin:1px; color:#5C97CF; font-size:44pt; text-align:left; font-weight:400; margin-left:80px;}
-		h2 {margin:5px 0px; font-size:20pt; text-align:left; margin-left:80px; font-weight:normal; padding:0;}
-		a {color:#3377D6; text-decoration:none;font-weight:400}
-		td a:hover {color:darkblue; text-decoration:underline;}
-		a:hover {text-decoration:underline; }			
-		span.OCR {border-radius:5px; background-color:blue;color:white; padding:0px 4px; font-size:0.9em;}
-		p {text-align:left; margin-top:0px; margin-left:80px; font-size:14pt; margin-right:80px;}
 
-	</style>
-	<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
+<style>
+
+body {
+
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
+}
+
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+}
+
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
+
+}
+
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+::-moz-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+</style>
+
 <body>
-	<div class="container">
-			
-		<div class="header">	
 
-		<h1>Technical Topics</h1>
-		<h2>PowerPoints and Worksheets for <span class="OCR">CIE</span> IGCSE Computer Science </h2>
-		<p style="margin-top:12px; color:#666">Select a worksheet or presentation from the list of topics below</p>
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				</div>
+			</div>
 		</div>
-				
-			
-		<table>
-			<tr>
-				<!--<th>TOPIC</th>-->
-				<th>TITLE</th>
-				<th>LEVEL</th>
-				<th>SPEC REFS</th>
-				<th>WORKSHEET</th>				
-				<th>PRESENTATION</th>
-			</tr>	
-			
-			<tr class='even'><td class='title'>Number Representation</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.1.1, 1.1.2</td><td class='worksheet'><a href='docx-worksheets/NumberRepresentation.docx'>DOCX</a> | <a href='pdf-worksheets/NumberRepresentation.pdf'>PDF</a></td><td class='presentation'><a href='ppt/NumberRepresentation.pptx' target='_new'>PPTX</a>  |  <a href='html5/NumberRepresentation/NumberRepresentation.html'>HTML5</a>  |  <a href='pdf-presentations/NumberRepresentation.pdf'>PDF</a></td></tr>
-
-			<tr class='odd'><td class='title'>Data Representation and Compression</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.1.3</td><td class='worksheet'><a href='docx-worksheets/DataRepresentationCompression.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/DataRepresentationCompression.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/DataRepresentationCompression.pptx' target='_new'>PPTX</a>  |  <a href='html5/DataRepresentationCompression/DataRepresentationCompression.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/DataRepresentationCompression.pdf' target='_new'>PDF</a></td></tr>
-
-			<tr class='even'><td class='title'>Data Storage Units</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.1.1, 1.3.5</td><td class='worksheet'><a href='docx-worksheets/StorageUnits.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/StorageUnits.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/StorageUnits.pptx' target='_new'>PPTX</a>  |  <a href='html5/StorageUnits/StorageUnits.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/StorageUnits.pdf' target='_new'>PDF</a></td></tr>
-	
-			<tr class='odd'><td class='title'>Error Detection and Correction</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.1.3, 1.2.1</td><td class='worksheet'><a href='docx-worksheets/ErrorDetectionCorrection.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/ErrorDetectionCorrection.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/ErrorDetectionCorrection.pptx' target='_new'>PPTX</a>  |  <a href='html5/ErrorDetectionCorrection/ErrorDetectionCorrection.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/ErrorDetectionCorrection.pdf' target='_new'>PDF</a></td></tr>			
-						
-			<tr class='even'><td class='title'>HTML</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.2.3</td><td class='worksheet'><a href='docx-worksheets/HTML.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/HTML.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/HTML.pptx' target='_new'>PPTX</a>  |  <a href='html5/HTML/HTML.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/HTML.pdf' target='_new'>PDF</a></td></tr>
-
-			<tr class='odd'><td class='title'>Encryption</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.4.2</td><td class='worksheet'><a href='docx-worksheets/Encryption.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/Encryption.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/Encryption.pptx' target='_new'>PPTX</a>  |  <a href='html5/Encryption/Encryption.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/Encryption.pdf' target='_new'>PDF</a></td></tr>
-
-			<tr class='even'><td class='title'>Logic Gates</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>1.3.1</td><td class='worksheet'><a href='docx-worksheets/LogicGates.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/LogicGates.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/LogicGates.pptx' target='_new'>PPTX</a>  |  <a href='html5/LogicGates/LogicGates.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/LogicGates.pdf' target='_new'>PDF</a></td></tr>
-			
-			<tr class='odd'><td class='title'>Designing Solutions</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.1.1</td><td class='worksheet'><a href='docx-worksheets/DesigningSolutions.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/DesigningSolutions.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/DesigningSolutions.pptx' target='_new'>PPTX</a>  |  <a href='html5/DesigningSolutions/DesigningSolutions.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/DesigningSolutions.pdf' target='_new'>PDF</a></td></tr>
-			
-			<tr class='even'><td class='title'>Tracing Algorithms</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.1.1</td><td class='worksheet'><a href='docx-worksheets/TracingAlgorithms.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/TracingAlgorithms.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/TracingAlgorithms.pptx' target='_new'>PPTX</a>  |  <a href='html5/TracingAlgorithms/TracingAlgorithms.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/TracingAlgorithms.pdf' target='_new'>PDF</a></td></tr>
-			
-			<tr class='odd'><td class='title'>Validation, Verification and Testing</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.1.1</td><td class='worksheet'><a href='docx-worksheets/ValidationVerificationTesting.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/ValidationVerificationTesting.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/ValidationVerificationTesting.pptx' target='_new'>PPTX</a>  |  <a href='html5/ValidationVerificationTesting/ValidationVerificationTesting.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/ValidationVerificationTesting.pdf' target='_new'>PDF</a></td></tr>
-			
-			<tr class='even'><td class='title'>Programming Concepts</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.2.1</td><td class='worksheet'><a href='docx-worksheets/ProgrammingConcepts.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/ProgrammingConcepts.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/ProgrammingConcepts.pptx' target='_new'>PPTX</a>  |  <a href='html5/ProgrammingConcepts/ProgrammingConcepts.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/ProgrammingConcepts.pdf' target='_new'>PDF</a></td></tr>
-
-			<tr class='odd'><td class='title'>Data Types</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.2.1</td><td class='worksheet'><a href='docx-worksheets/DataTypes.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/DataTypes.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/DataTypes.pptx' target='_new'>PPTX</a>  |  <a href='html5/DataTypes/DataTypes.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/DataTypes.pdf' target='_new'>PDF</a></td></tr>			
-			
-			<tr class='even'><td class='title'>Data Structures</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.2.3</td><td class='worksheet'><a href='docx-worksheets/DataStructures.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/DataStructures.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/DataStructures.pptx' target='_new'>PPTX</a>  |  <a href='html5/DataStructures/DataStructures.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/DataStructures.pdf' target='_new'>PDF</a></td></tr>
-
-			<tr class='odd'><td class='title'>Databases</td><td class='level'><img src='images/gcse-icon.png'></td><td class='specref'>2.3</td><td class='worksheet'><a href='docx-worksheets/Databases.docx' target='_new'>DOCX</a> | <a href='pdf-worksheets/Databases.pdf' target='_new'>PDF</a></td><td class='presentation'><a href='ppt/Databases.pptx' target='_new'>PPTX</a>  |  <a href='html5/Databases/Databases.html' target='_new'>HTML5</a>  |  <a href='pdf-presentations/Databases.pdf' target='_new'>PDF</a></td></tr>			
-
-		</table>	
-		
-		<p style="text-align:right; font-size:0.9em"><a href="pdf-worksheets/WorksheetAnswers.pdf">Worksheet Answers</a></p>
-		
-		<h2>Interactive Practice</h2>
-		
-		<p style="margin-top:12px; color:#666">Select a concept below to perfect your skills in</p>
-						
-		<table>
-			<tr class="practice">
-				<td><a href="practice/Binary.html">Binary Conversion</td>			
-				<td><a href="practice/Hexadecimal.html">Hexadecimal Conversion</td>
-				<td><a href="practice/LogicStatements.html">Logic Statements</td>							
-			</tr>			
-		</table>
-		
-		<br /><a href="#top">Back to Top</a><br /><br />
-		
-		<div class="footer">&copy; <a href="http://www.zigzageducation.co.uk" target="_blank">ZigZag Education</a> 2020</div>
-		
 	</div>
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+
+	function loadPage(pwd) {
+
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
+
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+
+				window.location= url;
+
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+
+
+				parent.location.hash= hash;
+
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+
+	</script>
+
 </body>
+</html>
