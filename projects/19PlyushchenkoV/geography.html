@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+
+    <div><backbutton><a style="color:black" href="index.html">Menu<<<</a></backbutton></div>
+
+    <div><h1>Geography <i class="material-icons">language</i><span style="color:lightgoldenrodyellow"> .....</span></h1></div>
+
+   <div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+    <script src="script.js"></script>
+
+<p><button onclick="myFunction()">Click for Answers</button></p>
+
+<div id="ans">...</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("ans");
+  if (x.innerHTML === "...") {
+    x.innerHTML = "¦1.b¦--¦2.d¦--¦3.d¦--¦4.c¦--¦5.b¦--¦6.c¦--¦7.b¦--¦8.a¦--¦9.b¦--¦10.a¦--¦11.a¦--¦12a.c¦--¦12b.c¦--¦13.d¦--¦14.d¦--¦15.b¦--¦16.d¦--¦17.c¦--¦18.c¦--¦19.c¦--¦20.d¦ ";
+  } else {
+    x.innerHTML = "...";
+  }
+}
+</script>
+  </body>
+</html>
