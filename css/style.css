@@ -2,3 +2,12 @@ html {
     margin:    0 auto;
     max-width: 1000px;
 }
+
+body {
+    font-family: system-ui, Helvetica, sans-serif
+}
+
+h1 {
+    font-family: ui-monospace, Courier New, monospace
+}
+
