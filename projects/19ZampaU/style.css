@@ -1,0 +1,93 @@
+body{background-color: rgb(230, 255, 255);
+}
+
+h1 {
+  color: rgb(26, 143, 189);
+  text-align: center;
+  font-family: roman;
+}
+
+p {
+  font-family: roman;
+  font-size: 20px;
+  color: rgb(32, 127, 204);
+}
+
+h2 {
+  color: rgb(206, 159, 31);
+  text-align: left;
+  font-family: roman;
+}
+
+h3 {
+  color: rgb(72, 145, 57);
+  text-align: left;
+  font-family: roman;
+}
+
+/* Reference link: https://www.w3schools.com/howto/howto_js_topnav.asp */
+.topnav {
+  background-color: rgb(72, 145, 57);
+  overflow: hidden;
+}
+
+footer {background-color: rgb(72, 145, 57);}
+footer p {color:whitesmoke;}
+
+.topnav a {
+  float: left;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: roman;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+.topnav a:hover {
+  background-color: whitesmoke;
+  color: rgb(9, 148, 33);
+}
+
+
+.topnav a.active {
+  background-color: rgb(26, 143, 189);
+  color:whitesmoke;
+}
+
+.image_location{text-align: center;}
+
+.btn-group{text-align: center;}
+
+.btn-group button {
+  width:130px;
+  height:40px;
+  font-size: 115%;
+  background-color:rgb(26, 143, 189);
+  
+  
+}
+.btn-group a {
+  text-decoration: none;
+  color:whitesmoke;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+.btn-group a:hover {
+  text-decoration: none;
+  background-color: whitesmoke;
+  color:rgb(26, 143, 189);
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+#pasta_image{text-align: center;}
+
+img {border: 2px solid whitesmoke;}
+img:hover {border: 2px solid green;}
+
+#intro a {text-decoration: none; color:rgb(72, 145, 57);}
