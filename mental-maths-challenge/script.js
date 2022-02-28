@@ -22,47 +22,47 @@ function randomNumbers(m, n) {
 }
 
 function addition(m, n) {
-    question = document.getElementById("question")
+    questionElement = document.getElementById("question")
     
     let [number1, number2] = randomNumbers(m, n)
     
-    question.innerHTML = `${number1} + ${number2}`
+    questionElement.innerHTML = `${number1} + ${number2}`
     answer = String(number1 + number2)
     
     
     answerText += answer + "\n"
     
-    answer = document.getElementById("answer")
-    answer.innerHTML = ""
+    answerElement = document.getElementById("answer")
+    answerElement.innerHTML = ""
 }
 
 function subtraction(m, n) {
-    question = document.getElementById("question")
+    questionElement = document.getElementById("question")
     
     let [number1, number2] = randomNumbers(m, n)
     
-    question.innerHTML = `${number1} &ndash; ${number2}`
+    questionElement.innerHTML = `${number1} &ndash; ${number2}`
     answerText = String(number1 * number2)
     
     answerText += answer + "\n"
     
-    answer = document.getElementById("answer")
-    answer.innerHTML = ""
+    answerElement = document.getElementById("answer")
+    answerElement.innerHTML = ""
 }
 
 
 function multiplication(m, n) {
-    question = document.getElementById("question")
+    questionElement = document.getElementById("question")
     
     let [number1, number2] = randomNumbers(m, n)
     
-    question.innerHTML = `${number1} x ${number2}`
+    questionElement.innerHTML = `${number1} x ${number2}`
     answerText = String(number1 * number2)
     
     answerText += answer + "\n"
     
-    answer = document.getElementById("answer")
-    answer.innerHTML = ""
+    answerElement = document.getElementById("answer")
+    answerElement.innerHTML = ""
 }
 
 function showAnswers() {
