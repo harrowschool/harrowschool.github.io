@@ -5,7 +5,11 @@
 
 #answer {
     text-align: center;
-    font-size: 18px;
+    font-size: 32px;
+}
+
+h1 {
+    text-align: center;
 }
 
 p {

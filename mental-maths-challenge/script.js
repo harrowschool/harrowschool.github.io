@@ -71,7 +71,6 @@ function showAnswers() {
     
     answerElement = document.getElementById("answer")
     answerElement.innerHTML = answerText
-    console.log(answerText)
 }
 
 function clearAnswers() {
