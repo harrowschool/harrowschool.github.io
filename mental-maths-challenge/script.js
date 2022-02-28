@@ -56,10 +56,10 @@ function multiplication(m, n) {
     
     let [number1, number2] = randomNumbers(m, n)
     
-    questionElement.innerHTML = `${number1} x ${number2}`
+    questionElement.innerHTML = `${number1} &times; ${number2}`
     answer = String(number1 * number2)
     
-    answerText += `${number1} x ${number2} = ${answer}<br>`
+    answerText += `${number1} &times; ${number2} = ${answer}<br>`
     
     answerElement = document.getElementById("answer")
     answerElement.innerHTML = ""
