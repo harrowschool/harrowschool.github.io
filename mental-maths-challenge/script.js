@@ -5,7 +5,7 @@ function randomNumbers(m, n) {
     upperBound1 = Math.pow(10, m-1) * 9
     
     lowerBound2 = Math.pow(10, n-1)
-    upperBound1 = Math.pow(10, n-1) * 9
+    upperBound2 = Math.pow(10, n-1) * 9
     
     number1 = Math.floor((Math.random() * upperBound1) + lowerBound1)
     number2 = Math.floor((Math.random() * upperBound2) + lowerBound2)
