@@ -30,7 +30,7 @@ function addition(m, n) {
     answer = String(number1 + number2)
     
     
-    answerText += answer + "\n"
+    answerText += `${number1} + ${number2} = ${answer}<br>`
     
     answerElement = document.getElementById("answer")
     answerElement.innerHTML = ""
@@ -44,7 +44,7 @@ function subtraction(m, n) {
     questionElement.innerHTML = `${number1} &ndash; ${number2}`
     answer = String(number1 - number2)
     
-    answerText += answer + "\n"
+    answerText += `${number1} &ndash; ${number2} = ${answer}<br>`
     
     answerElement = document.getElementById("answer")
     answerElement.innerHTML = ""
@@ -59,7 +59,7 @@ function multiplication(m, n) {
     questionElement.innerHTML = `${number1} x ${number2}`
     answer = String(number1 * number2)
     
-    answerText += answer + "\n"
+    answerText += `${number1} x ${number2} = ${answer}<br>`
     
     answerElement = document.getElementById("answer")
     answerElement.innerHTML = ""
@@ -71,6 +71,7 @@ function showAnswers() {
     
     answerElement = document.getElementById("answer")
     answerElement.innerHTML = answerText
+    console.log(answerText)
 }
 
 function clearAnswers() {
