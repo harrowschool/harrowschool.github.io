@@ -42,7 +42,7 @@ function subtraction(m, n) {
     let [number1, number2] = randomNumbers(m, n)
     
     questionElement.innerHTML = `${number1} &ndash; ${number2}`
-    answerText = String(number1 * number2)
+    answer = String(number1 - number2)
     
     answerText += answer + "\n"
     
@@ -57,7 +57,7 @@ function multiplication(m, n) {
     let [number1, number2] = randomNumbers(m, n)
     
     questionElement.innerHTML = `${number1} x ${number2}`
-    answerText = String(number1 * number2)
+    answer = String(number1 * number2)
     
     answerText += answer + "\n"
     
@@ -69,12 +69,12 @@ function showAnswers() {
     question = document.getElementById("question")
     question.innerHTML = ""
     
-    answer = document.getElementById("answer")
-    answer.innerHTML = answerText
+    answerElement = document.getElementById("answer")
+    answerElement.innerHTML = answerText
 }
 
 function clearAnswers() {
     answerText = ""
-    answer = document.getElementById("answer")
-    answer.innerHTML = ""
+    answerElement = document.getElementById("answer")
+    answerElement.innerHTML = ""
 }
