@@ -10,3 +10,4 @@ layout: 450
 - 2.00pm Noye’s Fludde by Benjamin Brittan in Speech Room.  First performance.  No tickets required
 - 5.00pm Noye’s Fludde by Benjamin Brittan in Speech Room.  Second performance. No tickets required
 - 6.00pm Events end
+- 7pm more events 
