@@ -5,11 +5,19 @@
     <meta name="robots" content="noindex,follow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Harrow 450</title>
-    <link rel="stylesheet" href="450.css">
+    <link rel="stylesheet" href="/450/450.css">
   </head>
   <body>
-      <img src="logo.png">
-      {% include_relative content.md %}
+    <img src="/450/logo.png">
+    <nav>
+      <!-- Disable nav for now
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      -->
+    </nav>
+    <section>
+      {{ content }}
+    </section>
     <footer>
       &copy; Harrow School 2021
     </footer>
