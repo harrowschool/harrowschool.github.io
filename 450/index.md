@@ -4,11 +4,9 @@ permalink: /450
 ---
 
 
-# COMMUNITY DAY
+# Community Day
+## Programme
 
-- 12.00pm Food stalls and restaurants open
-- 2.00pm Events begin
-- 2.00pm Noye’s Fludde by Benjamin Brittan in Speech Room.  First performance.  No tickets required
-- 5.00pm Noye’s Fludde by Benjamin Brittan in Speech Room.  Second performance. No tickets required
-- 6.00pm Events end
-- 7pm more events 
+**6am – 12pm**: Street decoration and set up for stalls and bands. Delivery vehicles only.<br>
+**12pm – 6pm**: Food stalls and restaurants open. Roads closed except for emergency access.<br>
+**2pm – 6pm**: Events take place along the High Street.<br>
