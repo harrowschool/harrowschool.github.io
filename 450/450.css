@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
 
 html {
-  margin:    0 auto;
+  margin:    20 auto;
   max-width: 600px;
 }
 
@@ -18,7 +18,7 @@ h1 {
 h2 {
   text-align: center;
   color: #A09267;
-  font-weight: normal;
+  font-weight: medium;
   text-transform: uppercase;
 }
 
@@ -28,6 +28,6 @@ img {
   margin-right: auto;
 }
 
-img.logo {
-  width: 50%;
+footer {
+  text-align: center;
 }
