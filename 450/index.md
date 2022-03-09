@@ -1,9 +1,10 @@
 ---
 layout: 450
+permalink: /450
 ---
 
 
-# 450 PROGRAMME
+# COMMUNITY DAY
 
 - 12.00pm Food stalls and restaurants open
 - 2.00pm Events begin
