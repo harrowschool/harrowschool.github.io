@@ -12,6 +12,14 @@ body {
 h1 {
   text-align: center;
   color: #051742;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  color: A09267;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 img {
