@@ -43,6 +43,6 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 - The road closures will be in place on Saturday 30th April from midnight to midnight.
 - Residents of the Hill will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at any time during the 24-hour period. 
 - Traffic will be marshalled by Road Traffic Solutions Ltd.
-- Alternative parking for this period will be available to residents of the High St and the top half of West St. Please contact Harrow School Security security@harrowschool.org.uk or ring 0208 872 8345 for more information.
-- Public parking is availably in the Queen’s Car Park HA1 1YH. Shuttle bus to Davidson Lane.
+- Alternative parking for this period will be available to residents of the High St and the top half of West St. Please contact Harrow School Security [security@harrowschool.org.uk](mailto:security@harrowschool.org.uk) or ring 0208 872 8345 for more information.
+- Public parking is available in the Queen’s Car Park, HA1 1YH. Shuttle bus to Davidson Lane.
  
