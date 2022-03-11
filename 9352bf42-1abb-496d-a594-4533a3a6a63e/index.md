@@ -6,6 +6,8 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 
 # Community Day
 
+Residents and friends from around the Hill are invited to join in a day of celebration on 30th April to mark the 450th anniversary of Harrow School. The many events taking place will provide interest for everyone and are being added to all the time. The information on this site will be updated regularly in the lead up to and on the day.
+
 ## Programme
 **6am – 12pm** Street decoration and set up for stalls and bands. Delivery vehicles only.
 
@@ -40,9 +42,9 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 
 ## Road Closures
 ![Road Closures Map](/450/road_closures.png)
-- The road closures will be in place on Saturday 30th April from midnight to midnight.
+- The road closures will be in place on Saturday 30th April from midnight to midnight. Red areas will be closed to traffic other than emergency vehicles. 
 - Residents of the Hill will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at any time during the 24-hour period. 
 - Traffic will be marshalled by Road Traffic Solutions Ltd.
 - Alternative parking for this period will be available to residents of the High St and the top half of West St. Please contact Harrow School Security [security@harrowschool.org.uk](mailto:security@harrowschool.org.uk) or ring 0208 872 8345 for more information.
-- Public parking is available in the Queen’s Car Park, HA1 1YH. Shuttle bus to Davidson Lane.
+- Public parking is available in the Queen’s House Car Park, Kymberley Road, London, HA1 1US ([Google Maps](https://goo.gl/maps/keAqtqzrvP2NYrpA6)/[Apple Maps](https://maps.apple.com/?address=104%20College%20Road,%20Harrow,%20HA1%201BQ,%20England&auid=11423917619285009007&ll=51.580760,-0.339339)). A shuttle bus will be running from the car park to Davidson Lane.
  
