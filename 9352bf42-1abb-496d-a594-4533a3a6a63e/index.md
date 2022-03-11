@@ -5,8 +5,9 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 
 
 # Community Day
+## 30th April
 
-Residents and friends from around the Hill are invited to join in a day of celebration on 30th April to mark the 450th anniversary of Harrow School. The many events taking place will provide interest for everyone and are being added to all the time. The information on this site will be updated regularly in the lead up to and on the day.
+Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. The many events taking place will provide interest for everyone and are being added to all the time. The information on this site will be updated regularly up to and including the 30th April.
 
 ## Programme
 **6am – 12pm** Street decoration and set up for stalls and bands. Delivery vehicles only.
