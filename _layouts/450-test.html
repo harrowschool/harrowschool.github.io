@@ -26,9 +26,9 @@
             .then((commits) => {
               var modified = commits[0]['commit']['committer']['date'];
 							console.log(modified)
-							var date = Date(modified);
+							var date = new Date(modified);
 							console.log(date)
-              var formattedDate = date.toLocaleDateString("en-GB", {weekday: "short", year: "numeric", month:"short", day:"2-digit"});
+							var formattedDate = date.toLocaleDateString("en-GB", {weekday: "short", year: "numeric", month:"short", day:"2-digit"});
 							console.log(formattedDate)
               var formattedTime = date.toLocaleTimeString("en-GB", {hour12: false, hour: "numeric", minute: "numeric", seconds: "numeric"});
 							console.log(formattedTime)
