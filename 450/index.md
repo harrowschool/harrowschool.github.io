@@ -1,4 +1,5 @@
 ---
+date: 2022-03-16
 layout: 450
 permalink: /450
 ---
@@ -7,6 +8,8 @@ permalink: /450
 ## 30 April
 
 Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. There’s something for everyone and new events are being added to all the time. This information will be updated regularly up until and including Saturday 30 April.
+
+<div class="center"><strong>Last updated: {{ page.date | date: "%A %-d %B" }}</strong></div>
 
 ## Programme
 **6am – midday** Street decoration and set up for stalls and bands. Delivery vehicles only.
