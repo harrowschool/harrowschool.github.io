@@ -32,7 +32,7 @@
 							console.log(formattedDate)
               var formattedTime = date.toLocaleTimeString("en-GB", {hour12: false, hour: "numeric", minute: "numeric", seconds: "numeric"});
 							console.log(formattedTime)
-              document.getElementById('last-modified').textContent = "Last modified: " + formattedDate + ", " + formattedTime;
+              document.getElementById('last-modified').textContent = "Last updated: " + formattedDate + ", " + formattedTime;
 							console.log(formattedDate + ", " + formattedTime)
             });
         }
@@ -51,7 +51,8 @@
       {{ content }}
     </section>
     <footer>
-      &copy; Harrow School 2022
+			<span id="accessed-on">Last reloaded:</span>
+      <span>&copy; Harrow School 2022</span>
     </footer>
   </body>
 </html>
