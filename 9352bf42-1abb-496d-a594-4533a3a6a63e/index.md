@@ -6,42 +6,59 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 <span id="last-modified">
 <span id="accessed-on">
 
-# Community Day
+# Harrow and the Hill Community Day
 ## 30th April
 
-Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. The many events taking place will provide interest for everyone and are being added to all the time. The information on this site will be updated regularly up to and including the 30th April.
+Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. There’s something for everyone and new events are being added to all the time. This information will be updated regularly up until and including Saturday 30 April.
 
 ## Programme
-**6am – 12pm** Street decoration and set up for stalls and bands. Delivery vehicles only.
+**6am – midday** Street decoration and set up for stalls and bands. Delivery vehicles only.
 
-**12pm – 6pm** Food stalls and restaurants open. Roads closed except for emergency access.
+**midday – 6pm** Food stalls and restaurants open. Roads closed except for emergency access.
 
 **2pm – 6pm** Events take place along the High Street.
 
 ## Events
-- All Harrow School boys will be involved and in costume, many parents will attend. 
-- Community production of Noye’s Fludde in Speech Room, five local partnership primary schools.
-- Art, Photography and Sculpture exhibitions of work by local schools and adult art groups in the Passmore gallery and Grove Hill.
-- Art workshop at Druries.
-- Punch and Judy and magician at Marilliers/Bradbys.
-- Cricket festival. Youth cricket teams.
-- Basketball competition.
-- Exhibition Squash, Fives, Rackets, Judo and Archery.
-- Old Speech Room Gallery 450 exhibition open.
-- School Observatory open. 
-- Victorian West St, Edwardian High St, Elizabethan Old Schools and the Church.
-- Bellringing 
-- Bollywood dance groups in the road outside the Vaughan Library.
-- Tai Chi in Bill Yard.
-- Bandstand near the Green with full programme of music.
-- Harrow steel band and Indie Choir on the Hill Meeting Room terrace.
-- Stagecoach and Barefoot Dance groups in the War Memorial Building forecourt
-- Street theatre. Harrow School Guild, John Lyon School, Barefoot Dance drama group, The Hill Players and Quainton Hall. 
-- The streets decorated with bunting, flags and other items.
-- Local residents and businesses involved and contributing.
-- Food stalls run by London’s Community Kitchen along the High St between Moretons and Bradbys.
-- Restaurants on the Hill in costume.
-- Miriam’s Munchies and Free Range Jane in Grove Hill
+**Noye's Fludde** - a community production of the children's opera by Benjamin Britten that features five local partnership primary schools. Performances in Speech Room at **2pm and 5pm**.
+
+**Art, photography and sculpture exhibitions** of work by local schools and adult art groups in the Pasmore Gallery and outside on Grove Hill.
+
+**Art workshop** outside Druries, one of Harrow’s oldest boarding houses.
+
+**Punch and Judy** and the **Magician** will perform outside Bradbys boarding house.
+
+**Cricket festival** for youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.
+
+**Basketball competition** in the sports hall.
+
+**Exhibition of traditional games** including Squash - which was invented at Harrow - Fives, Rackets, Judo and Archery.
+
+**Old Speech Room Gallery 450 exhibition** - _Harrow 1572-2022_ from the time of Elizabeth I to the present day, this exhibition is a visual tour through time, full of local legend and newly researched revelations.
+
+**Rayleigh Observatory** will be open. You can find out about the observation of planets, galaxies and other astronomical phenomena.
+
+**Costume-themed streets** - Victorian West St, Edwardian High St, Elizabethan Old Schools and the Church.
+
+**Bellringing in St Mary’s Church** - the traditional way to herald a special event.
+
+**Bollywood dance groups** will perform outside the Vaughan Library.
+
+**Tai Chi** in Bill Yard.
+
+**Bandstand** near the Green - enjoy a full programme of traditional bandstand entertainment including brass, wind and concert bands.
+
+**Harrow steel band**,  and the **Harrow Indie Choir** will perform at various times on the Hill Meeting Room terrace (behind the Hill Shop).
+
+**Stagecoach**, the **Irish Dance Group** and **Barefoot Dance** will perform on the War Memorial Building forecourt.
+
+**Street theatre** - Harrow School Guild, John Lyon School, The Hill Players, and Quainton Hall will entertain with short plays, dancing and singing in various locations.
+
+**Businesses and restaurants** on the Hill will be joining in, with some in costumes from a bygone era.
+
+**Food stalls** run by London’s Community Kitchen will be serving a vast array of food and drink along the High Street between Moretons and Bradbys boarding houses.
+
+**Miriam’s Munchies** and **Free Range Jane** will be serving snacks and more on Grove Hill throughout the afternoon.
+
 
 ## Road Closures
 ![Road Closures Map](/450/road_closures.png)
