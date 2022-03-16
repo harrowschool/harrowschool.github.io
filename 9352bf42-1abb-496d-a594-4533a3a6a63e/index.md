@@ -8,7 +8,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 
 Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. There’s something for everyone and new events are being added to all the time. This information will be updated regularly up until and including Saturday 30 April.
 
-<em><p id='last-modified'>Last updated: </p></em>
+<em><span id='last-modified'>Last updated: </span></em>
 
 ## Programme
 **6am – midday** Street decoration and set up for stalls and bands. Delivery vehicles only.
