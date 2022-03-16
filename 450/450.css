@@ -22,6 +22,14 @@ h2 {
   text-transform: uppercase;
 }
 
+b {
+  color: #051742
+}
+
+a {
+  color: #A09267;
+}
+
 img {
   display: block;
   margin-left: auto;
