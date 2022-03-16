@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="refresh" content="300">
+    <title>Harrow 450 Community Day</title>
+    <link rel="stylesheet" href="/450/450.css">
+    <script>
+    	function setLastRefreshedTime() {
+        if (document.getElementById('last-refreshed')) {
+          var now = new Date();
+          var formattedTime = now.toLocaleTimeString("en-GB", {hour12: false, hour: "numeric", minute: "numeric", seconds: "numeric"});
+          document.getElementById('last-refreshed').textContent = "Last refreshed at " + formattedTime;
+        }
+      }
+    </script>
+  </head>
+  <body onload="setLastRefreshedTime();">
+    <img src="/450/logo.jpeg" width=128 height=auto>
+    <nav>
+      <!-- Disable nav for now
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      -->
+    </nav>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+			<div id="last-refreshed">Last refreshed at</div>
+      <div>&copy; Harrow School 2022</div>
+    </footer>
+  </body>
+</html>
