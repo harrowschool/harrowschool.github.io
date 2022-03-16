@@ -34,6 +34,10 @@ a {
   color: #A09267;
 }
 
+div.center {
+	text-align: center;
+}
+
 img {
   display: block;
   margin-left: auto;
