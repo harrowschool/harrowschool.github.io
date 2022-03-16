@@ -4,7 +4,8 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 ---
 
 <span id="last-modified"/>
-<span id="accessed-on"/>
+
+<!--<span id="accessed-on"/>-->
 
 # Harrow and the Hill Community Day
 ## 30th April
