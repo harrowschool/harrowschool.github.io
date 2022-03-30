@@ -4,21 +4,22 @@ layout: 450-test
 permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 ---
 
-# Harrow and the Hill Community Day
-## 30 April
-							
+<h1 class="pink">Celebrating 450 years of community on the Hill</h1>
+<h1 class="turquoise">30 April Noon – 6pm</h1>
+
 Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. There’s something for everyone and new events are being added to all the time. This information will be updated regularly up until and including Saturday 30 April.
 
 <div class="center"><strong>Last updated: {{ page.date | date: "%A %-d %B" }}</strong></div>
 
-## Programme
+<h1 class="orange">Programme</h1>
 **6am – midday** Street decoration and set up for stalls and bands. Delivery vehicles only.
 
 **midday – 6pm** Food stalls and restaurants open. Roads closed except for emergency access.
 
 **2pm – 6pm** Events take place along the High Street.
 
-## Events
+<h1 class="purple">Events</h1>
+
 **Noye's Fludde** -- a community production of the children’s opera by Benjamin Britten that features five local partnership primary schools. Performances in Speech Room at **2pm and 5pm**.
 
 **Art, photography and sculpture exhibitions** of work by local schools and adult art groups in the Pasmore Gallery and outside on Grove Hill.
@@ -59,7 +60,7 @@ Residents and friends from around the Hill are invited to join in a day of celeb
 
 **Miriam’s Munchies** and **Free Range Jane** will be serving snacks and more on Grove Hill throughout the afternoon.
 
-## Road Closures
+<h1 class="green">Road Closures</h1>
 ![Road Closures Map](/450/road_closures.png)
 Road closures will be in place on Saturday 30 April from midnight to midnight.
 
