@@ -57,3 +57,24 @@ footer {
   text-align: center;
   padding: 1em 0;
 }
+
+details {
+
+}
+
+details > summary {
+  font-weight: bold;
+	padding-top: 1em;
+}
+
+details > p {
+  
+}
+
+details[open] > summary {
+ 
+}
+
+td {
+	padding-right: 1em;
+}
