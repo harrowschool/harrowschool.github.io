@@ -275,15 +275,16 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
 
     <div id="map"></div>
 
-
+    
     <script>
+        iconsDirectory = "./450-test/icons/"
         const locations = [{
             title: 'The Castle',
             coords: {
                 lat: 51.5721,
                 lng: -0.3400
             },
-            icon: '/assets/icons/music.png'
+            icon: iconsDirectory+'music.png'
         },
         {
             title: 'The Band Stand',
@@ -291,7 +292,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.570709547070194,
                 lng: -0.33953382679834193
             },
-            icon: '/assets/icons/music.png'
+            icon: iconsDirectory+'music.png'
         },
         {
             title: 'The Park Drive',
@@ -299,7 +300,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57107799697978,
                 lng: -0.33864699551627864
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'The Roof Terrace',
@@ -307,7 +308,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.572615028201376,
                 lng: -0.3381793112539503
             },
-            icon: '/assets/icons/music.png'
+            icon: iconsDirectory+'music.png'
         },
         {
             title: 'The Old House',
@@ -315,7 +316,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.572306622419745,
                 lng: -0.337707242462523
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'Speech Room',
@@ -323,7 +324,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57388032088066,
                 lng: -0.3365924234147868
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'Vaughan Library “Forecourt”',
@@ -331,7 +332,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.5729784615626,
                 lng: -0.33683114001183134
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'Behind the Vaughan',
@@ -339,7 +340,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57288677430271,
                 lng: -0.3364073509924032
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'The Head Master’s Yard',
@@ -347,7 +348,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57256920155196,
                 lng: -0.33677481362631606
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'War Memorial Building Forecourt',
@@ -355,7 +356,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57334270818231,
                 lng: -0.3370028013856397
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'Bill Yard',
@@ -363,7 +364,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57317433825023,
                 lng: -0.3374212259876906
             },
-            icon: '/assets/icons/music.png'
+            icon: iconsDirectory+'music.png'
         },
         {
             title: 'Druries Steps',
@@ -371,7 +372,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.572975960994754,
                 lng: -0.3373541707638017
             },
-            icon: '/assets/icons/drama.png'
+            icon: iconsDirectory+'drama.png'
         },
         {
             title: 'Art Schools',
@@ -379,7 +380,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57465043293017,
                 lng: -0.33585118104491185
             },
-            icon: '/assets/icons/arts.png'
+            icon: iconsDirectory+'arts.png'
         },
         {
             title: 'Passmore Gallery',
@@ -387,7 +388,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.5741953456611,
                 lng: -0.3362347369255564
             },
-            icon: '/assets/icons/arts.png'
+            icon: iconsDirectory+'arts.png'
         },
         {
             title: 'Grove Hill Portaloos',
@@ -395,7 +396,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.573988106438506,
                 lng: -0.33615847667901955
             },
-            icon: '/assets/icons/wc.png'
+            icon: iconsDirectory+'wc.png'
         },
         {
             title: 'Harrow Park Portaloos',
@@ -403,7 +404,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.56982528515575,
                 lng: -0.3391569089820675
             },
-            icon: '/assets/icons/wc.png'
+            icon: iconsDirectory+'wc.png'
         },
         {
             title: 'London Community Kitchen',
@@ -411,7 +412,7 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.57150259260376,
                 lng: -0.33864416430660427
             },
-            icon: '/assets/icons/food.png'
+            icon: iconsDirectory+'food.png'
         },
         {
             title: 'Picnic Area',
@@ -419,15 +420,16 @@ permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
                 lat: 51.572578688703,
                 lng: -0.3376919801021046
             },
-            icon: '/assets/icons/picnic.png'
+            icon: iconsDirectory+'picnic.png'
         }
         ];
 
         var mymap = L.map('map')
-        var myIcon = L.icon({
-            iconUrl: '/static/favicon.ico',
-            iconSize: [30, 30]
-        });
+        
+        // var myIcon = L.icon({
+        //     iconUrl: '/static/favicon.ico',
+        //     iconSize: [30, 30]
+        // });
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHlsYW5rMTIzIiwiYSI6ImNrajUwMm55NzV0NWwyc2xiNzk0OHFjdXoifQ.cIzWvi9HlI1YfhpY24KbTA', {
             maxZoom: 18,
