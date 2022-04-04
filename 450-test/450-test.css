@@ -78,3 +78,12 @@ details[open] > summary {
 td {
 	padding-right: 1em;
 }
+
+#map {
+  height: 50vh;
+  width: 75vw;
+}
+
+.leaflet-marker-icon {
+border-radius: 10px
+}
