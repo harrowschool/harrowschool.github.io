@@ -14,27 +14,27 @@ h1 {
 }
 
 h1.pink {
-	color: #AC427B
+	color: #AC427B;
 }
 
 h1.turquoise {
-	color: #347891
+	color: #347891;
 }
 
 h1.orange {
-	color: #E07E2F
+	color: #E07E2F;
 }
 
 h1.purple {
-	color: #62226D
+	color: #62226D;
 }
 
 h1.green {
-	color: #34777A
+	color: #34777A;
 }
 
 strong {
-  color: #051742
+  color: #051742;
 }
 
 a {
@@ -64,7 +64,8 @@ details {
 
 details > summary {
   font-weight: bold;
-	padding-top: 1em;
+  padding-top: 1em;
+  color: #051742;
 }
 
 details > p {
