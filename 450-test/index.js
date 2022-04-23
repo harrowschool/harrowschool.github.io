@@ -761,7 +761,18 @@ var app = new Vue({
         icon: icon,
       })
         .addTo(mainMap)
-        .bindPopup(location.title /*+ " " + id*/);
+        .bindPopup(
+          `
+        <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+          data-bs-locationid="` +
+            id +
+            `" data-bs-target="#locationModal` +
+            id +
+            `">` +
+            this.locations[id].title +
+            `</button>
+      `
+        );
     });
 
     mainMap.setView([51.57281743898807, -0.3371716811246794], 17);
