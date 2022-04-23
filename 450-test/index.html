@@ -58,8 +58,6 @@
         This
         information will be updated regularly up until and including Saturday 30 April.</p>
 
-      <p><strong>Last updated: FIX</strong></p>
-
       <h1 class="purple">Food Noon to 6pm</h1>
 
       <details v-for="event in events" v-if="event.classification == 'Food' ">
@@ -71,7 +69,7 @@
         <p>📍 {{locations[event.location].title}}
           <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
             :data-bs-locationid="event.location"
-            :data-bs-target="'#locationModal'+event.location">{{locations[event.location].title}}</button>
+            :data-bs-target="'#locationModal'+event.location">Find</button>
         </p>
 
         <!-- Button trigger modal -->
