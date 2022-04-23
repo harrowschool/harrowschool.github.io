@@ -39,8 +39,10 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-    <!-- Import Axios-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Import Axios-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+    integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -68,8 +70,7 @@
 
         <p>📍 {{locations[event.location].title}}
           <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-            :data-bs-locationid="event.location"
-            :data-bs-target="'#locationModal'+event.location">Find</button>
+            :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">Find</button>
         </p>
 
         <!-- Button trigger modal -->
@@ -87,20 +88,18 @@
 
         <p>📍 {{locations[event.location].title}}
           <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-            :data-bs-locationid="event.location"
-            :data-bs-target="'#locationModal'+event.location">Find</button>
+            :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">Find</button>
         </p>
 
         <!-- Button trigger modal -->
       </details>
 
       <h1 class="green">Road Closures</h1>
-      <img src="./assets/road_closures.png">
+      <img src="/450/road_closures.png">
       <p>Road closures will be in place on Saturday 30 April from 6am to 8pm.</p>
 
       <p>Residents will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at
-        any
-        time during the 24-hour period.</p>
+        any time during the 24-hour period.</p>
 
       <p>Traffic will be marshalled by Road Traffic Solutions Ltd.</p>
 
@@ -118,12 +117,20 @@
 
       <h1 class="pink">Other Information</h1>
 
-      <p><strong>First Aid and Lost Children</strong></p>
-      <p>St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
+      <p><strong>First Aid and Lost Children</strong><br />
+        St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
         location to which lost children should be taken.</p>
 
-      <p><strong>Security</strong></p>
-      <p>Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
+      <p><strong>Security</strong><br />
+        Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
+
+      <p><strong>Picnic Places</strong><br />
+        You are welcome to picnic in the gardens below the Chapel Terrace, on the Roof Terrace and on The Green by the
+        Band Stand.</p>
+
+      <p><strong>Toilets</strong><br />
+        Porta Loos can be found in Grove Hill and Harrow Park.</p>
+
 
       <h1 class="orange">Map</h1>
 
@@ -131,15 +138,17 @@
 
       <div class="py-3 row justify-content-between">
 
-          <div class="col">
-            <span>Last Updated <strong v-if="state.latestcommit"> {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
-          </div>
+        <div class="col">
+          <span>Last Updated <strong v-if="state.latestcommit">
+              {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
+        </div>
 
-          <div class="col">
-            <button class="btn btn-secondary btn-small float-end" type="button" data-bs-toggle="collapse" data-bs-target="#changesBox" aria-expanded="false" aria-controls="changesBox">
-              Read changes
-            </button>
-          </div>
+        <div class="col">
+          <button class="btn btn-secondary btn-small float-end" type="button" data-bs-toggle="collapse"
+            data-bs-target="#changesBox" aria-expanded="false" aria-controls="changesBox">
+            Read changes
+          </button>
+        </div>
       </div>
 
       <div class="collapse" id="changesBox">
@@ -153,7 +162,7 @@
             <h6>Latest Commit</h6>
             <table class="table">
               <tbody>
-                
+
                 <tr>
                   <th scope="row">Committer</th>
                   <td>{{state.latestcommit.commit.author.name}}</td>
@@ -169,8 +178,9 @@
 
               </tbody>
             </table>
-            
-            <a type="button" role="button" :href="state.latestcommit.parents[0].html_url" class="btn btn-outline-info">View on Github</a>
+
+            <a type="button" role="button" :href="state.latestcommit.parents[0].html_url"
+              class="btn btn-outline-info">View on Github</a>
 
           </div>
 
