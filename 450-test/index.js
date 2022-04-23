@@ -56,7 +56,7 @@ var app = new Vue({
           lat: 51.5721,
           lng: -0.34,
         },
-        icon: "/assets/icons/music.png",
+        icon: "./assets/icons/music.png",
       },
       2: {
         title: "The Band Stand",
@@ -64,7 +64,7 @@ var app = new Vue({
           lat: 51.570709547070194,
           lng: -0.33953382679834193,
         },
-        icon: "/assets/icons/music.png",
+        icon: "./assets/icons/music.png",
       },
       3: {
         title: "The Park Drive",
@@ -72,7 +72,7 @@ var app = new Vue({
           lat: 51.57107799697978,
           lng: -0.33864699551627864,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       4: {
         title: "The Roof Terrace",
@@ -80,7 +80,7 @@ var app = new Vue({
           lat: 51.572615028201376,
           lng: -0.3381793112539503,
         },
-        icon: "/assets/icons/music.png",
+        icon: "./assets/icons/music.png",
       },
       5: {
         title: "The Old House",
@@ -88,7 +88,7 @@ var app = new Vue({
           lat: 51.572306622419745,
           lng: -0.337707242462523,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       6: {
         title: "Speech Room",
@@ -96,7 +96,7 @@ var app = new Vue({
           lat: 51.57388032088066,
           lng: -0.3365924234147868,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       7: {
         title: "Vaughan Library “Forecourt”",
@@ -104,7 +104,7 @@ var app = new Vue({
           lat: 51.5729784615626,
           lng: -0.33683114001183134,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       8: {
         title: "Behind the Vaughan",
@@ -112,7 +112,7 @@ var app = new Vue({
           lat: 51.57288677430271,
           lng: -0.3364073509924032,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       9: {
         title: "The Head Master’s Yard",
@@ -120,7 +120,7 @@ var app = new Vue({
           lat: 51.57256920155196,
           lng: -0.33677481362631606,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       10: {
         title: "War Memorial Building Forecourt",
@@ -128,7 +128,7 @@ var app = new Vue({
           lat: 51.57334270818231,
           lng: -0.3370028013856397,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       11: {
         title: "Bill Yard",
@@ -136,7 +136,7 @@ var app = new Vue({
           lat: 51.57317433825023,
           lng: -0.3374212259876906,
         },
-        icon: "/assets/icons/music.png",
+        icon: "./assets/icons/music.png",
       },
       12: {
         title: "Druries Steps",
@@ -144,7 +144,7 @@ var app = new Vue({
           lat: 51.572975960994754,
           lng: -0.3373541707638017,
         },
-        icon: "/assets/icons/drama.png",
+        icon: "./assets/icons/drama.png",
       },
       13: {
         title: "Art Schools",
@@ -152,7 +152,7 @@ var app = new Vue({
           lat: 51.57465043293017,
           lng: -0.33585118104491185,
         },
-        icon: "/assets/icons/arts.png",
+        icon: "./assets/icons/arts.png",
       },
       14: {
         title: "Passmore Gallery",
@@ -160,7 +160,7 @@ var app = new Vue({
           lat: 51.5741953456611,
           lng: -0.3362347369255564,
         },
-        icon: "/assets/icons/arts.png",
+        icon: "./assets/icons/arts.png",
       },
       15: {
         title: "Grove Hill Portaloos",
@@ -168,7 +168,7 @@ var app = new Vue({
           lat: 51.573988106438506,
           lng: -0.33615847667901955,
         },
-        icon: "/assets/icons/wc.png",
+        icon: "./assets/icons/wc.png",
       },
       16: {
         title: "Harrow Park Portaloos",
@@ -176,7 +176,7 @@ var app = new Vue({
           lat: 51.56982528515575,
           lng: -0.3391569089820675,
         },
-        icon: "/assets/icons/wc.png",
+        icon: "./assets/icons/wc.png",
       },
       17: {
         title: "London Community Kitchen",
@@ -184,7 +184,7 @@ var app = new Vue({
           lat: 51.57150259260376,
           lng: -0.33864416430660427,
         },
-        icon: "/assets/icons/food.png",
+        icon: "./assets/icons/food.png",
       },
       18: {
         title: "Picnic Area",
@@ -192,7 +192,7 @@ var app = new Vue({
           lat: 51.572578688703,
           lng: -0.3376919801021046,
         },
-        icon: "/assets/icons/picnic.png",
+        icon: "./assets/icons/picnic.png",
       },
       19: {
         title: "St Mary's",
@@ -200,7 +200,7 @@ var app = new Vue({
           lat: 51.574059316831075,
           lng: -0.3371416801004325,
         },
-        icon: "/assets/icons/arts.png",
+        icon: "./assets/icons/arts.png",
       },
     },
   },
