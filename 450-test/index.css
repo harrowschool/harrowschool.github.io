@@ -5,12 +5,13 @@ html {
   max-width: 600px;
 }
 
-body {
+main {
   font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
   text-align: center;
+  padding-top:10px
 }
 
 h1.pink {
@@ -79,7 +80,7 @@ td {
 	padding-right: 1em;
 }
 
-#map {
+.map {
   height: 50vh;
 }
 

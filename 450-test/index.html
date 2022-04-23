@@ -1,347 +1,161 @@
----
-date: 2022-04-20
-layout: 450-test
-permalink: /9352bf42-1abb-496d-a594-4533a3a6a63e
----
+<!doctype html>
+<html lang="en">
 
-<h1 class="pink">Celebrating 450 years of community on the Hill</h1>
-<h1 class="turquoise">30 April Noon – 6pm</h1>
+<head>
 
-<p>Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. There’s something for everyone and new events are being added to all the time. This information will be updated regularly up until and including Saturday 30 April.</p>
+  <!-- Meta Tags->
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="300">
 
-<p><strong>Last updated: {{ page.date | date: "%A %-d %B" }}</strong></p>
+  <!-- Title Tag -->
+  <title>Harrow and the Hill Community Day</title>
 
-<h1 class="purple">Food Noon to 6pm</h1>
+  <!-- Import Special CSS -->
+  <link rel="stylesheet" href="/index.css">
 
-<details>
-<summary>Food Market</summary>
-<p>Food stalls run by London's Community Kitchen will be serving a vast array of food and drink along the High Street between Moretons and Bradbys boarding houses.<p>
-<p><ul>
-<li>The Kind Café</li>
-<li>Chipsy (Grilled burgers and loaded chips)</li>
-<li>Brat Bros Catering (Bratwurst, hot dogs, schnitzels)</li>
-<li>Sugo Kitchen (Italian Street Food, focaccia sandwiches, handmade pasta bowls)</li>
-<li>Gully (Indian Street Food) </li>
-<li>The Cheese Toaster (Gourmet cheese toasties)</li>
-<li>Social Dhaba (Punjabi Street Food)</li>
-<li>Paella Shack (Paella)</li>
-<li>Letterbox Cookie (Handmade cookies)</li>
-<li>Lilibet’s of Windsor (Traditional Old-Fashioned sweets)</li>
-<li>1218 Plant Based Cuisine (Vegan Street Food, salad boxes, BBQ and vegan sweet treats)</li>
-<li>Ben’s Bakery (Artisan Cakes)</li>
-</ul></p>
-<p>🕓 noon – 6pm</p>
-<p>📍 High Street</p>
-</details>
+  <!-- Import Leaflet.js for map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-<details>
-<summary>Free Range Jane</summary>
-<p>Free Range Jane specialises in luxury free-range fried chicken burgers and hand cut chips. We make all our sauces in house and conscientiously source our free-range chicken from a small butcher in Wiltshire. We will be in situ on Grove Hill next to Miriam's Munchies, and will be serving delicious free-range fried chicken all afternoon.</p>
-<p>🕓 noon – 6pm</p>
-<p>📍 Grove Hill</p>
-</details>
+  <!-- Import vue-->
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- production version, optimized for size and speed -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>-->
 
-<details>
-<summary>Miriam's Munchies</summary>
-<p>Miriam's Munchies is a women led artisan bakery and coffee van, based locally in Harrow. Since 2007, we have been baking delicious cakes using high quality, seasonal and locally sourced ingredients. On our mobile coffee van, we’ll be serving  a range of our cakes alongside coffee sourced and roasted by Monmouth Coffee Company, Birchall teas, and homemade iced teas and chai. <a href="https://www.miriamsmunchies.co.uk/coffee-van/">www.miriamsmunchies.co.uk/coffee-van/</a></p>
-<p>🕓 noon – 6pm</p>
-<p>📍 Grove Hill</p>
-</details>
+  <!-- Import Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
-<details>
-<summary>WI Cake Stall</summary>
-<p>A selection of wonderful home-made cakes for sale.</p>
-<p>🕓 noon – 6pm</p>
-<p>📍 Opposite Druries</p>
-</details>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<h1 class="orange">Events 2pm – 6pm</h1>
+</head>
 
-<p>Tap each item for more information.</p>
+<body>
+  <main id="app">
 
-<details>
-<summary>Archery</summary>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Bill Yard</p>
-</details>
+    <img src="/assets/logo.png" width=100% height=auto class="py-2">
+    <section>
 
-<details>
-<summary>ArtPerUk Peruvian Dance</summary>
-<img src="/450/ArtPerUk.jpeg" width=100% height=auto>
-<p>ArtPerÚK is a Peruvian folkloric dance academy that promotes Peruvian traditional dances from the Coast, the Andes and the Jungle of Peru, enhancing people to explore the diversity, music and rhythms of Latin American culture with the wider community in London. Allowing them to appreciate the artistic richness of culture. Our main goal is to continue promoting our traditions and heritage in the UK.</p>
-<p>🕓 2pm – 3pm</p>
-<p>📍 Outside Vaughan Library</p>
-</details>
+      <h1 class="pink">Celebrating 450 years of community on the Hill</h1>
+      <h1 class="turquoise">30 April Noon – 6pm</h1>
 
-<details>
-<summary>Art, Photography and Sculpture Exhibitions</summary>
-<p>Work by local schools and adult art groups</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Pasmore Gallery and Grove Hill</p>
-</details>
+      <p>Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th
+        anniversary of Harrow School. There’s something for everyone and new events are being added to all the time.
+        This
+        information will be updated regularly up until and including Saturday 30 April.</p>
 
-<details>
-<summary>Art Workshop</summary>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Outside Druries</p>
-</details>
+      <p><strong>Last updated: FIX</strong></p>
 
-<details>
-<summary>Barefoot Dance</summary>
-<p>🕓 2.45pm, 4.15pm</p>
-<p>📍 War Memorial Building Forecourt</p>
-</details>
+      <h1 class="purple">Food Noon to 6pm</h1>
 
-<details>
-<summary>Basketball Competition</summary>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Sports Hall</p>
-</details>
-
-<details>
-<summary>Bollywood Dance by Quainton Hall</summary>
-<p>🕓 3.15pm – 3.45pm</p>
-<p>📍 Outside Vaughan Library</p>
-</details>
-
-<details>
-<summary>Cara Gael Irish Dance Group</summary>
-<p>🕓 3.15pm, 4.45pm</p>
-<p>📍 War Memorial Building Forecourt</p>
-</details>
-
-<details>
-<summary>Community Production: Noye's Fludde</summary>
-<p>A flood is coming, but Noah is building a boat, in the hope that a new world will be waiting on the other side.</p>
-<p>As part of Harrow School's Community Day, members of the Drama and Music departments direct a joyous new production of Benjamin Britten's community opera, combining the talents of more than a hundred children from four primary schools: Byron Court, Norbury, St Anselm's and St Jerome's from across the borough, and Bishopshalt School.</p>
-<p>🕓 2pm, 5pm</p>
-<p>📍 Speech Room</p>
-</details>
-
-<details>
-<summary>Costume-themed Streets</summary>
-<p>Victorian West Street, Edwardian High Street, Elizabethan Old Schools, and the Church. With many thanks to the members of the Harrow on the Hill Women's Institute for the more than 600m of wonderful handmade bunting and to the boys of Harrow School for all the flags.</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 West Street, High Street, Old Schools, St Mary's</p>
-</details>
-
-<details>
-<summary>Cricket Festival</summary>
-<p>Youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Cricket Pitches</p>
-</details>
-
-<details>
-<summary>Edwardian Harrow Beak Reads Virgil</summary>
-<p>🕓 2.40pm – 3pm</p>
-<p>📍 The Park Drive</p>
-</details>
-
-<details>
-<summary>Exhibition of Traditional Games</summary>
-<p>Including Squash – which was invented at Harrow – Fives, Rackets, Judo and Archery</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Sports Hall</p>
-</details>
+      <details v-for="event in events" v-if="event.classification == 'Food' ">
+        <summary>{{event.title}}</summary>
+        <span v-html="event.body"></span>
+        <p>🕓 {{event.times}}</p>
 
 
-<details>
-<summary>Harrow Community Gospel Choir</summary>
-<p><a href="https://harrowcommunitygospelchoir.com">Harrow Community Gospel Choir</a> is a performing choir singing a mixture of contemporary gospel songs and spirituals. The choir is directed by CeCelia Wickham-Anderson, a member of the internationally acclaimed acapella singing group <a href="http://blackvoices.co.uk">Black Voices</a></p>
-<p>🕓 3.30pm, 5.15pm</p>
-<p>📍 Bill Yard</p>
-</details>
+        <p>📍 {{locations[event.location].title}}
+          <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+            :data-bs-locationid="event.location"
+            :data-bs-target="'#locationModal'+event.location">{{locations[event.location].title}}</button>
+        </p>
 
-<details>
-<summary>Harrow Hill Trust Guided Walk</summary>
-<p>The Harrow Hill Trust will hold a guided tour of the Hill led by Jonathan Edwards. The walk will take in some of the events, people and buildings that helped shape the Hill, from Tudor times through to the 21st Century.</p>
-<p>Please register for this walk, for which there is no charge, with Robert Lemon  07836 638620 <a href="mailto:robertlemon@live.co.uk">robertlemon@live.co.uk</a></p>
-<p>🕓 3pm – 4pm</p>
-<p>📍 St Mary's Church</p>
-</details>
+        <!-- Button trigger modal -->
+      </details>
 
-<details>
-<summary>Harrow Steel Band</summary>
-<p>Harrow Steel was formed in 1992 and provides an opportunity for gifted and talented young musicians aged 8-21 to learn challenging music aurally within a steel band. We support the engagement of musical talent, in a multicultural environment across Harrow and NW London. Weekly rehearsals are held at Whitmore High School in Harrow.</p>
-<p>We have performed at Notting Hill Carnival on three occasions, where we were voted ‘Best Band on the road’. Other notable performances have been for BBC programmes such as Blue Peter, Record Breakers, and You and Me. The Band have also toured Europe and performed in Barcelona, Salzburg, Paris, Lake Garda, Venice, Ostend, and Amsterdam.</p>
-<p>We are very proud of our Alumni, many of whom still perform and help voluntarily within the band, our trustees include ex band members and their parents. Others have gone on to be teachers, leaders of arts organisations and practising musicians.</p> <p>Our funders include: John Lyon's Charity, Harrow Giving, and the Young Harrow Foundation.</p> 
-<p>Please get in touch for further info: <a href="mailto:bandmanager@harrowsteel.org.uk">bandmanager@harrowsteel.org.uk</a></p>
-<p>🕓 2pm, 3.45pm, 5pm</p>
-<p>📍 Roof Terrace</p>
-</details>
+      <h1 class="orange">Events 2pm – 6pm</h1>
 
-<details>
-<summary>The Hill Players</summary>
-<p>"Banter" by Robert Scott. John and Angie are having a quiet conversation before breakfast – or so it would seem. Luckily for us, they each have an interpreter on hand so we can understand what they are really saying.</p>
-<p>The Hill Players is an ever-growing amateur dramatics group founded in 2007 and based around Harrow on the Hill. We are passionate about community theatre and pride ourselves on putting on great productions, including an annual Christmas Panto at Harrow School's Ryan Theatre. We welcome new members! Please see our website <a href="https://www.hillplayers.co.uk">hillplayers.co.uk</a> for more information.</p>
-<p>🕓 2pm – 6pm, every half hour</p>
-<p>📍 The Old Well, West Street</p>
-</details>
+      <p>Tap each item for more information.</p>
 
-<details>
-<summary>Indie Choir</summary>
-<p>Harrow's very own Indie Choir sings a wide range of alternative and contemporary rock and pop songs, from the Beatles to Bowie to Bastille. Launched in September 2017, the choir has performed live at Rickmansworth Festival, Harrow's Heroes, Headstone Manor, and at pubs, bars, venues, and parties in Harrow and Hillingdon.</p>
-<p>Indie Choir meets upstairs at Trinity Bar in central Harrow on Thursday nights, and more details can be found on the web (<a href="https://www.indiechoir.com">indiechoir.com</a>), Facebook (<a href="https://www.facebook.com/indiechoir">@indiechoir</a>) and Instagram (<a href="https://www.instagram.com/indiechoiruk/">@indiechoiruk</a>).</p>
-<p>🕓 2.45pm, 4.15pm, 5.30pm</p>
-<p>📍 Roof Terrace</p>
-</details>
-
-<details>
-<summary>John Lyon School Drama</summary>
-<p>🕓 2pm – 2.30pm</p>
-<p>📍 The Park Drive</p>
-</details>
-
-<details>
-<summary>Kidology</summary>
-<p>Kidology Dance Co was established in 2010 by Nicky Rutter and Lauren O'Connell. We have a passion for performing, teaching and helping young people to realise their talents and progress within their future in dance. We specialise in street/Hip-Hop dance, contemporary, musical theatre and have directed and produced a number of sold-out shows, competed in competitions throughout the country and had dancers go on to do remarkable things. Our aim is to work with dancers to enhance their talents, draw on their strengths and build their confidence. We are very fortunate to work with a thriving and well-presented group of young and talented students. We encourage everyone to take part in as many performance opportunities as they can throughout the year especially if dance is something they wish to pursue later in life. <a href="http://www.kidologydance.co.uk">www.kidologydance.co.uk</a></p>
-<p>🕓 3pm, 4.15pm</p>
-<p>📍 Bill Yard</p>
-</details>
-
-<details>
-<summary>Maypole Dance</summary>
-<p>Vaughn Primary School</p>
-<p>🕓 2.30pm – 2.45pm, 4.00pm – 4.15pm</p>
-<p>📍 The Old House</p>
-</details>
-
-<details>
-<summary>Merrydowners Morris</summary>
-<p>Founded in 1990 as a fun entry in a local Church Fete (St. Alban, North Harrow), we practised in secret as, at the time, one of the team was the vicar of the church, so you can imagine the gasps of surprise at our debut! We enjoyed the experience so much that several of the original church members are still performing. During the past 31 years we have performed across London, in France and Germany, the highlights being: The Guildhall, City of London, for the inaugural Dinner of the 1996 European football championships; representing England at The Hong Kong Chinese New Year parade in 2004; La Fetes du Gayants, Douai Pas de Calais in 2001 and 2003; Recklinghausen Germany for the annual Concert of The Akkordeonklaenge von Recklinghausen Westfallen in 2005. We took part many times in London’s New Year’s Day parade and have also appeared in a pop music video and, albeit briefly, on the BBC’s Strictly Come Dancing and also on The One Show! We were also honoured to be included in Harrow’s Diamond Jubilee celebrations and performed for HRH The Duke of Edinburgh.</p>
-<p>🕓 2pm, 3pm, 4pm, 5pm</p>
-<p>📍 The Castle</p>
-</details>
-
-<details>
-<summary>Music at the Bandstand</summary>
-<p>Enjoy a full programme of traditional bandstand entertainment including brass, wind and concert bands.</p>
-<table>
-<tr><td>2.00pm</td><td>Orley Farm (Year 8 Rock Band, String Quartet and Chamber Choir)</td></tr>
-<tr><td>2.30pm</td><td>John Lyon and Quainton Hall</td></tr>
-<tr><td>3.00pm</td><td>Traditional Irish Music</td></tr>
-<tr><td>3.30pm</td><td>The Aftercare (Harrow School)</td></tr>
-<tr><td>4.00pm</td><td>Traditional Irish Music</td></tr>
-<tr><td>4.30pm</td><td>ohn Lyon and Quainton Hall</td></tr>
-<tr><td>5.00pm</td><td>Traditional Irish Music</td></tr>
-<tr><td>5.30pm</td><td>The Aftercare (Harrow School)</td></tr>
-</table>
-<p>The London Irish Music School was established in 1999 under the direction of Colette Keaveney (TTCT) who is a qualified teacher of Traditional Irish Music registered with Comhaltas Ceoltoiri Eireann in Dublin, Ireland.</p>
-<p>The aim of Comhaltas Ceoltoiri Eireann is to promote the Music, Culture and Arts of Ireland at Home and Abroad. The London Irish Music School’s main objective is to fulfil this aim and to be able to reach as many children as possible.</p>
-<p>Weekly classes take place during term time at a community venue in Brent and at two schools in Harrow as part of their music curriculum.</p>
-<p>Workshops are held regularly with different tutors in a small group or individual setting to give more in-depth tuition, once children have passed the beginner stage and progressed onto a second instrument.</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Bandstand</p>
-</details>
-
-<details>
-<summary>Old Speech Room Gallery 450 Exhibition</summary>
-<p>Harrow 1572-2022: from the time of Elizabeth I to the present day, this exhibition is a visual tour through time, full of local legend and newly researched revelations.</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Old Speech Room Gallery</p>
-</details>
-
-<details>
-<summary>Punch and Judy Show and Magician</summary>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Outside Bradbys</p>
-</details>
-
-<details>
-<summary>Rayleigh Observatory</summary>
-<p>Find out about the observation of planets, galaxies and other astronomical phenomena.</p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Rayleigh Observatory</p>
-</details>
-
-<details>
-<summary>Roystonjax</summary>
-<p>RoystonJax are a trio with a difference. They use stripped down to bass/drum backing tracks and play live guitars with fabulous three-part harmonies. It feels like a full band but one that can play at any volume in any venue!</p>
-<p>🕓 3.15pm, 5.30pm</p>
-<p>📍 Roof Terrace</p>
-</details>
-
-<details>
-<summary>Stagecoach Irish Dance Group</summary>
-<p>Stagecoach Harrow is in its 29th Year and was one of the first Stagecoach schools to open based at Rooks Heath College. Emmy Hamilton has been Principal for 15 of those years and is proud to be at the head of this energetic and creative Performing Arts School in the borough. At this event are dedicated students from Stagecoach Harrow's Dance Troupe (performing some street and musical theatre) and our 15+ year group 'Further Stages' who will be performing some of their Performance Arts Awards Exam work, based on life in 1940s. There are two other Stagecoach centres in the borough: Stagecoach Harrow on the Hill and Stagecoach Harrow Weald, all three providing quality, nurturing environments in part time performing arts lessons for our students to thrive in, from 4-19 years, with lots of opportunities for students to be themselves, develop skills and confidence, make new friends, and have a chance to shine. Professional work and West End opportunities along with added value in LAMDA lessons are also available. Enquire at <a href="https://www.stagecoach.co.uk/harrow">www.stagecoach.co.uk/harrow</a> 0203 5040100.</p>
-<p>🕓 2.15pm, 3.45pm</p>
-<p>📍 War Memorial Building Forecourt</p>
-</details>
-
-<details>
-<summary>St Mary's and Spire Cafe</summary>
-<p>After listening to the bellringing opening the Community Day why not climb the tower and go onto the flat roof (weather permitting) to see the stunning views of the Hill and London.  Come and meet Elizabeth I and John Lyon, who founded the School and other characters in costume who will tell you some of the history of the School and church. Visit the church where boys worshipped before the chapel was built, including prime ministers Robert Peel and Spencer Percival and authors Lord Byron, Sheridan, and Anthony Trollope. Go on our churchyard trail or have a cuppa at our Spire Cafe.</p>
-<p><ul>
-<li>Homemade soup and fresh rolls</li>
-<li>Hot filled rolls</li>
-<li>Cream teas featuring Spire Cafe's famous scones, fresh from the oven</li>
-<li>Home-baked cakes</li>
-<li>Fairtrade teas and coffees</li>
-<li>Cold drinks including our homemade mango lassi</li>
-</ul></p>
-<p>For updates, find us <a href="https://tinyurl.com/spirecafeharrow">on the web<a> and <a href="https://twitter.com/SpireCafe">on Twitter @SpireCafe.</a></p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 St Mary's</p>
-</details>
-
-<details>
-<summary>String Quartet and Brass Trio</summary>
-<p>🕓 3.30pm – 4.30pm</p>
-<p>📍 The Park Drive</p>
-</details>
-
-<details>
-<summary>Tai Chi</summary>
-<p>We are a community tai chi group called Harrow Tai Chi for Health. We offer free tai chi sessions at Harrow Recreation Ground every Friday 9.30 to 10.30am for health and general well-being. For more information please email <a href="mailto:info@harrowrec.org.uk">info@harrowrec.org.uk</a></p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Bill Yard</p>
-</details>
-
-<details>
-<summary>Tours of Harrow School</summary>
-<p>Public tours of Harrow School's historic venues on the hour, every hour. Our expert guides will share an insight into Harrow's 450-year history. This is an exciting opportunity for members of the public to visit some of the most spectacular and historic buildings at Harrow School. Tours last 30–40 minutes.</p>
-
-<p>To register your attendance please email Victoria Perry on <a href="mailto:tours@harrowschool.org.uk">tours@harrowschool.org.uk</a> with your name, contact number and the number of places you would like to book, and your preferred tour time.</p>
-
-<p>🕓 12pm, 1pm, 2pm, 3pm, 4pm, 5pm</p>
-<p>📍 Bill Yard</p>
-</details>
-
-<details>
-<summary>Veteran Cars</summary>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Outside the Old King's Head</p>
-</details>
+      <details v-for="event in events" v-if="event.classification == 'Events' ">
+        <summary>{{event.title}}</summary>
+        <span v-html="event.body"></span>
+        <p>🕓 {{event.times}}</p>
 
 
+        <p>📍 {{locations[event.location].title}}
+          <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+            :data-bs-locationid="event.location"
+            :data-bs-target="'#locationModal'+event.location">{{locations[event.location].title}}</button>
+        </p>
 
-<h1 class="green">Road Closures</h1>
-<img src="/450/road_closures.png">
-<p>Road closures will be in place on Saturday 30 April from 6am to 8pm.</p>
+        <!-- Button trigger modal -->
+      </details>
 
-<p>Residents will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at any time during the 24-hour period.</p>
+      <h1 class="green">Road Closures</h1>
+      <img src="/assets/road_closures.png">
+      <p>Road closures will be in place on Saturday 30 April from 6am to 8pm.</p>
 
-<p>Traffic will be marshalled by Road Traffic Solutions Ltd.</p>
+      <p>Residents will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at
+        any
+        time during the 24-hour period.</p>
 
-<p>Alternative parking for this period will be available for residents of the High Street and the top half of West Street. Please contact Harrow School Security at <a href="mailto:security@harrowschool.org.uk">security@harrowschool.org.uk</a> or call 020 8872 8345 for more information.</p>
+      <p>Traffic will be marshalled by Road Traffic Solutions Ltd.</p>
 
-<p>Public parking is available in the Queen’s House Car Park, Kymberley Road, London, HA1 1US (<a href="https://goo.gl/maps/keAqtqzrvP2NYrpA6">Google Maps</a>/<a href="https://maps.apple.com/?address=104%20College%20Road,%20Harrow,%20HA1%201BQ,%20England&auid=11423917619285009007&ll=51.580760,-0.339339">Apple Maps</a>) and a free shuttle bus from the car park to Davidson Lane will be in operation.</p>
+      <p>Alternative parking for this period will be available for residents of the High Street and the top half of West
+        Street. Please contact Harrow School Security at <a
+          href="mailto:security@harrowschool.org.uk">security@harrowschool.org.uk</a> or call 020 8872 8345 for more
+        information.</p>
 
-<p>There will be accessibility parking on London Road at the south end of the Hill.</p>
+      <p>Public parking is available in the Queen’s House Car Park, Kymberley Road, London, HA1 1US (<a
+          href="https://goo.gl/maps/keAqtqzrvP2NYrpA6">Google Maps</a>/<a
+          href="https://maps.apple.com/?address=104%20College%20Road,%20Harrow,%20HA1%201BQ,%20England&auid=11423917619285009007&ll=51.580760,-0.339339">Apple
+          Maps</a>) and a free shuttle bus from the car park to Davidson Lane will be in operation.</p>
 
-<h1 class="pink">Other Information</h1>
+      <p>There will be accessibility parking on London Road at the south end of the Hill.</p>
 
-<p><strong>First Aid and Lost Children</strong></p>
-<p>St John’s ambulance will be working from the West St Meeting Room at the top of West St.  This will also be the location to which lost children should be taken.</p>	
- 
-<p><strong>Security</strong></p>
-<p>Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
+      <h1 class="pink">Other Information</h1>
 
-<h1 class="orange">Map (BETA)</h1>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+      <p><strong>First Aid and Lost Children</strong></p>
+      <p>St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
+        location to which lost children should be taken.</p>
 
-<div id="map"></div>		
+      <p><strong>Security</strong></p>
+      <p>Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
 
-<script src="/450-test/map.js"></script>
+      <h1 class="orange">Map</h1>
+
+      <div id="mainMap" class="map"></div>
+
+    </section>
+
+    <!-- Modal -->
+    <div v-for="(location, id) in locations" class="modal fade" :id="'locationModal'+id" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Locate {{location.title}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div :id="'mainMap'+id" class="map"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Import Special JS -->
+  <script src="/index.js"></script>
+
+  <footer>
+    &copy; Harrow School 2022
+  </footer>
+</body>
+
+</html>
