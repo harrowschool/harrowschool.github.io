@@ -39,7 +39,8 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Import Axios-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -129,6 +130,54 @@
       <h1 class="orange">Map</h1>
 
       <div id="mainMap" class="map"></div>
+
+      <div class="py-3 row justify-content-between">
+
+          <div class="col">
+            <span>Last Updated <strong v-if="state.latestcommit"> {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
+          </div>
+
+          <div class="col">
+            <button class="btn btn-secondary btn-small float-end" type="button" data-bs-toggle="collapse" data-bs-target="#changesBox" aria-expanded="false" aria-controls="changesBox">
+              Read changes
+            </button>
+          </div>
+      </div>
+
+      <div class="collapse" id="changesBox">
+        <div class="card card-body">
+          <div v-if="!state.latestcommit">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div v-if="state.latestcommit">
+            <h6>Latest Commit</h6>
+            <table class="table">
+              <tbody>
+                
+                <tr>
+                  <th scope="row">Committer</th>
+                  <td>{{state.latestcommit.commit.author.name}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>{{dateformat(state.latestcommit.commit.committer.date)}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Details</th>
+                  <td>{{state.latestcommit.commit.message}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+            
+            <a type="button" role="button" :href="state.latestcommit.parents[0].html_url" class="btn btn-outline-info">View on github</a>
+
+          </div>
+
+        </div>
+      </div>
 
     </section>
 

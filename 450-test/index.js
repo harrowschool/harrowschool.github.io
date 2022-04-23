@@ -2,6 +2,7 @@ var app = new Vue({
   el: "#app",
   data: {
     state: {
+      latestcommit: null,
       modalData: null,
       maps: null,
     },
@@ -205,6 +206,15 @@ var app = new Vue({
     },
   },
   methods: {
+    dateformat(input) {
+      return new Date(input).toLocaleDateString('en-GB', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour:'2-digit',
+          minute:'2-digit'
+      });
+  },
     modalOpened() {
       if (this.state.maps) {
         this.state.maps.remove();
@@ -253,6 +263,14 @@ var app = new Vue({
     },
   },
   mounted() {
+
+
+      axios
+        .get('https://api.github.com/repos/harrowschool/harrowschool.github.io/commits?per_page=1')
+        .then(response => (this.state.latestcommit = response.data[0]))
+
+
+
     var mainMap = L.map("mainMap");
 
     window.addEventListener("show.bs.modal", this.modalOpened);
