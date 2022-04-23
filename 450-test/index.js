@@ -632,8 +632,8 @@ var app = new Vue({
       25: {
         title: "The Rayleigh Observatory (Maths and Physics Schools)",
         coords: {
-          lat: 51.571293418778446,
-          lng: -0.3389576839538226,
+          lat: 51.57349321757922,
+          lng: -0.3348936927102774,
         },
         icon: "./assets/icons/arts.png",
       },
@@ -761,7 +761,7 @@ var app = new Vue({
         icon: icon,
       })
         .addTo(mainMap)
-        .bindPopup(location.title + " " + id);
+        .bindPopup(location.title /*+ " " + id*/);
     });
 
     mainMap.setView([51.57281743898807, -0.3371716811246794], 17);

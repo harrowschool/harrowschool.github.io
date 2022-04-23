@@ -47,175 +47,181 @@
 </head>
 
 <body>
-  <main id="app">
 
-    <img src="./assets/logo.png" width=100% height=auto class="py-2">
-    <section>
+  <div class="col-lg-5 mx-auto p-3 pt-md-5">
+    <header class="d-flex align-items-center pb-3 mb-3">
+      <img src="./assets/logo.png" width=100% height=auto class="py-2">
+    </header>
 
-      <h1 class="pink">Celebrating 450 years of community on the Hill</h1>
-      <h1 class="turquoise">30 April Noon – 6pm</h1>
+    <main id="app">
+      <section>
+        <h3 class="pink"><b>Celebrating 450 years of community on the Hill</b></h3>
+        <h3 class="turquoise">30 April Noon – 6pm</h3>
 
-      <p>Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th
-        anniversary of Harrow School. There’s something for everyone and new events are being added to all the time.
-        This
-        information will be updated regularly up until and including Saturday 30 April.</p>
+        <p class="text-center">Residents and friends from around the Hill are invited to join in a day of celebration to
+          mark
+          the 450th
+          anniversary of Harrow School. There’s something for everyone and new events are being added to all the time.
+          This
+          information will be updated regularly up until and including Saturday 30 April.</p>
 
-      <h1 class="purple">Food Noon to 6pm</h1>
+        <h3 class="purple">Food Noon to 6pm</h3>
 
-      <details v-for="event in events" v-if="event.classification == 'Food' ">
-        <summary>{{event.title}}</summary>
-        <span v-html="event.body"></span>
-        <p>🕓 {{event.times}}</p>
-
-
-        <p>📍 {{locations[event.location].title}}
-          <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-            :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">Find</button>
-        </p>
-
-        <!-- Button trigger modal -->
-      </details>
-
-      <h1 class="orange">Events 2pm – 6pm</h1>
-
-      <p>Tap each item for more information.</p>
-
-      <details v-for="event in events" v-if="event.classification == 'Event' ">
-        <summary>{{event.title}}</summary>
-        <span v-html="event.body"></span>
-        <p>🕓 {{event.times}}</p>
+        <details v-for="event in events" v-if="event.classification == 'Food' ">
+          <summary>{{event.title}}</summary>
+          <span v-html="event.body"></span>
+          <p>🕓 {{event.times}}</p>
 
 
-        <p>📍 {{locations[event.location].title}}
-          <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-            :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">Find</button>
-        </p>
+          <p>📍 {{locations[event.location].title}}
+            <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+              :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">Find</button>
+          </p>
 
-        <!-- Button trigger modal -->
-      </details>
+          <!-- Button trigger modal -->
+        </details>
 
-      <h1 class="green">Road Closures</h1>
-      <img src="/450/road_closures.png">
-      <p>Road closures will be in place on Saturday 30 April from 6am to 8pm.</p>
+        <h3 class="orange">Events 2pm – 6pm</h3>
 
-      <p>Residents will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at
-        any time during the 24-hour period.</p>
+        <p>Tap each item for more information.</p>
 
-      <p>Traffic will be marshalled by Road Traffic Solutions Ltd.</p>
-
-      <p>Alternative parking for this period will be available for residents of the High Street and the top half of West
-        Street. Please contact Harrow School Security at <a
-          href="mailto:security@harrowschool.org.uk">security@harrowschool.org.uk</a> or call 020 8872 8345 for more
-        information.</p>
-
-      <p>Public parking is available in the Queen’s House Car Park, Kymberley Road, London, HA1 1US (<a
-          href="https://goo.gl/maps/keAqtqzrvP2NYrpA6">Google Maps</a>/<a
-          href="https://maps.apple.com/?address=104%20College%20Road,%20Harrow,%20HA1%201BQ,%20England&auid=11423917619285009007&ll=51.580760,-0.339339">Apple
-          Maps</a>) and a free shuttle bus from the car park to Davidson Lane will be in operation.</p>
-
-      <p>There will be accessibility parking on London Road at the south end of the Hill.</p>
-
-      <h1 class="pink">Other Information</h1>
-
-      <p><strong>First Aid and Lost Children</strong><br />
-        St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
-        location to which lost children should be taken.</p>
-
-      <p><strong>Security</strong><br />
-        Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
-
-      <p><strong>Picnic Places</strong><br />
-        You are welcome to picnic in the gardens below the Chapel Terrace, on the Roof Terrace and on The Green by the
-        Band Stand.</p>
-
-      <p><strong>Toilets</strong><br />
-        Porta Loos can be found in Grove Hill and Harrow Park.</p>
+        <details v-for="event in events" v-if="event.classification == 'Event' ">
+          <summary>{{event.title}}</summary>
+          <span v-html="event.body"></span>
+          <p>🕓 {{event.times}}</p>
 
 
-      <h1 class="orange">Map</h1>
+          <p>📍 {{locations[event.location].title}}
+            <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+              :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">Find</button>
+          </p>
 
-      <div id="mainMap" class="map"></div>
+          <!-- Button trigger modal -->
+        </details>
 
-      <div class="py-3 row justify-content-between">
+        <h3 class="green">Road Closures</h3>
+        <img src="/450/road_closures.png">
+        <p>Road closures will be in place on Saturday 30 April from 6am to 8pm.</p>
 
-        <div class="col">
-          <span>Last Updated <strong v-if="state.latestcommit">
-              {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
+        <p>Residents will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at
+          any time during the 24-hour period.</p>
+
+        <p>Traffic will be marshalled by Road Traffic Solutions Ltd.</p>
+
+        <p>Alternative parking for this period will be available for residents of the High Street and the top half of
+          West
+          Street. Please contact Harrow School Security at <a
+            href="mailto:security@harrowschool.org.uk">security@harrowschool.org.uk</a> or call 020 8872 8345 for more
+          information.</p>
+
+        <p>Public parking is available in the Queen’s House Car Park, Kymberley Road, London, HA1 1US (<a
+            href="https://goo.gl/maps/keAqtqzrvP2NYrpA6">Google Maps</a>/<a
+            href="https://maps.apple.com/?address=104%20College%20Road,%20Harrow,%20HA1%201BQ,%20England&auid=11423917619285009007&ll=51.580760,-0.339339">Apple
+            Maps</a>) and a free shuttle bus from the car park to Davidson Lane will be in operation.</p>
+
+        <p>There will be accessibility parking on London Road at the south end of the Hill.</p>
+
+        <h3 class="pink">Other Information</h3>
+
+        <p><strong>First Aid and Lost Children</strong><br />
+          St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
+          location to which lost children should be taken.</p>
+
+        <p><strong>Security</strong><br />
+          Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
+
+        <p><strong>Picnic Places</strong><br />
+          You are welcome to picnic in the gardens below the Chapel Terrace, on the Roof Terrace and on The Green by the
+          Band Stand.</p>
+
+        <p><strong>Toilets</strong><br />
+          Porta Loos can be found in Grove Hill and Harrow Park.</p>
+
+
+        <h3 class="orange">Map</h3>
+
+        <div id="mainMap" class="map"></div>
+
+        <div class="py-3 row justify-content-between">
+
+          <div class="col">
+            <span>Last Updated <strong v-if="state.latestcommit">
+                {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
+          </div>
+
+          <div class="col">
+            <button class="btn btn-secondary btn-small float-end" type="button" data-bs-toggle="collapse"
+              data-bs-target="#changesBox" aria-expanded="false" aria-controls="changesBox">
+              Read changes
+            </button>
+          </div>
         </div>
 
-        <div class="col">
-          <button class="btn btn-secondary btn-small float-end" type="button" data-bs-toggle="collapse"
-            data-bs-target="#changesBox" aria-expanded="false" aria-controls="changesBox">
-            Read changes
-          </button>
-        </div>
-      </div>
+        <div class="collapse" id="changesBox">
+          <div class="card card-body">
+            <div v-if="!state.latestcommit">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div v-if="state.latestcommit">
+              <h6>Latest Commit</h6>
+              <table class="table">
+                <tbody>
 
-      <div class="collapse" id="changesBox">
-        <div class="card card-body">
-          <div v-if="!state.latestcommit">
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden">Loading...</span>
+                  <tr>
+                    <th scope="row">Committer</th>
+                    <td>{{state.latestcommit.commit.author.name}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Date</th>
+                    <td>{{dateformat(state.latestcommit.commit.committer.date)}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Details</th>
+                    <td>{{state.latestcommit.commit.message}}</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <a type="button" role="button" :href="state.latestcommit.parents[0].html_url"
+                class="btn btn-outline-info">View on Github</a>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Modal -->
+      <div v-for="(location, id) in locations" class="modal fade" :id="'locationModal'+id" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Locate {{location.title}}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div :id="'mainMap'+id" class="map"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
-          <div v-if="state.latestcommit">
-            <h6>Latest Commit</h6>
-            <table class="table">
-              <tbody>
-
-                <tr>
-                  <th scope="row">Committer</th>
-                  <td>{{state.latestcommit.commit.author.name}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Date</th>
-                  <td>{{dateformat(state.latestcommit.commit.committer.date)}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Details</th>
-                  <td>{{state.latestcommit.commit.message}}</td>
-                </tr>
-
-              </tbody>
-            </table>
-
-            <a type="button" role="button" :href="state.latestcommit.parents[0].html_url"
-              class="btn btn-outline-info">View on Github</a>
-
-          </div>
-
         </div>
       </div>
+    </main>
 
-    </section>
+    <script src="./index.js"></script>
 
-    <!-- Modal -->
-    <div v-for="(location, id) in locations" class="modal fade" :id="'locationModal'+id" tabindex="-1"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Locate {{location.title}}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div :id="'mainMap'+id" class="map"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <footer class="pt-5 my-5 text-muted border-top">
+      &copy; Harrow School 2022
+    </footer>
+  </div>
 
-  </main>
-
-  <!-- Import Special JS -->
-  <script src="./index.js"></script>
-
-  <footer>
-    &copy; Harrow School 2022
-  </footer>
 </body>
 
 </html>
