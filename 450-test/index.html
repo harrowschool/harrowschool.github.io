@@ -67,7 +67,7 @@
 
         <h3 class="purple">Food Noon to 6pm</h3>
 
-        <details v-for="event in events" v-if="event.classification == 'Food' ">
+        <details :id="'event'+event.id" v-for="event in events" v-if="event.classification == 'Food' ">
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
           <p>🕓 {{event.times}}</p>
@@ -140,7 +140,7 @@
 
         <h3 class="orange">Map</h3>
 
-        <div id="mainMap" class="map"></div>
+        <div id="mainMap" class="mainmap"></div>
 
         <div class="py-3 row justify-content-between">
 
@@ -205,7 +205,30 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div :id="'mainMap'+id" class="map"></div>
+              <div :id="'mainMap'+id" class="modalmap"></div>
+              <hr>
+
+              <h3>On at {{location.title}}</h3>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Event</th>
+                    <th scope="col">Time</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr div v-for="event in events" v-if="event.location==id">
+                    <td>{{event.title}}</td>
+                    <td>{{event.times}}</td>
+                    <td><a :href="'#event'+event.id">Read more</a></td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

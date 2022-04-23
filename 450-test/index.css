@@ -80,6 +80,10 @@ td {
   padding-right: 1em;
 }
 
-.map {
+.mainmap {
   height: 50vh;
+}
+
+.modalmap {
+  height: 40vh;
 }
