@@ -481,8 +481,8 @@ var app = new Vue({
           lng: -0.3374212259876906,
         },
         maplocation: {
-          w: 50,
-          h: 50,
+          x: (2706 / 4365) * 100,
+          y: (921 / 4932) * 100,
         },
         icon: "./assets/icons/music.png",
       },
@@ -697,11 +697,15 @@ var app = new Vue({
 
       // Add a smaller default Octopus at same location
       // but using percent as unit (given image width of 1000px and height of 667px)
-      this.state.glass.addOctopus(73.7, (139 / 667) * 100, {
-        radius: 5,
-        margin: 2,
-        positionUnit: "%",
-      });
+      this.state.glass.addOctopus(
+        location.maplocation.x,
+        location.maplocation.y,
+        {
+          radius: 5,
+          margin: 2,
+          positionUnit: "%",
+        }
+      );
     },
   },
   mounted() {
