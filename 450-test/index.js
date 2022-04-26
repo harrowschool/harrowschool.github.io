@@ -480,6 +480,10 @@ var app = new Vue({
           lat: 51.57317433825023,
           lng: -0.3374212259876906,
         },
+        maplocation: {
+          w: 50,
+          h: 50,
+        },
         icon: "./assets/icons/music.png",
       },
       12: {
@@ -688,7 +692,7 @@ var app = new Vue({
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
       this.state.glass = injectGlass(
         document.getElementById("inject" + locationid),
-        "https://github.com/PerceptronV/glass-octopus/blob/main/demo/everest.jpg?raw=true"
+        "./assets/450_map.jpg"
       );
 
       // Add a smaller default Octopus at same location
