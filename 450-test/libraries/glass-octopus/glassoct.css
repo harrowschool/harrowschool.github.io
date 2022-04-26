@@ -1,0 +1,37 @@
+.glass-oct-cont {
+  width: inherit;
+  height: inherit;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.glass-oct-img {
+  width: inherit;
+  height: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+.glass-oct-head {
+  position: absolute;
+}
+
+.glass-oct-tail {
+  position: absolute;
+  animation-name: glass-oct-swim;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glass-oct-swim {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  80% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
