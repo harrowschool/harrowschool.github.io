@@ -10,7 +10,7 @@
   <meta http-equiv="refresh" content="300">
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="./assets/favicon.png">
 
   <!-- Title Tag -->
   <title>Harrow and the Hill Community Day</title>
@@ -61,21 +61,22 @@
 
         <h3 class="purple">Food Noon to 6pm</h3>
 
-        <details :id="'event'+event.id" v-for="event in events" v-if="event.classification == 'Food' ">
+        <details :id="'event'+eventid" v-for="(event, eventid) in events" v-if="event.classification == 'Food' ">
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
 
-          <p>
-            <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
-              :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
-              🕓 {{event.times}}</button>
-          </p>
-
-          <p>
-            <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-              :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
-              {{locations[event.location].title}}</button>
-          </p>
+          <div class="row">
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
+                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
+                🕓 {{event.times}}</button>
+            </div>
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
+                {{locations[event.location].title}}</button>
+            </div>
+          </div>
 
           <!-- Button trigger modal -->
         </details>
@@ -84,23 +85,47 @@
 
         <p>Tap each item for more information.</p>
 
-        <details v-for="event in events" v-if="event.classification == 'Event' ">
+        <details :id="'event'+eventid" v-for="(event, eventid) in events" v-if="event.classification == 'Event' ">
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
-          <p>
-            <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
-              :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
-              🕓 {{event.times}}</button>
-          </p>
 
-          <p>
-            <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-              :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
-              {{locations[event.location].title}}</button>
-          </p>
+          <div class="row">
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
+                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
+                🕓 {{event.times}}</button>
+            </div>
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
+                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
+                {{locations[event.location].title}}</button>
+            </div>
+          </div>
+
+
 
           <!-- Button trigger modal -->
         </details>
+
+        <h3 class="orange">Maps</h3>
+
+        <div id="mainMap" class="mainmap"></div>
+
+        <h3 class="pink">Other Information</h3>
+
+        <p><strong>First Aid and Lost Children</strong><br />
+          St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
+          location to which lost children should be taken.</p>
+
+        <p><strong>Security</strong><br />
+          Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
+
+        <p><strong>Picnic Places</strong><br />
+          You are welcome to picnic in the gardens below the Chapel Terrace, on the Roof Terrace and on The Green by the
+          Band Stand.</p>
+
+        <p><strong>Toilets</strong><br />
+          Porta Loos can be found in Grove Hill and Harrow Park.</p>
 
         <h3 class="green">Road Closures</h3>
         <img src="./assets/road_closures.png">
@@ -123,27 +148,6 @@
             Maps</a>) and a free shuttle bus from the car park to Davidson Lane will be in operation.</p>
 
         <p>There will be accessibility parking on London Road at the south end of the Hill.</p>
-
-        <h3 class="pink">Other Information</h3>
-
-        <p><strong>First Aid and Lost Children</strong><br />
-          St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
-          location to which lost children should be taken.</p>
-
-        <p><strong>Security</strong><br />
-          Harrow School Security can be contacted via 0208 872 8345 and 07766 688597.</p>
-
-        <p><strong>Picnic Places</strong><br />
-          You are welcome to picnic in the gardens below the Chapel Terrace, on the Roof Terrace and on The Green by the
-          Band Stand.</p>
-
-        <p><strong>Toilets</strong><br />
-          Porta Loos can be found in Grove Hill and Harrow Park.</p>
-
-
-        <h3 class="orange">Map</h3>
-
-        <div id="mainMap" class="mainmap"></div>
 
         <div class="py-3 row justify-content-between">
 
@@ -200,7 +204,7 @@
 
 
       <!-- Modal -->
-      <div v-for="(location, id) in locations" class="modal fade" :id="'locationModal'+id" tabindex="-1"
+      <div v-for="(location, id) in locations" class="modal hide" :id="'locationModal'+id" tabindex="-1"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -214,7 +218,7 @@
               <div :id="'inject'+id"></div>
               <hr>
 
-              <h3>On at {{location.title}}</h3>
+              <!-- <h3>On at {{location.title}}</h3>-->
               <table class="table">
                 <thead>
                   <tr>
@@ -224,10 +228,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr div v-for="event in events" v-if="event.location==id">
+                  <tr div v-for="(event, eventid) in events" v-if="event.location==id">
                     <td>{{event.title}}</td>
                     <td>{{event.times}}</td>
-                    <td><a :href="'#event'+event.id">Read more</a></td>
+                    <td><a :href="'#event'+eventid" @click="closemodalandopenevent(id,eventid)">Read more</a></td>
                   </tr>
 
                 </tbody>
@@ -263,6 +267,11 @@
   <!-- Import Axios js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
     integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Custom Vue stuffs-->

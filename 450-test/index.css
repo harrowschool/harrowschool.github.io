@@ -87,3 +87,10 @@ td {
 .modalmap {
   height: 40vh;
 }
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:visited {
+  background-color: #e07e2f !important;
+}

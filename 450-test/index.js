@@ -733,6 +733,10 @@ var app = new Vue({
     },
   },
   methods: {
+    closemodalandopenevent(modalid, eventid) {
+      $("#locationModal" + modalid).modal("hide");
+      document.getElementById("event" + eventid).open = true;
+    },
     dateformat(input) {
       return new Date(input).toLocaleDateString("en-GB", {
         year: "numeric",
