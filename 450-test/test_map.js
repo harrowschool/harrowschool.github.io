@@ -4,9 +4,9 @@ canvas.height = 4096
 canvas.style.width = "100%"
 var context = canvas.getContext("2d")
 var map = new Image()
-map.src = "/450-test/450_map.jpg"
+map.src = "/450-test/450_map.jpeg"
 var hand = new Image()
-hand.src = "/450-test/hand_right.png"
+hand.src = "/450-test/hand_right_down.png"
 
 var x_slider = document.getElementById("x_coordinate")
 var y_slider = document.getElementById("y_coordinate")
