@@ -1,8 +1,15 @@
 ---
-date: 2022-04-22
+date: 2022-04-27
 layout: 450
 permalink: /450
 ---
+<img id="map" src="/450/450_map.jpeg" style="display: none" />
+<img id="hand_right" src="/450/hand_right.png" style="display: none" />
+<img id="hand_right_down" src="/450/hand_right_down.png" style="display: none" />
+<img id="hand_left" src="/450/hand_left.png" style="display: none" />
+<img id="hand_left_down" src="/450/hand_left_down.png" style="display: none" />
+<img id="hand_left_up" src="/450/hand_left_up.png" style="display: none" />
+<script src="/450/map.js" type="text/javascript"></script>
 
 <h1 class="pink">Celebrating 450 years of community on the Hill</h1>
 <h1 class="turquoise">30 April Noon – 6pm</h1>
@@ -10,9 +17,6 @@ permalink: /450
 <p>Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th anniversary of Harrow School. There’s something for everyone and new events are being added to all the time. This information will be updated regularly up until and including Saturday 30 April.</p>
 
 <p><strong>Last updated: {{ page.date | date: "%A %-d %B" }}</strong></p>
-
-<h1 class="orange">Map of the Hill</h1>
-<img src="/450/450_map.jpg" width=100% height=auto>
 
 <h1 class="purple">Food Noon to 6pm</h1>
 
@@ -36,28 +40,44 @@ permalink: /450
 <li>Ben’s Bakery (Artisan Cakes)</li>
 </ul></p>
 <p>🕓 noon – 6pm</p>
-<p>📍 High Street</p>
+
+<div id="1">
+<p>📍 High Street <button onclick="toggleMap('1', 'high_street')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Free Range Jane</summary>
 <p>Free Range Jane specialises in luxury free-range fried chicken burgers and hand cut chips. We make all our sauces in house and conscientiously source our free-range chicken from a small butcher in Wiltshire. We will be in situ on Grove Hill next to Miriam's Munchies, and will be serving delicious free-range fried chicken all afternoon.</p>
 <p>🕓 noon – 6pm</p>
-<p>📍 Grove Hill</p>
+
+<div id="2">
+<p>📍 Grove Hill <button onclick="toggleMap('2', 'grove_hill')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
+
 </details>
 
 <details>
 <summary>Miriam's Munchies</summary>
 <p>Miriam's Munchies is a women led artisan bakery and coffee van, based locally in Harrow. Since 2007, we have been baking delicious cakes using high quality, seasonal and locally sourced ingredients. On our mobile coffee van, we’ll be serving  a range of our cakes alongside coffee sourced and roasted by Monmouth Coffee Company, Birchall teas, and homemade iced teas and chai. <a href="https://www.miriamsmunchies.co.uk/coffee-van/">www.miriamsmunchies.co.uk/coffee-van/</a></p>
 <p>🕓 noon – 6pm</p>
-<p>📍 Grove Hill</p>
+
+<div id="3">
+<p>📍 Grove Hill <button onclick="toggleMap('3', 'grove_hill')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>The Pie Stall</summary>
 <p>We will be selling delicious pies from across the centuries, both savoury and sweet. Come and select a filling of your choice! Proceeds from sales will be donated to Paws for Cause.</p>
 <p>🕓 noon – 6pm</p>
-<p>📍 Bill Yard</p>
+<div id="4">
+<p>📍 Bill Yard <button onclick="toggleMap('4', 'bill_yard')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -72,14 +92,20 @@ permalink: /450
 </ul></p>
 <p>For updates, find us <a href="https://tinyurl.com/spirecafeharrow">on the web</a> and <a href="https://twitter.com/SpireCafe">on Twitter @SpireCafe.</a></p>
 <p>🕓 noon – 6pm</p>
-<p>📍 St Mary's Church</p>
+<div id="5">
+<p>📍 St Mary's Church <button onclick="toggleMap('5', 'st_marys')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>WI Cake Stall</summary>
 <p>A selection of wonderful home-made cakes for sale.</p>
 <p>🕓 noon – 6pm</p>
-<p>📍 Opposite Druries</p>
+<div id="6">
+<p>📍 Opposite Druries <button onclick="toggleMap('6', 'opposite_druries')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <h1 class="green">Events 2pm – 6pm</h1>
@@ -88,8 +114,12 @@ permalink: /450
 
 <details>
 <summary>Archery</summary>
+<p>John Lyon directed in his will that Archery should be a compulsory part of the curriculum at the school. A competition for the Silver Arrow was held every year until 1771 when it was stopped because of crowd control issues, but the arrow still appears in Harrow School coat of arms. Since the mid-20th century, Archery has been taken up again as part of the sporting curriculum. Every year there is an annual match between Harrow School and The John Lyon School, in which we celebrate our association and membership of the wider Harrow family. To celebrate this unique sport during the Community Events, both schools are putting a historic display/competition where members of the public can enjoy seeing the boys in action shooting compound bows from 10 and 20 yards.</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Bill Yard</p>
+<div id="7">
+<p>📍 Bill Yard <button onclick="toggleMap('7', 'bill_yard')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -97,7 +127,10 @@ permalink: /450
 <img src="/450/ArtPerUk.jpeg" width=100% height=auto>
 <p>ArtPerÚK is a Peruvian folkloric dance academy that promotes Peruvian traditional dances from the Coast, the Andes and the Jungle of Peru, enhancing people to explore the diversity, music and rhythms of Latin American culture with the wider community in London. Allowing them to appreciate the artistic richness of culture. Our main goal is to continue promoting our traditions and heritage in the UK.</p>
 <p>🕓 2pm – 3pm</p>
-<p>📍 Outside Vaughan Library</p>
+<div id="8">
+<p>📍 Outside Vaughan Library <button onclick="toggleMap('8', 'vaughan')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -105,7 +138,10 @@ permalink: /450
 <p>Work by local schools and adult art groups</p>
 <p>See here for more information on how to enter the <a href="/450/Photography Competition Poster.pdf">photography competition</a> or the <a href="/450/Harrow Community Art Exhibition.pdf">art exhibition</a>.
 <p>🕓 2pm – 6pm</p>
-<p>📍 Pasmore Gallery and Grove Hill</p>
+<div id="9">
+<p>📍 Pasmore Gallery and Grove Hill <button onclick="toggleMap('9', 'pasmore')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -117,39 +153,76 @@ permalink: /450
 <p><strong>Victorian Photographic Studio</strong></p>
 <p>Thinking of Harrow School in Victorian times, and create your own photo studio... with a difference!</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Outside Druries</p>
+<div id="10">
+<p>📍 Outside Druries <button onclick="toggleMap('10', 'outside_druries')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Athletics</summary>
 <p>Harrow School and Harrow Athletics Club will combine to compete in an afternoon of athletics. This festival will see 48 Harrow athletes compete against Harrow AC in a refined range of events, highlighting the key disciplines within the sport and strengthening the connection between the school and local community.</p>
 <p>🕓 2.15pm – 4.45pm</p>
-<p>📍 Athletics Ground</p>
+<div id="11">
+<p>📍 Athletics Ground <button onclick="toggleMap('11', 'athletics')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Barefoot Dance</summary>
 <p>🕓 2.45pm, 4.15pm</p>
-<p>📍 War Memorial Building Forecourt</p>
+<div id="12">
+<p>📍 War Memorial Building Forecourt <button onclick="toggleMap('12', 'war_memorial')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Basketball</summary>
 <p>Harrow school and the local community Basketball clubs will play a 3 vs 3 competition in the Harrow school sports hall, culminating in a final between the top two teams. Following this, Harrow schools current senior first team will play a recent leavers OH team in an exciting exhibition match.</p>
 <p>🕓 2pm – 4.30pm</p>
-<p>📍 Sports Hall</p>
+<div id="13">
+<p>📍 Sports Hall <button onclick="toggleMap('13', 'sports_hall')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
+</details>
+
+<details>
+<summary>Behind the Vaughan</summary>
+<p>Excerpts from Harrow School Drama
+<ul>
+<li>A scene from The Importance of Being Earnest – Tobias and Ben</li>
+<li>A scene from The Tempest – Freddie, Ben and Rowland</li>
+<li>Moreton’s entry to the House Scenes Competition – Victor, Rory, Valentine, Freddie, Max and Tom</li>
+<li>A selection of Speech Day readings – Max</li>
+<li>A duologue by the L6 A-Level actors – Rowland and Omar</li>
+<li>Two scenes from Chariots of Fire – Ben, Max, Theo, Matt, Maxi and Omar</li>
+<li>A performance from the Fifth Form GCSE actors – Jasper and Jack</li>
+</ul></p>
+<p>🕓 2pm, 4pm, 5pm</p>
+<div id="14">
+<p>📍 Vaughan Library <button onclick="toggleMap('14', 'vaughan')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Bollywood Dance by Quainton Hall</summary>
 <p>🕓 3.15pm – 3.45pm</p>
-<p>📍 Outside Vaughan Library</p>
+<div id="15">
+<p>📍 Outside Vaughan Library <button onclick="toggleMap('15', 'vaughan')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Cara Gael Irish Dance Group</summary>
 <p>🕓 3.15pm, 4.45pm</p>
-<p>📍 War Memorial Building Forecourt</p>
+<div id="16">
+<p>📍 War Memorial Building Forecourt <button onclick="toggleMap('16', 'war_memorial')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -157,14 +230,20 @@ permalink: /450
 <p>A flood is coming, but Noah is building a boat, in the hope that a new world will be waiting on the other side.</p>
 <p>As part of Harrow School's Community Day, members of the Drama and Music departments direct a joyous new production of Benjamin Britten's community opera, combining the talents of more than a hundred children from four primary schools: Byron Court, Norbury, St Anselm's and St Jerome's from across the borough, and Bishopshalt School.</p>
 <p>🕓 2pm and 5pm</p>
-<p>📍 Speech Room</p>
+<div id="17">
+<p>📍 Speech Room <button onclick="toggleMap('17', 'speech_room')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Cricket Festival</summary>
 <p>Youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Cricket Pitches</p>
+<div id="18">
+<p>📍 Cricket Pitches <button onclick="toggleMap('18', 'cricket')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -177,21 +256,30 @@ permalink: /450
 <details>
 <summary>Edwardian Harrow Beak Reads Virgil</summary>
 <p>🕓 2.40pm – 3pm</p>
-<p>📍 The Park Driveway</p>
+<div id="19">
+<p>📍 The Park Driveway <button onclick="toggleMap('19', 'park_drive')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Fives</summary>
 <p>On the main fives courts, initial celebrations will start with an exciting exhibition match between the top seeded players in the school. On the others courts, highly qualified coaches and some senior boys will run a taster session for all those who wish to trial the game. The afternoon will then conclude with a festival style tournament between the Harrow boys and some community players.</p>
 <p>🕓 2pm – 4pm</p>
-<p>📍 Hundred Steps</p>
+<div id="20">
+<p>📍 Hundred Steps <button onclick="toggleMap('20', 'hundred_steps')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Harrow Community Gospel Choir</summary>
 <p><a href="https://harrowcommunitygospelchoir.com">Harrow Community Gospel Choir</a> is a performing choir singing a mixture of contemporary gospel songs and spirituals. The choir is directed by CeCelia Wickham-Anderson, a member of the internationally acclaimed acapella singing group <a href="http://blackvoices.co.uk">Black Voices</a></p>
 <p>🕓 3.30pm, 5.15pm</p>
-<p>📍 Bill Yard</p>
+<div id="21">
+<p>📍 Bill Yard <button onclick="toggleMap('21', 'bill_yard')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -199,7 +287,10 @@ permalink: /450
 <p>The Harrow Hill Trust will hold a guided tour of the Hill led by Jonathan Edwards. The walk will take in some of the events, people and buildings that helped shape the Hill, from Tudor times through to the 21st Century.</p>
 <p>Please register for this walk, for which there is no charge, with Robert Lemon  07836 638620 <a href="mailto:robertlemon@live.co.uk">robertlemon@live.co.uk</a></p>
 <p>🕓 3pm – 4pm</p>
-<p>📍 St Mary's Church</p>
+<div id="22">
+<p>📍 St Mary's Church <button onclick="toggleMap('22', 'st_marys')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -209,7 +300,10 @@ permalink: /450
 <p>We are very proud of our Alumni, many of whom still perform and help voluntarily within the band, our trustees include ex band members and their parents. Others have gone on to be teachers, leaders of arts organisations and practising musicians.</p> <p>Our funders include: John Lyon's Charity, Harrow Giving, and the Young Harrow Foundation.</p> 
 <p>Please get in touch for further info: <a href="mailto:bandmanager@harrowsteel.org.uk">bandmanager@harrowsteel.org.uk</a></p>
 <p>🕓 2pm, 3.45pm, 5pm</p>
-<p>📍 Roof Terrace behind Medical Centre</p>
+<div id="23">
+<p>📍 Roof Terrace behind Medical Centre <button onclick="toggleMap('23', 'roof_terrace')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -217,50 +311,72 @@ permalink: /450
 <p>"Banter" by Robert Scott. John and Angie are having a quiet conversation before breakfast – or so it would seem. Luckily for us, they each have an interpreter on hand so we can understand what they are really saying.</p>
 <p>The Hill Players is an ever-growing amateur dramatics group founded in 2007 and based around Harrow on the Hill. We are passionate about community theatre and pride ourselves on putting on great productions, including an annual Christmas Panto at Harrow School's Ryan Theatre. We welcome new members! Please see our website <a href="https://www.hillplayers.co.uk">hillplayers.co.uk</a> for more information.</p>
 <p>🕓 2pm – 6pm, every half hour</p>
-<p>📍 The Old Well, West Street</p>
+<div id="24">
+<p>📍 The Old Well, West Street <button onclick="toggleMap('24', 'old_well')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Indie Choir</summary>
 <p>Harrow's very own Indie Choir sings a wide range of alternative and contemporary rock and pop songs, from the Beatles to Bowie to Bastille. Launched in September 2017, the choir has performed live at Rickmansworth Festival, Harrow's Heroes, Headstone Manor, and at pubs, bars, venues, and parties in Harrow and Hillingdon.</p>
 <p>Indie Choir meets upstairs at Trinity Bar in central Harrow on Thursday nights, and more details can be found on the web (<a href="https://www.indiechoir.com">indiechoir.com</a>), Facebook (<a href="https://www.facebook.com/indiechoir">@indiechoir</a>) and Instagram (<a href="https://www.instagram.com/indiechoiruk/">@indiechoiruk</a>).</p>
-<p>🕓 2.45pm, 4.15pm, 5.30pm</p>
-<p>📍 Roof Terrace behind Medical Centre</p>
+<p>🕓 2.45pm-3.15pm, 4.15pm-4.45pm, 5.30pm-6pm</p>
+<div id="100">
+<p>📍 Roof Terrace behind Medical Centre <button onclick="toggleMap('100', 'roof_terrace')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>John Lyon School Drama</summary>
 <p>A showcase of material from John Lyon’s upcoming modern interpretation of Shakespeare’s The Tempest, adapted for the Harrow and Hill Community Day.</p>
 <p>🕓 2pm – 2.30pm</p>
-<p>📍 The Park Driveway</p>
+<div id="25">
+<p>📍 The Park Driveway <button onclick="toggleMap('25', 'park_drive')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Judo</summary>
 <p>The judo celebrations will begin with an exhibition training session at 2pm. Boys will demonstrate the main elements of judo training, including traditional warm-up and agility exercises, breakfalls, uchi-komi (technical drills) for standing and groundwork, contest technique, and randori (sparring). The session will conclude with some inter-house exhibition contests. At 3:30pm there will then be an expert demonstration of Nage-no-kata, which is one of the main katas (formal demonstrations) of Kodokan Judo. It is intended as an illustration of the various concepts of throwing that exist in judo and is used both as a training method and as a demonstration of understanding. From 4-5pm there will be a taster session for anyone who would like to try judo.</p>
 <p>🕓 2pm – 5pm</p>
-<p>📍 Hundred Steps</p>
+<div id="26">
+<p>📍 Hundred Steps <button onclick="toggleMap('26', 'hundred_steps')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Kidology</summary>
 <p>Kidology Dance Co was established in 2010 by Nicky Rutter and Lauren O'Connell. We have a passion for performing, teaching and helping young people to realise their talents and progress within their future in dance. We specialise in street/Hip-Hop dance, contemporary, musical theatre and have directed and produced a number of sold-out shows, competed in competitions throughout the country and had dancers go on to do remarkable things. Our aim is to work with dancers to enhance their talents, draw on their strengths and build their confidence. We are very fortunate to work with a thriving and well-presented group of young and talented students. We encourage everyone to take part in as many performance opportunities as they can throughout the year especially if dance is something they wish to pursue later in life. <a href="http://www.kidologydance.co.uk">www.kidologydance.co.uk</a></p>
 <p>🕓 3pm, 4.15pm</p>
-<p>📍 Bill Yard</p>
+<div id="27">
+<p>📍 Bill Yard <button onclick="toggleMap('27', 'bill_yard')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Maypole Dance</summary>
 <p>Vaughn Primary School</p>
 <p>🕓 2.30pm – 2.45pm, 4.00pm – 4.15pm</p>
-<p>📍 The Old House</p>
+<div id="101">
+<p>📍 The Old House <button onclick="toggleMap('101', 'old_house')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
+</details>
 </details>
 
 <details>
 <summary>Merrydowners Morris</summary>
 <p>Founded in 1990 as a fun entry in a local Church Fete (St. Alban, North Harrow), we practised in secret as, at the time, one of the team was the vicar of the church, so you can imagine the gasps of surprise at our debut! We enjoyed the experience so much that several of the original church members are still performing. During the past 31 years we have performed across London, in France and Germany, the highlights being: The Guildhall, City of London, for the inaugural Dinner of the 1996 European football championships; representing England at The Hong Kong Chinese New Year parade in 2004; La Fetes du Gayants, Douai Pas de Calais in 2001 and 2003; Recklinghausen Germany for the annual Concert of The Akkordeonklaenge von Recklinghausen Westfallen in 2005. We took part many times in London’s New Year’s Day parade and have also appeared in a pop music video and, albeit briefly, on the BBC’s Strictly Come Dancing and also on The One Show! We were also honoured to be included in Harrow’s Diamond Jubilee celebrations and performed for HRH The Duke of Edinburgh.</p>
 <p>🕓 2pm, 3pm, 4pm, 5pm</p>
-<p>📍 The Castle</p>
+<div id="28">
+<p>📍 The Castle <button onclick="toggleMap('28', 'the_castle')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
@@ -281,93 +397,142 @@ permalink: /450
 <p>Weekly classes take place during term time at a community venue in Brent and at two schools in Harrow as part of their music curriculum.</p>
 <p>Workshops are held regularly with different tutors in a small group or individual setting to give more in-depth tuition, once children have passed the beginner stage and progressed onto a second instrument.</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Bandstand</p>
+<div id="29">
+<p>📍 Bandstand <button onclick="toggleMap('29', 'bandstand')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Old Speech Room Gallery 450 Exhibition</summary>
 <p>Harrow 1572-2022: from the time of Elizabeth I to the present day, this exhibition is a visual tour through time, full of local legend and newly researched revelations.</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Old Speech Room Gallery</p>
+<div id="30">
+<p>📍 Old Speech Room Gallery <button onclick="toggleMap('30', 'osrg')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Punch and Judy Show and Magician</summary>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Outside Bradbys</p>
+<div id="31">
+<p>📍 Outside Bradbys <button onclick="toggleMap('31', 'bradbys')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Rackets</summary>
 <p>On the main rackets court there will be an exciting exhibition match between the top seeded players in the school. On the second court, highly qualified coaches will run a taster session for all those who wish to trial the game and gain experience of the pace of the ball and play. All are welcome and kit and equipment will be provided.</p>
 <p>🕓 2.15pm – 4.30pm</p>
-<p>📍 Hundred Steps</p>
+<div id="32">
+<p>📍 Hundred Steps <button onclick="toggleMap('32', 'hundred_steps')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Rayleigh Observatory</summary>
 <p>Find out about the observation of planets, galaxies and other astronomical phenomena.</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Rayleigh Observatory</p>
+<div id="33">
+<p>📍 Rayleigh Observatory <button onclick="toggleMap('33', 'observatory')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
+</details>
+
+<details>
+<summary>Romanian Choir</summary>
+<img src="/450/Romanian Choir.jpeg" width=100% height=auto>
+<p>Gloryah London Choir was founded in 1998, performing regularly in Romanian Bethlem church and occasionally abroad, in Ireland, Romania, Italy, Ukraine, and Moldova. Our commitment is to honour God Almighty through old and new hymns in English and Romanian, bringing joy and excitement to people of all kinds of culture and nationalities. Our main conductor, Simon Boloca, is a multi-talented musician and composer who brings the choir to a very high musical standard.</p>
+<p>🕓 4.15pm and 5.15pm</p>
+<div id="34">
+<p>📍 Chapel Terrace <button onclick="toggleMap('34', 'chapel_terrace')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Roystonjax</summary>
 <p>RoystonJax are a trio with a difference. They use stripped down to bass/drum backing tracks and play live guitars with fabulous three-part harmonies. It feels like a full band but one that can play at any volume in any venue!</p>
 <p>🕓 3.15pm, 5.30pm</p>
-<p>📍 Roof Terrace behind Medical Centre</p>
+<div id="35">
+<p>📍 Roof Terrace behind Medical Centre <button onclick="toggleMap('35', 'roof_terrace')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Squash</summary>
-<p> A sport invented at Harrow School, this squash event will feature exhibition matches between the School’s first and second seed (former number 1 in Asia U16 and current top 40 U18 UK), and members of the Harrow Leisure Centre Squash Club. On the second glass back court, the captain and vice captain (Ilyas Qureshi and Hanno Sie) will offer a taster session and training for all that wish to come and take part.</p>
+<p> A sport invented at Harrow School, this squash event will feature exhibition matches between the School’s first and second seed (former number 1 in Asia U16 and current top 40 U18 UK), and members of the Harrow Leisure Centre Squash Club. On the second glass back court, the captain and vice captain (Ilyas and Hanno) will offer a taster session and training for all that wish to come and take part.</p>
 <p>🕓 1pm – 4pm</p>
-<p>📍 Hundred Steps</p>
+<div id="36">
+<p>📍 Hundred Steps <button onclick="toggleMap('36', 'hundred_steps')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Stagecoach Harrow</summary>
 <p>Stagecoach Harrow is in its 29th Year and was one of the first Stagecoach schools to open based at Rooks Heath College. Emmy Hamilton has been Principal for 15 of those years and is proud to be at the head of this energetic and creative Performing Arts School in the borough. At this event are dedicated students from Stagecoach Harrow's Dance Troupe (performing some street and musical theatre) and our 15+ year group 'Further Stages' who will be performing some of their Performance Arts Awards Exam work, based on life in 1940s. There are two other Stagecoach centres in the borough: Stagecoach Harrow on the Hill and Stagecoach Harrow Weald, all three providing quality, nurturing environments in part time performing arts lessons for our students to thrive in, from 4-19 years, with lots of opportunities for students to be themselves, develop skills and confidence, make new friends, and have a chance to shine. Professional work and West End opportunities along with added value in LAMDA lessons are also available. Enquire at <a href="https://www.stagecoach.co.uk/harrow">www.stagecoach.co.uk/harrow</a> 0203 5040100.</p>
 <p>🕓 2.15pm, 3.45pm</p>
-<p>📍 War Memorial Building Forecourt</p>
+<div id="37">
+<p>📍 War Memorial Building Forecourt <button onclick="toggleMap('37', 'war_memorial')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>St Mary's Church</summary>
-<p>After listening to the bellringing opening the Community Day why not climb the tower and go onto the flat roof (weather permitting) to see the stunning views of the Hill and London.  Come and meet Elizabeth I and John Lyon, who founded the School and other characters in costume who will tell you some of the history of the School and church. Visit the church where boys worshipped before the chapel was built, including prime ministers Robert Peel and Spencer Percival and authors Lord Byron, Sheridan, and Anthony Trollope. Go on our churchyard trail or have a cuppa at our Spire Cafe.</p>
+<p>After listening to the bell-ringing opening the Community Day, why not climb the tower and go onto the roof (weather permitting) to see the stunning views of the Hill and London? Come and meet Elizabeth I and John Lyon, who founded the School, and other characters in costume (including the apothecary, Thomas Graham, in his Apothecary's shop) who will tell you some of the history of the School and church. Visit the church where Harrow boys worshipped before the chapel was built, including prime ministers Robert Peel and Spencer Perceval, the poet, Lord Byron, playwrite, Sheridan, and novelist, Anthony Trollope. Go on our "Monumental Connections" tour at 12 noon, visit the tomb of the oldest resident of the Hill - our Saxon lady, discover our churchyard nature trail or have a cuppa and a homemade scone at our Spire Cafe (open 11am - 6pm). All are very welcome.</p>
 <p>🕓 2pm – 6pm</p>
-<p>📍 St Mary's Church</p>
+<div id="38">
+<p>📍 St Mary's Church <button onclick="toggleMap('38', 'st_marys')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>String Quartet and Brass Trio</summary>
 <p>🕓 3.30pm – 4.30pm</p>
-<p>📍 The Park Driveway</p>
+<div id="39">
+<p>📍 The Park Driveway <button onclick="toggleMap('39', 'park_drive')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Tai Chi</summary>
 <p>We are a community tai chi group called Harrow Tai Chi for Health. We offer free tai chi sessions at Harrow Recreation Ground every Friday 9.30 to 10.30am for health and general well-being. For more information please email <a href="mailto:info@harrowrec.org.uk">info@harrowrec.org.uk</a></p>
-<p>🕓 2pm – 6pm</p>
-<p>📍 Bill Yard</p>
+<p>🕓 2pm – 3pm</p>
+<div id="40">
+<p>📍 Bill Yard <button onclick="toggleMap('40', 'bill_yard')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
 <summary>Tours of Harrow School</summary>
 <p>Public tours of Harrow School's historic venues on the hour, every hour. Our expert guides will share an insight into Harrow's 450-year history. This is an exciting opportunity for members of the public to visit some of the most spectacular and historic buildings at Harrow School. Tours last 30–40 minutes.</p>
 
-<p>To register your attendance please email Victoria Perry on <a href="mailto:tours@harrowschool.org.uk">tours@harrowschool.org.uk</a> with your name, contact number and the number of places you would like to book, and your preferred tour time.</p>
+<p><strong>Bookings now closed.</strong></p>
 
 <p>🕓 12pm, 1pm, 2pm, 3pm, 4pm, 5pm</p>
-<p>📍 Bill Yard</p>
+<div id="41">
+<p>📍 Bill Yard <button onclick="toggleMap('41', 'bill_yard')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
 
 <details>
-<summary>Veteran Cars</summary>
+<summary>Vintage and Veteran Cars</summary>
 <p>🕓 2pm – 6pm</p>
-<p>📍 Outside the Old King's Head</p>
+<div id="42">
+<p>📍 Outside the Old King's Head <button onclick="toggleMap('42', 'kings_head')">Show Map</button></p>
+<canvas style="display: none"></canvas>
+</div>
 </details>
-
 
 
 <h1 class="orange">Road Closures</h1>
