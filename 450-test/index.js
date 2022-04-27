@@ -401,6 +401,10 @@ var app = new Vue({
           lng: -0.34,
         },
         icon: "./assets/icons/music.png",
+        maplocation: {
+          x: 28.62595419847328,
+          y: 35.86711711711711,
+        },
       },
       2: {
         title: "The Band Stand",
@@ -409,6 +413,10 @@ var app = new Vue({
           lng: -0.33953382679834193,
         },
         icon: "./assets/icons/music.png",
+        maplocation: {
+          x: 31.297709923664126,
+          y: 72.91666666666666,
+        },
       },
       3: {
         title: "The Park Drive",
@@ -417,6 +425,10 @@ var app = new Vue({
           lng: -0.33864699551627864,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 52.54452926208651,
+          y: 58.16441441441441,
+        },
       },
       4: {
         title: "The Roof Terrace",
@@ -425,6 +437,10 @@ var app = new Vue({
           lng: -0.3381793112539503,
         },
         icon: "./assets/icons/music.png",
+        maplocation: {
+          x: 49.74554707379134,
+          y: 28.99774774774775,
+        },
       },
       5: {
         title: "The Old House",
@@ -433,6 +449,10 @@ var app = new Vue({
           lng: -0.337707242462523,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 67.68447837150127,
+          y: 29.898648648648653,
+        },
       },
       6: {
         title: "Speech Room",
@@ -441,6 +461,10 @@ var app = new Vue({
           lng: -0.3365924234147868,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 71.7557251908397,
+          y: 13.119369369369368,
+        },
       },
       7: {
         title: "Vaughan Library “Forecourt”",
@@ -449,6 +473,10 @@ var app = new Vue({
           lng: -0.33683114001183134,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 74.93638676844783,
+          y: 23.93018018018018,
+        },
       },
       8: {
         title: "Behind the Vaughan",
@@ -457,6 +485,10 @@ var app = new Vue({
           lng: -0.3364073509924032,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 81.55216284987277,
+          y: 23.81756756756757,
+        },
       },
       9: {
         title: "The Head Master’s Yard",
@@ -465,6 +497,10 @@ var app = new Vue({
           lng: -0.33677481362631606,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 79.89821882951654,
+          y: 27.87162162162162,
+        },
       },
       10: {
         title: "War Memorial Building Forecourt",
@@ -473,6 +509,10 @@ var app = new Vue({
           lng: -0.3370028013856397,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 67.93893129770993,
+          y: 17.96171171171171,
+        },
       },
       11: {
         title: "Bill Yard",
@@ -481,8 +521,8 @@ var app = new Vue({
           lng: -0.3374212259876906,
         },
         maplocation: {
-          x: (2706 / 4365) * 100,
-          y: (921 / 4932) * 100,
+          x: 62.213740458015266,
+          y: 18.524774774774773,
         },
         icon: "./assets/icons/music.png",
       },
@@ -493,6 +533,10 @@ var app = new Vue({
           lng: -0.3373541707638017,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 63.358778625954194,
+          y: 23.14189189189189,
+        },
       },
       13: {
         title: "Art Schools",
@@ -501,6 +545,10 @@ var app = new Vue({
           lng: -0.33585118104491185,
         },
         icon: "./assets/icons/arts.png",
+        maplocation: {
+          x: 75.69974554707379,
+          y: 10.304054054054054,
+        },
       },
       14: {
         title: "Passmore Gallery",
@@ -509,6 +557,10 @@ var app = new Vue({
           lng: -0.3362347369255564,
         },
         icon: "./assets/icons/arts.png",
+        maplocation: {
+          x: 74.80916030534351,
+          y: 11.204954954954955,
+        },
       },
       15: {
         title: "Grove Hill Portaloos",
@@ -517,6 +569,10 @@ var app = new Vue({
           lng: -0.33615847667901955,
         },
         icon: "./assets/icons/wc.png",
+        maplocation: {
+          x: 77.86259541984732,
+          y: 11.655405405405405,
+        },
       },
       16: {
         title: "Harrow Park Portaloos",
@@ -525,6 +581,10 @@ var app = new Vue({
           lng: -0.3391569089820675,
         },
         icon: "./assets/icons/wc.png",
+        maplocation: {
+          x: 56.87022900763359,
+          y: 94.53828828828829,
+        },
       },
       17: {
         title: "Food Stalls",
@@ -533,6 +593,10 @@ var app = new Vue({
           lng: -0.33864416430660427,
         },
         icon: "./assets/icons/food.png",
+        maplocation: {
+          x: 50.38167938931297,
+          y: 45.439189189189186,
+        },
       },
       18: {
         title: "Picnic Area",
@@ -541,6 +605,10 @@ var app = new Vue({
           lng: -0.3376919801021046,
         },
         icon: "./assets/icons/picnic.png",
+        maplocation: {
+          x: 56.36132315521628,
+          y: 26.85810810810811,
+        },
       },
       19: {
         title: "St Mary's",
@@ -549,6 +617,10 @@ var app = new Vue({
           lng: -0.3371416801004325,
         },
         icon: "./assets/icons/arts.png",
+        maplocation: {
+          x: 56.74300254452926,
+          y: 9.628378378378379,
+        },
       },
       20: {
         title: "Sports Centre",
@@ -557,6 +629,10 @@ var app = new Vue({
           lng: -0.33363183575090516,
         },
         icon: "./assets/icons/basketball.png",
+        maplocation: {
+          x: 90.45801526717557,
+          y: 5.123873873873873,
+        },
       },
       21: {
         title: "High St Central",
@@ -565,6 +641,10 @@ var app = new Vue({
           lng: -0.3370087369049427,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 64.24936386768448,
+          y: 28.885135135135137,
+        },
       },
       22: {
         title: "Cricket Pitches",
@@ -573,6 +653,10 @@ var app = new Vue({
           lng: -0.34379332137733504,
         },
         icon: "./assets/icons/cricket.png",
+        maplocation: {
+          x: 24.681933842239186,
+          y: 8.502252252252253,
+        },
       },
       23: {
         title: "The OSRG",
@@ -581,6 +665,10 @@ var app = new Vue({
           lng: -0.3372359341674162,
         },
         icon: "./assets/icons/arts.png",
+        maplocation: {
+          x: 63.48600508905853,
+          y: 16.9481981981982,
+        },
       },
       24: {
         title: "Outside Bradbys",
@@ -589,6 +677,10 @@ var app = new Vue({
           lng: -0.3389576839538226,
         },
         icon: "./assets/icons/drama.png",
+        maplocation: {
+          x: 37.27735368956743,
+          y: 59.17792792792793,
+        },
       },
       25: {
         title: "The Rayleigh Observatory (Maths and Physics Schools)",
@@ -597,6 +689,10 @@ var app = new Vue({
           lng: -0.3348936927102774,
         },
         icon: "./assets/icons/arts.png",
+        maplocation: {
+          x: 93.00254452926208,
+          y: 18.63738738738739,
+        },
       },
       26: {
         title: "The Old King's Head (The Gantry)",
@@ -605,6 +701,10 @@ var app = new Vue({
           lng: -0.339785273378362,
         },
         icon: "./assets/icons/arts.png",
+        maplocation: {
+          x: 24.93638676844784,
+          y: 81.47522522522522,
+        },
       },
       27: {
         title: "Athletics Ground",
@@ -613,6 +713,10 @@ var app = new Vue({
           lng: -0.3329113428644686,
         },
         icon: "./assets/icons/athletics.png",
+        maplocation: {
+          x: 89.69465648854961,
+          y: 6.25,
+        },
       },
       28: {
         title: "Hundred Steps",
@@ -621,6 +725,10 @@ var app = new Vue({
           lng: -0.33851045418652276,
         },
         icon: "./assets/icons/steps.png",
+        maplocation: {
+          x: 47.70992366412214,
+          y: 22.353603603603602,
+        },
       },
     },
   },
