@@ -13,7 +13,8 @@ function showMap(event_id, location_id) {
 	}
 	
 	const location = locations[location_id]
-	const size = {x: 1000, y: 1129}
+	const scale = 1
+	const size = {x: 3625 * scale, y: 4096 * scale}
 	
 	var canvas = document.getElementById(event_id).getElementsByTagName("canvas")[0]
 	canvas.style.display = "block"
@@ -21,20 +22,11 @@ function showMap(event_id, location_id) {
 	canvas.height = size.y
 	canvas.style.width = "100%"
 	var context = canvas.getContext("2d")
-	//var map = new Image()
-	//map.src = "/450-test/450_map.jpg"
 	var map = document.getElementById("map")
-	//var hand = new Image()
-	//hand.src = `/450-test/hand_${location.direction}.png`
 	var hand = document.getElementById(`hand_${location.direction}`)
 	
 	context.drawImage(map, 0, 0, size.x, size.y)
-	context.drawImage(hand, location.x, location.y)
-	
-	// map.onload = function() {
-	// 	context.drawImage(map, 0, 0, size.x, size.y)
-	// 	context.drawImage(hand, location.x, location.y)
-	// }
+	context.drawImage(hand, location.x * scale, location.y * scale, hand.naturalWidth * scale, hand.naturalHeight * scale)
 }
 
 function toggleMap(event_id, location_id) {
