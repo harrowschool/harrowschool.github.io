@@ -31,9 +31,9 @@ function showMap(event_id, location_id) {
 			direction: "right"
 		},
 		grove_drive: {
-			x: 2693,
-			y: 382,
-			direction: "left_up"
+			x: 1315,
+			y: 0,
+			direction: "right"
 		},
 		outside_druries: {
 			x: 2259,
@@ -124,11 +124,6 @@ function showMap(event_id, location_id) {
 			x: 1430,
 			y: 281,
 			direction: "right_down"
-		},
-		grove_drive: {
-			x: 1315,
-			y: 0,
-			direction: "right"
 		}
 	}
 	
