@@ -17,7 +17,7 @@ class Octopus {
     tailColor: null,
     headOpacity: 1,
     tailOpacity: 0.5,
-    positionUnit: "px",
+    positionUnit: "%",
   };
   defaultConfigKeys = Object.keys(this.defaultConfig);
 
@@ -26,10 +26,9 @@ class Octopus {
   }
 
   position(element, radius, x, y, unit) {
-    if (unit == "%") {
-      x = (this.parent.image.width * x) / 100;
-      y = (this.parent.image.height * y) / 100;
-    }
+    var coords = this.parent.standardUnits(x, y, unit);
+    x = coords[0];
+    y = coords[1];
     element.style.left = this.num2string(x - radius) + "px";
     element.style.top = this.num2string(y - radius) + "px";
   }
@@ -40,7 +39,7 @@ class Octopus {
     element.style.borderRadius = this.num2string(radius) + "px";
   }
 
-  updatePosition() {
+  update() {
     this.position(
       this.head,
       this.config.radius,
@@ -94,10 +93,105 @@ class Octopus {
 
     // -------------------------------------------- //
 
-    this.updatePosition();
+    this.update();
 
     this.parent.octopusesTank.appendChild(this.head);
     this.parent.octopusesTank.appendChild(this.tail);
+
+    return this;
+  }
+}
+
+class Tentacle {
+  targX;
+  targY;
+  iconImg;
+  iconContainer;
+  parent;
+  config;
+  defaultConfig = {
+    width: 100,
+    anchorX: 0,
+    anchorY: 0,
+    opacity: 1,
+    positionUnit: "%",
+    sizeUnit: "px",
+    anchorUnit: "%",
+  };
+  defaultConfigKeys = Object.keys(this.defaultConfig);
+
+  num2string(num) {
+    return parseInt(num).toString();
+  }
+
+  standardUnits(x, y, unit) {
+    if (unit == "%") {
+      x = (this.iconImg.width * x) / 100;
+      y = (this.iconImg.height * y) / 100;
+    }
+    return [x, y];
+  }
+
+  position() {
+    var tcoords = this.parent.standardUnits(
+      this.targX,
+      this.targY,
+      this.config.positionUnit
+    );
+    var tx = tcoords[0];
+    var ty = tcoords[1];
+
+    var aCoords = this.standardUnits(
+      this.config.anchorX,
+      this.config.anchorY,
+      this.config.anchorUnit
+    );
+    var ax = aCoords[0];
+    var ay = aCoords[1];
+
+    this.iconContainer.style.left = this.num2string(tx - ax) + "px";
+    this.iconContainer.style.top = this.num2string(ty - ay) + "px";
+
+    console.log(ax, ay, tx, ty);
+  }
+
+  update() {
+    this.position();
+  }
+
+  constructor(targX, targY, iconPath, config, parentObj) {
+    if (!config) config = {};
+
+    for (let ki in this.defaultConfigKeys) {
+      var key = this.defaultConfigKeys[ki];
+      if (!(key in config)) config[key] = this.defaultConfig[key];
+    }
+
+    if (config.tailColor === null) config.tailColor = config.headColor;
+
+    // -------------------------------------------- //
+
+    this.targX = targX;
+    this.targY = targY;
+    this.config = config;
+    this.parent = parentObj;
+
+    // -------------------------------------------- //
+
+    this.iconContainer = document.createElement("div");
+    this.iconContainer.style.opacity = this.config.opacity;
+    this.iconContainer.classList.add("glass-oct-tent");
+
+    this.iconImg = document.createElement("img");
+    this.iconImg.src = iconPath;
+    this.iconImg.style.width =
+      this.num2string(this.config.width) + this.config.sizeUnit;
+
+    this.iconContainer.appendChild(this.iconImg);
+
+    this.update();
+
+    this.parent.octopusesTank.appendChild(this.iconContainer);
 
     return this;
   }
@@ -110,15 +204,15 @@ class Glass {
   rszObs;
   image;
   octopusesTank;
-  octopusCount = 0;
-  octopuses = {};
+  childrenCount = 0;
+  children = {};
   loaded = false;
 
-  updateOctopuses() {
-    var octKeys = Object.keys(this.octopuses);
+  updateChildren() {
+    var octKeys = Object.keys(this.children);
     for (let ki in octKeys) {
-      let oct = this.octopuses[octKeys[ki]];
-      oct.updatePosition();
+      let oct = this.children[octKeys[ki]];
+      oct.update();
     }
   }
 
@@ -134,13 +228,13 @@ class Glass {
     this.image.setAttribute("glassoct-parent", this.id);
     this.image.onload = function () {
       var parentId = this.getAttribute("glassoct-parent");
-      GLASSOCT.glasses[parentId].updateOctopuses();
+      GLASSOCT.glasses[parentId].updateChildren();
     };
 
     this.rszObs = new ResizeObserver(function (entries) {
       entries.forEach((entry) => {
         var parentId = entry.target.getAttribute("glassoct-parent");
-        GLASSOCT.glasses[parentId].updateOctopuses();
+        GLASSOCT.glasses[parentId].updateChildren();
       });
     });
     this.rszObs.observe(this.image);
@@ -161,7 +255,7 @@ class Glass {
     this.container.onresize = function () {
       console.log("resized");
       var parentId = this.getAttribute("glassoct-parent");
-      GLASSOCT.glasses[parentId].updateOctopuses();
+      GLASSOCT.glasses[parentId].updateChildren();
     };
 
     this.octopusesTank = document.createElement("div");
@@ -175,10 +269,29 @@ class Glass {
 
     var newOct = new Octopus(x, y, config, this);
 
-    this.octopuses[this.octopusCount] = newOct;
-    this.octopusCount += 1;
+    this.children[this.childrenCount] = newOct;
+    this.childrenCount += 1;
 
-    return [this.octopusCount, newOct];
+    return [this.childrenCount, newOct];
+  }
+
+  addTentacle(targX, targY, iconPath, config) {
+    if (!config) config = {};
+
+    var newTcl = new Tentacle(targX, targY, iconPath, config, this);
+
+    this.children[this.childrenCount] = newTcl;
+    this.childrenCount += 1;
+
+    return [this.childrenCount, newTcl];
+  }
+
+  standardUnits(x, y, unit) {
+    if (unit == "%") {
+      x = (this.image.width * x) / 100;
+      y = (this.image.height * y) / 100;
+    }
+    return [x, y];
   }
 }
 

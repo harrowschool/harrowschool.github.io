@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Glass Octupos Test</title>
+  <!-- Link Glass Octopus stylesheet -->
+  <link href="./glassoct.css" rel="stylesheet">
+
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #inject {
+      margin: auto;
+      width: 50vw;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Glass Octopus Image Test</h1>
+  <div id="inject"></div>
+  <script src="./glassoct.js"></script>
+
+  <script>
+    var glass = injectGlass(document.getElementById("inject"), "image.png");
+
+  </script>
+</body>
+
+</html>

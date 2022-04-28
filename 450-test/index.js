@@ -385,6 +385,7 @@ var app = new Vue({
           lng: 0,
         },
         icon: "./assets/icons/food.png",
+        hand: "right",
       },
       101: {
         title: "UNKNOWN - The Old Well",
@@ -393,6 +394,7 @@ var app = new Vue({
           lng: 0,
         },
         icon: "./assets/icons/drama.png",
+        hand: "left",
       },
       1: {
         title: "The Castle",
@@ -405,6 +407,7 @@ var app = new Vue({
           x: 28.62595419847328,
           y: 35.86711711711711,
         },
+        hand: "left_down",
       },
       2: {
         title: "The Band Stand",
@@ -417,6 +420,7 @@ var app = new Vue({
           x: 31.297709923664126,
           y: 72.91666666666666,
         },
+        hand: "left_down",
       },
       3: {
         title: "The Park Drive",
@@ -429,6 +433,7 @@ var app = new Vue({
           x: 52.54452926208651,
           y: 58.16441441441441,
         },
+        hand: "right",
       },
       4: {
         title: "The Roof Terrace",
@@ -441,6 +446,7 @@ var app = new Vue({
           x: 49.74554707379134,
           y: 28.99774774774775,
         },
+        hand: "right_down",
       },
       5: {
         title: "The Old House",
@@ -453,6 +459,7 @@ var app = new Vue({
           x: 67.68447837150127,
           y: 29.898648648648653,
         },
+        hand: "right_down",
       },
       6: {
         title: "Speech Room",
@@ -465,6 +472,7 @@ var app = new Vue({
           x: 71.7557251908397,
           y: 13.119369369369368,
         },
+        hand: "left_up",
       },
       7: {
         title: "Vaughan Library “Forecourt”",
@@ -489,6 +497,7 @@ var app = new Vue({
           x: 81.55216284987277,
           y: 23.81756756756757,
         },
+        hand: "left_up",
       },
       9: {
         title: "The Head Master’s Yard",
@@ -513,6 +522,7 @@ var app = new Vue({
           x: 67.93893129770993,
           y: 17.96171171171171,
         },
+        hand: "left_up",
       },
       11: {
         title: "Bill Yard",
@@ -525,6 +535,7 @@ var app = new Vue({
           y: 18.524774774774773,
         },
         icon: "./assets/icons/music.png",
+        hand: "right",
       },
       12: {
         title: "Druries Steps",
@@ -537,6 +548,7 @@ var app = new Vue({
           x: 63.358778625954194,
           y: 23.14189189189189,
         },
+        hand: "right",
       },
       13: {
         title: "Art Schools",
@@ -621,6 +633,7 @@ var app = new Vue({
           x: 56.74300254452926,
           y: 9.628378378378379,
         },
+        hand: "left",
       },
       20: {
         title: "Sports Centre",
@@ -633,6 +646,7 @@ var app = new Vue({
           x: 90.45801526717557,
           y: 5.123873873873873,
         },
+        hand: "right",
       },
       21: {
         title: "High St Central",
@@ -645,6 +659,7 @@ var app = new Vue({
           x: 64.24936386768448,
           y: 28.885135135135137,
         },
+        hand: "right",
       },
       22: {
         title: "Cricket Pitches",
@@ -657,6 +672,7 @@ var app = new Vue({
           x: 24.681933842239186,
           y: 8.502252252252253,
         },
+        hand: "left",
       },
       23: {
         title: "The OSRG",
@@ -669,6 +685,7 @@ var app = new Vue({
           x: 63.48600508905853,
           y: 16.9481981981982,
         },
+        hand: "left_up",
       },
       24: {
         title: "Outside Bradbys",
@@ -681,6 +698,7 @@ var app = new Vue({
           x: 37.27735368956743,
           y: 59.17792792792793,
         },
+        hand: "left",
       },
       25: {
         title: "The Rayleigh Observatory (Maths and Physics Schools)",
@@ -693,6 +711,7 @@ var app = new Vue({
           x: 93.00254452926208,
           y: 18.63738738738739,
         },
+        hand: "right_down",
       },
       26: {
         title: "The Old King's Head (The Gantry)",
@@ -705,6 +724,7 @@ var app = new Vue({
           x: 24.93638676844784,
           y: 81.47522522522522,
         },
+        hand: "left_down",
       },
       27: {
         title: "Athletics Ground",
@@ -717,6 +737,7 @@ var app = new Vue({
           x: 89.69465648854961,
           y: 6.25,
         },
+        hand: "right",
       },
       28: {
         title: "Hundred Steps",
@@ -729,6 +750,7 @@ var app = new Vue({
           x: 47.70992366412214,
           y: 22.353603603603602,
         },
+        hand: "right_down",
       },
     },
   },
@@ -765,42 +787,6 @@ var app = new Vue({
 
       var location = this.locations[locationid];
 
-      this.state.maps = L.map("mainMap" + locationid);
-
-      L.tileLayer(
-        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHlsYW5rMTIzIiwiYSI6ImNrajUwMm55NzV0NWwyc2xiNzk0OHFjdXoifQ.cIzWvi9HlI1YfhpY24KbTA",
-        {
-          maxZoom: 18,
-          attribution:
-            'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          id: "dylank123/ckl2u73iy1s5v17tjzyld3nzl",
-          tileSize: 512,
-          zoomOffset: -1,
-        }
-      ).addTo(this.state.maps);
-
-      var icon = L.icon({
-        iconUrl: location.icon,
-        //shadowUrl: 'leaf-shadow.png',
-
-        iconSize: [25, 25], // size of the icon
-        // shadowSize:   [50, 64], // size of the shadow
-        // iconAnchor:   [12.5, 12.5], // point of the icon which will correspond to marker's location
-        // shadowAnchor: [4, 62],  // the same for the shadow
-        // popupAnchor:  [12.5, 12.5] // point from which the popup should open relative to the iconAnchor
-      });
-
-      var marker = L.marker([location.coords.lat, location.coords.lng], {
-        icon: icon,
-      })
-        .addTo(this.state.maps)
-        .bindPopup(location.title);
-
-      this.state.maps.setView([location.coords.lat, location.coords.lng], 17);
-
-      setTimeout(this.invalidatemap, 500);
-
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
       this.state.glass = injectGlass(
         document.getElementById("inject" + locationid),
@@ -818,6 +804,49 @@ var app = new Vue({
           positionUnit: "%",
         }
       );
+
+      if (location.hand == "left") {
+        anchorpoints = {
+          width: 200,
+          anchorX: 0,
+          anchorY: 50,
+        };
+      } else if (location.hand == "right") {
+        anchorpoints = {
+          width: 200,
+          anchorX: 100,
+          anchorY: 50,
+        };
+      } else if (location.hand == "left_down") {
+        anchorpoints = {
+          width: 200,
+          anchorX: 0,
+          anchorY: 0,
+        };
+      } else if (location.hand == "right_down") {
+        anchorpoints = {
+          width: 200,
+          anchorX: 100,
+          anchorY: 0,
+        };
+      } else if (location.hand == "left_up") {
+        anchorpoints = {
+          width: 200,
+          anchorX: 0,
+          anchorY: 100,
+        };
+      }
+
+      this.state.glass.addTentacle(
+        location.maplocation.x,
+        location.maplocation.y,
+        "./assets/icons/hands/hand_" + location.hand + ".png",
+        anchorpoints
+      );
+
+      // glass.addTentacle(50, 75, "icons/hand_right.png", { width: 200, anchorX: 100, anchorY: 50 });
+
+      // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
     },
   },
   mounted() {
@@ -827,78 +856,11 @@ var app = new Vue({
       )
       .then((response) => (this.state.latestcommit = response.data[0]));
 
-    var mainMap = L.map("mainMap");
-
     window.addEventListener("show.bs.modal", this.modalOpened);
     window.addEventListener("hide.bs.modal", (e) => {
       // remove the word "locationModal" from the string to get the location id
       var locationid = e.target.id.replace("locationModal", "");
       document.getElementById("inject" + locationid).innerHTML = "";
     });
-
-    L.tileLayer(
-      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHlsYW5rMTIzIiwiYSI6ImNrajUwMm55NzV0NWwyc2xiNzk0OHFjdXoifQ.cIzWvi9HlI1YfhpY24KbTA",
-      {
-        maxZoom: 18,
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: "dylank123/ckl2u73iy1s5v17tjzyld3nzl",
-        tileSize: 512,
-        zoomOffset: -1,
-      }
-    ).addTo(mainMap);
-
-    Object.entries(this.locations).forEach((entry) => {
-      const [id, location] = entry;
-      var icon = L.icon({
-        iconUrl: location.icon,
-        //shadowUrl: 'leaf-shadow.png',
-
-        iconSize: [25, 25], // size of the icon
-        // shadowSize:   [50, 64], // size of the shadow
-        // iconAnchor:   [12.5, 12.5], // point of the icon which will correspond to marker's location
-        // shadowAnchor: [4, 62],  // the same for the shadow
-        // popupAnchor:  [12.5, 12.5] // point from which the popup should open relative to the iconAnchor
-      });
-
-      var marker = L.marker([location.coords.lat, location.coords.lng], {
-        icon: icon,
-      })
-        .addTo(mainMap)
-        .bindPopup(
-          `
-        <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-          data-bs-locationid="` +
-            id +
-            `" data-bs-target="#locationModal` +
-            id +
-            `">` +
-            this.locations[id].title +
-            `</button>
-      `
-        );
-    });
-
-    mainMap.setView([51.57281743898807, -0.3371716811246794], 17);
-
-    // shows user's location on map
-    // function onLocationFound(e) {
-    //     var radius = e.accuracy / 2;
-
-    //     var locationMarker = L.marker(e.latlng).addTo(mymap)
-    //         .bindPopup('You are within ' + radius + ' meters from this point').openPopup();
-
-    //     var locationCircle = L.circle(e.latlng, radius).addTo(mymap);
-    // }
-
-    // function onLocationError(e) {
-    //     alert(e.message);
-    // }
-
-    // mymap.on('locationfound', onLocationFound);
-    // mymap.on('locationerror', onLocationError);
-
-    // mymap.locate({ setView: true, maxZoom: 16 });
   },
 });
