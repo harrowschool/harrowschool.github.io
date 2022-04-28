@@ -30,7 +30,7 @@ function showMap(event_id, location_id) {
 			y: 534,
 			direction: "right"
 		},
-		pasmore: {
+		grove_drive: {
 			x: 2693,
 			y: 382,
 			direction: "left_up"
