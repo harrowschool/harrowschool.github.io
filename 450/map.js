@@ -124,6 +124,11 @@ function showMap(event_id, location_id) {
 			x: 1430,
 			y: 281,
 			direction: "right_down"
+		},
+		grove_drive: {
+			x: 1315,
+			y: 0,
+			direction: "right"
 		}
 	}
 	
