@@ -124,6 +124,11 @@ function showMap(event_id, location_id) {
 			x: 1430,
 			y: 281,
 			direction: "right_down"
+		},
+		judo: {
+			x: 428,
+			y: 173,
+			direction: "right_down"
 		}
 	}
 	
