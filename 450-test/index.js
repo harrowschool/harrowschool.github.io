@@ -27,15 +27,15 @@ var app = new Vue({
         <li>The Kind Café</li>
         <li>Chipsy (Grilled burgers and loaded chips)</li>
         <li>Brat Bros Catering (Bratwurst, hot dogs, schnitzels)</li>
-        <li>Sugo Kitchen (Italian Street Food, focaccia sandwiches, handmade pasta bowls)</li>
         <li>Gully (Indian Street Food) </li>
+        <li>Howe and Co (fish and chips)</li>
         <li>The Cheese Toaster (Gourmet cheese toasties)</li>
         <li>Social Dhaba (Punjabi Street Food)</li>
-        <li>Paella Shack (Paella)</li>
-        <li>Letterbox Cookie (Handmade cookies)</li>
+        <li>Paella Shack</li>
+        <li>NoshyCircle</li>
         <li>Lilibet’s of Windsor (Traditional Old-Fashioned sweets)</li>
         <li>1218 Plant Based Cuisine (Vegan Street Food, salad boxes, BBQ and vegan sweet treats)</li>
-        <li>Ben’s Bakery (Artisan Cakes)</li>
+        <li>Sangi Sweet and Savoury</li>
         </ul></p>`,
         times: "noon – 6pm", //could be an array of datetimes later
         location: 17,
@@ -66,7 +66,7 @@ var app = new Vue({
       5: {
         title: "Archery",
         body: ``,
-        times: "2pm – 6pm", //could be an array of datetimes later
+        times: "3pm – 5pm", //could be an array of datetimes later
         location: 11,
         classification: "Event",
       },
@@ -98,7 +98,7 @@ var app = new Vue({
       },
       9: {
         title: "Barefoot Dance",
-        body: ``,
+        body: `<p>A part time dance, drama and performing arts school. We offer a variety of classes running throughout the week.</p>`,
         times: "2.45pm, 4.15pm", //could be an array of datetimes later
         location: 10,
         classification: "Event",
@@ -111,7 +111,7 @@ var app = new Vue({
         classification: "Event",
       },
       11: {
-        title: "Bollywood Dance by Quainton Hall",
+        title: "Bollywood Dance by Quainton Hall School",
         body: ``,
         times: "3.15pm – 3.45pm", //could be an array of datetimes later
         location: 7,
@@ -128,7 +128,9 @@ var app = new Vue({
         title: "Community Production: Noye's Fludde",
         body: `<p>A flood is coming, but Noah is building a boat, in the hope that a new world will be waiting on the other side.</p>
         <p>As part of Harrow School's Community Day, members of the Drama and Music departments direct a joyous new production of Benjamin Britten's community opera, combining the talents of more than a hundred children from four primary schools: Byron Court, Norbury, St Anselm's and St Jerome's from across the borough, and Bishopshalt School.</p>
-        `,
+        <p>Everyone is very welcome to attend. Please just come to Speech Room in time for either performance at 2pm or 5pm, which will last for approximately an hour each.</p>
+
+<p>If you would like to reserve seats in advance, for which there is no charge, please visit <a href="https://www.trybooking.co.uk/BNMY">https://www.trybooking.co.uk/BNMY</a></p>.`,
         times: "2pm, 5pm", //could be an array of datetimes later
         location: 6,
         classification: "Event",
@@ -144,8 +146,8 @@ var app = new Vue({
       15: {
         title: "Cricket Festival",
         body: `<p>Youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.</p>
-        `,
-        times: "2pm – 6pm", //could be an array of datetimes later
+        <p>There will be twelve stations of fun-filled coaching of different skills by professional cricketers and A-team players.</p>`,
+        times: "2pm – 4pm", //could be an array of datetimes later
         location: 22,
         classification: "Event",
       },
@@ -244,12 +246,12 @@ var app = new Vue({
         body: `<p>Enjoy a full programme of traditional bandstand entertainment including brass, wind and concert bands.</p>
         <table>
         <tr><td>2.00pm</td><td>Orley Farm (Year 8 Rock Band, String Quartet and Chamber Choir)</td></tr>
-        <tr><td>2.30pm</td><td>John Lyon and Quainton Hall</td></tr>
+        <tr><td>2.30pm</td><td>John Lyon and Quainton Hall School</td></tr>
         <tr><td>3.00pm</td><td>Traditional Irish Music</td></tr>
         <tr><td>3.30pm</td><td>The Aftercare (Harrow School)</td></tr>
         <tr><td>4.00pm</td><td>Traditional Irish Music</td></tr>
-        <tr><td>4.30pm</td><td>John Lyon and Quainton Hall</td></tr>
-        <tr><td>5.00pm</td><td>Traditional Irish Music</td></tr>
+        <tr><td>4.30pm</td><td>John Lyon and Quainton Hall School</td></tr>
+        <tr><td>5.00pm</td><td>The Famous Seamus</td></tr>
         <tr><td>5.30pm</td><td>The Aftercare (Harrow School)</td></tr>
         </table>
         <p>The London Irish Music School was established in 1999 under the direction of Colette Keaveney (TTCT) who is a qualified teacher of Traditional Irish Music registered with Comhaltas Ceoltoiri Eireann in Dublin, Ireland.</p>
@@ -272,7 +274,7 @@ var app = new Vue({
       29: {
         title: "Punch and Judy Show and Magician",
         body: ``,
-        times: "2pm – 6pm", //could be an array of datetimes later
+        times: "2pm – 5pm", //could be an array of datetimes later
         location: 24,
         classification: "Event",
       },
@@ -307,13 +309,13 @@ var app = new Vue({
         location: 19,
         classification: "Event",
       },
-      34: {
-        title: "String Quartet and Brass Trio",
-        body: ``,
-        times: "3.30pm – 4.30pm", //could be an array of datetimes later
-        location: 3,
-        classification: "Event",
-      },
+      // 34: {
+      //   title: "String Quartet and Brass Trio",
+      //   body: ``,
+      //   times: "3.30pm – 4.30pm", //could be an array of datetimes later
+      //   location: 3,
+      //   classification: "Event",
+      // },
       35: {
         title: "Tai Chi",
         body: `<p>We are a community tai chi group called Harrow Tai Chi for Health. We offer free tai chi sessions at Harrow Recreation Ground every Friday 9.30 to 10.30am for health and general well-being. For more information please email <a href="mailto:info@harrowrec.org.uk">info@harrowrec.org.uk</a></p>
