@@ -98,6 +98,7 @@
 
         <h3 class="orange">Maps</h3>
 
+        <img id="map" src="./assets/450_map.jpg" width=100% height=auto>
 
         <h3 class="pink">Other Information</h3>
 
@@ -214,7 +215,7 @@
             <div class="modal-body">
               <div id="inject"></div>
 
-              <!--
+
               <h3>On at {{state.NewlocationModal.title}}</h3>
               <table class="table">
                 <thead>
@@ -228,12 +229,12 @@
                   <tr div v-for="(event, eventid) in events" v-if="event.location==state.NewlocationModal.id">
                     <td>{{event.title}}</td>
                     <td>{{event.times}}</td>
-                    <td><a :href="'#event'+eventid" @click="closemodalandopenevent(id,eventid)">Read more</a></td>
+                    <td><a :href="'#event'+eventid" @click="closemodalandopenevent(eventid)">Read more</a></td>
                   </tr>
 
                 </tbody>
               </table>
-              -->
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

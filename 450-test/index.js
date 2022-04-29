@@ -777,8 +777,8 @@ var app = new Vue({
     },
   },
   methods: {
-    closemodalandopenevent(modalid, eventid) {
-      $("#locationModal" + modalid).modal("hide");
+    closemodalandopenevent(eventid) {
+      $("#NewlocationModal").modal("hide");
       document.getElementById("event" + eventid).open = true;
     },
     dateformat(input) {
@@ -809,6 +809,7 @@ var app = new Vue({
       var locationid = button.getAttribute("data-bs-locationid");
 
       this.state.NewlocationModal = this.locations[locationid];
+      this.state.NewlocationModal.id = locationid;
 
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
       this.state.glass = injectGlass(
