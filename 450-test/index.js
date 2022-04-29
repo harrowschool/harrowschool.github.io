@@ -5,7 +5,19 @@ var app = new Vue({
       latestcommit: null,
       modalData: null,
       maps: null,
-      NewlocationModal: null,
+      NewlocationModal: {
+        title: null,
+        coords: {
+          lat: null,
+          lng: null,
+        },
+        icon: null,
+        maplocation: {
+          x: null,
+          y: null,
+        },
+        hand: null,
+      },
     },
     events: {
       1: {
@@ -745,7 +757,7 @@ var app = new Vue({
           x: 89.69465648854961,
           y: 6.25,
         },
-        hand: "right",
+        hand: "left_up",
       },
       28: {
         title: "Hundred Steps",
@@ -758,7 +770,7 @@ var app = new Vue({
           x: 47.70992366412214,
           y: 22.353603603603602,
         },
-        hand: "right_down",
+        hand: "left_up",
       },
     },
   },
@@ -776,17 +788,11 @@ var app = new Vue({
         minute: "2-digit",
       });
     },
+    modalClosed() {
+      this.state.glass.shatter();
+      console.log("shattered");
+    },
     modalOpened() {
-      if (this.state.maps) {
-        this.state.maps.remove();
-      }
-
-      if (this.state.glass) {
-        this.state.glass = null;
-
-        document.getElementById("inject").innerHTML = "";
-      }
-
       var button = event.relatedTarget;
       var locationid = button.getAttribute("data-bs-locationid");
 
@@ -807,53 +813,65 @@ var app = new Vue({
           radius: 5,
           margin: 2,
           positionUnit: "%",
+          headColor: "#be564f",
         }
       );
 
       if (this.state.NewlocationModal.hand == "left") {
-        anchorpoints = {
+        this.state.NewlocationModal.anchorpoints = {
           width: 200,
           anchorX: 0,
           anchorY: 50,
         };
       } else if (this.state.NewlocationModal.hand == "right") {
-        anchorpoints = {
+        this.state.NewlocationModal.anchorpoints = {
           width: 200,
           anchorX: 100,
           anchorY: 50,
         };
       } else if (this.state.NewlocationModal.hand == "left_down") {
-        anchorpoints = {
-          width: 200,
-          anchorX: 100,
-          anchorY: 0,
-        };
-      } else if (this.state.NewlocationModal.hand == "right_down") {
-        anchorpoints = {
-          width: 200,
-          anchorX: 200,
-          anchorY: 200,
-        };
-      } else if (this.state.NewlocationModal.hand == "left_up") {
-        anchorpoints = {
+        this.state.NewlocationModal.anchorpoints = {
           width: 200,
           anchorX: 0,
           anchorY: 100,
         };
+      } else if (this.state.NewlocationModal.hand == "right_down") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 200,
+          anchorX: 100,
+          anchorY: 100,
+        };
+      } else if (this.state.NewlocationModal.hand == "left_up") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 100,
+          anchorX: 0,
+          anchorY: 0,
+        };
       }
 
+      // this.state.glass.addTentacle(
+      //   this.state.NewlocationModal.maplocation.x,
+      //   this.state.NewlocationModal.maplocation.y,
+      //   "./assets/icons/hands/hand_" +
+      //     this.state.NewlocationModal.hand +
+      //     ".png",
+      //   this.state.NewlocationModal.anchorpoints
+      // );
+
       this.state.glass.addTentacle(
-        this.state.NewlocationModal.maplocation.x,
-        this.state.NewlocationModal.maplocation.y,
-        "./assets/icons/hands/hand_" +
-          this.state.NewlocationModal.hand +
-          ".png",
-        anchorpoints
+        50,
+        75,
+        "./assets/icons/hands/hand_right.png",
+        {
+          width: 200,
+          anchorX: 100,
+          anchorY: 50,
+        }
       );
 
-      // glass.addTentacle(50, 75, "icons/hand_right.png", { width: 200, anchorX: 100, anchorY: 50 });
-
       // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
+
+      setTimeout(this.state.glass.updateChildren(), 500);
     },
   },
   mounted() {
@@ -864,10 +882,6 @@ var app = new Vue({
       .then((response) => (this.state.latestcommit = response.data[0]));
 
     window.addEventListener("show.bs.modal", this.modalOpened);
-    window.addEventListener("hide.bs.modal", (e) => {
-      // remove the word "locationModal" from the string to get the location id
-      var locationid = e.target.id.replace("locationModal", "");
-      document.getElementById("inject" + locationid).innerHTML = "";
-    });
+    window.addEventListener("hide.bs.modal", this.modalClosed);
   },
 });

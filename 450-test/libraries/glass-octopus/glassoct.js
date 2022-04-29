@@ -1,6 +1,6 @@
 var GLASSOCT = {
   count: 0,
-  glasses: {},
+  glasses: {}
 };
 
 class Octopus {
@@ -11,11 +11,11 @@ class Octopus {
   parent;
   config;
   defaultConfig = {
-    radius: 7,
-    margin: 5,
-    headColor: "#42e39d",
-    tailColor: null,
-    headOpacity: 1,
+    radius: 7, 
+    margin: 5, 
+    headColor: "#42e39d", 
+    tailColor: null, 
+    headOpacity: 1, 
     tailOpacity: 0.5,
     positionUnit: "%",
   };
@@ -40,30 +40,20 @@ class Octopus {
   }
 
   update() {
-    this.position(
-      this.head,
-      this.config.radius,
-      this.x,
-      this.y,
-      this.config.positionUnit
-    );
-    this.position(
-      this.tail,
-      this.config.radius + this.config.margin,
-      this.x,
-      this.y,
-      this.config.positionUnit
-    );
+    this.position(this.head, this.config.radius, this.x, this.y, this.config.positionUnit);
+    this.position(this.tail, this.config.radius + this.config.margin, this.x, this.y, this.config.positionUnit);
   }
 
-  constructor(x, y, config, parentObj) {
-    if (!config) config = {};
+  constructor(
+    x, y, config, parentObj
+  ) {
+    if (!(config)) config = {};
 
     for (let ki in this.defaultConfigKeys) {
       var key = this.defaultConfigKeys[ki];
       if (!(key in config)) config[key] = this.defaultConfig[key];
     }
-
+    
     if (config.tailColor === null) config.tailColor = config.headColor;
 
     // -------------------------------------------- //
@@ -76,7 +66,7 @@ class Octopus {
     // -------------------------------------------- //
 
     this.head = document.createElement("div");
-
+    
     this.circularise(this.head, config.radius);
     this.head.style.backgroundColor = config.headColor;
     this.head.style.opacity = config.headOpacity;
@@ -85,7 +75,7 @@ class Octopus {
     // -------------------------------------------- //
 
     this.tail = document.createElement("div");
-
+    
     this.circularise(this.tail, config.radius + config.margin);
     this.tail.style.backgroundColor = config.tailColor;
     this.tail.style.opacity = config.tailOpacity;
@@ -100,6 +90,11 @@ class Octopus {
 
     return this;
   }
+
+  delete() {
+    this.head.remove();
+    this.tail.remove();
+  }
 }
 
 class Tentacle {
@@ -110,7 +105,7 @@ class Tentacle {
   parent;
   config;
   defaultConfig = {
-    width: 100,
+    width: 100, 
     anchorX: 0,
     anchorY: 0,
     opacity: 1,
@@ -133,40 +128,32 @@ class Tentacle {
   }
 
   position() {
-    var tcoords = this.parent.standardUnits(
-      this.targX,
-      this.targY,
-      this.config.positionUnit
-    );
+    var tcoords = this.parent.standardUnits(this.targX, this.targY, this.config.positionUnit);
     var tx = tcoords[0];
     var ty = tcoords[1];
 
-    var aCoords = this.standardUnits(
-      this.config.anchorX,
-      this.config.anchorY,
-      this.config.anchorUnit
-    );
+    var aCoords = this.standardUnits(this.config.anchorX, this.config.anchorY, this.config.anchorUnit);
     var ax = aCoords[0];
     var ay = aCoords[1];
 
     this.iconContainer.style.left = this.num2string(tx - ax) + "px";
     this.iconContainer.style.top = this.num2string(ty - ay) + "px";
-
-    console.log(ax, ay, tx, ty);
   }
 
   update() {
     this.position();
   }
 
-  constructor(targX, targY, iconPath, config, parentObj) {
-    if (!config) config = {};
+  constructor(
+    targX, targY, iconPath, config, parentObj
+  ) {
+    if (!(config)) config = {};
 
     for (let ki in this.defaultConfigKeys) {
       var key = this.defaultConfigKeys[ki];
       if (!(key in config)) config[key] = this.defaultConfig[key];
     }
-
+    
     if (config.tailColor === null) config.tailColor = config.headColor;
 
     // -------------------------------------------- //
@@ -184,8 +171,7 @@ class Tentacle {
 
     this.iconImg = document.createElement("img");
     this.iconImg.src = iconPath;
-    this.iconImg.style.width =
-      this.num2string(this.config.width) + this.config.sizeUnit;
+    this.iconImg.style.width = this.num2string(this.config.width) + this.config.sizeUnit;
 
     this.iconContainer.appendChild(this.iconImg);
 
@@ -195,7 +181,13 @@ class Tentacle {
 
     return this;
   }
+
+  delete() {
+    this.iconImg.remove();
+    this.iconContainer.remove();
+  }
 }
+
 
 class Glass {
   id;
@@ -232,7 +224,7 @@ class Glass {
     };
 
     this.rszObs = new ResizeObserver(function (entries) {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         var parentId = entry.target.getAttribute("glassoct-parent");
         GLASSOCT.glasses[parentId].updateChildren();
       });
@@ -241,7 +233,7 @@ class Glass {
   }
 
   attach(element, fit) {
-    if (!fit) fit = "contain";
+    if (!(fit)) fit = "contain";
 
     this.image.style.object_fit = fit;
 
@@ -253,7 +245,6 @@ class Glass {
     this.container.appendChild(this.image);
     this.container.setAttribute("glassoct-parent", this.id);
     this.container.onresize = function () {
-      console.log("resized");
       var parentId = this.getAttribute("glassoct-parent");
       GLASSOCT.glasses[parentId].updateChildren();
     };
@@ -264,8 +255,10 @@ class Glass {
     this.container.appendChild(this.octopusesTank);
   }
 
-  addOctopus(x, y, config) {
-    if (!config) config = {};
+  addOctopus(
+    x, y, config
+  ) {
+    if (!(config)) config = {};
 
     var newOct = new Octopus(x, y, config, this);
 
@@ -275,8 +268,10 @@ class Glass {
     return [this.childrenCount, newOct];
   }
 
-  addTentacle(targX, targY, iconPath, config) {
-    if (!config) config = {};
+  addTentacle(
+    targX, targY, iconPath, config
+  ) {
+    if (!(config)) config = {};
 
     var newTcl = new Tentacle(targX, targY, iconPath, config, this);
 
@@ -284,6 +279,19 @@ class Glass {
     this.childrenCount += 1;
 
     return [this.childrenCount, newTcl];
+  }
+
+  shatter() {
+    this.container.remove();
+    this.image.remove();
+    this.rszObs.disconnect();
+
+    var octKeys = Object.keys(this.children);
+    for (let ki in octKeys) {
+      this.children[octKeys[ki]].delete();
+    }
+
+    this.octopusesTank.remove();
   }
 
   standardUnits(x, y, unit) {
