@@ -5,6 +5,7 @@ var app = new Vue({
       latestcommit: null,
       modalData: null,
       maps: null,
+      NewlocationModal: null,
     },
     events: {
       1: {
@@ -235,7 +236,7 @@ var app = new Vue({
         <tr><td>3.00pm</td><td>Traditional Irish Music</td></tr>
         <tr><td>3.30pm</td><td>The Aftercare (Harrow School)</td></tr>
         <tr><td>4.00pm</td><td>Traditional Irish Music</td></tr>
-        <tr><td>4.30pm</td><td>ohn Lyon and Quainton Hall</td></tr>
+        <tr><td>4.30pm</td><td>John Lyon and Quainton Hall</td></tr>
         <tr><td>5.00pm</td><td>Traditional Irish Music</td></tr>
         <tr><td>5.30pm</td><td>The Aftercare (Harrow School)</td></tr>
         </table>
@@ -485,6 +486,7 @@ var app = new Vue({
           x: 74.93638676844783,
           y: 23.93018018018018,
         },
+        hand: "right",
       },
       8: {
         title: "Behind the Vaughan",
@@ -561,6 +563,7 @@ var app = new Vue({
           x: 75.69974554707379,
           y: 10.304054054054054,
         },
+        hand: "right",
       },
       14: {
         title: "Passmore Gallery",
@@ -573,6 +576,7 @@ var app = new Vue({
           x: 74.80916030534351,
           y: 11.204954954954955,
         },
+        hand: "right",
       },
       15: {
         title: "Grove Hill Portaloos",
@@ -585,6 +589,7 @@ var app = new Vue({
           x: 77.86259541984732,
           y: 11.655405405405405,
         },
+        hand: "right",
       },
       16: {
         title: "Harrow Park Portaloos",
@@ -597,6 +602,7 @@ var app = new Vue({
           x: 56.87022900763359,
           y: 94.53828828828829,
         },
+        hand: "right",
       },
       17: {
         title: "Food Stalls",
@@ -609,6 +615,7 @@ var app = new Vue({
           x: 50.38167938931297,
           y: 45.439189189189186,
         },
+        hand: "right",
       },
       18: {
         title: "Picnic Area",
@@ -621,6 +628,7 @@ var app = new Vue({
           x: 56.36132315521628,
           y: 26.85810810810811,
         },
+        hand: "right",
       },
       19: {
         title: "St Mary's",
@@ -768,9 +776,6 @@ var app = new Vue({
         minute: "2-digit",
       });
     },
-    invalidatemap() {
-      this.state.maps.invalidateSize();
-    },
     modalOpened() {
       if (this.state.maps) {
         this.state.maps.remove();
@@ -779,25 +784,25 @@ var app = new Vue({
       if (this.state.glass) {
         this.state.glass = null;
 
-        document.getElementById("inject11").innerHTML = "";
+        document.getElementById("inject").innerHTML = "";
       }
 
       var button = event.relatedTarget;
       var locationid = button.getAttribute("data-bs-locationid");
 
-      var location = this.locations[locationid];
+      this.state.NewlocationModal = this.locations[locationid];
 
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
       this.state.glass = injectGlass(
-        document.getElementById("inject" + locationid),
+        document.getElementById("inject"),
         "./assets/450_map.jpg"
       );
 
       // Add a smaller default Octopus at same location
       // but using percent as unit (given image width of 1000px and height of 667px)
       this.state.glass.addOctopus(
-        location.maplocation.x,
-        location.maplocation.y,
+        this.state.NewlocationModal.maplocation.x,
+        this.state.NewlocationModal.maplocation.y,
         {
           radius: 5,
           margin: 2,
@@ -805,31 +810,31 @@ var app = new Vue({
         }
       );
 
-      if (location.hand == "left") {
+      if (this.state.NewlocationModal.hand == "left") {
         anchorpoints = {
           width: 200,
           anchorX: 0,
           anchorY: 50,
         };
-      } else if (location.hand == "right") {
+      } else if (this.state.NewlocationModal.hand == "right") {
         anchorpoints = {
           width: 200,
           anchorX: 100,
           anchorY: 50,
         };
-      } else if (location.hand == "left_down") {
-        anchorpoints = {
-          width: 200,
-          anchorX: 0,
-          anchorY: 0,
-        };
-      } else if (location.hand == "right_down") {
+      } else if (this.state.NewlocationModal.hand == "left_down") {
         anchorpoints = {
           width: 200,
           anchorX: 100,
           anchorY: 0,
         };
-      } else if (location.hand == "left_up") {
+      } else if (this.state.NewlocationModal.hand == "right_down") {
+        anchorpoints = {
+          width: 200,
+          anchorX: 200,
+          anchorY: 200,
+        };
+      } else if (this.state.NewlocationModal.hand == "left_up") {
         anchorpoints = {
           width: 200,
           anchorX: 0,
@@ -838,9 +843,11 @@ var app = new Vue({
       }
 
       this.state.glass.addTentacle(
-        location.maplocation.x,
-        location.maplocation.y,
-        "./assets/icons/hands/hand_" + location.hand + ".png",
+        this.state.NewlocationModal.maplocation.x,
+        this.state.NewlocationModal.maplocation.y,
+        "./assets/icons/hands/hand_" +
+          this.state.NewlocationModal.hand +
+          ".png",
         anchorpoints
       );
 
