@@ -394,22 +394,30 @@ var app = new Vue({
     },
     locations: {
       100: {
-        title: "UNKNOWN - GROVE HILL",
+        title: "Grove Hill",
         coords: {
           lat: 0,
           lng: 0,
         },
         icon: "./assets/icons/food.png",
         hand: "right",
+        maplocation: {
+          x: 76.33587786259542,
+          y: 8.38963963963964,
+        },
       },
       101: {
-        title: "UNKNOWN - The Old Well",
+        title: "The Old Well",
         coords: {
           lat: 0,
           lng: 0,
         },
         icon: "./assets/icons/drama.png",
         hand: "left",
+        maplocation: {
+          x: 22.646310432569976,
+          y: 40.25900900900901,
+        },
       },
       1: {
         title: "The Castle",
@@ -794,16 +802,6 @@ var app = new Vue({
       this.state.glass.shatter();
       console.log("shattered");
     },
-    updatemychild() {
-      console.log("update my child");
-      this.state.glass.updateChildren();
-      this.state.glass.updateChildren();
-      this.state.glass.updateChildren();
-      this.state.glass.updateChildren();
-      this.state.glass.updateChildren();
-      this.state.glass.updateChildren();
-      this.state.glass.updateChildren();
-    },
     modalOpened() {
       var button = event.relatedTarget;
       var locationid = button.getAttribute("data-bs-locationid");
@@ -811,6 +809,22 @@ var app = new Vue({
       this.state.NewlocationModal = this.locations[locationid];
       this.state.NewlocationModal.id = locationid;
 
+      // this.state.glass.addTentacle(
+      //   50,
+      //   75,
+      //   "./assets/icons/hands/hand_right.png",
+      //   {
+      //     width: 200,
+      //     anchorX: 100,
+      //     anchorY: 50,
+      //   }
+      // );
+
+      // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
+
+      setTimeout(this.glassytuff, 300);
+    },
+    glassytuff() {
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
       this.state.glass = injectGlass(
         document.getElementById("inject"),
@@ -870,21 +884,6 @@ var app = new Vue({
           ".png",
         this.state.NewlocationModal.anchorpoints
       );
-
-      // this.state.glass.addTentacle(
-      //   50,
-      //   75,
-      //   "./assets/icons/hands/hand_right.png",
-      //   {
-      //     width: 200,
-      //     anchorX: 100,
-      //     anchorY: 50,
-      //   }
-      // );
-
-      // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
-
-      setTimeout(this.updatemychild, 500);
     },
   },
   mounted() {

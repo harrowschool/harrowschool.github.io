@@ -58,12 +58,12 @@
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
 
-          <div class="row">
-            <div class="col-md-auto">
+          <div>
+            <div>
 
               🕓 {{event.times}}
             </div>
-            <div class="col-md-auto">
+            <div>
               📍 {{locations[event.location].title}}
 
               <button type="button" class="btn btn-secondary btn-sm pl-2" data-bs-toggle="modal"
@@ -81,12 +81,12 @@
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
 
-          <div class="row">
-            <div class="col-md-auto">
+          <div>
+            <div>
 
               🕓 {{event.times}}
             </div>
-            <div class="col-md-auto">
+            <div>
               📍 {{locations[event.location].title}}
 
               <button type="button" class="btn btn-secondary btn-sm pl-2" data-bs-toggle="modal"
@@ -99,6 +99,8 @@
         <h3 class="orange">Maps</h3>
 
         <img id="map" src="./assets/450_map.jpg" width=100% height=auto>
+
+
 
         <h3 class="pink">Other Information</h3>
 
@@ -213,6 +215,8 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+
+
               <div id="inject"></div>
 
 
