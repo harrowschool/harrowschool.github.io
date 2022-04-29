@@ -62,18 +62,17 @@
 
           <div class="row">
             <div class="col-md-auto">
-              <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
-                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
-                🕓 {{event.times}}</button>
+
+              🕓 {{event.times}}
             </div>
             <div class="col-md-auto">
-              <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
-                {{locations[event.location].title}}</button>
+              📍 {{locations[event.location].title}}
+
+              <button type="button" class="btn btn-secondary btn-sm pl-2" data-bs-toggle="modal"
+                data-bs-target="#NewlocationModal" :data-bs-locationid="event.location">View Map</button>
+
             </div>
           </div>
-
-          <!-- Button trigger modal -->
         </details>
 
         <h3 class="orange">Events 2pm – 6pm</h3>
@@ -100,6 +99,7 @@
         </details>
 
         <h3 class="orange">Maps</h3>
+
 
         <h3 class="pink">Other Information</h3>
 
@@ -154,6 +154,8 @@
           </div>
         </div>
 
+
+
         <div class="collapse" id="changesBox">
           <div class="card card-body">
             <div v-if="!state.latestcommit">
@@ -192,6 +194,8 @@
 
       </section>
 
+
+
       <div class="modal fade" id="NewlocationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -201,8 +205,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div id="inject">
-              </div>
+              <div id="inject"></div>
 
               <!--
               <h3>On at {{state.NewlocationModal.title}}</h3>
@@ -232,6 +235,7 @@
           </div>
         </div>
       </div>
+
 
     </main>
 

@@ -792,6 +792,16 @@ var app = new Vue({
       this.state.glass.shatter();
       console.log("shattered");
     },
+    updatemychild() {
+      console.log("update my child");
+      this.state.glass.updateChildren();
+      this.state.glass.updateChildren();
+      this.state.glass.updateChildren();
+      this.state.glass.updateChildren();
+      this.state.glass.updateChildren();
+      this.state.glass.updateChildren();
+      this.state.glass.updateChildren();
+    },
     modalOpened() {
       var button = event.relatedTarget;
       var locationid = button.getAttribute("data-bs-locationid");
@@ -849,29 +859,29 @@ var app = new Vue({
         };
       }
 
-      // this.state.glass.addTentacle(
-      //   this.state.NewlocationModal.maplocation.x,
-      //   this.state.NewlocationModal.maplocation.y,
-      //   "./assets/icons/hands/hand_" +
-      //     this.state.NewlocationModal.hand +
-      //     ".png",
-      //   this.state.NewlocationModal.anchorpoints
-      // );
-
       this.state.glass.addTentacle(
-        50,
-        75,
-        "./assets/icons/hands/hand_right.png",
-        {
-          width: 200,
-          anchorX: 100,
-          anchorY: 50,
-        }
+        this.state.NewlocationModal.maplocation.x,
+        this.state.NewlocationModal.maplocation.y,
+        "./assets/icons/hands/hand_" +
+          this.state.NewlocationModal.hand +
+          ".png",
+        this.state.NewlocationModal.anchorpoints
       );
+
+      // this.state.glass.addTentacle(
+      //   50,
+      //   75,
+      //   "./assets/icons/hands/hand_right.png",
+      //   {
+      //     width: 200,
+      //     anchorX: 100,
+      //     anchorY: 50,
+      //   }
+      // );
 
       // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
 
-      setTimeout(this.state.glass.updateChildren(), 500);
+      setTimeout(this.updatemychild, 500);
     },
   },
   mounted() {
