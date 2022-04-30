@@ -1,6 +1,7 @@
 var app = new Vue({
   el: "#app",
   data: {
+    maptype: true,
     state: {
       latestcommit: null,
       modalData: null,
@@ -64,6 +65,7 @@ var app = new Vue({
         location: 12,
         classification: "Food",
       },
+
       5: {
         title: "Archery",
         body: ``,
@@ -72,20 +74,27 @@ var app = new Vue({
         classification: "Event",
       },
       6: {
+        title: "Athletics",
+        body: `<p>Harrow School and Harrow Athletics Club will combine to compete in an afternoon of athletics. This festival will see 48 Harrow athletes compete against Harrow AC in a refined range of events, highlighting the key disciplines within the sport and strengthening the connection between the school and local community.</p>`,
+        times: "2.15pm – 4.45pm", //could be an array of datetimes later
+        location: 27,
+        classification: "Event",
+      },
+      7: {
         title: "ArtPerUk Peruvian Dance",
         body: `<img src="./assets/media/ArtPerUk.jpeg" width=100% height=auto> <p>ArtPerÚK is a Peruvian folkloric dance academy that promotes Peruvian traditional dances from the Coast, the Andes and the Jungle of Peru, enhancing people to explore the diversity, music and rhythms of Latin American culture with the wider community in London. Allowing them to appreciate the artistic richness of culture. Our main goal is to continue promoting our traditions and heritage in the UK.</p>`,
         times: "2pm – 3pm", //could be an array of datetimes later
         location: 7,
         classification: "Event",
       },
-      7: {
+      8: {
         title: "Art, Photography and Sculpture Exhibitions",
         body: `<p>Work by local schools and adult art groups</p>`,
         times: "2pm – 6pm", //could be an array of datetimes later
         location: 14,
         classification: "Event",
       },
-      8: {
+      9: {
         title: "Art Workshop",
         body: `<p><strong>Queen Elizabeth I and John Lyon Figures</strong></p>
         <p>Our two prestigious life-size figures need your help to decorate them and make them look as glorious as possible! Just drop by, and spend as long or as little as you like.</p>
@@ -97,35 +106,35 @@ var app = new Vue({
         location: 12,
         classification: "Event",
       },
-      9: {
+      10: {
         title: "Barefoot Dance",
         body: `<p>A part time dance, drama and performing arts school. We offer a variety of classes running throughout the week.</p>`,
         times: "2.45pm, 4.15pm", //could be an array of datetimes later
         location: 10,
         classification: "Event",
       },
-      10: {
+      11: {
         title: "Basketball",
         body: `<p>Harrow school and the local community Basketball clubs will play a 3 vs 3 competition in the Harrow school sports hall, culminating in a final between the top two teams. Following this, Harrow schools current senior first team will play a recent leavers OH team in an exciting exhibition match.</p>`,
         times: "2pm – 4.30pm", //could be an array of datetimes later
         location: 20,
         classification: "Event",
       },
-      11: {
+      12: {
         title: "Bollywood Dance by Quainton Hall School",
         body: ``,
         times: "3.15pm – 3.45pm", //could be an array of datetimes later
         location: 7,
         classification: "Event",
       },
-      12: {
+      13: {
         title: "Cara Gael Irish Dance Group",
         body: ``,
         times: "3.15pm, 4.45pm", //could be an array of datetimes later
         location: 10,
         classification: "Event",
       },
-      13: {
+      14: {
         title: "Community Production: Noye's Fludde",
         body: `<p>A flood is coming, but Noah is building a boat, in the hope that a new world will be waiting on the other side.</p>
         <p>As part of Harrow School's Community Day, members of the Drama and Music departments direct a joyous new production of Benjamin Britten's community opera, combining the talents of more than a hundred children from four primary schools: Byron Court, Norbury, St Anselm's and St Jerome's from across the borough, and Bishopshalt School.</p>
@@ -136,7 +145,7 @@ var app = new Vue({
         location: 6,
         classification: "Event",
       },
-      14: {
+      15: {
         title: "Costume-themed Streets",
         body: `<p>Victorian West Street, Edwardian High Street, Elizabethan Old Schools, and the Church. With many thanks to the members of the Harrow on the Hill Women's Institute for the more than 600m of wonderful handmade bunting and to the boys of Harrow School for all the flags.</p>
         `,
@@ -144,7 +153,7 @@ var app = new Vue({
         location: 21,
         classification: "Event",
       },
-      15: {
+      16: {
         title: "Cricket Festival",
         body: `<p>Youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.</p>
         <p>There will be twelve stations of fun-filled coaching of different skills by professional cricketers and A-team players.</p>`,
@@ -152,21 +161,21 @@ var app = new Vue({
         location: 22,
         classification: "Event",
       },
-      16: {
+      17: {
         title: "Edwardian Harrow Beak Reads Virgil",
         body: ``,
         times: "2.40pm – 3pm", //could be an array of datetimes later
         location: 3,
         classification: "Event",
       },
-      17: {
+      18: {
         title: "Fives",
         body: `<p>On the main fives courts, initial celebrations will start with an exciting exhibition match between the top seeded players in the school. On the others courts, highly qualified coaches and some senior boys will run a taster session for all those who wish to trial the game. The afternoon will then conclude with a festival style tournament between the Harrow boys and some community players.</p>`,
         times: "2pm – 4pm", //could be an array of datetimes later
         location: 28,
         classification: "Event",
       },
-      18: {
+      19: {
         title: "Harrow Community Gospel Choir",
         body: `<p><a href="https://harrowcommunitygospelchoir.com">Harrow Community Gospel Choir</a> is a performing choir singing a mixture of contemporary gospel songs and spirituals. The choir is directed by CeCelia Wickham-Anderson, a member of the internationally acclaimed acapella singing group <a href="http://blackvoices.co.uk">Black Voices</a></p>
         `,
@@ -174,7 +183,7 @@ var app = new Vue({
         location: 11,
         classification: "Event",
       },
-      19: {
+      20: {
         title: "Harrow Hill Trust Guided Walk",
         body: `<p>The Harrow Hill Trust will hold a guided tour of the Hill led by Jonathan Edwards. The walk will take in some of the events, people and buildings that helped shape the Hill, from Tudor times through to the 21st Century.</p>
         <p>Please register for this walk, for which there is no charge, with Robert Lemon  07836 638620 <a href="mailto:robertlemon@live.co.uk">robertlemon@live.co.uk</a></p>
@@ -183,7 +192,7 @@ var app = new Vue({
         location: 19,
         classification: "Event",
       },
-      20: {
+      21: {
         title: "Harrow Steel Band",
         body: `<p>Harrow Steel was formed in 1992 and provides an opportunity for gifted and talented young musicians aged 8-21 to learn challenging music aurally within a steel band. We support the engagement of musical talent, in a multicultural environment across Harrow and NW London. Weekly rehearsals are held at Whitmore High School in Harrow.</p>
         <p>We have performed at Notting Hill Carnival on three occasions, where we were voted ‘Best Band on the road’. Other notable performances have been for BBC programmes such as Blue Peter, Record Breakers, and You and Me. The Band have also toured Europe and performed in Barcelona, Salzburg, Paris, Lake Garda, Venice, Ostend, and Amsterdam.</p>
@@ -192,15 +201,6 @@ var app = new Vue({
         `,
         times: "2pm, 3.45pm, 5pm", //could be an array of datetimes later
         location: 4,
-        classification: "Event",
-      },
-      21: {
-        title: "The Hill Players",
-        body: `<p>"Banter" by Robert Scott. John and Angie are having a quiet conversation before breakfast – or so it would seem. Luckily for us, they each have an interpreter on hand so we can understand what they are really saying.</p>
-        <p>The Hill Players is an ever-growing amateur dramatics group founded in 2007 and based around Harrow on the Hill. We are passionate about community theatre and pride ourselves on putting on great productions, including an annual Christmas Panto at Harrow School's Ryan Theatre. We welcome new members! Please see our website <a href="https://www.hillplayers.co.uk">hillplayers.co.uk</a> for more information.</p>
-        `,
-        times: "2pm – 6pm, every half hour", //could be an array of datetimes later
-        location: 101,
         classification: "Event",
       },
       22: {
@@ -212,6 +212,7 @@ var app = new Vue({
         location: 4,
         classification: "Event",
       },
+
       23: {
         title: "John Lyon School Drama",
         body: `<p>A showcase of material from John Lyon’s upcoming modern interpretation of Shakespeare’s The Tempest, adapted for the Harrow and Hill Community Day.</p>`,
@@ -220,6 +221,13 @@ var app = new Vue({
         classification: "Event",
       },
       24: {
+        title: "Judo",
+        body: `<p>The judo celebrations will begin with an exhibition training session at 2pm. Boys will demonstrate the main elements of judo training, including traditional warm-up and agility exercises, breakfalls, uchi-komi (technical drills) for standing and groundwork, contest technique, and randori (sparring). The session will conclude with some inter-house exhibition contests. At 3:30pm there will then be an expert demonstration of Nage-no-kata, which is one of the main katas (formal demonstrations) of Kodokan Judo. It is intended as an illustration of the various concepts of throwing that exist in judo and is used both as a training method and as a demonstration of understanding. From 4-5pm there will be a taster session for anyone who would like to try judo.</p>`,
+        times: "2pm – 5pm", //could be an array of datetimes later
+        location: 28,
+        classification: "Event",
+      },
+      25: {
         title: "Kidology",
         body: `<p>Kidology Dance Co was established in 2010 by Nicky Rutter and Lauren O'Connell. We have a passion for performing, teaching and helping young people to realise their talents and progress within their future in dance. We specialise in street/Hip-Hop dance, contemporary, musical theatre and have directed and produced a number of sold-out shows, competed in competitions throughout the country and had dancers go on to do remarkable things. Our aim is to work with dancers to enhance their talents, draw on their strengths and build their confidence. We are very fortunate to work with a thriving and well-presented group of young and talented students. We encourage everyone to take part in as many performance opportunities as they can throughout the year especially if dance is something they wish to pursue later in life. <a href="http://www.kidologydance.co.uk">www.kidologydance.co.uk</a></p>
         `,
@@ -227,14 +235,14 @@ var app = new Vue({
         location: 11,
         classification: "Event",
       },
-      25: {
+      26: {
         title: "Maypole Dance",
         body: `<p>Vaughn Primary School</p>`,
         times: "2.30pm – 2.45pm, 4.00pm – 4.15pm", //could be an array of datetimes later
         location: 5,
         classification: "Event",
       },
-      26: {
+      27: {
         title: "Merrydowners Morris",
         body: `<p>Founded in 1990 as a fun entry in a local Church Fete (St. Alban, North Harrow), we practised in secret as, at the time, one of the team was the vicar of the church, so you can imagine the gasps of surprise at our debut! We enjoyed the experience so much that several of the original church members are still performing. During the past 31 years we have performed across London, in France and Germany, the highlights being: The Guildhall, City of London, for the inaugural Dinner of the 1996 European football championships; representing England at The Hong Kong Chinese New Year parade in 2004; La Fetes du Gayants, Douai Pas de Calais in 2001 and 2003; Recklinghausen Germany for the annual Concert of The Akkordeonklaenge von Recklinghausen Westfallen in 2005. We took part many times in London’s New Year’s Day parade and have also appeared in a pop music video and, albeit briefly, on the BBC’s Strictly Come Dancing and also on The One Show! We were also honoured to be included in Harrow’s Diamond Jubilee celebrations and performed for HRH The Duke of Edinburgh.</p>
         `,
@@ -242,7 +250,7 @@ var app = new Vue({
         location: 1,
         classification: "Event",
       },
-      27: {
+      28: {
         title: "Music at the Bandstand",
         body: `<p>Enjoy a full programme of traditional bandstand entertainment including brass, wind and concert bands.</p>
         <table>
@@ -264,7 +272,7 @@ var app = new Vue({
         location: 2,
         classification: "Event",
       },
-      28: {
+      29: {
         title: "Old Speech Room Gallery 450 Exhibition",
         body: `<p>Harrow 1572-2022: from the time of Elizabeth I to the present day, this exhibition is a visual tour through time, full of local legend and newly researched revelations.</p>
         `,
@@ -272,21 +280,28 @@ var app = new Vue({
         location: 23,
         classification: "Event",
       },
-      29: {
+      30: {
         title: "Punch and Judy Show and Magician",
         body: ``,
         times: "2pm – 5pm", //could be an array of datetimes later
         location: 24,
         classification: "Event",
       },
-      30: {
+      31: {
+        title: "Rackets",
+        body: `<p>On the main rackets court there will be an exciting exhibition match between the top seeded players in the school. On the second court, highly qualified coaches will run a taster session for all those who wish to trial the game and gain experience of the pace of the ball and play. All are welcome and kit and equipment will be provided.</p>`,
+        times: "2.15pm – 4.30pm", //could be an array of datetimes later
+        location: 28,
+        classification: "Event",
+      },
+      32: {
         title: "Rayleigh Observatory",
         body: `<p>Find out about the observation of planets, galaxies and other astronomical phenomena.</p>        `,
         times: "2pm – 6pm", //could be an array of datetimes later
         location: 25,
         classification: "Event",
       },
-      31: {
+      33: {
         title: "Roystonjax",
         body: `<p>RoystonJax are a trio with a difference. They use stripped down to bass/drum backing tracks and play live guitars with fabulous three-part harmonies. It feels like a full band but one that can play at any volume in any venue!</p>
         `,
@@ -294,62 +309,7 @@ var app = new Vue({
         location: 4,
         classification: "Event",
       },
-      32: {
-        title: "Stagecoach Irish Dance Group",
-        body: `<p>Stagecoach Harrow is in its 29th Year and was one of the first Stagecoach schools to open based at Rooks Heath College. Emmy Hamilton has been Principal for 15 of those years and is proud to be at the head of this energetic and creative Performing Arts School in the borough. At this event are dedicated students from Stagecoach Harrow's Dance Troupe (performing some street and musical theatre) and our 15+ year group 'Further Stages' who will be performing some of their Performance Arts Awards Exam work, based on life in 1940s. There are two other Stagecoach centres in the borough: Stagecoach Harrow on the Hill and Stagecoach Harrow Weald, all three providing quality, nurturing environments in part time performing arts lessons for our students to thrive in, from 4-19 years, with lots of opportunities for students to be themselves, develop skills and confidence, make new friends, and have a chance to shine. Professional work and West End opportunities along with added value in LAMDA lessons are also available. Enquire at <a href="https://www.stagecoach.co.uk/harrow">www.stagecoach.co.uk/harrow</a> 0203 5040100.</p>
-        `,
-        times: "2.15pm, 3.45pm", //could be an array of datetimes later
-        location: 10,
-        classification: "Event",
-      },
-      33: {
-        title: "St Mary's",
-        body: `<p>After listening to the bellringing opening the Community Day why not climb the tower and go onto the flat roof (weather permitting) to see the stunning views of the Hill and London.  Come and meet Elizabeth I and John Lyon, who founded the School and other characters in costume who will tell you some of the history of the School and church. Visit the church where boys worshipped before the chapel was built, including prime ministers Robert Peel and Spencer Percival and authors Lord Byron, Sheridan, and Anthony Trollope. Go on our churchyard trail or have a cuppa at our Spire Cafe.</p>
-        `,
-        times: "2pm – 6pm", //could be an array of datetimes later
-        location: 19,
-        classification: "Event",
-      },
-      // 34: {
-      //   title: "String Quartet and Brass Trio",
-      //   body: ``,
-      //   times: "3.30pm – 4.30pm", //could be an array of datetimes later
-      //   location: 3,
-      //   classification: "Event",
-      // },
-      35: {
-        title: "Tai Chi",
-        body: `<p>We are a community tai chi group called Harrow Tai Chi for Health. We offer free tai chi sessions at Harrow Recreation Ground every Friday 9.30 to 10.30am for health and general well-being. For more information please email <a href="mailto:info@harrowrec.org.uk">info@harrowrec.org.uk</a></p>
-        `,
-        times: "2pm – 6pm", //could be an array of datetimes later
-        location: 11,
-        classification: "Event",
-      },
-      36: {
-        title: "Tours of Harrow School",
-        body: `<p>Public tours of Harrow School's historic venues on the hour, every hour. Our expert guides will share an insight into Harrow's 450-year history. This is an exciting opportunity for members of the public to visit some of the most spectacular and historic buildings at Harrow School. Tours last 30–40 minutes.</p>
-
-        <p>To register your attendance please email Victoria Perry on <a href="mailto:tours@harrowschool.org.uk">tours@harrowschool.org.uk</a> with your name, contact number and the number of places you would like to book, and your preferred tour time.</p>
-        `,
-        times: "12pm, 1pm, 2pm, 3pm, 4pm, 5pm", //could be an array of datetimes later
-        location: 11,
-        classification: "Event",
-      },
-      37: {
-        title: "Veteran Cars",
-        body: ``,
-        times: "2pm – 6pm", //could be an array of datetimes later
-        location: 26,
-        classification: "Event",
-      },
-      38: {
-        title: "The Pie Stall",
-        body: `<p>We will be selling delicious pies from across the centuries, both savoury and sweet. Come and select a filling of your choice! Proceeds from sales will be donated to Paws for Cause.</p>`,
-        times: "noon – 6pm", //could be an array of datetimes later
-        location: 11,
-        classification: "Food",
-      },
-      39: {
+      34: {
         title: "Spire Cafe",
         body: `<p><ul>
         <li>Homemade soup and fresh rolls</li>
@@ -364,32 +324,76 @@ var app = new Vue({
         location: 19,
         classification: "Food",
       },
-      40: {
-        title: "Athletics",
-        body: `<p>Harrow School and Harrow Athletics Club will combine to compete in an afternoon of athletics. This festival will see 48 Harrow athletes compete against Harrow AC in a refined range of events, highlighting the key disciplines within the sport and strengthening the connection between the school and local community.</p>`,
-        times: "2.15pm – 4.45pm", //could be an array of datetimes later
-        location: 27,
-        classification: "Event",
-      },
-      41: {
-        title: "Judo",
-        body: `<p>The judo celebrations will begin with an exhibition training session at 2pm. Boys will demonstrate the main elements of judo training, including traditional warm-up and agility exercises, breakfalls, uchi-komi (technical drills) for standing and groundwork, contest technique, and randori (sparring). The session will conclude with some inter-house exhibition contests. At 3:30pm there will then be an expert demonstration of Nage-no-kata, which is one of the main katas (formal demonstrations) of Kodokan Judo. It is intended as an illustration of the various concepts of throwing that exist in judo and is used both as a training method and as a demonstration of understanding. From 4-5pm there will be a taster session for anyone who would like to try judo.</p>`,
-        times: "2pm – 5pm", //could be an array of datetimes later
-        location: 28,
-        classification: "Event",
-      },
-      42: {
-        title: "Rackets",
-        body: `<p>On the main rackets court there will be an exciting exhibition match between the top seeded players in the school. On the second court, highly qualified coaches will run a taster session for all those who wish to trial the game and gain experience of the pace of the ball and play. All are welcome and kit and equipment will be provided.</p>`,
-        times: "2.15pm – 4.30pm", //could be an array of datetimes later
-        location: 28,
-        classification: "Event",
-      },
-      43: {
+      35: {
         title: "Squash",
         body: `<p> A sport invented at Harrow School, this squash event will feature exhibition matches between the School’s first and second seed (former number 1 in Asia U16 and current top 40 U18 UK), and members of the Harrow Leisure Centre Squash Club. On the second glass back court, the captain and vice captain (Ilyas Qureshi and Hanno Sie) will offer a taster session and training for all that wish to come and take part.</p>`,
         times: "1pm – 4pm", //could be an array of datetimes later
         location: 28,
+        classification: "Event",
+      },
+      36: {
+        title: "Stagecoach Irish Dance Group",
+        body: `<p>Stagecoach Harrow is in its 29th Year and was one of the first Stagecoach schools to open based at Rooks Heath College. Emmy Hamilton has been Principal for 15 of those years and is proud to be at the head of this energetic and creative Performing Arts School in the borough. At this event are dedicated students from Stagecoach Harrow's Dance Troupe (performing some street and musical theatre) and our 15+ year group 'Further Stages' who will be performing some of their Performance Arts Awards Exam work, based on life in 1940s. There are two other Stagecoach centres in the borough: Stagecoach Harrow on the Hill and Stagecoach Harrow Weald, all three providing quality, nurturing environments in part time performing arts lessons for our students to thrive in, from 4-19 years, with lots of opportunities for students to be themselves, develop skills and confidence, make new friends, and have a chance to shine. Professional work and West End opportunities along with added value in LAMDA lessons are also available. Enquire at <a href="https://www.stagecoach.co.uk/harrow">www.stagecoach.co.uk/harrow</a> 0203 5040100.</p>
+        `,
+        times: "2.15pm, 3.45pm", //could be an array of datetimes later
+        location: 10,
+        classification: "Event",
+      },
+      37: {
+        title: "St Mary's",
+        body: `<p>After listening to the bellringing opening the Community Day why not climb the tower and go onto the flat roof (weather permitting) to see the stunning views of the Hill and London.  Come and meet Elizabeth I and John Lyon, who founded the School and other characters in costume who will tell you some of the history of the School and church. Visit the church where boys worshipped before the chapel was built, including prime ministers Robert Peel and Spencer Percival and authors Lord Byron, Sheridan, and Anthony Trollope. Go on our churchyard trail or have a cuppa at our Spire Cafe.</p>
+        `,
+        times: "2pm – 6pm", //could be an array of datetimes later
+        location: 19,
+        classification: "Event",
+      },
+      // 34: {
+      //   title: "String Quartet and Brass Trio",
+      //   body: ``,
+      //   times: "3.30pm – 4.30pm", //could be an array of datetimes later
+      //   location: 3,
+      //   classification: "Event",
+      // },
+
+      38: {
+        title: "Tai Chi",
+        body: `<p>We are a community tai chi group called Harrow Tai Chi for Health. We offer free tai chi sessions at Harrow Recreation Ground every Friday 9.30 to 10.30am for health and general well-being. For more information please email <a href="mailto:info@harrowrec.org.uk">info@harrowrec.org.uk</a></p>
+        `,
+        times: "2pm – 6pm", //could be an array of datetimes later
+        location: 11,
+        classification: "Event",
+      },
+      39: {
+        title: "The Pie Stall",
+        body: `<p>We will be selling delicious pies from across the centuries, both savoury and sweet. Come and select a filling of your choice! Proceeds from sales will be donated to Paws for Cause.</p>`,
+        times: "noon – 6pm", //could be an array of datetimes later
+        location: 11,
+        classification: "Food",
+      },
+      40: {
+        title: "The Hill Players",
+        body: `<p>"Banter" by Robert Scott. John and Angie are having a quiet conversation before breakfast – or so it would seem. Luckily for us, they each have an interpreter on hand so we can understand what they are really saying.</p>
+        <p>The Hill Players is an ever-growing amateur dramatics group founded in 2007 and based around Harrow on the Hill. We are passionate about community theatre and pride ourselves on putting on great productions, including an annual Christmas Panto at Harrow School's Ryan Theatre. We welcome new members! Please see our website <a href="https://www.hillplayers.co.uk">hillplayers.co.uk</a> for more information.</p>
+        `,
+        times: "2pm – 6pm, every half hour", //could be an array of datetimes later
+        location: 101,
+        classification: "Event",
+      },
+      41: {
+        title: "Tours of Harrow School",
+        body: `<p>Public tours of Harrow School's historic venues on the hour, every hour. Our expert guides will share an insight into Harrow's 450-year history. This is an exciting opportunity for members of the public to visit some of the most spectacular and historic buildings at Harrow School. Tours last 30–40 minutes.</p>
+
+        <p>To register your attendance please email Victoria Perry on <a href="mailto:tours@harrowschool.org.uk">tours@harrowschool.org.uk</a> with your name, contact number and the number of places you would like to book, and your preferred tour time.</p>
+        `,
+        times: "12pm, 1pm, 2pm, 3pm, 4pm, 5pm", //could be an array of datetimes later
+        location: 11,
+        classification: "Event",
+      },
+      42: {
+        title: "Veteran Cars",
+        body: ``,
+        times: "2pm – 6pm", //could be an array of datetimes later
+        location: 26,
         classification: "Event",
       },
     },
@@ -830,7 +834,9 @@ var app = new Vue({
 
       setTimeout(this.glassytuff, 750);
     },
-
+    // invalidatemap() {
+    //   this.state.maps.invalidateSize();
+    // },
     getwords(lat, lng) {
       what3words.api.convertTo3wa({ lat, lng }, "en").then((response) => {
         this.state.words = response.words;
@@ -898,6 +904,7 @@ var app = new Vue({
       );
     },
   },
+
   mounted() {
     axios
       .get(
@@ -907,5 +914,7 @@ var app = new Vue({
 
     window.addEventListener("show.bs.modal", this.modalOpened);
     window.addEventListener("hide.bs.modal", this.modalClosed);
+
+ 
   },
 });
