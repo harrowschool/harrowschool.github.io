@@ -34,6 +34,14 @@
   <!-- What three words?-->
   <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=W6GU1XLL"></script>
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
 </head>
 
 <body>
@@ -98,11 +106,25 @@
           </div>
         </details>
 
+        <details>
+          <summary>Photography Competition</summary>
+          <p>Entries are now closed and the winners have been announced.</p>
+          <img src="./assets/media/photocomp/photography1.jpg" width=100% height=auto>
+          <p>Junior Winner: Fatima, Year 10</p>
+          <img src="./assets/media/photocomp/photography2.jpeg" width=100% height=auto>
+          <p>Senior Winner: Anna, Year 13</p>
+        </details>
+
         <h3 class="orange">Maps</h3>
 
-        <img id="map" src="./assets/450_map.jpg" width=100% height=auto>
+        <img v-show="maptype" id="map" src="./assets/450_map.jpg" width=100% height=auto>
 
+        <!-- <div v-show="!maptype" id="mainMap" class="mainmap pt-3"></div>
 
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" v-model="maptype" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+        </div> -->
 
         <h3 class="pink">Other Information</h3>
 
