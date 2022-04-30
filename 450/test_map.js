@@ -6,7 +6,7 @@ var context = canvas.getContext("2d")
 var map = new Image()
 map.src = "/450/450_map.jpeg"
 var hand = new Image()
-hand.src = "/450/hand_right.png"
+hand.src = "/450/hand_right_down.png"
 
 var x_slider = document.getElementById("x_coordinate")
 var y_slider = document.getElementById("y_coordinate")
