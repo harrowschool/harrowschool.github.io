@@ -18,16 +18,11 @@
   <!-- Import Special CSS -->
   <link rel="stylesheet" href="./index.css">
 
-  <!-- Import Leaflet.js for map-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="" />
-
   <!-- Import vue-->
   <!-- development version, includes helpful console warnings -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
   <!-- production version, optimized for size and speed -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
   <!-- Import Bootstrap 5 stylesheet -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -36,10 +31,12 @@
   <!-- Link Glass Octopus stylesheet -->
   <link href="./libraries/glass-octopus/glassoct.css" rel="stylesheet">
 
+  <!-- What three words?-->
+  <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=W6GU1XLL"></script>
 
 </head>
 
-<bodys>
+<body>
 
   <div class="col-lg-5 mx-auto p-3 pt-md-5">
     <header class="d-flex align-items-center pb-3 mb-3">
@@ -52,12 +49,10 @@
         <h3 class="pink"><b>Celebrating 450 years of community on the Hill</b></h3>
         <h3 class="turquoise">30 April Noon – 6pm</h3>
 
-        <p class="text-center">Residents and friends from around the Hill are invited to join in a day of celebration to
-          mark
-          the 450th
-          anniversary of Harrow School. There’s something for everyone and new events are being added to all the time.
-          This
+        <p>Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th
+          anniversary of Harrow School. There’s something for everyone and new events are being added all the time. This
           information will be updated regularly up until and including Saturday 30 April.</p>
+        <p>You are welcome to come in period costume.</p>
 
         <h3 class="purple">Food Noon to 6pm</h3>
 
@@ -65,20 +60,19 @@
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
 
-          <div class="row">
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
-                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
-                🕓 {{event.times}}</button>
+          <div>
+            <div>
+
+              🕓 {{event.times}}
             </div>
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
-                {{locations[event.location].title}}</button>
+            <div>
+              📍 {{locations[event.location].title}}
+
+              <button type="button" class="btn btn-secondary btn-sm pl-2" data-bs-toggle="modal"
+                data-bs-target="#NewlocationModal" :data-bs-locationid="event.location">View Map</button>
+
             </div>
           </div>
-
-          <!-- Button trigger modal -->
         </details>
 
         <h3 class="orange">Events 2pm – 6pm</h3>
@@ -89,27 +83,26 @@
           <summary>{{event.title}}</summary>
           <span v-html="event.body"></span>
 
-          <div class="row">
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-secondary disabled btn-sm pl-2" data-bs-toggle="modal"
-                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">
-                🕓 {{event.times}}</button>
+          <div>
+            <div>
+
+              🕓 {{event.times}}
             </div>
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-                :data-bs-locationid="event.location" :data-bs-target="'#locationModal'+event.location">📍
-                {{locations[event.location].title}}</button>
+            <div>
+              📍 {{locations[event.location].title}}
+
+              <button type="button" class="btn btn-secondary btn-sm pl-2" data-bs-toggle="modal"
+                data-bs-target="#NewlocationModal" :data-bs-locationid="event.location">View Map</button>
+
             </div>
           </div>
-
-
-
-          <!-- Button trigger modal -->
         </details>
 
         <h3 class="orange">Maps</h3>
 
-        <div id="mainMap" class="mainmap"></div>
+        <img id="map" src="./assets/450_map.jpg" width=100% height=auto>
+
+
 
         <h3 class="pink">Other Information</h3>
 
@@ -125,11 +118,20 @@
           Band Stand.</p>
 
         <p><strong>Toilets</strong><br />
-          Porta Loos can be found in Grove Hill and Harrow Park.</p>
-
+          Portaloos can be found in Grove Hill and Harrow Park.</p>
         <h3 class="green">Road Closures</h3>
         <img src="./assets/road_closures.png">
         <p>Road closures will be in place on Saturday 30 April from 6am to 8pm.</p>
+
+        <p>
+        <ul>
+          <li><strong><span style="color:red">Red Zone:</span></strong> Emergency vehicles and stallholders only.</li>
+          <li><strong><span style="color:orange">Yellow Zone:</span></strong> Entrance and exit with car pass, no access
+            to red zone.</li>
+          <li><strong><span style="color:blue">Blue Zone:</span></strong> Marshalled entry via Middle Road, flow through
+            Byron Hill Road, and exit via London Road for car pass holders all day.</li>
+        </ul>
+        </p>
 
         <p>Residents will be issued, in advance, with a car pass to allow them to access the yellow and blue sections at
           any time during the 24-hour period.</p>
@@ -163,6 +165,8 @@
             </button>
           </div>
         </div>
+
+
 
         <div class="collapse" id="changesBox">
           <div class="card card-body">
@@ -203,22 +207,32 @@
       </section>
 
 
-      <!-- Modal -->
-      <div v-for="(location, id) in locations" class="modal hide" :id="'locationModal'+id" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <div class="modal fade" id="NewlocationModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Locate {{location.title}}</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Locate {{state.NewlocationModal.title}}</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div :id="'mainMap'+id" class="modalmap"></div>
-              <hr>
-              <div :id="'inject'+id"></div>
-              <hr>
 
-              <!-- <h3>On at {{location.title}}</h3>-->
+
+              <div id="inject"></div>
+
+              <div class="row justify-content-md-center">
+
+                <!-- put an image vertically -->
+
+                <div class="col-md-auto pt-1">
+                  <p><i>/// {{state.words}}</i></p>
+                </div>
+
+              </div>
+
+
+              <h3>On at {{state.NewlocationModal.title}}</h3>
               <table class="table">
                 <thead>
                   <tr>
@@ -228,14 +242,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr div v-for="(event, eventid) in events" v-if="event.location==id">
+                  <tr div v-for="(event, eventid) in events" v-if="event.location==state.NewlocationModal.id">
                     <td>{{event.title}}</td>
                     <td>{{event.times}}</td>
-                    <td><a :href="'#event'+eventid" @click="closemodalandopenevent(id,eventid)">Read more</a></td>
+                    <td><a :href="'#event'+eventid" @click="closemodalandopenevent(eventid)">Read more</a></td>
                   </tr>
 
                 </tbody>
               </table>
+
+
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -243,6 +260,8 @@
           </div>
         </div>
       </div>
+
+
     </main>
 
 
@@ -277,7 +296,6 @@
   <!-- Custom Vue stuffs-->
   <script src="./index.js"></script>
 
-
-  </body>
+</body>
 
 </html>

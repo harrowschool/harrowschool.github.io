@@ -5,6 +5,20 @@ var app = new Vue({
       latestcommit: null,
       modalData: null,
       maps: null,
+      NewlocationModal: {
+        title: null,
+        coords: {
+          lat: null,
+          lng: null,
+        },
+        icon: null,
+        maplocation: {
+          x: null,
+          y: null,
+        },
+      },
+      words: null,
+      hand: null,
     },
     events: {
       1: {
@@ -14,15 +28,15 @@ var app = new Vue({
         <li>The Kind Café</li>
         <li>Chipsy (Grilled burgers and loaded chips)</li>
         <li>Brat Bros Catering (Bratwurst, hot dogs, schnitzels)</li>
-        <li>Sugo Kitchen (Italian Street Food, focaccia sandwiches, handmade pasta bowls)</li>
         <li>Gully (Indian Street Food) </li>
+        <li>Howe and Co (fish and chips)</li>
         <li>The Cheese Toaster (Gourmet cheese toasties)</li>
         <li>Social Dhaba (Punjabi Street Food)</li>
-        <li>Paella Shack (Paella)</li>
-        <li>Letterbox Cookie (Handmade cookies)</li>
+        <li>Paella Shack</li>
+        <li>NoshyCircle</li>
         <li>Lilibet’s of Windsor (Traditional Old-Fashioned sweets)</li>
         <li>1218 Plant Based Cuisine (Vegan Street Food, salad boxes, BBQ and vegan sweet treats)</li>
-        <li>Ben’s Bakery (Artisan Cakes)</li>
+        <li>Sangi Sweet and Savoury</li>
         </ul></p>`,
         times: "noon – 6pm", //could be an array of datetimes later
         location: 17,
@@ -53,7 +67,7 @@ var app = new Vue({
       5: {
         title: "Archery",
         body: ``,
-        times: "2pm – 6pm", //could be an array of datetimes later
+        times: "3pm – 5pm", //could be an array of datetimes later
         location: 11,
         classification: "Event",
       },
@@ -85,7 +99,7 @@ var app = new Vue({
       },
       9: {
         title: "Barefoot Dance",
-        body: ``,
+        body: `<p>A part time dance, drama and performing arts school. We offer a variety of classes running throughout the week.</p>`,
         times: "2.45pm, 4.15pm", //could be an array of datetimes later
         location: 10,
         classification: "Event",
@@ -98,7 +112,7 @@ var app = new Vue({
         classification: "Event",
       },
       11: {
-        title: "Bollywood Dance by Quainton Hall",
+        title: "Bollywood Dance by Quainton Hall School",
         body: ``,
         times: "3.15pm – 3.45pm", //could be an array of datetimes later
         location: 7,
@@ -115,7 +129,9 @@ var app = new Vue({
         title: "Community Production: Noye's Fludde",
         body: `<p>A flood is coming, but Noah is building a boat, in the hope that a new world will be waiting on the other side.</p>
         <p>As part of Harrow School's Community Day, members of the Drama and Music departments direct a joyous new production of Benjamin Britten's community opera, combining the talents of more than a hundred children from four primary schools: Byron Court, Norbury, St Anselm's and St Jerome's from across the borough, and Bishopshalt School.</p>
-        `,
+        <p>Everyone is very welcome to attend. Please just come to Speech Room in time for either performance at 2pm or 5pm, which will last for approximately an hour each.</p>
+
+<p>If you would like to reserve seats in advance, for which there is no charge, please visit <a href="https://www.trybooking.co.uk/BNMY">https://www.trybooking.co.uk/BNMY</a></p>.`,
         times: "2pm, 5pm", //could be an array of datetimes later
         location: 6,
         classification: "Event",
@@ -131,8 +147,8 @@ var app = new Vue({
       15: {
         title: "Cricket Festival",
         body: `<p>Youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.</p>
-        `,
-        times: "2pm – 6pm", //could be an array of datetimes later
+        <p>There will be twelve stations of fun-filled coaching of different skills by professional cricketers and A-team players.</p>`,
+        times: "2pm – 4pm", //could be an array of datetimes later
         location: 22,
         classification: "Event",
       },
@@ -231,12 +247,12 @@ var app = new Vue({
         body: `<p>Enjoy a full programme of traditional bandstand entertainment including brass, wind and concert bands.</p>
         <table>
         <tr><td>2.00pm</td><td>Orley Farm (Year 8 Rock Band, String Quartet and Chamber Choir)</td></tr>
-        <tr><td>2.30pm</td><td>John Lyon and Quainton Hall</td></tr>
+        <tr><td>2.30pm</td><td>John Lyon and Quainton Hall School</td></tr>
         <tr><td>3.00pm</td><td>Traditional Irish Music</td></tr>
         <tr><td>3.30pm</td><td>The Aftercare (Harrow School)</td></tr>
         <tr><td>4.00pm</td><td>Traditional Irish Music</td></tr>
-        <tr><td>4.30pm</td><td>ohn Lyon and Quainton Hall</td></tr>
-        <tr><td>5.00pm</td><td>Traditional Irish Music</td></tr>
+        <tr><td>4.30pm</td><td>John Lyon and Quainton Hall School</td></tr>
+        <tr><td>5.00pm</td><td>The Famous Seamus</td></tr>
         <tr><td>5.30pm</td><td>The Aftercare (Harrow School)</td></tr>
         </table>
         <p>The London Irish Music School was established in 1999 under the direction of Colette Keaveney (TTCT) who is a qualified teacher of Traditional Irish Music registered with Comhaltas Ceoltoiri Eireann in Dublin, Ireland.</p>
@@ -259,7 +275,7 @@ var app = new Vue({
       29: {
         title: "Punch and Judy Show and Magician",
         body: ``,
-        times: "2pm – 6pm", //could be an array of datetimes later
+        times: "2pm – 5pm", //could be an array of datetimes later
         location: 24,
         classification: "Event",
       },
@@ -294,13 +310,13 @@ var app = new Vue({
         location: 19,
         classification: "Event",
       },
-      34: {
-        title: "String Quartet and Brass Trio",
-        body: ``,
-        times: "3.30pm – 4.30pm", //could be an array of datetimes later
-        location: 3,
-        classification: "Event",
-      },
+      // 34: {
+      //   title: "String Quartet and Brass Trio",
+      //   body: ``,
+      //   times: "3.30pm – 4.30pm", //could be an array of datetimes later
+      //   location: 3,
+      //   classification: "Event",
+      // },
       35: {
         title: "Tai Chi",
         body: `<p>We are a community tai chi group called Harrow Tai Chi for Health. We offer free tai chi sessions at Harrow Recreation Ground every Friday 9.30 to 10.30am for health and general well-being. For more information please email <a href="mailto:info@harrowrec.org.uk">info@harrowrec.org.uk</a></p>
@@ -379,20 +395,30 @@ var app = new Vue({
     },
     locations: {
       100: {
-        title: "UNKNOWN - GROVE HILL",
+        title: "Grove Hill",
         coords: {
           lat: 0,
           lng: 0,
         },
         icon: "./assets/icons/food.png",
+        hand: "right",
+        maplocation: {
+          x: 76.33587786259542,
+          y: 8.38963963963964,
+        },
       },
       101: {
-        title: "UNKNOWN - The Old Well",
+        title: "The Old Well",
         coords: {
           lat: 0,
           lng: 0,
         },
         icon: "./assets/icons/drama.png",
+        hand: "left",
+        maplocation: {
+          x: 22.646310432569976,
+          y: 40.25900900900901,
+        },
       },
       1: {
         title: "The Castle",
@@ -405,6 +431,7 @@ var app = new Vue({
           x: 28.62595419847328,
           y: 35.86711711711711,
         },
+        hand: "left_down",
       },
       2: {
         title: "The Band Stand",
@@ -417,6 +444,7 @@ var app = new Vue({
           x: 31.297709923664126,
           y: 72.91666666666666,
         },
+        hand: "left_down",
       },
       3: {
         title: "The Park Drive",
@@ -429,6 +457,7 @@ var app = new Vue({
           x: 52.54452926208651,
           y: 58.16441441441441,
         },
+        hand: "right",
       },
       4: {
         title: "The Roof Terrace",
@@ -441,6 +470,7 @@ var app = new Vue({
           x: 49.74554707379134,
           y: 28.99774774774775,
         },
+        hand: "right_down",
       },
       5: {
         title: "The Old House",
@@ -453,6 +483,7 @@ var app = new Vue({
           x: 67.68447837150127,
           y: 29.898648648648653,
         },
+        hand: "right_down",
       },
       6: {
         title: "Speech Room",
@@ -465,6 +496,7 @@ var app = new Vue({
           x: 71.7557251908397,
           y: 13.119369369369368,
         },
+        hand: "left_up",
       },
       7: {
         title: "Vaughan Library “Forecourt”",
@@ -477,6 +509,7 @@ var app = new Vue({
           x: 74.93638676844783,
           y: 23.93018018018018,
         },
+        hand: "right",
       },
       8: {
         title: "Behind the Vaughan",
@@ -489,6 +522,7 @@ var app = new Vue({
           x: 81.55216284987277,
           y: 23.81756756756757,
         },
+        hand: "left_up",
       },
       9: {
         title: "The Head Master’s Yard",
@@ -513,6 +547,7 @@ var app = new Vue({
           x: 67.93893129770993,
           y: 17.96171171171171,
         },
+        hand: "left_up",
       },
       11: {
         title: "Bill Yard",
@@ -525,6 +560,7 @@ var app = new Vue({
           y: 18.524774774774773,
         },
         icon: "./assets/icons/music.png",
+        hand: "right",
       },
       12: {
         title: "Druries Steps",
@@ -537,6 +573,7 @@ var app = new Vue({
           x: 63.358778625954194,
           y: 23.14189189189189,
         },
+        hand: "right",
       },
       13: {
         title: "Art Schools",
@@ -549,6 +586,7 @@ var app = new Vue({
           x: 75.69974554707379,
           y: 10.304054054054054,
         },
+        hand: "right",
       },
       14: {
         title: "Passmore Gallery",
@@ -561,6 +599,7 @@ var app = new Vue({
           x: 74.80916030534351,
           y: 11.204954954954955,
         },
+        hand: "right",
       },
       15: {
         title: "Grove Hill Portaloos",
@@ -573,6 +612,7 @@ var app = new Vue({
           x: 77.86259541984732,
           y: 11.655405405405405,
         },
+        hand: "right",
       },
       16: {
         title: "Harrow Park Portaloos",
@@ -585,6 +625,7 @@ var app = new Vue({
           x: 56.87022900763359,
           y: 94.53828828828829,
         },
+        hand: "right",
       },
       17: {
         title: "Food Stalls",
@@ -597,6 +638,7 @@ var app = new Vue({
           x: 50.38167938931297,
           y: 45.439189189189186,
         },
+        hand: "right",
       },
       18: {
         title: "Picnic Area",
@@ -609,6 +651,7 @@ var app = new Vue({
           x: 56.36132315521628,
           y: 26.85810810810811,
         },
+        hand: "right",
       },
       19: {
         title: "St Mary's",
@@ -621,6 +664,7 @@ var app = new Vue({
           x: 56.74300254452926,
           y: 9.628378378378379,
         },
+        hand: "left",
       },
       20: {
         title: "Sports Centre",
@@ -633,6 +677,7 @@ var app = new Vue({
           x: 90.45801526717557,
           y: 5.123873873873873,
         },
+        hand: "right",
       },
       21: {
         title: "High St Central",
@@ -645,6 +690,7 @@ var app = new Vue({
           x: 64.24936386768448,
           y: 28.885135135135137,
         },
+        hand: "right",
       },
       22: {
         title: "Cricket Pitches",
@@ -657,6 +703,7 @@ var app = new Vue({
           x: 24.681933842239186,
           y: 8.502252252252253,
         },
+        hand: "left",
       },
       23: {
         title: "The OSRG",
@@ -669,6 +716,7 @@ var app = new Vue({
           x: 63.48600508905853,
           y: 16.9481981981982,
         },
+        hand: "left_up",
       },
       24: {
         title: "Outside Bradbys",
@@ -681,6 +729,7 @@ var app = new Vue({
           x: 37.27735368956743,
           y: 59.17792792792793,
         },
+        hand: "left",
       },
       25: {
         title: "The Rayleigh Observatory (Maths and Physics Schools)",
@@ -693,6 +742,7 @@ var app = new Vue({
           x: 93.00254452926208,
           y: 18.63738738738739,
         },
+        hand: "right_down",
       },
       26: {
         title: "The Old King's Head (The Gantry)",
@@ -705,6 +755,7 @@ var app = new Vue({
           x: 24.93638676844784,
           y: 81.47522522522522,
         },
+        hand: "left_down",
       },
       27: {
         title: "Athletics Ground",
@@ -717,6 +768,7 @@ var app = new Vue({
           x: 89.69465648854961,
           y: 6.25,
         },
+        hand: "left_up",
       },
       28: {
         title: "Hundred Steps",
@@ -729,12 +781,13 @@ var app = new Vue({
           x: 47.70992366412214,
           y: 22.353603603603602,
         },
+        hand: "left_up",
       },
     },
   },
   methods: {
-    closemodalandopenevent(modalid, eventid) {
-      $("#locationModal" + modalid).modal("hide");
+    closemodalandopenevent(eventid) {
+      $("#NewlocationModal").modal("hide");
       document.getElementById("event" + eventid).open = true;
     },
     dateformat(input) {
@@ -746,77 +799,102 @@ var app = new Vue({
         minute: "2-digit",
       });
     },
-    invalidatemap() {
-      this.state.maps.invalidateSize();
+    modalClosed() {
+      this.state.glass.shatter();
+      console.log("shattered");
     },
     modalOpened() {
-      if (this.state.maps) {
-        this.state.maps.remove();
-      }
-
-      if (this.state.glass) {
-        this.state.glass = null;
-
-        document.getElementById("inject11").innerHTML = "";
-      }
-
       var button = event.relatedTarget;
       var locationid = button.getAttribute("data-bs-locationid");
 
-      var location = this.locations[locationid];
+      this.state.NewlocationModal = this.locations[locationid];
+      this.state.NewlocationModal.id = locationid;
 
-      this.state.maps = L.map("mainMap" + locationid);
+      this.getwords(
+        this.state.NewlocationModal.coords.lat,
+        this.state.NewlocationModal.coords.lng
+      );
 
-      L.tileLayer(
-        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHlsYW5rMTIzIiwiYSI6ImNrajUwMm55NzV0NWwyc2xiNzk0OHFjdXoifQ.cIzWvi9HlI1YfhpY24KbTA",
-        {
-          maxZoom: 18,
-          attribution:
-            'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          id: "dylank123/ckl2u73iy1s5v17tjzyld3nzl",
-          tileSize: 512,
-          zoomOffset: -1,
-        }
-      ).addTo(this.state.maps);
+      // this.state.glass.addTentacle(
+      //   50,
+      //   75,
+      //   "./assets/icons/hands/hand_right.png",
+      //   {
+      //     width: 200,
+      //     anchorX: 100,
+      //     anchorY: 50,
+      //   }
+      // );
 
-      var icon = L.icon({
-        iconUrl: location.icon,
-        //shadowUrl: 'leaf-shadow.png',
+      // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
 
-        iconSize: [25, 25], // size of the icon
-        // shadowSize:   [50, 64], // size of the shadow
-        // iconAnchor:   [12.5, 12.5], // point of the icon which will correspond to marker's location
-        // shadowAnchor: [4, 62],  // the same for the shadow
-        // popupAnchor:  [12.5, 12.5] // point from which the popup should open relative to the iconAnchor
+      setTimeout(this.glassytuff, 750);
+    },
+
+    getwords(lat, lng) {
+      what3words.api.convertTo3wa({ lat, lng }, "en").then((response) => {
+        this.state.words = response.words;
       });
-
-      var marker = L.marker([location.coords.lat, location.coords.lng], {
-        icon: icon,
-      })
-        .addTo(this.state.maps)
-        .bindPopup(location.title);
-
-      this.state.maps.setView([location.coords.lat, location.coords.lng], 17);
-
-      setTimeout(this.invalidatemap, 500);
-
+    },
+    glassytuff() {
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
       this.state.glass = injectGlass(
-        document.getElementById("inject" + locationid),
+        document.getElementById("inject"),
         "./assets/450_map.jpg"
       );
 
       // Add a smaller default Octopus at same location
       // but using percent as unit (given image width of 1000px and height of 667px)
       this.state.glass.addOctopus(
-        location.maplocation.x,
-        location.maplocation.y,
+        this.state.NewlocationModal.maplocation.x,
+        this.state.NewlocationModal.maplocation.y,
         {
           radius: 5,
           margin: 2,
           positionUnit: "%",
+          headColor: "#be564f",
         }
+      );
+
+      if (this.state.NewlocationModal.hand == "left") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 100,
+          anchorX: 0,
+          anchorY: 50,
+        };
+      } else if (this.state.NewlocationModal.hand == "right") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 100,
+          anchorX: 100,
+          anchorY: 50,
+        };
+      } else if (this.state.NewlocationModal.hand == "left_down") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 100,
+          anchorX: 0,
+          anchorY: 100,
+        };
+      } else if (this.state.NewlocationModal.hand == "right_down") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 100,
+          anchorX: 100,
+          anchorY: 100,
+        };
+      } else if (this.state.NewlocationModal.hand == "left_up") {
+        this.state.NewlocationModal.anchorpoints = {
+          width: 100,
+          anchorX: 0,
+          anchorY: 0,
+        };
+      }
+
+      this.state.glass.addTentacle(
+        this.state.NewlocationModal.maplocation.x,
+        this.state.NewlocationModal.maplocation.y,
+        "./assets/icons/hands/hand_" +
+          this.state.NewlocationModal.hand +
+          ".png",
+        this.state.NewlocationModal.anchorpoints
       );
     },
   },
@@ -827,78 +905,7 @@ var app = new Vue({
       )
       .then((response) => (this.state.latestcommit = response.data[0]));
 
-    var mainMap = L.map("mainMap");
-
     window.addEventListener("show.bs.modal", this.modalOpened);
-    window.addEventListener("hide.bs.modal", (e) => {
-      // remove the word "locationModal" from the string to get the location id
-      var locationid = e.target.id.replace("locationModal", "");
-      document.getElementById("inject" + locationid).innerHTML = "";
-    });
-
-    L.tileLayer(
-      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHlsYW5rMTIzIiwiYSI6ImNrajUwMm55NzV0NWwyc2xiNzk0OHFjdXoifQ.cIzWvi9HlI1YfhpY24KbTA",
-      {
-        maxZoom: 18,
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: "dylank123/ckl2u73iy1s5v17tjzyld3nzl",
-        tileSize: 512,
-        zoomOffset: -1,
-      }
-    ).addTo(mainMap);
-
-    Object.entries(this.locations).forEach((entry) => {
-      const [id, location] = entry;
-      var icon = L.icon({
-        iconUrl: location.icon,
-        //shadowUrl: 'leaf-shadow.png',
-
-        iconSize: [25, 25], // size of the icon
-        // shadowSize:   [50, 64], // size of the shadow
-        // iconAnchor:   [12.5, 12.5], // point of the icon which will correspond to marker's location
-        // shadowAnchor: [4, 62],  // the same for the shadow
-        // popupAnchor:  [12.5, 12.5] // point from which the popup should open relative to the iconAnchor
-      });
-
-      var marker = L.marker([location.coords.lat, location.coords.lng], {
-        icon: icon,
-      })
-        .addTo(mainMap)
-        .bindPopup(
-          `
-        <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-          data-bs-locationid="` +
-            id +
-            `" data-bs-target="#locationModal` +
-            id +
-            `">` +
-            this.locations[id].title +
-            `</button>
-      `
-        );
-    });
-
-    mainMap.setView([51.57281743898807, -0.3371716811246794], 17);
-
-    // shows user's location on map
-    // function onLocationFound(e) {
-    //     var radius = e.accuracy / 2;
-
-    //     var locationMarker = L.marker(e.latlng).addTo(mymap)
-    //         .bindPopup('You are within ' + radius + ' meters from this point').openPopup();
-
-    //     var locationCircle = L.circle(e.latlng, radius).addTo(mymap);
-    // }
-
-    // function onLocationError(e) {
-    //     alert(e.message);
-    // }
-
-    // mymap.on('locationfound', onLocationFound);
-    // mymap.on('locationerror', onLocationError);
-
-    // mymap.locate({ setView: true, maxZoom: 16 });
+    window.addEventListener("hide.bs.modal", this.modalClosed);
   },
 });
