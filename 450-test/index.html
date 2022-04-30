@@ -31,6 +31,8 @@
   <!-- Link Glass Octopus stylesheet -->
   <link href="./libraries/glass-octopus/glassoct.css" rel="stylesheet">
 
+  <!-- What three words?-->
+  <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=W6GU1XLL"></script>
 
 </head>
 
@@ -219,6 +221,16 @@
 
               <div id="inject"></div>
 
+              <div class="row justify-content-md-center">
+
+                <!-- put an image vertically -->
+
+                <div class="col-md-auto pt-1">
+                  <p><i>/// {{state.words}}</i></p>
+                </div>
+
+              </div>
+
 
               <h3>On at {{state.NewlocationModal.title}}</h3>
               <table class="table">
@@ -238,6 +250,8 @@
 
                 </tbody>
               </table>
+
+
 
             </div>
             <div class="modal-footer">

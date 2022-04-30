@@ -16,8 +16,9 @@ var app = new Vue({
           x: null,
           y: null,
         },
-        hand: null,
       },
+      words: null,
+      hand: null,
     },
     events: {
       1: {
@@ -809,6 +810,11 @@ var app = new Vue({
       this.state.NewlocationModal = this.locations[locationid];
       this.state.NewlocationModal.id = locationid;
 
+      this.getwords(
+        this.state.NewlocationModal.coords.lat,
+        this.state.NewlocationModal.coords.lng
+      );
+
       // this.state.glass.addTentacle(
       //   50,
       //   75,
@@ -823,6 +829,12 @@ var app = new Vue({
       // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
 
       setTimeout(this.glassytuff, 300);
+    },
+
+    getwords(lat, lng) {
+      what3words.api.convertTo3wa({ lat, lng }, "en").then((response) => {
+        this.state.words = response.words;
+      });
     },
     glassytuff() {
       // Create a `Glass` (image) object and inject it into an existing element with the `injectGlass` shorthand
@@ -846,25 +858,25 @@ var app = new Vue({
 
       if (this.state.NewlocationModal.hand == "left") {
         this.state.NewlocationModal.anchorpoints = {
-          width: 200,
+          width: 100,
           anchorX: 0,
           anchorY: 50,
         };
       } else if (this.state.NewlocationModal.hand == "right") {
         this.state.NewlocationModal.anchorpoints = {
-          width: 200,
+          width: 100,
           anchorX: 100,
           anchorY: 50,
         };
       } else if (this.state.NewlocationModal.hand == "left_down") {
         this.state.NewlocationModal.anchorpoints = {
-          width: 200,
+          width: 100,
           anchorX: 0,
           anchorY: 100,
         };
       } else if (this.state.NewlocationModal.hand == "right_down") {
         this.state.NewlocationModal.anchorpoints = {
-          width: 200,
+          width: 100,
           anchorX: 100,
           anchorY: 100,
         };
