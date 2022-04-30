@@ -915,60 +915,6 @@ var app = new Vue({
     window.addEventListener("show.bs.modal", this.modalOpened);
     window.addEventListener("hide.bs.modal", this.modalClosed);
 
-    // this.state.maps = L.map("mainMap");
-    // L.tileLayer(
-    //   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHlsYW5rMTIzIiwiYSI6ImNrajUwMm55NzV0NWwyc2xiNzk0OHFjdXoifQ.cIzWvi9HlI1YfhpY24KbTA",
-    //   {
-    //     maxZoom: 18,
-    //     attribution:
-    //       'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-    //       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    //     id: "dylank123/ckl2u73iy1s5v17tjzyld3nzl",
-    //     tileSize: 512,
-    //     zoomOffset: -1,
-    //   }
-    // ).addTo(this.state.maps);
-    // Object.entries(this.locations).forEach((entry) => {
-    //   const [id, location] = entry;
-    //   var icon = L.icon({
-    //     iconUrl: location.icon,
-    //     //shadowUrl: 'leaf-shadow.png',
-    //     iconSize: [25, 25], // size of the icon
-    //     // shadowSize:   [50, 64], // size of the shadow
-    //     // iconAnchor:   [12.5, 12.5], // point of the icon which will correspond to marker's location
-    //     // shadowAnchor: [4, 62],  // the same for the shadow
-    //     // popupAnchor:  [12.5, 12.5] // point from which the popup should open relative to the iconAnchor
-    //   });
-    //   var marker = L.marker([location.coords.lat, location.coords.lng], {
-    //     icon: icon,
-    //   })
-    //     .addTo(this.state.maps)
-    //     .bindPopup(
-    //       `
-    //     <button type="button" class="btn btn-danger btn-sm pl-2" data-bs-toggle="modal"
-    //       data-bs-locationid="` +
-    //         id +
-    //         `" data-bs-target="#locationModal` +
-    //         id +
-    //         `">` +
-    //         this.locations[id].title +
-    //         `</button>
-    //   `
-    //     );
-    // });
-    // this.state.maps.setView([51.57281743898807, -0.3371716811246794], 17);
-    // // shows user's location on map
-    // // function onLocationFound(e) {
-    // //     var radius = e.accuracy / 2;
-    // //     var locationMarker = L.marker(e.latlng).addTo(mymap)
-    // //         .bindPopup('You are within ' + radius + ' meters from this point').openPopup();
-    // //     var locationCircle = L.circle(e.latlng, radius).addTo(mymap);
-    // // }
-    // // function onLocationError(e) {
-    // //     alert(e.message);
-    // // }
-    // // mymap.on('locationfound', onLocationFound);
-    // // mymap.on('locationerror', onLocationError);
-    // // mymap.locate({ setView: true, maxZoom: 16 });
+ 
   },
 });
