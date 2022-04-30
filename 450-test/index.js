@@ -401,8 +401,8 @@ var app = new Vue({
       100: {
         title: "Grove Hill",
         coords: {
-          lat: 0,
-          lng: 0,
+          lat: 51.57398768968225,
+          lng:  -0.33614975951016984,
         },
         icon: "./assets/icons/food.png",
         hand: "right",
@@ -414,8 +414,8 @@ var app = new Vue({
       101: {
         title: "The Old Well",
         coords: {
-          lat: 0,
-          lng: 0,
+          lat: 51.57222396701636, 
+          lng: -0.3400470091712488
         },
         icon: "./assets/icons/drama.png",
         hand: "left",
