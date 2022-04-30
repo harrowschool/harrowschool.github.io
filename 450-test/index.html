@@ -54,15 +54,20 @@
     <main id="app">
       <section>
 
-        <h3 class="pink"><b>Celebrating 450 years of community on the Hill</b></h3>
-        <h3 class="turquoise">30 April Noon – 6pm</h3>
+        <h3 class="pink subtitle">Celebrating 450 years of community on the Hill</h3>
+        <h3 class="turquoise subtitle">30 April Noon – 6pm</h3>
 
         <p>Residents and friends from around the Hill are invited to join in a day of celebration to mark the 450th
           anniversary of Harrow School. There’s something for everyone and new events are being added all the time. This
           information will be updated regularly up until and including Saturday 30 April.</p>
         <p>You are welcome to come in period costume.</p>
 
-        <h3 class="purple">Food Noon to 6pm</h3>
+        <h3 class="orange subtitle">Map of the Hill</h3>
+
+        <img v-show="maptype" id="map" src="./assets/450_map.jpg" width=100% height=auto>
+
+
+        <h3 class="purple subtitle">Food Noon to 6pm</h3>
 
         <details :id="'event'+eventid" v-for="(event, eventid) in events" v-if="event.classification == 'Food' ">
           <summary>{{event.title}}</summary>
@@ -83,7 +88,7 @@
           </div>
         </details>
 
-        <h3 class="orange">Events 2pm – 6pm</h3>
+        <h3 class="orange subtitle">Events 2pm – 6pm</h3>
 
         <p>Tap each item for more information.</p>
 
@@ -115,11 +120,8 @@
           <p>Senior Winner: Anna, Year 13</p>
         </details>
 
-        <h3 class="orange">Maps</h3>
 
-        <img v-show="maptype" id="map" src="./assets/450_map.jpg" width=100% height=auto>
-
-        <h3 class="pink">Other Information</h3>
+        <h3 class="pink subtitle">Other Information</h3>
 
         <p><strong>First Aid and Lost Children</strong><br />
           St John’s ambulance will be working from the West St Meeting Room at the top of West St. This will also be the
@@ -168,56 +170,15 @@
 
         <div class="py-3 row justify-content-between">
 
-          <div class="col">
-            <span>Last Updated <strong v-if="state.latestcommit">
-                {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
-          </div>
 
-          <div class="col">
-            <button class="btn btn-secondary btn-small float-end" type="button" data-bs-toggle="collapse"
-              data-bs-target="#changesBox" aria-expanded="false" aria-controls="changesBox">
-              Read changes
-            </button>
-          </div>
+          <span>Last Updated <strong v-if="state.latestcommit">
+              {{dateformat(state.latestcommit.commit.committer.date)}}</strong></span>
+
+
         </div>
 
 
 
-        <div class="collapse" id="changesBox">
-          <div class="card card-body">
-            <div v-if="!state.latestcommit">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-            </div>
-            <div v-if="state.latestcommit">
-              <h6>Latest Commit</h6>
-              <table class="table">
-                <tbody>
-
-                  <tr>
-                    <th scope="row">Committer</th>
-                    <td>{{state.latestcommit.commit.author.name}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Date</th>
-                    <td>{{dateformat(state.latestcommit.commit.committer.date)}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Details</th>
-                    <td>{{state.latestcommit.commit.message}}</td>
-                  </tr>
-
-                </tbody>
-              </table>
-
-              <a type="button" role="button" :href="state.latestcommit.parents[0].html_url"
-                class="btn btn-outline-info">View on Github</a>
-
-            </div>
-
-          </div>
-        </div>
 
       </section>
 
@@ -257,6 +218,7 @@
                   </tr>
                 </thead>
                 <tbody>
+
                   <tr div v-for="(event, eventid) in events" v-if="event.location==state.NewlocationModal.id">
                     <td>{{event.title}}</td>
                     <td>{{event.times}}</td>
