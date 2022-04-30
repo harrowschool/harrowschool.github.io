@@ -833,16 +833,16 @@ var app = new Vue({
 
       // Add a smaller default Octopus at same location
       // but using percent as unit (given image width of 1000px and height of 667px)
-      this.state.glass.addOctopus(
-        this.state.NewlocationModal.maplocation.x,
-        this.state.NewlocationModal.maplocation.y,
-        {
-          radius: 5,
-          margin: 2,
-          positionUnit: "%",
-          headColor: "#be564f",
-        }
-      );
+      //this.state.glass.addOctopus(
+      //  this.state.NewlocationModal.maplocation.x,
+      //  this.state.NewlocationModal.maplocation.y,
+      //  {
+      //    radius: 5,
+      //    margin: 2,
+      //   positionUnit: "%",
+      //  headColor: "#be564f",
+      //  }
+      //);
 
       if (this.state.NewlocationModal.hand == "left") {
         this.state.NewlocationModal.anchorpoints = {
