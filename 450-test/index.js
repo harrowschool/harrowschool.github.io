@@ -828,7 +828,7 @@ var app = new Vue({
 
       // glass.addTentacle(50, 25, "icons/hand_left_up.png", { width: 100, anchorX: 0, anchorY: 0 });
 
-      setTimeout(this.glassytuff, 300);
+      setTimeout(this.glassytuff, 750);
     },
 
     getwords(lat, lng) {
