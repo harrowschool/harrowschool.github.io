@@ -88,13 +88,6 @@ var app = new Vue({
         classification: "Event",
       },
       8: {
-        title: "Art, Photography and Sculpture Exhibitions",
-        body: `<p>Work by local schools and adult art groups</p>`,
-        times: "2pm – 6pm", //could be an array of datetimes later
-        location: 14,
-        classification: "Event",
-      },
-      9: {
         title: "Art Workshop",
         body: `<p><strong>Queen Elizabeth I and John Lyon Figures</strong></p>
         <p>Our two prestigious life-size figures need your help to decorate them and make them look as glorious as possible! Just drop by, and spend as long or as little as you like.</p>
@@ -106,35 +99,35 @@ var app = new Vue({
         location: 12,
         classification: "Event",
       },
-      10: {
+      9: {
         title: "Barefoot Dance",
         body: `<p>A part time dance, drama and performing arts school. We offer a variety of classes running throughout the week.</p>`,
         times: "2.45pm, 4.15pm", //could be an array of datetimes later
         location: 10,
         classification: "Event",
       },
-      11: {
+      10: {
         title: "Basketball",
         body: `<p>Harrow school and the local community Basketball clubs will play a 3 vs 3 competition in the Harrow school sports hall, culminating in a final between the top two teams. Following this, Harrow schools current senior first team will play a recent leavers OH team in an exciting exhibition match.</p>`,
         times: "2pm – 4.30pm", //could be an array of datetimes later
         location: 20,
         classification: "Event",
       },
-      12: {
+      11: {
         title: "Bollywood Dance by Quainton Hall School",
         body: ``,
         times: "3.15pm – 3.45pm", //could be an array of datetimes later
         location: 7,
         classification: "Event",
       },
-      13: {
+      12: {
         title: "Cara Gael Irish Dance Group",
         body: ``,
         times: "3.15pm, 4.45pm", //could be an array of datetimes later
         location: 10,
         classification: "Event",
       },
-      14: {
+      13: {
         title: "Community Production: Noye's Fludde",
         body: `<p>A flood is coming, but Noah is building a boat, in the hope that a new world will be waiting on the other side.</p>
         <p>As part of Harrow School's Community Day, members of the Drama and Music departments direct a joyous new production of Benjamin Britten's community opera, combining the talents of more than a hundred children from four primary schools: Byron Court, Norbury, St Anselm's and St Jerome's from across the borough, and Bishopshalt School.</p>
@@ -145,7 +138,7 @@ var app = new Vue({
         location: 6,
         classification: "Event",
       },
-      15: {
+      14: {
         title: "Costume-themed Streets",
         body: `<p>Victorian West Street, Edwardian High Street, Elizabethan Old Schools, and the Church. With many thanks to the members of the Harrow on the Hill Women's Institute for the more than 600m of wonderful handmade bunting and to the boys of Harrow School for all the flags.</p>
         `,
@@ -153,7 +146,7 @@ var app = new Vue({
         location: 21,
         classification: "Event",
       },
-      16: {
+      15: {
         title: "Cricket Festival",
         body: `<p>Youth cricket teams: Harrow CC, Harrow Town CC, Harrow St Mary’s CC, Newton Farm Primary School, Byron Court Primary School, Pinner Park Primary School, Whitchurch Primary School, and West Lodge Primary School.</p>
         <p>There will be twelve stations of fun-filled coaching of different skills by professional cricketers and A-team players.</p>`,
@@ -161,21 +154,21 @@ var app = new Vue({
         location: 22,
         classification: "Event",
       },
-      17: {
+      16: {
         title: "Edwardian Harrow Beak Reads Virgil",
         body: ``,
         times: "2.40pm – 3pm", //could be an array of datetimes later
         location: 3,
         classification: "Event",
       },
-      18: {
+      17: {
         title: "Fives",
         body: `<p>On the main fives courts, initial celebrations will start with an exciting exhibition match between the top seeded players in the school. On the others courts, highly qualified coaches and some senior boys will run a taster session for all those who wish to trial the game. The afternoon will then conclude with a festival style tournament between the Harrow boys and some community players.</p>`,
         times: "2pm – 4pm", //could be an array of datetimes later
         location: 28,
         classification: "Event",
       },
-      19: {
+      18: {
         title: "Harrow Community Gospel Choir",
         body: `<p><a href="https://harrowcommunitygospelchoir.com">Harrow Community Gospel Choir</a> is a performing choir singing a mixture of contemporary gospel songs and spirituals. The choir is directed by CeCelia Wickham-Anderson, a member of the internationally acclaimed acapella singing group <a href="http://blackvoices.co.uk">Black Voices</a></p>
         `,
@@ -183,7 +176,7 @@ var app = new Vue({
         location: 11,
         classification: "Event",
       },
-      20: {
+      19: {
         title: "Harrow Hill Trust Guided Walk",
         body: `<p>The Harrow Hill Trust will hold a guided tour of the Hill led by Jonathan Edwards. The walk will take in some of the events, people and buildings that helped shape the Hill, from Tudor times through to the 21st Century.</p>
         <p>Please register for this walk, for which there is no charge, with Robert Lemon  07836 638620 <a href="mailto:robertlemon@live.co.uk">robertlemon@live.co.uk</a></p>
@@ -192,7 +185,7 @@ var app = new Vue({
         location: 19,
         classification: "Event",
       },
-      21: {
+      20: {
         title: "Harrow Steel Band",
         body: `<p>Harrow Steel was formed in 1992 and provides an opportunity for gifted and talented young musicians aged 8-21 to learn challenging music aurally within a steel band. We support the engagement of musical talent, in a multicultural environment across Harrow and NW London. Weekly rehearsals are held at Whitmore High School in Harrow.</p>
         <p>We have performed at Notting Hill Carnival on three occasions, where we were voted ‘Best Band on the road’. Other notable performances have been for BBC programmes such as Blue Peter, Record Breakers, and You and Me. The Band have also toured Europe and performed in Barcelona, Salzburg, Paris, Lake Garda, Venice, Ostend, and Amsterdam.</p>
@@ -203,7 +196,7 @@ var app = new Vue({
         location: 4,
         classification: "Event",
       },
-      22: {
+      21: {
         title: "Indie Choir",
         body: `<p>Harrow's very own Indie Choir sings a wide range of alternative and contemporary rock and pop songs, from the Beatles to Bowie to Bastille. Launched in September 2017, the choir has performed live at Rickmansworth Festival, Harrow's Heroes, Headstone Manor, and at pubs, bars, venues, and parties in Harrow and Hillingdon.</p>
         <p>Indie Choir meets upstairs at Trinity Bar in central Harrow on Thursday nights, and more details can be found on the web (<a href="https://www.indiechoir.com">indiechoir.com</a>), Facebook (<a href="https://www.facebook.com/indiechoir">@indiechoir</a>) and Instagram (<a href="https://www.instagram.com/indiechoiruk/">@indiechoiruk</a>).</p>
@@ -213,21 +206,21 @@ var app = new Vue({
         classification: "Event",
       },
 
-      23: {
+      22: {
         title: "John Lyon School Drama",
         body: `<p>A showcase of material from John Lyon’s upcoming modern interpretation of Shakespeare’s The Tempest, adapted for the Harrow and Hill Community Day.</p>`,
         times: "2pm – 2.30pm", //could be an array of datetimes later
         location: 3,
         classification: "Event",
       },
-      24: {
+      23: {
         title: "Judo",
         body: `<p>The judo celebrations will begin with an exhibition training session at 2pm. Boys will demonstrate the main elements of judo training, including traditional warm-up and agility exercises, breakfalls, uchi-komi (technical drills) for standing and groundwork, contest technique, and randori (sparring). The session will conclude with some inter-house exhibition contests. At 3:30pm there will then be an expert demonstration of Nage-no-kata, which is one of the main katas (formal demonstrations) of Kodokan Judo. It is intended as an illustration of the various concepts of throwing that exist in judo and is used both as a training method and as a demonstration of understanding. From 4-5pm there will be a taster session for anyone who would like to try judo.</p>`,
         times: "2pm – 5pm", //could be an array of datetimes later
         location: 28,
         classification: "Event",
       },
-      25: {
+      34: {
         title: "Kidology",
         body: `<p>Kidology Dance Co was established in 2010 by Nicky Rutter and Lauren O'Connell. We have a passion for performing, teaching and helping young people to realise their talents and progress within their future in dance. We specialise in street/Hip-Hop dance, contemporary, musical theatre and have directed and produced a number of sold-out shows, competed in competitions throughout the country and had dancers go on to do remarkable things. Our aim is to work with dancers to enhance their talents, draw on their strengths and build their confidence. We are very fortunate to work with a thriving and well-presented group of young and talented students. We encourage everyone to take part in as many performance opportunities as they can throughout the year especially if dance is something they wish to pursue later in life. <a href="http://www.kidologydance.co.uk">www.kidologydance.co.uk</a></p>
         `,
@@ -235,14 +228,14 @@ var app = new Vue({
         location: 11,
         classification: "Event",
       },
-      26: {
+      25: {
         title: "Maypole Dance",
         body: `<p>Vaughn Primary School</p>`,
         times: "2.30pm – 2.45pm, 4.00pm – 4.15pm", //could be an array of datetimes later
         location: 5,
         classification: "Event",
       },
-      27: {
+      26: {
         title: "Merrydowners Morris",
         body: `<p>Founded in 1990 as a fun entry in a local Church Fete (St. Alban, North Harrow), we practised in secret as, at the time, one of the team was the vicar of the church, so you can imagine the gasps of surprise at our debut! We enjoyed the experience so much that several of the original church members are still performing. During the past 31 years we have performed across London, in France and Germany, the highlights being: The Guildhall, City of London, for the inaugural Dinner of the 1996 European football championships; representing England at The Hong Kong Chinese New Year parade in 2004; La Fetes du Gayants, Douai Pas de Calais in 2001 and 2003; Recklinghausen Germany for the annual Concert of The Akkordeonklaenge von Recklinghausen Westfallen in 2005. We took part many times in London’s New Year’s Day parade and have also appeared in a pop music video and, albeit briefly, on the BBC’s Strictly Come Dancing and also on The One Show! We were also honoured to be included in Harrow’s Diamond Jubilee celebrations and performed for HRH The Duke of Edinburgh.</p>
         `,
@@ -250,7 +243,7 @@ var app = new Vue({
         location: 1,
         classification: "Event",
       },
-      28: {
+      27: {
         title: "Music at the Bandstand",
         body: `<p>Enjoy a full programme of traditional bandstand entertainment including brass, wind and concert bands.</p>
         <table>
@@ -272,7 +265,7 @@ var app = new Vue({
         location: 2,
         classification: "Event",
       },
-      29: {
+      28: {
         title: "Old Speech Room Gallery 450 Exhibition",
         body: `<p>Harrow 1572-2022: from the time of Elizabeth I to the present day, this exhibition is a visual tour through time, full of local legend and newly researched revelations.</p>
         `,
@@ -280,33 +273,40 @@ var app = new Vue({
         location: 23,
         classification: "Event",
       },
-      30: {
+      29: {
         title: "Punch and Judy Show and Magician",
         body: ``,
         times: "2pm – 5pm", //could be an array of datetimes later
         location: 24,
         classification: "Event",
       },
-      31: {
+      30: {
         title: "Rackets",
         body: `<p>On the main rackets court there will be an exciting exhibition match between the top seeded players in the school. On the second court, highly qualified coaches will run a taster session for all those who wish to trial the game and gain experience of the pace of the ball and play. All are welcome and kit and equipment will be provided.</p>`,
         times: "2.15pm – 4.30pm", //could be an array of datetimes later
         location: 28,
         classification: "Event",
       },
-      32: {
+      31: {
         title: "Rayleigh Observatory",
         body: `<p>Find out about the observation of planets, galaxies and other astronomical phenomena.</p>        `,
         times: "2pm – 6pm", //could be an array of datetimes later
         location: 25,
         classification: "Event",
       },
-      33: {
+      32: {
         title: "Roystonjax",
         body: `<p>RoystonJax are a trio with a difference. They use stripped down to bass/drum backing tracks and play live guitars with fabulous three-part harmonies. It feels like a full band but one that can play at any volume in any venue!</p>
         `,
         times: "3.15pm, 5.30pm", //could be an array of datetimes later
         location: 4,
+        classification: "Event",
+      },
+      33: {
+        title: "Sculpture",
+        body: `<p>Work by local schools and adult art groups</p>`,
+        times: "2pm – 6pm", //could be an array of datetimes later
+        location: 14,
         classification: "Event",
       },
       34: {
@@ -402,7 +402,7 @@ var app = new Vue({
         title: "Grove Hill",
         coords: {
           lat: 51.57398768968225,
-          lng:  -0.33614975951016984,
+          lng: -0.33614975951016984,
         },
         icon: "./assets/icons/food.png",
         hand: "right",
@@ -414,8 +414,8 @@ var app = new Vue({
       101: {
         title: "The Old Well",
         coords: {
-          lat: 51.57222396701636, 
-          lng: -0.3400470091712488
+          lat: 51.57222396701636,
+          lng: -0.3400470091712488,
         },
         icon: "./assets/icons/drama.png",
         hand: "left",
@@ -914,7 +914,5 @@ var app = new Vue({
 
     window.addEventListener("show.bs.modal", this.modalOpened);
     window.addEventListener("hide.bs.modal", this.modalClosed);
-
- 
   },
 });
