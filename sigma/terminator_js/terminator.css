@@ -1,0 +1,29 @@
+.terminal {
+  font-family: 'VT323', monospace; 
+  text-align: left; 
+  background-color: black; 
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+.terminal-input {
+  border: none;
+  background-color: inherit !important;
+  color: inherit !important;
+  overflow-x: auto;
+}
+.terminal-line {
+  padding: 2px;
+  overflow-x: auto;
+}
+.terminal-break {
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.422);
+}
+.hiddenscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hiddenscrollbar::-webkit-scrollbar {
+  display: none;
+}
