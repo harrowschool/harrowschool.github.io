@@ -7,8 +7,8 @@ layout: default
 - [Min and Lucien](https://forms.office.com/Pages/ResponsePage.aspx?id=UBzjllrT0UicvFq7UcsWiNcsHDoslL1BoPCRlyic10pUMzQxVjJJSEtPRERXNUNaM1A4TU9CQko4RS4u)
 
 ## Data Transmission
-- [Sean on Data Transmission](https://forms.office.com/Pages/ResponsePage.aspx?id=UBzjllrT0UicvFq7UcsWiCYdcMCfI8tIvlKlOBfTueJURVVDUlA0QjRFWE1JODFNUTJDT0NJTzNZVy4u)
-- [Cameron on Data Transmission](https://forms.office.com/Pages/ResponsePage.aspx?id=UBzjllrT0UicvFq7UcsWiDclk2-jAOpAt85hAtpjDL1UME1FVUtTQjY3TVA0QUE1Q1Q3MTlZRTUwVi4u)
+- [Sean](https://forms.office.com/Pages/ResponsePage.aspx?id=UBzjllrT0UicvFq7UcsWiCYdcMCfI8tIvlKlOBfTueJURVVDUlA0QjRFWE1JODFNUTJDT0NJTzNZVy4u)
+- [Cameron](https://forms.office.com/Pages/ResponsePage.aspx?id=UBzjllrT0UicvFq7UcsWiDclk2-jAOpAt85hAtpjDL1UME1FVUtTQjY3TVA0QUE1Q1Q3MTlZRTUwVi4u)
 - [Richard and Vinsson](https://forms.office.com/Pages/ResponsePage.aspx?id=UBzjllrT0UicvFq7UcsWiBY3i4QbmLBOhmm-4EiNSYJUOEFHM1ZWUzlBQTQxQ1NKRzJaRTJBNDQzVC4u)
 
 ## Hardware
