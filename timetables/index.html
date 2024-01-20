@@ -2,9 +2,10 @@
 title: Timetables
 layout: default
 ---
-
+<ul>
 {% for file in site.static_files %}
     {% if file.path contains "/timetables/" and file.extname == ".ics" %}
-        [file.basename]({{ site.baseurl }}{{ file.path }})
+		<li><a href="{{ site.baseurl }}{{ file.path }}">file.basename</a></li>
     {% endif %}
 {% endfor %}
+</ul>
