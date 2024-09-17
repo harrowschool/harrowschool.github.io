@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>D of E Assessor Request Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>D of E Assessor Request Form</h1>
+    <script src="dofe.js"></script>
+    <form onsubmit="event.preventDefault(); openEmail();">
+        <!-- Your Name -->
+        <label for="yourName">Your Name:</label><br>
+        <input type="text" id="yourName" name="yourName" required><br><br>
+
+        <!-- Award -->
+        <label for="award">Award:</label><br>
+        <select id="award" name="award" required>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+            <option value="Bronze">Bronze</option>
+        </select><br><br>
+
+        <!-- Section -->
+        <label for="section">Section:</label><br>
+        <select id="section" name="section" required>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Physical">Physical</option>
+            <option value="Skill">Skills</option>
+        </select><br><br>
+
+        <!-- Duration -->
+        <label for="duration">Duration:</label><br>
+        <select id="duration" name="duration" required>
+            <option value="3 months">3 months</option>
+            <option value="6 months">6 months</option>
+            <option value="12 months">12 months</option>
+            <option value="18 months">18 months</option>
+        </select><br><br>
+
+        <!-- eDofE ID Number -->
+        <label for="edofeID">eDofE ID Number:</label><br>
+        <input type="text" id="edofeID" name="edofeID" required><br><br>
+
+        <!-- Assessor's Name -->
+        <label for="assessorName">Assessor's Name:</label><br>
+        <input type="text" id="assessorName" name="assessorName" required><br><br>
+
+        <!-- Assessor's Email -->
+        <label for="assessorEmail">Assessor's Email Address:</label><br>
+        <input type="email" id="assessorEmail" name="assessorEmail" required><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>
+      &copy; Harrow School 2024
+    </footer>
+  </body>
+</html>
