@@ -56,7 +56,7 @@ layout: default
     <label for="initials">Select Your Initials:</label>
         <select id="initials" name="initials">
             <option value="" disabled selected>Choose your initials</option>
-            {% assign initials = site.static_files | map: "basename" | uniq | sort %}
+            {% assign initials = site.static_files | where_exp: "file", "file.path contains '/timetables/timetables/' and file.extname == '.ics'" | map: "basename" | sort %}
             {% for file in site.static_files %}
                 {% if file.extname == ".ics" %}
                     <option value="{{ file.basename }}">{{ file.basename }}</option>
