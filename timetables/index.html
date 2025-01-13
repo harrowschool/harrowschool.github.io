@@ -4,6 +4,21 @@ layout: default
 ---
 <p>Last updated {{ "now" | date: "%Y-%m-%d" }}</p>
 
+<!-- Style for spacing -->
+<style>
+    fieldset {
+        margin-bottom: 20px;
+    }
+    #timetable-form label {
+        margin-right: 10px;
+    }
+    #dynamic-text {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #555;
+    }
+</style>
+
 <!-- Form for selecting options -->
 <form id="timetable-form">
     <!-- Radio buttons for including/excluding period names -->
@@ -32,6 +47,12 @@ layout: default
         </label>
     </fieldset>
 
+    <!-- Dynamic text display -->
+    <h3>Preview</h3>
+    <div id="dynamic-text">
+        <ul><li>SS-MA1</li><li>UC-MA4</li><li></li><li>Tutor Period</li><li></li></ul>
+    </div>
+
     <!-- Dropdown for initials -->
     <label for="initials">Select Your Initials:</label>
     <select id="initials" name="initials">
@@ -45,11 +66,36 @@ layout: default
     </select>
 
     <!-- Download button -->
-    <button type="button" id="download-btn">Download</button>
+    <button type="button" id="download-btn" style="margin-top: 20px;">Download</button>
 </form>
 
 <!-- Script for handling directory and initials selection -->
 <script>
+    const periodNamesRadios = document.querySelectorAll('input[name="period_names"]');
+    const freeLessonsRadios = document.querySelectorAll('input[name="free_lessons"]');
+    const dynamicText = document.getElementById('dynamic-text');
+
+    // Function to update dynamic text
+    function updateDynamicText() {
+        const periodNames = document.querySelector('input[name="period_names"]:checked').value;
+        const freeLessons = document.querySelector('input[name="free_lessons"]:checked').value;
+
+        if (periodNames === "with" && freeLessons === "with") {
+            dynamicText.innerHTML = "<ul><li>2a: SS-MA1</li><li>2b: UC-MA4</li><li>2c</li><li>2d: Tutor Period</li><li>2e</li></ul>";
+        } else if (periodNames === "with" && freeLessons === "without") {
+            dynamicText.innerHTML = "<ul><li>2a: SS-MA1</li><li>2b: UC-MA4</li><li></li><li>2d: Tutor Period</li><li></li></ul>";
+        } else if (periodNames === "without" && freeLessons === "with") {
+            dynamicText.innerHTML = "<ul><li>SS-MA1</li><li>UC-MA4</li><li>2c</li><li>Tutor Period</li><li>2e</li></ul>";
+        } else {
+            dynamicText.innerHTML = "<ul><li>SS-MA1</li><li>UC-MA4</li><li></li><li>Tutor Period</li><li></li></ul>";
+        }
+    }
+
+    // Attach event listeners to update dynamic text
+    periodNamesRadios.forEach(radio => radio.addEventListener('change', updateDynamicText));
+    freeLessonsRadios.forEach(radio => radio.addEventListener('change', updateDynamicText));
+
+    // Download button logic
     document.getElementById('download-btn').addEventListener('click', function () {
         // Get selected options for period names and free lessons
         const periodNames = document.querySelector('input[name="period_names"]:checked').value;
@@ -80,4 +126,7 @@ layout: default
         // Redirect to the file path to trigger download
         window.location.href = filePath;
     });
+
+    // Initialize dynamic text
+    updateDynamicText();
 </script>
