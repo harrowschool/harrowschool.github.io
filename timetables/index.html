@@ -2,11 +2,82 @@
 title: Timetables
 layout: default
 ---
-<p>Last updated 2024-11-04</p>
-<ul>
-{% for file in site.static_files %}
-    {% if file.path contains "/timetables/" and file.extname == ".ics" %}
-		<li><a href="{{ site.baseurl }}{{ file.path }}">{{file.basename}}</a></li>
-    {% endif %}
-{% endfor %}
-</ul>
+<p>Last updated {{ "now" | date: "%Y-%m-%d" }}</p>
+
+<!-- Form for selecting options -->
+<form id="timetable-form">
+    <!-- Radio buttons for including/excluding period names -->
+    <fieldset>
+        <legend>Include Period Names</legend>
+        <label>
+            <input type="radio" name="period_names" value="with">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="period_names" value="without" checked>
+            No
+        </label>
+    </fieldset>
+
+    <!-- Radio buttons for including/excluding free lessons -->
+    <fieldset>
+        <legend>Include Free Lessons</legend>
+        <label>
+            <input type="radio" name="free_lessons" value="with">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="free_lessons" value="without" checked>
+            No
+        </label>
+    </fieldset>
+
+    <!-- Dropdown for initials -->
+    <label for="initials">Select Your Initials:</label>
+    <select id="initials" name="initials">
+        <option value="" disabled selected>Choose your initials</option>
+        {% assign initials = site.static_files | map: "basename" | uniq | sort %}
+        {% for file in site.static_files %}
+            {% if file.extname == ".ics" %}
+                <option value="{{ file.basename }}">{{ file.basename }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+
+    <!-- Download button -->
+    <button type="button" id="download-btn">Download</button>
+</form>
+
+<!-- Script for handling directory and initials selection -->
+<script>
+    document.getElementById('download-btn').addEventListener('click', function () {
+        // Get selected options for period names and free lessons
+        const periodNames = document.querySelector('input[name="period_names"]:checked').value;
+        const freeLessons = document.querySelector('input[name="free_lessons"]:checked').value;
+
+        // Map options to directory names
+        let directory = "timetables";
+        if (freeLessons === "with" && periodNames === "with") {
+            directory = "timetables_with_free_lessons_and_period_names";
+        } else if (freeLessons === "with" && periodNames === "without") {
+            directory = "timetables_with_free_lessons";
+        } else if (freeLessons === "without" && periodNames === "with") {
+            directory = "timetables_with_period_names";
+        }
+
+        // Get selected initials
+        const initials = document.getElementById('initials').value;
+
+        if (!initials) {
+            alert('Please select your initials.');
+            return;
+        }
+
+        // Construct the file path and navigate to it
+        const basePath = '{{ site.baseurl }}/timetables/' + directory + '/';
+        const filePath = basePath + initials + '.ics';
+
+        // Redirect to the file path to trigger download
+        window.location.href = filePath;
+    });
+</script>
