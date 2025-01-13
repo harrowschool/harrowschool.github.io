@@ -56,11 +56,9 @@ layout: default
     <label for="initials">Select Your Initials:</label>
         <select id="initials" name="initials">
             <option value="" disabled selected>Choose your initials</option>
-            {% assign initials = site.static_files | map: "basename" | sort | uniq %}
-            {% for file in site.static_files %}
-                {% if file.extname == ".ics" %}
-                    <option value="{{ file.basename }}">{{ file.basename }}</option>
-                {% endif %}
+            {% assign initials = site.static_files | where_exp: "file", "file.extname == '.ics'" | map: "basename" | uniq | sort %}
+            {% for initial in initials %}
+                <option value="{{ initial }}">{{ initial }}</option>
             {% endfor %}
         </select>
         <p></p>
