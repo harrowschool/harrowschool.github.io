@@ -12,14 +12,11 @@ layout: default
     #timetable-form label {
         margin-right: 10px;
     }
-    #dynamic-text {
-        margin-top: 10px;
-        font-size: 0.9em;
-        color: #555;
-    }
+    
 </style>
 
 <!-- Form for selecting options -->
+<h3>Select Options</h3>
 <form id="timetable-form">
     <!-- Radio buttons for including/excluding period names -->
     <fieldset>
@@ -53,20 +50,19 @@ layout: default
         <ul><li>SS-MA1</li><li>UC-MA4</li><li></li><li>Tutor Period</li><li></li></ul>
     </div>
 
-    <!-- Dropdown for initials -->
     <label for="initials">Select Your Initials:</label>
-    <select id="initials" name="initials">
-        <option value="" disabled selected>Choose your initials</option>
-        {% assign initials = site.static_files | map: "basename" | uniq | sort %}
-        {% for file in site.static_files %}
-            {% if file.extname == ".ics" %}
-                <option value="{{ file.basename }}">{{ file.basename }}</option>
-            {% endif %}
-        {% endfor %}
-    </select>
-
-    <!-- Download button -->
-    <button type="button" id="download-btn" style="margin-top: 20px;">Download</button>
+        <select id="initials" name="initials">
+            <option value="" disabled selected>Choose your initials</option>
+            {% assign initials = site.static_files | map: "basename" | uniq | sort %}
+            {% for file in site.static_files %}
+                {% if file.extname == ".ics" %}
+                    <option value="{{ file.basename }}">{{ file.basename }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <p></p>
+        <!-- Download button -->
+        <button type="button" id="download-btn">Download</button>
 </form>
 
 <!-- Script for handling directory and initials selection -->
