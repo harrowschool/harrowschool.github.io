@@ -1,0 +1,58 @@
+{
+	"name": "Basic error handling",
+    "id": "beh",
+    "children": [
+        {
+            "id": "behc01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "behc02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "grape",
+                    "out": ".*that comes at position 5 in my list of favourites\nthanks for playing!"
+                },
+                {
+                    "in": "melon",
+                    "out": ".*it looks like I don't like that fruit at all!\nthanks for playing!"
+                }				
+			]				
+        },
+        {
+            "id": "behc03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "behc04",
+            "name": "Ex. 4 (task)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "tests": [
+                {
+                    "in": "5\n2",
+                    "out": ".*dividing a by b gives 2.50 rounded to 2dp"
+                },
+                {
+                    "in": "1\n0",
+                    "out": ".*an error occurred:\nfloat division by zero"
+                },
+                {
+                    "in": "x",
+                    "out": ".*an error occurred:\ncould not convert string to float: 'x'"
+                }					
+            ]
+        }	
+    ]
+}
+
+

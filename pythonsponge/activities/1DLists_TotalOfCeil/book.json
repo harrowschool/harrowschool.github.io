@@ -1,0 +1,24 @@
+{
+    "name": "Totalling",
+    "id": "82b2aca7-3389-4c3f-aee7-bedeb7fbc8cb",
+    "children": [
+        {
+            "id": "11f45a15-1d7a-47e7-bd12-8a3866c473e2",
+            "name": "Challenge",
+            "guide": "c01.md",
+            "py": "c01.py",
+            "bookMainUrl": "edit://edit/book.json",
+            "tests": [
+                {
+                    "in": "5\n57",
+                    "out": ".* 586"
+                },
+                {
+                    "in": "21\n46",
+                    "out": ".* 255"
+                }
+            ]
+        }
+    ],
+    "bookMainUrl": "edit://edit/book.json"
+}

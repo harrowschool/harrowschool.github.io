@@ -1,0 +1,52 @@
+{
+	"name": "String slicing",
+    "id": "ss",
+    "children": [
+        {
+            "id": "ssc01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "ssc02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "televisions",
+                    "out": ".*\nvis"
+                },
+                {
+                    "in": "car",
+                    "out": ".*\ncar"
+                }	
+			]				
+        },
+        {
+            "id": "ssc03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "ssc04",
+            "name": "Ex. 4 (task)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "tests": [
+                {
+                    "in": "chops\n1",
+                    "out": ".*\ncops"
+                },
+                {
+                    "in": "RATES\n3",
+                    "out": ".*\nRATS"
+                }                
+            ]
+        }	
+    ]
+}

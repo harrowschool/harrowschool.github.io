@@ -1,0 +1,44 @@
+{
+    "name": "Inheritance and Polymorphism",
+    "id": "inapoly",
+    "children": [
+        {
+            "id": "inapoly01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+            "isExample": "True"
+        },
+        {
+            "id": "inapoly02",
+            "name": "Ex. 2 (task)",
+            "guide": "./c02.md",
+            "py": "./c02.py",
+            "tests": [
+                {
+                    "in": [],
+                    "out": "2020 GenericMake GenericModel\n2021 Toyota Corolla, Fuel Type: Gasoline\n2022 Tesla Model 3, Fuel Type: Electric, Battery Capacity: 75 kWh\n2023 Giant Escape 3, Gear Count: 21\nRing ring!"
+                }
+            ]
+        },
+        {
+            "id": "inapoly03",
+            "name": "Ex. 3 (example)",
+            "guide": "./c03.md",
+            "py": "./c03.py",
+            "isExample": "True"
+        },
+        {
+            "id": "inapoly04",
+            "name": "Ex. 4 (task)",
+            "guide": "./c04.md",
+            "py": "./c04.py",
+            "tests": [
+                {
+                    "in": [],
+                    "out": "Area of shape: 20\nArea of shape: 28.274333882308138\nArea of shape: 24.0"
+                }
+            ]
+        }
+    ]
+}

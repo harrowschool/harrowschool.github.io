@@ -1,0 +1,50 @@
+{
+	"name": "Functional programming",
+    "id": "fp",
+    "children": [
+        {
+            "id": "fp01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "fp02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {"in": ["1"], "out": ".*int"},
+                {"in": ["2"], "out": ".*print"},
+                {"in": ["3"], "out": ".*len"}
+            ]
+        },
+        {
+            "id": "fp03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "fp04",
+            "name": "Ex. 4 (example)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "isExample": "True"
+        },
+        {
+            "id": "fp05",
+            "name": "Ex. 5 (task)",
+            "guide": "c05.md",
+            "py": "c05.py",
+            "tests": [
+                {
+                    "in": [],
+                    "out": "34681214\n[3, 4, 6, 8, 12, 14]"
+                }
+            ]
+        }
+    ]
+}

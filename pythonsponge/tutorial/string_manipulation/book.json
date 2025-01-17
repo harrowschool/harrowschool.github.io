@@ -1,0 +1,63 @@
+{
+	"name": "String manipulation",
+    "id": "sm",
+    "children": [
+        {
+            "id": "smc01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "smc02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "horse",
+                    "out": ".*he"
+                }
+			]				
+        },
+        {
+            "id": "smc03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "smc04",
+            "name": "Ex. 4 (example)",
+            "guide": "c04.md",
+            "py": "c04.py",
+			"isExample": "True"
+        },		
+        {
+            "id": "smc05",
+            "name": "Ex. 5 (task)",
+            "guide": "c05.md",
+            "py": "c05.py",
+            "tests": [
+                {
+                    "in": "dog",
+                    "out": ".*I like to hear dog facts"
+                },
+                {
+                    "in": "cat",
+                    "out": ".*I like to hear cat facts"
+                },
+                {
+                    "in": "elephant",
+                    "out": ".*I like to hear elephant facts"
+                },
+                {
+                    "in": "zebra",
+                    "out": ".*I like to hear zebra facts"
+                }				
+            ]
+        }	
+    ]
+}

@@ -1,0 +1,59 @@
+{
+	"name": "Bit manipulation",
+    "id": "bm",
+    "children": [
+        {
+            "id": "bm01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "bm02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [{
+                "in": [],
+                "out": "0b10001011\n0b11111111111111111111111110001011\n0xeef3cad4"
+            }]
+        },
+        {
+            "id": "bm03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+            "tests": [{
+                "in": [],
+                "out": ".*\n.*0x312d53f536c1e6e7bec001ccea06\n.*"
+            }]
+        },
+        {
+            "id": "bm04",
+            "name": "Ex. 4 (example)",
+            "guide": "c04.md",
+            "py": "c04.py",
+			"isExample": "True"
+        },
+        {
+            "id": "bm05",
+            "name": "Ex. 5 (task)",
+            "guide": "c05.md",
+            "py": "c05.py",
+            "tests": [
+                {
+                    "in": ["20"],
+                    "out": [
+                        {"typ": "+", "pattern": ".*7 steps.*"},
+                        {"typ": "c+", "pattern": "num&.*1.*==|if.*1.*&num", "ignore": "w"},
+                        {"typ": "c+", "pattern": "num>>.*1", "ignore": "w"},
+                        {"typ": "c+", "pattern": "num<<.*1.*\\+num|num\\+.*num<<.*1", "ignore": "w"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

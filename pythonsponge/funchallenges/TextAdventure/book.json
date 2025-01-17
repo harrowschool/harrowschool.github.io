@@ -1,0 +1,48 @@
+{
+  "name": "Text Adventure",
+  "id": "textadv",
+  "children": [
+    {
+      "id": "c03",
+      "name": "Text Adventure Intro",
+      "guide": "c03.md",
+      "py": "c03.py"
+    },
+    {
+      "id": "c12",
+      "name": "Text adventure 1",
+      "guide": "c12.md",
+      "py": "c12.py"
+    },
+    {
+      "id": "c13",
+      "name": "Text adventure 2",
+      "guide": "c13.md",
+      "py": "c13.py"
+    },
+    {
+      "id": "c15",
+      "name": "Text adventure 3",
+      "guide": "c15.md",
+      "py": "c15.py"
+    },
+    {
+      "id": "c16",
+      "name": "Text adventure 4",
+      "guide": "c16.md",
+      "py": "c16.py"
+    },
+    {
+      "id": "c17",
+      "name": "Text adventure 5",
+      "guide": "c17.md",
+      "py": "c17.py"
+    },
+    {
+      "id": "c17b",
+      "name": "Text adventure 6 - OOP",
+      "guide": "c17b.md",
+      "py": "c17b.py"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Perse Code Advent",
+  "id": "663722f6-3f56-450a-9c7b-58b01424aa26",
+  "children": [
+    {
+      "id": "c962cd39-17d6-4343-a1d2-bb7219d1877f",
+      "name": "Day 04",
+      "guide": "c01.md",
+      "py": "c01.py",
+      "isExample": true,
+      "additionalFiles": [{ "filename": "data.txt", "visible": true }]
+    }
+  ]
+}

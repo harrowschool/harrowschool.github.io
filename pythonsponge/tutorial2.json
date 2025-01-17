@@ -1,0 +1,56 @@
+{
+    "name": "Tutorial2",
+    "id": "Tutorial2",
+    "children": [
+		{
+            "id": "FSF",
+            "name": "f-string formatting",
+            "bookLink": "./tutorial2/f_string_formatting/book.json"      
+		},		
+		{
+            "id": "BOOAL",
+            "name": "Breaking out of a loop",
+            "bookLink": "./tutorial2/breaking_out_of_a_loop/book.json"      
+		},	
+		{
+            "id": "AARLI",
+            "name": "Adding and removing list items",
+            "bookLink": "./tutorial2/adding_and_removing_list_items/book.json"  
+		},	
+		{
+            "id": "UEWL",
+            "name": "Using enumerate with lists",
+            "bookLink": "./tutorial2/using_enumerate_with_lists/book.json"  
+		},
+		{
+            "id": "LSAM",
+            "name": "List slicing and methods",
+            "bookLink": "./tutorial2/list_slicing_and_methods/book.json"      
+		},
+		{
+            "id": "CL",
+            "name": "Copying lists",
+            "bookLink": "./tutorial2/copying_lists/book.json"
+		},
+		{
+            "id": "DSAP",
+            "name": "Data structures as parameters",
+            "bookLink": "./tutorial2/data_structures_as_parameters/book.json"
+		},
+		{
+            "id": "BEH",
+            "name": "Basic error handling",
+            "bookLink": "./tutorial2/basic_error_handling/book.json"      
+		},
+		{
+            "id": "FHWCB",
+            "name": "File handing with context block",
+            "bookLink": "./tutorial2/file_handling_with_context_block/book.json"      
+		},	
+		{
+            "id": "OPAU",
+            "name": "Optional parameters and unpacking",
+            "bookLink": "./tutorial2/optional_parameters_and_unpacking/book.json"      
+		}
+    ]
+}

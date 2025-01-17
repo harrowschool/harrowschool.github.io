@@ -1,0 +1,27 @@
+{
+	"name": "File handling with context block",
+    "id": "fhwcb",
+    "children": [
+        {
+            "id": "fhwcb01",
+            "name": "Ex. 1 (example)",
+            "guide": "c01.md",
+            "py": "c01.py",
+            "isExample": "True"			
+        },		
+        {
+            "id": "fhwcb02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "",
+                    "out": "ICON 1:\nXXXX\nXOOX\nXOOX\nXXXX\nICON 2:\nXOOX\nOXXO\nOXXO\nXOOX\n"
+                }				
+			]				
+        }	
+    ]
+}
+
+

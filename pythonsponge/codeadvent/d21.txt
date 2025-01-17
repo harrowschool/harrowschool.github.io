@@ -1,0 +1,20 @@
+LD 1 #2
+LD 2 #2
+LD 3 #10
+CMP 1 2
+JZ #10
+MOD 1 2
+JZ #4
+ADD 2 #1
+LD 2 0
+JA #-6
+ADD 1 #1
+LD 1 0
+LD 2 #2
+JA #-10
+SUB 3 #1
+JZ #3
+LD 3 0
+JA #-7
+OUT 1
+HLT

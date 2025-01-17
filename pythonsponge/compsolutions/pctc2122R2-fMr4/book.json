@@ -1,0 +1,90 @@
+{
+	"name": "PCTC R2 2021-22 Competition Solutions",
+    "id": "pctc21-22compsolns",
+    "children": [
+        {
+            "id": "q01",
+            "name": "q01",
+            "guide": "./q01.md",
+            "py": "./q01.py",
+			"isExample": "True"
+        },	
+        {
+            "id": "q02",
+            "name": "q02",
+            "guide": "./q02.md",
+            "py": "./q02.py",
+			"isExample": "True"
+        },	
+		        {
+            "id": "q03",
+            "name": "q03",
+            "guide": "./q03.md",
+            "py": "./q03.py",
+			"isExample": "True"
+        },	
+        {
+            "id": "q04",
+            "name": "q04",
+            "guide": "./q04.md",
+            "py": "./q04.py",
+			"isExample": "True"
+        },	
+		        {
+            "id": "q05",
+            "name": "q05",
+            "guide": "./q05.md",
+            "py": "./q05.py",
+			"isExample": "True"
+        },	
+        {
+            "id": "q06",
+            "name": "q06",
+            "guide": "./q06.md",
+            "py": "./q06.py",
+			"isExample": "True"
+        },	
+		        {
+            "id": "q07",
+            "name": "q07",
+            "guide": "./q07.md",
+            "py": "./q07.py",
+			"isExample": "True"
+        },	
+        {
+            "id": "q08",
+            "name": "q08",
+            "guide": "./q08.md",
+            "py": "./q08.py",
+			"isExample": "True"
+        },	
+		        {
+            "id": "q09",
+            "name": "q09",
+            "guide": "./q09.md",
+            "py": "./q09.py",
+			"isExample": "True"
+        },	
+        {
+            "id": "q10",
+            "name": "q10",
+            "guide": "./q10.md",
+            "py": "./q10.py",
+			"isExample": "True"
+        },	
+		        {
+            "id": "q11",
+            "name": "q11",
+            "guide": "./q11.md",
+            "py": "./q11.py",
+			"isExample": "True"
+        },	
+        {
+            "id": "q12",
+            "name": "q12",
+            "guide": "./q12.md",
+            "py": "./q12.py",
+			"isExample": "True"
+        }		
+    ]
+}

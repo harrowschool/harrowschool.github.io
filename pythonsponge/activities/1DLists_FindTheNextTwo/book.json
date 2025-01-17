@@ -1,0 +1,1 @@
+{"name":"Searching","id":"30fb4177-9fc7-4cc8-858a-97ecf988a56f","children":[{"id":"09e6b43f-296b-4b87-aea0-3b23b6cb9acd","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"233","out":".*233 and 239 .*"},{"in":"290","out":".*293 .*"},{"in":"299","out":".*no numbers .*"}]}],"bookMainUrl":"edit://edit/book.json"}

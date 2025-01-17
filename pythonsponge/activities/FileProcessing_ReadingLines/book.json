@@ -1,0 +1,23 @@
+{
+  "name": "File Processing",
+  "id": "c40674ba-c273-4e38-837e-a6e979cecc71-3630",
+  "children": [
+    {
+      "id": "3630cac9-5992-47b1-9bd2-0fa04d26c67f",
+      "name": "Task",
+      "tests": [
+        { "in": "a", "out": ".*Aryan\nAdi\nAllan" },
+        { "in": "F", "out": ".*Freya\nFei" }
+      ],
+      "py": "3630cac9-5992-47b1-9bd2-0fa04d26c67f.py",
+      "guide": "3630cac9-5992-47b1-9bd2-0fa04d26c67f.md",
+      "additionalFiles": [
+        {
+          "filename": "names.txt",
+          "visible": false
+        }
+      ]      
+    }
+  ],
+  "bookMainUrl": "edit://edit/book.json"
+}

@@ -1,0 +1,44 @@
+{
+	"name": "Optional parameters and unpacking",
+    "id": "opau",
+    "children": [
+        {
+            "id": "opau01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "opau02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "jump\nwalk",
+                    "out": ".*jumped\n.*walking"
+                }
+			]				
+        },
+        {
+            "id": "opau03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "opau04",
+            "name": "Ex. 4 (task)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "tests": [
+                {
+                    "in": "Marianne\nSophie\nRajeena",
+                    "out": ".*=====================\n|     Marianne      |\n|      Sophie       |\n|      Rajeena      |\n=====================\n|  FRIENDS FOREVER  |\n====================="
+                }
+            ]
+        }	
+    ]
+}

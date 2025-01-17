@@ -1,0 +1,353 @@
+{
+  "name": "Code Advent",
+  "id": "CodeAdvent",
+  "children": [
+    {
+      "id": "CA23Day1",
+      "name": "Day 1",
+      "guide": "d01.md",
+      "py": "d01.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*11999992927",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d01.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day2",
+      "name": "Day 2",
+      "guide": "d02.md",
+      "py": "d02.py",
+      "tests": [
+        {
+          "in": "",
+          "out": "\\*\\*\\*\\*\\*\\.\\.\\.\\*\\.",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d02.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day3",
+      "name": "Day 3",
+      "guide": "d03.md",
+      "py": "d03.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*17271800",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d03.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day4",
+      "name": "Day 4",
+      "guide": "d04.md",
+      "py": "d04.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*3619586717028092152",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d04.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day5",
+      "name": "Day 5",
+      "guide": "d05.md",
+      "py": "d05.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*762925",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d05.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day6",
+      "name": "Day 6",
+      "guide": "d06.md",
+      "py": "d06.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*CT",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d06.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day7",
+      "name": "Day 7",
+      "guide": "d07.md",
+      "py": "d07.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*107",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d07.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day8",
+      "name": "Day 8",
+      "guide": "d08.md",
+      "py": "d08.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*672",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d08.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day9",
+      "name": "Day 9",
+      "guide": "d09.md",
+      "py": "d09.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*RQPONMLKASJIHGFEDCB",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d09.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day10",
+      "name": "Day 10",
+      "guide": "d10.md",
+      "py": "d10.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*UVOEINAEZAMNPQRUISKEMKQUAWKRGJBIKAGASOXGYUWAIIQANJGAAAYBYSZSAACOZEEPYSAZAONXQGOACAMCAPNBQDWAQHRSAAJS",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d10.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day11",
+      "name": "Day 11",
+      "guide": "d11.md",
+      "py": "d11.py",
+      "tests": [
+        {
+          "in": [],
+          "out": [
+            {
+              "typ": "t",
+              "filename": "d11_turtle_sol.py",
+              "reveal": false
+            }
+          ]
+        }
+      ],
+      "additionalFiles": [
+        { "filename": "d11.txt", "visible": true },
+        {
+          "filename": "d11_turtle_sol.py",
+          "visible": false
+        }
+      ]
+    },
+    {
+      "id": "CA23Day12",
+      "name": "Day 12",
+      "guide": "d12.md",
+      "py": "d12.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*1148",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d12.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day13",
+      "name": "Day 13",
+      "guide": "d13.md",
+      "py": "d13.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*25925",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d13.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day14",
+      "name": "Day 14",
+      "guide": "d14.md",
+      "py": "d14.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*513664536878",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d14.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day15",
+      "name": "Day 15",
+      "guide": "d15.md",
+      "py": "d15.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*LYENYEETHRRGGTWLENHDAEFEGGFSGSLSNGSNEEYDSYYEHDTSYDRSRRRLMEETYTYDSGEHTTMTYYEYSSEETSEYEESRRGRGHNRPPHGE",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d15.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day16",
+      "name": "Day 16",
+      "guide": "d16.md",
+      "py": "d16.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*00010101000001100110001001111010001011010110010001111111001101111111111011001101101010111001101001100101101001000011101110010010110110011110000010111001100111001110101010001110011111110011101001000110",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d16.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day17",
+      "name": "Day 17",
+      "guide": "d17.md",
+      "py": "d17.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*80784680798529380789027813474807798402796535734475591090590196868238619945346092878857355735720761258723464587042974827503471149271913793636485934257506504",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d17.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day18",
+      "name": "Day 18",
+      "guide": "d18.md",
+      "py": "d18.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*6033",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d18.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day19",
+      "name": "Day 19",
+      "guide": "d19.md",
+      "py": "d19.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*3393461714218340633622335358385266930433578114564336815926488283272604196006225280717624952827334364414637797480",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d19.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day20",
+      "name": "Day 20",
+      "guide": "d20.md",
+      "py": "d20.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*4469944725",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d20.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day21",
+      "name": "Day 21",
+      "guide": "d21.md",
+      "py": "d21.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*29",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d21.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day22",
+      "name": "Day 22",
+      "guide": "d22.md",
+      "py": "d22.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*47",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d22.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day23",
+      "name": "Day 23",
+      "guide": "d23.md",
+      "py": "d23.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*371",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d23.txt", "visible": true }]
+    },
+    {
+      "id": "CA23Day24",
+      "name": "Day 24",
+      "guide": "d24.md",
+      "py": "d24.py",
+      "tests": [
+        {
+          "in": "",
+          "out": ".*Let merriest Yuletide greetings fall upon all dearest friends at ElvesLight for 2023.",
+          "reveal": false
+        }
+      ],
+      "additionalFiles": [{ "filename": "d24.txt", "visible": true }]
+    }
+  ]
+}

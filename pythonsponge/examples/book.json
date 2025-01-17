@@ -1,0 +1,218 @@
+{
+    "$schema": "https://raw.githubusercontent.com/gdenes355/python-frontend/main/bookSchema.json",
+    "name": "Example challenges",
+    "id": "a8ab8afe-9470-4fbc-980c-6b8017e3aa0b",
+    "children": [
+        {
+            "id": "afb57340-1197-473c-b24d-5687796fd3d4",
+            "name": "Hello world",
+            "guide": "c01.md",
+            "py": "c01.py",
+            "tests": [
+                {
+                    "in": "",
+                    "out": "hello world"
+                }
+            ]
+        },
+        {
+            "id": "d0918aba-8427-4601-9bf2-b4a55381f34e",
+            "name": "An example code",
+            "guide": "ex1.md",
+            "py": "ex1.py",
+            "isExample": true
+        },
+        {
+            "id": "57057e16-3c65-414b-a332-dfea93c626da",
+            "name": "Hello name",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "Joe",
+                    "out": ".*Hello Joe\n"
+                }
+            ]
+        },
+        {
+            "id": "d6824412-d643-4f1f-8aa5-e257e5a4fa80",
+            "name": "Advanced testing",
+            "guide": "advanced_tests.md",
+            "py": "advanced_tests.py",
+            "tests": [
+                {
+                    "in": [4, 5],
+                    "out": [
+                        {"pattern":"Enter    a;", "ignore":"wcp"},
+                        {"pattern":"Enter b:"},
+                        {"typ":"-", "pattern":"Hello 3"},
+                        {"typ":"+", "pattern":"Hello \\d", "count": 2, "ignore":"w"},
+                        {"pattern": "sum.*9", "ignore": "wc"},
+                        {"typ": "c+", "pattern": "int\\(input\\(", "count": 2, "ignore": "w"}
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "a071846a-8f41-4047-aef1-f7370affeffb",
+            "name": "Test with wildcard",
+            "guide": "wildcard.md",
+            "py": "wildcard.py",
+            "tests": [
+                {
+                    "in": "Alice",
+                    "out": ".*Hello Alice (Bob says hi)"
+                }
+            ]
+        },
+        {
+            "id": "a36fb1ce-627e-4d1c-ad18-dc4d84e7fb47",
+            "name": "Test with wildcard - solution",
+            "guide": "wildcard.md",
+            "py": "wildcard_sol.py",
+            "tests": [
+                {
+                    "in": "Alice",
+                    "out": ".*Hello Alice (Bob says hi)"
+                }
+            ]
+        },
+        {
+            "id": "8146dc43-a983-464b-a226-f2ce30b23599",
+            "name": "Test filename contents",
+            "guide": "filecontents.md",
+            "py": "filecontents.py",
+            "tests": [
+                {
+                    "in": ["5"],
+                    "out": [
+                        {"typ": "f+", "pattern": "1\\n3\\n5\\n7\\n9", "filename":"numbers.txt"},
+                        {"typ": "f-", "pattern": "1\\n3\\n5\\n7\\n9\\n11", "filename":"numbers.txt"}
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ce4e8567-4958-43fb-8536-658d13cd7b8f",
+            "name": "Statement tests",
+            "guide": "statementtest.md",
+            "py": "statementtest.py",
+            "tests": [
+                {
+                    "in": [],
+                    "out": [
+                        {"typ": "s+", "pattern": "21", "statement":"getNextMultipleOfSeven(15)"},
+                        {"typ": "s-", "pattern": "14", "statement":"getNextMultipleOfSeven(14)"},                        
+                        {"typ": "s+", "pattern": "42", "statement":"getNextMultipleOfSeven(41)"}
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "c91966b1-b090-4595-8cc0-abb441532902",
+            "name": "Turtle tests",
+            "guide": "turtletest.md",
+            "py": "turtletest.py",
+            "tests": [
+                {
+                    "in": [100],
+                    "out": [
+                        {"typ": "t", "filename":"turtletest_sol.py"}
+                    ]
+                },
+                {
+                    "in": [50],
+                    "out": [
+                        {"typ": "t", "filename":"turtletest_sol.py"}
+                    ]
+                }                
+            ],
+            "additionalFiles": [
+				{
+					"filename": "turtletest_sol.py",
+					"visible": false
+				}
+			]
+        },            
+        {
+            "id": "f79a3f47-0e12-4a8c-9913-2d325b1dd245",
+            "name": "Empty py",
+            "guide": "c03.md",
+            "py": "c03.py",
+            "isExample": true
+        },
+        {
+            "id": "8b3d3a10-9c7c-4815-b7bf-5c6ed0b65daa",
+            "name": "Additional files",
+            "guide": "additional_files.md",
+            "py": "additional_files.py",
+            "additionalFiles": [
+                {
+                    "filename": "additionalFile1.txt",
+                    "visible": true
+                },
+                {
+                    "filename": "additionalFile2.txt",
+                    "visible": false
+                }
+            ]
+        },
+        {
+            "id": "361421e2-d9cc-4c80-ad79-f1dc8b36ca48",
+            "name": "Graphics",
+            "children": [
+                {
+                    "id": "b2fa8941-7eed-44f0-bc80-27af0e45ead8",
+                    "name": "Canvas demo",
+                    "guide": "c04.md",
+                    "py": "c04.py",
+                    "isExample": true,
+                    "typ": "canvas"
+                }, 
+                {
+                    "id": "ebd04e6a-b9e2-11ec-8422-0242ac120002",
+                    "name": "Turtle demo",
+                    "guide": "c05.md",
+                    "py": "c05.py",
+                    "isExample": true,
+                    "typ": "canvas"
+                },
+                {
+                    "id": "5ca9cba7-fe08-427a-aba2-97a7612b19e1",
+                    "name": "Game: bouncing ball",
+                    "guide": "bouncing.md",
+                    "py": "bouncing.py",
+                    "isExample": true,
+                    "typ": "canvas"
+                }
+            ]
+        },               
+        {
+            "id": "cf9c8166-036b-4eb5-a944-29284b8fff79",
+            "name": "Parsons",
+            "children": [
+                {
+                    "id": "ec93a2aa-6c3a-4798-a91a-75d009951963",
+                    "name": "Parsons 1",
+                    "guide": "parsons.md",
+                    "py": "parsons.py",
+                    "typ": "parsons"
+                },
+                {
+                    "id": "404af9d0-78c6-4fdb-9c45-2e2a2f3a33bd",
+                    "name": "Parsons 2",
+                    "guide": "parsons2.md",
+                    "py": "parsons2.py",
+                    "typ": "parsons"
+                },
+                {
+                    "id": "88fd5261-8de5-4303-8c62-bb4399288985",
+                    "name": "Parsons 3",
+                    "guide": "parsons3.md",
+                    "py": "parsons3.py",
+                    "typ": "parsons"
+                }
+            ]
+        }
+    ]
+}

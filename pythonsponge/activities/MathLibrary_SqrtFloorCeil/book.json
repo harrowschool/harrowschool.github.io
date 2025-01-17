@@ -1,0 +1,85 @@
+{
+  "name": "MathLibrary",
+  "id": "84d65efc-5cb2-4100-894b-0d86a9e4efb6",
+  "children": [
+    {
+      "id": "3a74b6ba-8aa2-4811-a929-838242a80c68",
+      "name": "Task",
+      "guide": "c01.md",
+      "py": "c01.py",
+      "bookMainUrl": "edit://edit/book.json",
+      "tests": [
+        {
+          "in": [
+            5
+          ],
+          "out": [
+            {
+              "pattern": "The square root of 5 is between 2 and 3\\.",
+              "ignore": "wcp"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nroot = 0.0"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nabove = 0"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nbelow = 0"
+            }
+          ]
+        },
+        {
+          "in": [
+            17
+          ],
+          "out": [
+            {
+              "pattern": "The square root of 17 is between 4 and 5\\.",
+              "ignore": "wcp"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nroot = 0.0"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nabove = 0"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nbelow = 0"
+            }
+          ]
+        },
+        {
+          "in": [
+            10
+          ],
+          "out": [
+            {
+              "pattern": "The square root of 10 is between 3 and 4\\.",
+              "ignore": "wcp"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nroot = 0.0"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nabove = 0"
+            },
+            {
+              "typ": "c+",
+              "pattern": "\nbelow = 0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bookMainUrl": "edit://edit/book.json"
+}

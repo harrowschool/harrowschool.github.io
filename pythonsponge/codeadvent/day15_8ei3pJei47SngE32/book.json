@@ -1,0 +1,16 @@
+{
+  "name": "Perse Code Advent",
+  "id": "818de1aa-eb6c-4e79-a35f-6bc827304380",
+  "children": [
+    {
+      "id": "6b3d8409-e34f-40af-ab07-b7145654cebd",
+      "name": "Day 15",
+      "guide": "c01.md",
+      "py": "c01.py",
+      "isExample": true,
+      "bookMainUrl": "edit://edit/book.json",
+      "additionalFiles": [{ "filename": "data.txt", "visible": true }]
+    }
+  ],
+  "bookMainUrl": "edit://edit/book.json"
+}

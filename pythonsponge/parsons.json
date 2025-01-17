@@ -1,0 +1,51 @@
+{
+    "name": "Parson's Problems",
+    "id": "parsons_problems",
+    "children": [
+        {
+            "id": "parsons_sequencing",
+            "name": "Sequencing",
+            "bookLink": "./parsons_sequencing/book.json"
+        },
+        {
+            "id": "parsons_selection",
+            "name": "Selection",
+            "bookLink": "./parsons_selection/book.json"
+        },
+        {
+            "id": "parsons_for_loop",
+            "name": "Looping with for",
+            "bookLink": "./parsons_for_loop/book.json"
+        },
+        {
+            "id": "parsons_while_loop",
+            "name": "Looping with while",
+            "bookLink": "./parsons_while_loop/book.json"
+        },
+        {
+            "id": "parsons_strings",
+            "name": "Using strings",
+            "bookLink": "./parsons_strings/book.json"
+        },
+        {
+            "id": "parsons_lists",
+            "name": "Using lists",
+            "bookLink": "./parsons_lists/book.json"
+        },
+        {
+            "id": "parsons_subprograms",
+            "name": "Writing subprograms",
+            "bookLink": "./parsons_subprograms/book.json"
+        },
+        {
+            "id": "parsons_parameters",
+            "name": "Passing in parameters",
+            "bookLink": "./parsons_parameters/book.json"
+        },
+        {
+            "id": "parsons_mod_and_div",
+            "name": "Using mod and div",
+            "bookLink": "./parsons_mod_and_div/book.json"
+        }
+    ]
+}

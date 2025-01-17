@@ -1,0 +1,1 @@
+{"name":"Contents","id":"952c2e5a-60c8-44d5-ba76-54b603c100b2","children":[{"id":"cc9a6eaa-b87d-4c5b-9c27-37668fc924e1","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"2.8,2.01,3.8","out":".* 8"},{"in":"3.202,12.1,4.06","out":".* 19"},{"in":"-4.25,-4.25,-4.25","out":".* -13"}]}],"bookMainUrl":"edit://edit/book.json"}

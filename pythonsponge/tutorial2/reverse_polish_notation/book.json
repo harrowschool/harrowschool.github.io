@@ -1,0 +1,44 @@
+{
+    "name": "Reverse Polish Notation",
+    "id": "rpn",
+    "children": [
+        {
+            "id": "rpn01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+            "isExample": "True"
+        },
+        {
+            "id": "rpn02",
+            "name": "Ex. 2 (task)",
+            "guide": "./c02.md",
+            "py": "./c02.py",
+            "tests": [
+                {
+                    "in": [],
+                    "out": "56.0"
+                }
+            ]
+        },
+        {
+            "id": "rpn03",
+            "name": "Ex. 3 (example)",
+            "guide": "./c03.md",
+            "py": "./c03.py",
+            "isExample": "True"
+        },
+        {
+            "id": "rpn04",
+            "name": "Ex. 4 (task)",
+            "guide": "./c04.md",
+            "py": "./c04.py",
+            "tests": [
+                {
+                    "in": [],
+                    "out": "7\n18\n3\n*\n+\n5\n10\n+\n1\n2\n+\n/\n-\n5\n4\n-\n*"
+                }
+            ]
+        }
+    ]
+}

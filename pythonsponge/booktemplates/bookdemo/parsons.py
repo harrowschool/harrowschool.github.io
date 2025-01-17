@@ -1,0 +1,5 @@
+print("Old MacDonald had a farm")
+print("E—I—E—I—O")
+print("And on that farm he had a cow")
+print("E—I—E—I—O")
+print("Old MacDuckie had a shop") #distractor

@@ -1,0 +1,1 @@
+{"name":"Contents","id":"ebccd4d7-555b-404a-8414-e9bb6cc426d2","children":[{"id":"09b9075f-6be4-4924-a637-8f65d381ad33","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"abc\n2","out":".* abcabc"},{"in":"\ndef\nx\n0\n3","out":".* defdefdef"}]}],"bookMainUrl":"edit://edit/book.json"}

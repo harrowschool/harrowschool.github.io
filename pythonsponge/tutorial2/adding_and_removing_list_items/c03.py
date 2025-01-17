@@ -1,0 +1,5 @@
+game = input("enter a list of names e.g. Jenny,Phil,Mark with no spaces: ")
+names = game.split(",")
+next_player = names.pop(_)
+names.append(___________)
+print(f"after {next_player} has had a go, the order will be {names}")

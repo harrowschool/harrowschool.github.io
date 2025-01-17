@@ -1,0 +1,171 @@
+{
+  "name": "Tutorial2",
+  "id": "Tutorial2",
+  "children": [
+    {
+      "id": "MSLM",
+      "name": "More string and list methods",
+      "bookLink": "./string_and_list_methods/book.json"
+    },
+    {
+      "id": "FSF",
+      "name": "f-string formatting",
+      "bookLink": "./f_string_formatting/book.json"
+    },
+    {
+      "id": "ILT",
+      "name": "Importing Library Techniques",
+      "bookLink": "./importing_libraries/book.json"
+    },
+    {
+      "id": "BOOAL",
+      "name": "Breaking out of a loop",
+      "bookLink": "./breaking_out_of_a_loop/book.json"
+    },
+    {
+      "id": "RAT",
+      "name": "Rounding and Truncation",
+      "bookLink": "./rounding_and_truncation/book.json"
+    },
+    {
+      "id": "UDTL",
+      "name": "Using the datetime library",
+      "bookLink": "./datetime_library/book.json"
+    },
+    {
+      "id": "NCS",
+      "name": "Nested control structures",
+      "bookLink": "./nested_control_structures/book.json"
+    },
+    {
+      "id": "LAGV",
+      "name": "Local and Global Variables",
+      "bookLink": "./local_and_global_variables/book.json"
+    },
+    {
+      "id": "LSTC",
+      "name": "List Comprehensions",
+      "bookLink": "./list_comprehensions/book.json"
+    },
+    {
+      "id": "WWA",
+      "name": "Arrays vs Lists",
+      "bookLink": "./arrays/book.json"
+    },
+    {
+      "id": "UEWL",
+      "name": "Using enumerate with lists",
+      "bookLink": "./using_enumerate_with_lists/book.json"
+    },
+    {
+      "id": "CUREC",
+      "name": "Creating and using records",
+      "bookLink": "./records/book.json"
+    },
+    {
+      "id": "RLI",
+      "name": "Removing list items",
+      "bookLink": "./removing_list_items/book.json"
+    },
+    {
+      "id": "LSAM",
+      "name": "List slicing and methods",
+      "bookLink": "./list_slicing_and_methods/book.json"
+    },
+    {
+      "id": "CL",
+      "name": "Copying lists",
+      "bookLink": "./copying_lists/book.json"
+    },
+    {
+      "id": "DAS",
+      "name": "Sets and dictionaries",
+      "bookLink": "./dicts_and_sets/book.json"
+    },
+    {
+      "id": "DM",
+      "name": "Dictionary methods",
+      "bookLink": "./dictionary_methods/book.json"
+    },
+    {
+      "id": "DSAP",
+      "name": "Data structures as parameters",
+      "bookLink": "./data_structures_as_parameters/book.json"
+    },
+    {
+      "id": "RESUBP",
+      "name": "Review Exercise - Subprograms",
+      "bookLink": "./review_exercises_subprograms/book.json"
+    },
+    {
+      "id": "BEH",
+      "name": "Basic error handling",
+      "bookLink": "./basic_error_handling/book.json"
+    },
+    {
+      "id": "SPQ",
+      "name": "Priority Queues static implementation",
+      "bookLink": "./priority_queues_static/book.json"
+    },
+    {
+      "id": "PRNG",
+      "name": "Using the random library",
+      "bookLink": "./random_library/book.json"
+    },
+    {
+      "id": "FHWCBANDR",
+      "name": "More file handling inc. binary",
+      "bookLink": "./more_file_handling_inc_binary/book.json"
+    },
+    {
+      "id": "BSALG",
+      "name": "Binary Search Algorithm",
+      "bookLink": "./binary_search_algorithm/book.json"
+    },
+    {
+      "id": "GTDFS",
+      "name": "Graph Traversal - DFS",
+      "bookLink": "./graph_dfs/book.json"
+    },
+    {
+      "id": "GTBFS",
+      "name": "Graph Traversal - BFS",
+      "bookLink": "./graph_bfs/book.json"
+    },
+    {
+      "id": "GTDIJ",
+      "name": "Graph Traversal - Dijkstra",
+      "bookLink": "./graph_dijkstra/book.json"
+    },
+    {
+      "id": "TTRAV",
+      "name": "Tree Traversal",
+      "bookLink": "./tree_traversal/book.json"
+    },
+    {
+      "id": "OPAU",
+      "name": "Optional parameters and unpacking",
+      "bookLink": "./optional_parameters_and_unpacking/book.json"
+    },
+    {
+      "id": "RPN",
+      "name": "Reverse Polish Notation",
+      "bookLink": "./reverse_polish_notation/book.json"
+    },
+    {
+      "id": "FP",
+      "name": "Functional programming",
+      "bookLink": "./functional_programming/book.json"
+    },
+    {
+      "id": "LAP",
+      "name": "Lambdas and partials",
+      "bookLink": "./lambdas/book.json"
+    },
+    {
+      "id": "BM",
+      "name": "Bit manipulation",
+      "bookLink": "./bit_manipulation/book.json"
+    }
+  ]
+}

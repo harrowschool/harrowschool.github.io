@@ -1,0 +1,27 @@
+{
+	"name": "Using mod and div",
+    "id": "pmoddiv",
+    "children": [
+		{
+			"id": "pmoddivc01",
+			"name": "Ex. 1",
+			"guide": "c01.md",
+			"py": "c01.py",
+			"typ": "parsons"
+		},
+		{
+			"id": "pmoddivc02",
+			"name": "Ex. 2",
+			"guide": "c02.md",
+			"py": "c02.py",
+			"typ": "parsons"
+		},
+		{
+			"id": "pmoddivc03",
+			"name": "Ex. 3",
+			"guide": "c03.md",
+			"py": "c03.py",
+			"typ": "parsons"
+		}		
+	]
+}

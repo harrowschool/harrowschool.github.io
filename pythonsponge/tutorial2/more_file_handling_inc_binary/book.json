@@ -1,0 +1,46 @@
+{
+  "name": "More file handling inc. binary files",
+  "id": "fhwcbandr",
+  "children": [
+    {
+      "id": "fhwcb01",
+      "name": "Ex. 1 (example)",
+      "guide": "c01.md",
+      "py": "c01.py",
+      "isExample": "True"
+    },
+    {
+      "id": "fhwcb02",
+      "name": "Ex. 2 (task)",
+      "guide": "c02.md",
+      "py": "c02.py",
+      "tests": [
+        {
+          "in": "",
+          "out": "ICON 1:\nXXXX\nXOOX\nXOOX\nXXXX\nICON 2:\nXOOX\nOXXO\nOXXO\nXOOX\n"
+        }
+      ]
+    },
+    {
+      "id": "fhwcb03",
+      "name": "Ex. 4 (example)",
+      "guide": "c03.md",
+      "py": "c03.py",
+      "isExample": true,
+      "additionalFiles": [{ "filename": "data.bin", "visible": true }]
+    },
+    {
+      "id": "fhwcb04",
+      "name": "Ex. 4 (task)",
+      "guide": "c04.md",
+      "py": "c04.py",
+      "tests": [
+        {
+          "in": "",
+          "out": "-672952132661996746"
+        }
+      ],
+      "additionalFiles": [{ "filename": "data2.bin", "visible": false }]
+    }
+  ]
+}

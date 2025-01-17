@@ -1,0 +1,166 @@
+{
+    "name": "Tutorial",
+    "id": "Tutorial",
+    "children": [
+        {
+            "id": "OaI",
+            "name": "Outputs and inputs",
+            "bookLink": "./tutorial/outputs_and_inputs/book.json"
+        },
+        {
+            "id": "MO",
+            "name": "Mathematical operators",
+            "bookLink": "./tutorial/mathematical_operators/book.json"
+        },
+        {
+            "id": "VTAC",
+            "name": "Variable types and converting",
+            "bookLink": "./tutorial/variable_types_and_converting/book.json"
+        },
+        {
+            "id": "RESA",
+            "name": "Review exercises set A",
+            "bookLink": "./tutorial/review_exercises_set_a/book.json"
+        },
+        {
+            "id": "S1",
+            "name": "Selection 1",
+            "bookLink": "./tutorial/selection_using_if/book.json"
+        },
+        {
+            "id": "S2",
+            "name": "Selection 2",
+            "bookLink": "./tutorial/more_selection_using_if/book.json"
+        },
+		{
+            "id": "SM",
+            "name": "String manipulation",
+            "bookLink": "./tutorial/string_manipulation/book.json"
+        },
+		{
+            "id": "RESB",
+            "name": "Review exercises set B",
+            "bookLink": "./tutorial/review_exercises_set_b/book.json"
+        },
+		{
+            "id": "RUW",
+            "name": "Repetition using while",
+            "bookLink": "./tutorial/repetition_using_while/book.json"
+        },
+		{
+            "id": "VI",
+            "name": "Validating input",
+            "bookLink": "./tutorial/validating_input/book.json"      
+		},
+		{
+            "id": "RESC",
+            "name": "Review exercises set C",
+            "bookLink": "./tutorial/review_exercises_set_c/book.json"      
+		},
+		{
+            "id": "IUF1",
+            "name": "Iteration using for 1",
+            "bookLink": "./tutorial/iteration_using_for_1/book.json"      
+		},
+		{
+            "id": "IUF2",
+            "name": "Iteration using for 2",
+            "bookLink": "./tutorial/iteration_using_for_2/book.json"
+		},
+		{
+            "id": "SS",
+            "name": "String slicing",
+            "bookLink": "./tutorial/string_slicing/book.json"
+		},
+		{
+            "id": "RESD",
+            "name": "Review exercises set D",
+            "bookLink": "./tutorial/review_exercises_set_d/book.json"      
+		},
+		{
+            "id": "ITL",
+            "name": "Introduction to lists",
+            "bookLink": "./tutorial/introduction_to_lists/book.json"      
+		},
+		{
+            "id": "LAAR",
+            "name": "List appending and removing",
+            "bookLink": "./tutorial/list_appending_and_removing/book.json"      
+		},
+		{
+            "id": "SF",
+            "name": "String formatting",
+            "bookLink": "./tutorial/string_formatting/book.json"      
+		},
+		{
+            "id": "RESE",
+            "name": "Review exercises set E",
+            "bookLink": "./tutorial/review_exercises_set_e/book.json"      
+		},
+		{
+            "id": "IOL",
+            "name": "Iterating over lists",
+            "bookLink": "./tutorial/iterating_over_lists/book.json"      
+		},		
+		{
+            "id": "MSMAF",
+            "name": "More string methods and formatting",
+            "bookLink": "./tutorial/more_string_methods_&_formatting/book.json"      
+		},
+		{
+            "id": "RESF",
+            "name": "Review exercises set F",
+            "bookLink": "./tutorial/review_exercises_set_f/book.json"      
+		},		
+		{
+            "id": "SWFUD",
+            "name": "Starting with functions using def",
+            "bookLink": "./tutorial/starting_with_functions_using_def/book.json"
+		},
+		{
+            "id": "FP",
+            "name": "Function parameters",
+            "bookLink": "./tutorial/function_parameters/book.json"
+		},			
+		{
+            "id": "RESG",
+            "name": "Review exercises set G",
+            "bookLink": "./tutorial/review_exercises_set_g/book.json"      
+		},
+		{
+            "id": "AWOAC",
+            "name": "ASCII with ord and chr",
+            "bookLink": "./tutorial/ascii_with_ord_and_chr/book.json"      
+		},
+		{
+            "id": "MAIDO",
+            "name": "Mod and int division operators",
+            "bookLink": "./tutorial/mod_and_int_division_operators/book.json"      
+		},
+		{
+            "id": "FRAR",
+            "name": "File reading and writing",
+            "bookLink": "./tutorial/file_readwrite/book.json"      
+		},
+		{
+            "id": "MF",
+            "name": "Mathematical functions",
+            "bookLink": "./tutorial/math_functions/book.json"      
+		},
+		{
+            "id": "MFRW",
+            "name": "More file read-write",
+            "bookLink": "./tutorial/more_file_readwrite/book.json"      
+		},
+		{
+            "id": "RESH",
+            "name": "Review exercises set H",
+            "bookLink": "./tutorial/review_exercises_set_h/book.json"      
+		},
+		{
+            "id": "OL",
+            "name": "Other library examples",
+            "bookLink": "./tutorial/other_libraries/book.json"      
+		}
+    ]
+}

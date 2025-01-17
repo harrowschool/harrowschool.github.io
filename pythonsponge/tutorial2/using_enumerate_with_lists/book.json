@@ -1,0 +1,46 @@
+{
+	"name": "Using enumerate with lists",
+    "id": "uewl",
+    "children": [
+        {
+            "id": "uewlc01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "uewlc02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "rabbit",
+                    "out": ".*1\n4"
+                },
+                {
+                    "in": "lion",
+                    "out": ".*1\n2"
+                }			
+				
+			]				
+        },
+        {
+            "id": "uewlc03",
+            "name": "Ex. 3 (task)",
+            "guide": "c03.md",
+            "py": "c03.py",
+            "tests": [
+                {
+                    "in": "a,x,x,b,x,y,x",
+                    "out": ".*3"
+                },
+                {
+                    "in": "x,m,x,y,x,t,x,y,x,k",
+                    "out": ".*3"
+                }		
+            ]
+        }	
+    ]
+}

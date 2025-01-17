@@ -1,0 +1,69 @@
+{
+  "name": "List as Dynamic Stack and Queue",
+  "id": "ladsaq",
+  "children": [
+    {
+      "id": "ladsaq01",
+      "name": "Ex. 1 (example)",
+      "guide": "./c01.md",
+      "py": "./c01.py",
+      "isExample": "True"
+    },
+    {
+      "id": "ladsaq02",
+      "name": "Ex. 2 (task)",
+      "guide": "c02.md",
+      "py": "c02.py",
+      "tests": [
+        {
+          "in": [
+            "1",
+            "hello",
+            "1",
+            "world",
+            "2",
+            "1",
+            "tonight",
+            "1",
+            "all",
+            "2",
+            "3",
+            "3",
+            "3",
+            "4"
+          ],
+          "out": [
+            {
+              "typ": "+",
+              "pattern": ".*hello WORLD\nGoodbye!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ladsaq03",
+      "name": "Ex. 3 (example)",
+      "guide": "c03.md",
+      "py": "c03.py",
+      "isExample": "True"
+    },
+    {
+      "id": "ladsaq04",
+      "name": "Ex. 4 (task)",
+      "guide": "c04.md",
+      "py": "c04.py",
+      "tests": [
+        {
+            "in": ["lion"],
+            "out": [
+                {
+                    "typ": "+",
+                    "pattern": "lion\nelephant\nrat\nbat\ncat\ndog"
+                }
+            ]
+        }
+      ]
+    }
+  ]
+}

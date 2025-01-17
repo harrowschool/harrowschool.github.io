@@ -1,0 +1,44 @@
+{
+	"name": "Validating input",
+    "id": "vi",
+    "children": [
+        {
+            "id": "vic01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "vic02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "3\n!\nR\nf",
+                    "out": ".*error, please try again...\n.*error, please try again...\n.*error, please try again...\n.*code accepted"
+                }
+			]				
+        },
+        {
+            "id": "vic03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "vic04",
+            "name": "Ex. 4 (task)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "tests": [
+                {
+                    "in": "QWE4\n!QWE4\nBLA23",
+                    "out": ".*invalid code, try again...\n.*invalid code, try again...\n.*we will give a rise to employee BLA23"
+                }
+            ]
+        }	
+    ]
+}

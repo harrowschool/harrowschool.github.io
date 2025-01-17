@@ -1,0 +1,47 @@
+{
+  "name": "A-level material additions",
+  "id": "be4a6efd-2cf5-4b95-8257-2b6b78a8bff3",
+  "children": [
+    {
+      "id": "67d6fd54-b366-4271-8a56-0d002e90c33d",
+      "name": "Ex. 1 (example)",
+      "guide": "c01.md",
+      "py": "c01.py",
+      "isExample": true
+    },
+    {
+      "id": "0bb311b5-fc16-480e-b716-b25bdf7dd8ea",
+      "name": "Ex. 2 (task)",
+      "guide": "c02.md",
+      "py": "c02.py",
+      "tests": [{
+        "in": [],
+        "out": [
+          {
+            "typ": "c+",
+            "pattern": "from math import"
+          },
+          {
+            "typ": "c+",
+            "pattern": "fabs"
+          },
+          {
+            "typ": "c+",
+            "pattern": "sin"
+          }, 
+          {
+            "typ": "c+",
+            "pattern": "pi"
+          }, 
+          {
+            "typ": "c+",
+            "pattern": "from statistics import mean"
+          },
+          {
+            "pattern": "0.6329795093937626"
+          }
+        ]  
+      }]    
+    }    
+  ]
+}

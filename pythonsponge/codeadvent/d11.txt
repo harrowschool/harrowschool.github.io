@@ -1,0 +1,76 @@
+forward,50
+right,125
+forward,75
+pen up,None
+left,180
+forward,75
+right,55
+forward,30
+pen down,None
+forward,50
+right,90
+forward,30
+right,90
+forward,50
+left,90
+forward,30
+left,90
+forward,50
+left,90
+pen up,None
+forward,60
+right,90
+forward,30
+pen down,None
+forward,50
+right,90
+forward,30
+right,90
+forward,50
+left,90
+forward,30
+left,90
+forward,50
+left,90
+forward,30
+left,90
+forward,50
+right,90
+forward,30
+right,90
+pen up,None
+forward,80
+forward,25
+right,90
+pen down,None
+forward,60
+right,90
+forward,15
+left,180
+forward,30
+left,180
+forward,15
+right,90
+forward,60
+left,135
+forward,15
+right,180
+forward,15
+right,45
+pen up,None
+forward,55
+pen down,None
+forward,50
+right,180
+forward,50
+left,90
+forward,30
+left,90
+forward,50
+right,90
+forward,30
+right,90
+forward,50
+right,180
+pen up,None
+forward,80

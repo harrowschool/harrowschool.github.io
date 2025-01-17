@@ -1,0 +1,1 @@
+{"name":"Contents","id":"0cb9c1fa-f469-4ef1-88c6-744ee351be68","children":[{"id":"f0fb202d-38b0-4e84-907b-b1072b1b1e42","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":["a,b,c","d,e,f"],"out":[{"pattern":"\\['a', 'd', 'b', 'e', 'c', 'f'\\]"}]}]}],"bookMainUrl":"edit://edit/book.json"}

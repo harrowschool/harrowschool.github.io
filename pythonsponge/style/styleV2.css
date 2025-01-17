@@ -1,0 +1,128 @@
+#divHeaderSection {
+  padding: 5px !important;
+}
+
+#divMain {
+  padding-top: 10px;
+  clear: both;
+}
+
+#divContent {
+  padding: 10px;
+  clear: both;
+}
+
+#divFooter {
+  padding-top: 10px;
+  color: white;
+}
+
+#divFooter * {
+  width: 100%;
+  text-align: right !important;
+  font-size: 0.8em !important;
+}
+
+#logo {
+  float: left;
+  width: 200px;
+  padding: 5px;
+}
+
+#logoSection {
+  float: left;
+  width: 100px;
+  padding: 5px;
+}
+
+h1 {
+  background-color: #001219;
+  color: white;
+  padding: 5px;
+  clear: both;
+  max-width: 100%;
+  font-size: 1em !important;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a.link-card {
+  text-decoration: none;
+}
+
+.bg-sect1 {
+  background-color: #49d2e9 !important;
+}
+
+.bg-sect2 {
+  background-color: #64da80 !important;
+}
+
+.bg-sect3 {
+  background-color: #c983fd !important;
+}
+
+.bg-sect4 {
+  background-color: #b2ceb3 !important;
+}
+
+.bg-sect5 {
+  background-color: #a4b7dc !important;
+}
+
+.bg-sect6 {
+  background-color: #f2c99d !important;
+}
+
+.bg-sect7 {
+  background-color: #f8f9fa !important;
+}
+
+.bg-comp {
+  background-color: #f0a793 !important;
+}
+
+.bg-trace {
+  background-color: #f783f2 !important;
+}
+
+.bg-upload {
+  background-color: #a99691 !important;
+}
+
+.card-body {
+  height: 200px !important;
+}
+
+.card-body-small {
+  height: 140px !important;
+}
+
+.card-body-tiny {
+  height: 70px !important;
+}
+
+#header-right {
+  float: left !important;
+  height: 50px !important;
+  width: 300px;
+}
+
+#divHeaderSecondary {
+  padding-top: 10px;
+  padding-left: 10px;
+  clear: both;
+  width: 100%;
+}
+
+.white-text {
+  color: white;
+}
+
+.card-panel-small {
+  height: 40px !important;
+  width: 300px !important;
+  padding: 5px !important;
+}

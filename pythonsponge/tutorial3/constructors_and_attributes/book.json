@@ -1,0 +1,35 @@
+{
+	"name": "Constructors and Attributes",
+    "id": "conatt",
+    "children": [
+        {
+            "id": "conatt01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "conatt02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "typ": "canvas",
+            "tests": [
+                {"in": [], "out": [
+                    {"typ": "c+", "pattern": "self\\.length = x2 - x1", "ignore": "w"},
+                    {"typ": "c+", "pattern": "self\\.height = y2 - y1", "ignore": "w"},
+                    {"typ": "c+", "pattern": "self\\.colour = Rectangle\\.COLOURS\\[colour_name]", "ignore": "w"},
+                    {"typ": "c+", "pattern": "self\\.draw\\(\\)", "ignore": "w"}
+                ]}
+			]
+        },
+        {
+            "id": "conatt03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        }
+    ]
+}

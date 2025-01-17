@@ -1,0 +1,49 @@
+{
+	"name": "Lambdas and Partials",
+    "id": "lap",
+    "children": [
+        {
+            "id": "lap01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "lap02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {"in": [], "out": [
+                    {"typ": "c+", "pattern": "lambda (.+): \\1\\.upper\\(\\)", "ignore": "w"},
+                    {"typ": "c+", "pattern": "lambda (.+), (.+): \\1 \\+ \\2", "ignore": "w"},
+                    {"typ": "c+", "pattern": "lambda (.+): \\1 \\+ \\1\\[::-1\\]|lambda (.+): \\2 \\+ \\2\\.reverse\\(\\)|lambda (.+): \\3 \\+ reversed\\(\\3\\)", "ignore": "w"}
+                ]}
+            ]
+        },
+        {
+            "id": "lap03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "lap04",
+            "name": "Ex. 4 (task)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "tests": [
+                {"in": [], "out": [
+                    {"typ": "c+", "pattern": "partial\\(get_character, (string=)?line\\)", "ignore": "w"},
+                    {
+                      "typ": "c+",
+                      "pattern": "partial\\(remove_letters, letters=(\"ae\"|'ae'|\"ea\"|'ea')\\)",
+                      "ignore": "w"
+                    }
+                ]}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Graphical challenges",
+    "id": "a8ab8afe-9470-4fbc-980c-6b8017e3aa0b",
+    "children": [
+		{
+			"id": "5ca9cba7-fe08-427a-aba2-97a7612b19e1",
+			"name": "Game: bouncing ball",
+			"guide": "bouncing.md",
+			"py": "bouncing.py",
+			"isExample": true,
+			"typ": "canvas"
+		}             
+    ]
+}

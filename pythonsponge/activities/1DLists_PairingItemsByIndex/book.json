@@ -1,0 +1,1 @@
+{"name":"Pairing terms","id":"9eff9590-7e3d-4090-a13b-651799f47614","children":[{"id":"3a55e167-dddd-4a52-9926-45704d08d1a2","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"","out":".*3088.*"}]}],"bookMainUrl":"edit://edit/book.json"}

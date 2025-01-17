@@ -1,0 +1,20 @@
+{
+	"name": "Turtle playground",
+    "id": "turtle",
+    "children": [
+        {
+            "id": "c01",
+            "name": "Turtle Example 1",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": true
+        },
+        {
+            "id": "c02",
+            "name": "Turtle Example 1",
+            "guide": "./c02.md",
+            "py": "./c02.py",
+			"isExample": true			
+        }		
+    ]
+}

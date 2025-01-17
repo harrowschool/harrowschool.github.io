@@ -1,0 +1,27 @@
+{
+  "name": "File Processing",
+  "id": "c40674ba-c273-4e38-837e-a6e979cecc71-fd83",
+  "children": [
+    {
+      "id": "fd83b83c-6e55-45c2-9714-dac47e51e7e8",
+      "name": "Task",
+      "tests": [
+        {
+          "in": [],
+          "out": [
+            { "pattern": ".*\n71$", "typ":"f+", "filename":"digits.txt"}
+          ]
+        }
+      ],
+      "additionalFiles": [
+        {
+          "filename": "digits.txt",
+          "visible": true
+        }
+      ],
+      "py": "fd83b83c-6e55-45c2-9714-dac47e51e7e8.py",
+      "guide": "fd83b83c-6e55-45c2-9714-dac47e51e7e8.md"
+    }
+  ],
+  "bookMainUrl": "edit://edit/book.json"
+}

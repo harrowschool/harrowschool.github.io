@@ -1,0 +1,44 @@
+{
+	"name": "Mod and int division operators",
+    "id": "maido",
+    "children": [
+        {
+            "id": "maidoc01",
+            "name": "Ex. 1 (example)",
+            "guide": "./c01.md",
+            "py": "./c01.py",
+			"isExample": "True"
+        },
+        {
+            "id": "maidoc02",
+            "name": "Ex. 2 (task)",
+            "guide": "c02.md",
+            "py": "c02.py",
+            "tests": [
+                {
+                    "in": "131",
+                    "out": ".*that weight is 9 stone and 5 lbs"
+                }
+			]				
+        },
+        {
+            "id": "maidoc03",
+            "name": "Ex. 3 (example)",
+            "guide": "c03.md",
+            "py": "c03.py",
+			"isExample": "True"
+        },
+        {
+            "id": "maidoc04",
+            "name": "Ex. 4 (task)",
+            "guide": "c04.md",
+            "py": "c04.py",
+            "tests": [
+                {
+                    "in": "5\n6\n0",
+                    "out": ".*The current day is now WED\n.*The current day is now MON\n.*The current day is now SUN\n.*"
+                }
+            ]
+        }	
+    ]
+}
