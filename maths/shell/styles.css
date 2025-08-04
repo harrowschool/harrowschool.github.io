@@ -1,0 +1,34 @@
+/* Top-level ordered list: 1), 2), etc. */
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 1.5em;
+}
+
+ol > li {
+  counter-increment: item;
+  position: relative;
+}
+
+ol > li::before {
+  content: counter(item) ") ";
+  position: absolute;
+  left: -1.5em;
+}
+
+/* Second-level ordered list: a), b), etc. */
+ol ol {
+  list-style-type: none;
+  counter-reset: subitem;
+  padding-left: 1.5em;
+}
+
+ol ol > li {
+  counter-increment: subitem;
+}
+
+ol ol > li::before {
+  content: counter(subitem, lower-alpha) ") ";
+  position: absolute;
+  left: -1.5em;
+}

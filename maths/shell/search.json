@@ -1,0 +1,614 @@
+[
+  {
+    "objectID": "Autumn 1/Factorising with a Common Factor.html",
+    "href": "Autumn 1/Factorising with a Common Factor.html",
+    "title": "Factorising with a Common Factor",
+    "section": "",
+    "text": "Factorising is the opposite of expanding. There are several method of factorising, but the most basic one involves indentifying common factors. For example, in the expression\n\\[\nx^2 - 12x\n\\]\n\\(x\\) is a common factor, and so\n\\[\nx^2 - 12x = x(x - 12)\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Factorising with a Common Factor"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Factorising with a Common Factor.html#example-factorising-with-a-common-factor",
+    "href": "Autumn 1/Factorising with a Common Factor.html#example-factorising-with-a-common-factor",
+    "title": "Factorising with a Common Factor",
+    "section": "",
+    "text": "Factorising is the opposite of expanding. There are several method of factorising, but the most basic one involves indentifying common factors. For example, in the expression\n\\[\nx^2 - 12x\n\\]\n\\(x\\) is a common factor, and so\n\\[\nx^2 - 12x = x(x - 12)\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Factorising with a Common Factor"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Factorising with a Common Factor.html#example-more-than-one-factor",
+    "href": "Autumn 1/Factorising with a Common Factor.html#example-more-than-one-factor",
+    "title": "Factorising with a Common Factor",
+    "section": "Example: More than One Factor",
+    "text": "Example: More than One Factor\nSometimes, there is more than one common factor, and more than two terms:\n\\[\n4x^2y + 8xy^2 + 4xy= 4xy(x + 2y + 1)\n\\]\n\n\n\n\n\n\nWarning\n\n\n\nWhen you take out all the factors from a term, there is a 1 left, not a 0. This is because when you factorise, you are dividing rather than subtracting, and anything divided by itself is 1.",
+    "crumbs": [
+      "Autumn 1",
+      "Factorising with a Common Factor"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Factorising with a Common Factor.html#test-your-understanding",
+    "href": "Autumn 1/Factorising with a Common Factor.html#test-your-understanding",
+    "title": "Factorising with a Common Factor",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nFactorise completely:\n\n\\((3x^2 + 9x)\\)\n\n\\((14t^2 - 21t^3)\\)\n\n\\((8y + 28y^3)\\)\n\n\\((-5h^3 - 40h^7)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Factorising with a Common Factor"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Factorising with a Common Factor.html#answers",
+    "href": "Autumn 1/Factorising with a Common Factor.html#answers",
+    "title": "Factorising with a Common Factor",
+    "section": "Answers",
+    "text": "Answers\n\n\\((3x^2 + 9x) = 3x(x + 3)\\)\n\n\\((14t^2 - 21t^3) = 7t^2(2 - 3t)\\)\n\n\\((8y + 28y^3) = 4y(2 + 7y^2)\\)\n\n\\((-5h^3 - 40h^7) = -5h^3(1 + 8h^4)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Factorising with a Common Factor"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html",
+    "href": "Autumn 1/Expanding Brackets.html",
+    "title": "Expanding Brackets",
+    "section": "",
+    "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#learning-objectives",
+    "href": "Autumn 1/Expanding Brackets.html#learning-objectives",
+    "title": "Expanding Brackets",
+    "section": "",
+    "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#basic-principles",
+    "href": "Autumn 1/Expanding Brackets.html#basic-principles",
+    "title": "Expanding Brackets",
+    "section": "Basic Principles",
+    "text": "Basic Principles\nAlgebra uses letters, often \\(x\\), to stand for numbers. Algebraic expressions can be treated in the same way as number expressions.\n\n\\(x + 3\\) means “add three to the unknown number.”\n\n\\(3x\\) means “3 times the unknown number.”\n\n\\(x^2\\) means “square the unknown number.”",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-combining-like-terms",
+    "href": "Autumn 1/Expanding Brackets.html#example-combining-like-terms",
+    "title": "Expanding Brackets",
+    "section": "Example: Combining Like Terms",
+    "text": "Example: Combining Like Terms\n\\[\na + 3ab - 4ba = a - ab\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote: \\(ab = ba\\), so \\(3ab\\) and \\(-4ba\\) are like terms.\n\n\n\\[\n3p^3 + 2p^2 - 2p^3 + 5p^2 = (3p^3 - 2p^3) + (2p^2 + 5p^2) = p^3 + 7p^2\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-multiplying-algebraic-terms",
+    "href": "Autumn 1/Expanding Brackets.html#example-multiplying-algebraic-terms",
+    "title": "Expanding Brackets",
+    "section": "Example: Multiplying Algebraic Terms",
+    "text": "Example: Multiplying Algebraic Terms\n\\[\n4r \\times 5t = 20rt\n\\]\n\\[\n(3b)^2 \\times 3b = 9b^2 \\times 3b = 27b^3\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nThe multiplication sign is often not included between letters, e.g. \\(3ab\\) means \\(3 \\times a \\times b\\)\nWhen multiplying, add like powers: \\(3a^2b \\times 2a^5b^4 = 6a^8b^5\\). (Think of \\(a\\) as \\(a^1\\)).",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-expanding-brackets",
+    "href": "Autumn 1/Expanding Brackets.html#example-expanding-brackets",
+    "title": "Expanding Brackets",
+    "section": "Example: Expanding Brackets",
+    "text": "Example: Expanding Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x + 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-expanding-with-indices",
+    "href": "Autumn 1/Expanding Brackets.html#example-expanding-with-indices",
+    "title": "Expanding Brackets",
+    "section": "Example: Expanding with Indices",
+    "text": "Example: Expanding with Indices\nExpand \\(5x^2(12x^3 + 4x^5)\\)\n\\[\n5x^2 \\times 12x^3 + 5x^2 \\times 4x^5 = 60x^5 + 20x^7\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding",
+    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand\n\n\\(4y(2y-8)\\)\n\\(3x^2(x^3+y^4)\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}})\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2})\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#answers",
+    "href": "Autumn 1/Expanding Brackets.html#answers",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\(4y(2y-8) = 8y^2 - 32y\\)\n\\(3x^2(x^3+y^4) = 3x^5 + 3x^2y^4\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}}) = c^2 - c + 1\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2}) = 30x^3 - 5x^4 + 35x^2y - 5\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#exercise-1",
+    "href": "Autumn 1/Expanding Brackets.html#exercise-1",
+    "title": "Expanding Brackets",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nPleae complete the worksheet",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-expanding-two-brackets",
+    "href": "Autumn 1/Expanding Brackets.html#example-expanding-two-brackets",
+    "title": "Expanding Brackets",
+    "section": "Example: Expanding Two Brackets",
+    "text": "Example: Expanding Two Brackets\nTo expand \\((x + 3)(x + 2)\\), you can use the grid method. \\[\n\\begin{array}{c|cc}\n    & x & +2 \\\\ \\hline\nx   & x^2 & 2x \\\\\n+3   & 3x  & 6\n\\end{array}\n\\]\nSumming the terms on the inside and simplifying gives:\n\\[\nx^2 + 3x + 2x +6 = x^2 + 5x + 6\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-squared-bracket",
+    "href": "Autumn 1/Expanding Brackets.html#example-squared-bracket",
+    "title": "Expanding Brackets",
+    "section": "Example: Squared Bracket",
+    "text": "Example: Squared Bracket\nA squared bracket is simply the same bracket twice. For example to expand \\[\n(2x+3)^2\n\\] the grid method is: \\[\n\\begin{array}{c|cc}\n    & 2x & +3 \\\\ \\hline\n2x  & 4x^2  & 6x \\\\\n+3  & 6x    & 9\n\\end{array}\n\\]\nAdding the terms on the inside and simplifying gives\n\\[\n4x^2 + 12x + 9\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding-1",
+    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding-1",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((2y + 3)^2\\)\n\\((4 + x)(3x - 1)\\)\n\\((4a + 3)(4a - 3)\\)\n\\((5 - 2a)(b - 6)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#answers-1",
+    "href": "Autumn 1/Expanding Brackets.html#answers-1",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\((2y + 3)^2 = 4y^2 + 12y + 9\\)\n\\((4 + x)(3x - 1) = 3x^2 + 11x - 4\\)\n\\((4a + 3)(4a - 3) = 16a^2 - 9\\)\n\\((5 - 2a)(b - 6) = 5b + 12a - 2ab - 30\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#exercise-2",
+    "href": "Autumn 1/Expanding Brackets.html#exercise-2",
+    "title": "Expanding Brackets",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nPlease complete the worksheet",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-2-times-3-grids",
+    "href": "Autumn 1/Expanding Brackets.html#example-2-times-3-grids",
+    "title": "Expanding Brackets",
+    "section": "Example: 2 \\(\\times\\) 3 Grids",
+    "text": "Example: 2 \\(\\times\\) 3 Grids\nExpand and simplify \\((x^2 + 6x - 3)(x-4)\\)\n\\[\n\\begin{array}{c|cc}\n     & x      & -4      \\\\ \\hline\nx^2  & x^3    & -4x^2   \\\\\n6x   & 6x^2   & -24x    \\\\\n-3   & -3x    & 12\n\\end{array}\n\\] \\[\\begin{align}\n&x ^3 + 6x^2 - 3x - 4x^2 - 24x + 12 \\\\\n=\\ &x^3 + 2x^2 - 27x + 12\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding-2",
+    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding-2",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((a - 3b + 2c)(a + b)\\)\n\n\\((cd + 4c - 5d)(3e + 2f)\\)\n\n\\((x^2 - x + 7)(2x + 3)\\)\n\n\\((1 + 3x - 2x^2)(7x - 2)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#answers-2",
+    "href": "Autumn 1/Expanding Brackets.html#answers-2",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\((a - 3b + 2c)(a + b) = a^2 - 2ab + 2ac + 2bc - 3b^2\\)\n\n\\((cd + 4c - 5d)(3e + 2f) = 3cde + 2cdf + 12ce + 8cf - 15de - 10df\\)\n\n\\((x^2 - x + 7)(2x + 3) = 2x^3 + x^2 + 11x + 21\\)\n\n\\((1 + 3x - 2x^2)(7x - 2) = -14x^3 + 25x^2 + x - 2\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#exercise-3",
+    "href": "Autumn 1/Expanding Brackets.html#exercise-3",
+    "title": "Expanding Brackets",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#example-triple-brackets",
+    "href": "Autumn 1/Expanding Brackets.html#example-triple-brackets",
+    "title": "Expanding Brackets",
+    "section": "Example: Triple Brackets",
+    "text": "Example: Triple Brackets\nA three‐bracket expansion such as \\((x+1)(x-3)(x+2)\\) can be done in two grid‐method steps. First, expand \\((x-3)(x+2)\\):\n\\[\n\\begin{array}{c|cc}\n& x   & +2 \\\\ \\hline\nx  & x^2 & 2x  \\\\\n-3 & -3x & -6\n\\end{array}\n\\]\nThis gives a result of\n\\[\nx^2 - x - 6\n\\]\n\nThen expand \\((x+1)(x^2 - x - 6)\\) with a \\(2 \\times 3\\) grid:\n\\[\n\\begin{array}{c|ccc}\n& x^2    & -x     & -6   \\\\ \\hline\nx     & x^3    & -x^2   & -6x  \\\\\n+1    & x^2    & -x     & -6\n\\end{array}\n\\]\nSo altogether \\((x+1)(x-3)(x+2)=x^3-7x-6\\)\n\n\n\n\n\n\nTip\n\n\n\nThe order you multiply the brackets does not matter.",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding-3",
+    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding-3",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((x + 2)^3\\)\n\n\\((2x + 1)(x - 1)^2\\)\n\n\\((3 + y)(3 - y)^2\\)\n\n\\((a - b x)^3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#answers-3",
+    "href": "Autumn 1/Expanding Brackets.html#answers-3",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\((x + 2)^3 = x^3 + 6x^2 + 12x + 8\\)\n\n\\((2x + 1)(x - 1)^2 = 2x^3 - x^2 + 1\\)\n\n\\((3 + y)(3 - y)^2 = y^3 - 3y^2 - 9y + 27\\)\n\n\\((a - b x)^3 = a^3 - 3a^2 b x + 3a b^2 x^2 - b^3 x^3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Expanding Brackets.html#exercise-4",
+    "href": "Autumn 1/Expanding Brackets.html#exercise-4",
+    "title": "Expanding Brackets",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to the Shell Mathematics course."
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html",
+    "href": "Autumn 1/Linear Equations.html",
+    "title": "Linear Equations",
+    "section": "",
+    "text": "For each mathematical operation, there is an inverse operation.\n\\[\n\\Huge{\\times \\longleftrightarrow \\div}\n\\] \\[\n\\Huge{+ \\longleftrightarrow -}\n\\]\nTo solve equations, we use inverse pairs to isolate the variable \\(x\\) for which we are trying to solve.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#inverse-pairs",
+    "href": "Autumn 1/Linear Equations.html#inverse-pairs",
+    "title": "Linear Equations",
+    "section": "",
+    "text": "For each mathematical operation, there is an inverse operation.\n\\[\n\\Huge{\\times \\longleftrightarrow \\div}\n\\] \\[\n\\Huge{+ \\longleftrightarrow -}\n\\]\nTo solve equations, we use inverse pairs to isolate the variable \\(x\\) for which we are trying to solve.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-one-step-equations",
+    "href": "Autumn 1/Linear Equations.html#example-one-step-equations",
+    "title": "Linear Equations",
+    "section": "Example: One-Step Equations",
+    "text": "Example: One-Step Equations\nTo solve one-step equations, we simply use the relevant inverse pair:\n\n\n\n\\[\\begin{align}\nx + 3 &= 2 \\\\\nx + 3 - 3 &= 2-3 \\\\\nx &= -1\n\\end{align}\\]\n\\[\\begin{align}\ny-5 &= 7 \\\\\ny-5+5 &= 7+5 \\\\\ny &= 12\n\\end{align}\\]\n\n\n\n\\[\\begin{align}\n3u &= 12 \\\\\nu \\times 3 \\div 3 &= 12 \\div 3 \\\\\nu &= 4\n\\end{align}\\]\n\\[\\begin{align}\nv \\div 2 &= 8 \\\\\nv \\div 2 \\times 2 &= 8 \\times 2 \\\\\nv &= 16\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-two-step-equations",
+    "href": "Autumn 1/Linear Equations.html#example-two-step-equations",
+    "title": "Linear Equations",
+    "section": "Example: Two-Step Equations",
+    "text": "Example: Two-Step Equations\nWhen there is more than one step, it’s important to think about the order of operations. Drawing a diagram can help. For the equation \\[\n6x-2 = 16\n\\] we can draw the following diagram:\n\n\n\n\n\ngraph LR\n    X((x))\n    A[\"× 6\"]\n    B[\"−2\"]\n    C((16))\n\n    X --&gt; A --&gt; B --&gt; C\n\n\n\n\n\n\nWe need to work backwards using inverse pairs, so we first add 2 then divide by 6:\n\\[\\begin{align}\n6x-2+2 &= 16+2 \\\\\n6x &= 18 \\\\\nx \\times 6 \\div 6 &= 18 \\div 6 \\\\\nx &= 3\n\\end{align}\\]\n\n\\[\n\\frac{x+3}{2} = 5\n\\] The diagram for this equation is\n\n\n\n\n\ngraph LR\n    X((x))\n    A[\"+3\"]\n    B[\"÷2\"]\n    C((5))\n\n    X --&gt; A --&gt; B --&gt; C\n\n\n\n\n\n\nWe need to work backwards using inverse pairs,\n\\[\\begin{align}\n\\frac{x+3}{2} &= 5 \\\\\n(x+3) \\div 2 \\times 2 &= 5 \\times 2 \\\\\nx+3 &= 10 \\\\\nx+3-3 &= 10-3 \\\\\nx &= 7\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding",
+    "href": "Autumn 1/Linear Equations.html#test-your-understanding",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(5x-8=27\\)$\n\\(\\frac{x}{3}+4=9\\)\n\\(\\frac{x-3}{4}=1\\)\n\\(3-2x = 7\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#answers",
+    "href": "Autumn 1/Linear Equations.html#answers",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(5x-8=27 \\Rightarrow x=7\\)\n\\(\\frac{x}{3}+4=9 \\Rightarrow x=15\\)\n\\(\\frac{x-3}{4}=1 \\Rightarrow x=7\\)\n\\(3-2x = 7 \\Rightarrow x=-2\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#exercise-1",
+    "href": "Autumn 1/Linear Equations.html#exercise-1",
+    "title": "Linear Equations",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nFirst question: \\(3a-2=19\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-equations-with-brackets",
+    "href": "Autumn 1/Linear Equations.html#example-equations-with-brackets",
+    "title": "Linear Equations",
+    "section": "Example: Equations with Brackets",
+    "text": "Example: Equations with Brackets\nThere are often two ways to solve these kinds of questions:\n\n\n\\[\\begin{align}\n3(x+7) &= 15 \\\\\n3x + 21 &= 15 \\\\\n3x &= -6 \\\\\nx &= -2\n\\end{align}\\]\n\n\\[\\begin{align}\n3(x+7) &= 15 \\\\\nx+7 &= 5 \\\\\nx &= -2\n\\end{align}\\]\n\n\nAs you can see, expanding the brackets is not always the quickest method.\n\nBut sometimes if there is more than one bracket you need to expand the brackets and simplify first:\n\\[\\begin{align}\n5(x+2)-3(x-4) &= 28 \\\\\n5x+10-3x+12 &= 28 \\\\\n2x+22 &= 28 \\\\\n2x &= 6 \\\\\nx &= 3\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-1",
+    "href": "Autumn 1/Linear Equations.html#test-your-understanding-1",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(6(x-3)+5=29\\)\n\\(8(x+2)-3(2x-1)=39\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#answers-1",
+    "href": "Autumn 1/Linear Equations.html#answers-1",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(6(x-3)+5=29 \\Rightarrow x=7\\)\n\\(8(x+2)-3(2x-1)=39 \\Rightarrow x=10\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#exercise-2",
+    "href": "Autumn 1/Linear Equations.html#exercise-2",
+    "title": "Linear Equations",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nFirst question: \\(3(a+5)=36\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-equations-with-fractions",
+    "href": "Autumn 1/Linear Equations.html#example-equations-with-fractions",
+    "title": "Linear Equations",
+    "section": "Example: Equations with Fractions",
+    "text": "Example: Equations with Fractions\n\n\n\n\n\ngraph LR\n    X((h))\n    A[\"×3\"]\n    B[\"÷2\"]\n    C[+3]\n    D((12))\n\n    X --&gt; A --&gt; B --&gt; C --&gt; D\n\n\n\n\n\n\nWe can use the same method for questions like this\n\\[\\begin{align}\n\\frac{3h}{2}+3 &= 12 \\\\\n\\frac{3h}{2} &= 9 \\\\\nh &= 6\n\\end{align}\\]\n\nThere are two methods for questions like this:\n\n\nSubtract 4 first:\n\\[\\begin{align}\n\\frac{x}{3}+4 &= 9 \\\\\n\\frac{x}{3} &= 5 \\\\\nx &= 15\n\\end{align}\\]\n\nMultiply by 3 first:\n\\[\\begin{align}\n\\frac{x}{3}+4 &= 9 \\\\\nx+12 &= 27 \\\\\nx = 15\n\\end{align}\\]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWhen you multiply both sides by 3 you must multiply every term by 3.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-2",
+    "href": "Autumn 1/Linear Equations.html#test-your-understanding-2",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\n\\(\\dfrac{x}{2} - 8 = 16\\)\n\\(\\dfrac{2x}{5} + 6 = 19\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#answers-2",
+    "href": "Autumn 1/Linear Equations.html#answers-2",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{x}{2} - 8 = 16 \\Rightarrow x=48\\)\n\\(\\dfrac{2x}{5} + 6 = 19 \\Rightarrow x=32.5\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-multiplying-first",
+    "href": "Autumn 1/Linear Equations.html#example-multiplying-first",
+    "title": "Linear Equations",
+    "section": "Example: Multiplying First",
+    "text": "Example: Multiplying First\n\\[\n\\frac{y-5}{3} = 4\n\\]\nIn some questions, you should multiply first because of the order of operations:\n\n\n\n\n\ngraph LR\n    X((y))\n    A[\"-5\"]\n    B[\"÷3\"]\n    C((4))\n\n    X --&gt; A --&gt; B --&gt; C\n\n\n\n\n\n\n\\[\\begin{align}\n\\frac{y-5}{3} &= 4 \\\\\ny - 5 &= 12 \\\\\ny &= 17\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-fractions-on-both-sides",
+    "href": "Autumn 1/Linear Equations.html#example-fractions-on-both-sides",
+    "title": "Linear Equations",
+    "section": "Example: Fractions on Both Sides",
+    "text": "Example: Fractions on Both Sides\nIf both sides of the equation are fractions, you can mutiply by the lowest common multiple of the denominators.\n\\[\\begin{align}\n\\frac{3y+2}{3} &= \\frac{2}{5} \\\\\n(3y+2) \\div 3 \\times 15 &= 2 \\div 5 \\times 15 \\\\\n(3y+2) \\times 5 &= 2 \\times 3 \\\\\n15y + 10 &= 6 \\\\\n15y &= -4 \\\\\ny &= -\\frac{4}{15}\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-3",
+    "href": "Autumn 1/Linear Equations.html#test-your-understanding-3",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\n\\(\\dfrac{a+2}{3} = 4\\)\n\\(\\dfrac{g-4}{10} = 2\\)\n\\(6 = \\dfrac{2w+4}{3}\\)\n\\(\\dfrac{4r-3}{10} = \\dfrac{1}{5}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#answers-3",
+    "href": "Autumn 1/Linear Equations.html#answers-3",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{a+2}{3} = 4 \\Rightarrow a = 10\\)\n\\(\\dfrac{g-4}{10} = 2 \\Rightarrow g = 24\\)\n\\(6 = \\dfrac{2w+4}{3} \\Rightarrow w = 7\\)\n\\(\\dfrac{4r-3}{10} = \\dfrac{1}{5} \\Rightarrow r = \\dfrac{5}{4}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-variable-on-the-denominator",
+    "href": "Autumn 1/Linear Equations.html#example-variable-on-the-denominator",
+    "title": "Linear Equations",
+    "section": "Example: Variable on the Denominator",
+    "text": "Example: Variable on the Denominator\nIf the variable is on the denominator, the first step is always to multiply both sides of the equation by whatever the denominator is.\n\\[\\begin{align}\n\\dfrac{7}{z} &= 42 \\\\\n7 \\div z \\times z &= 42 \\times z \\\\\n7 &= 42z \\\\\n7 \\div 42 &= z \\times 42 \\div 42 \\\\\n\\dfrac{1}{6} &= z\n\\end{align}\\]\n\nThis same method applies even when the denominator is more complex:\n\\[\\begin{align}\n\\dfrac{7}{2v+3} &= 2 \\\\\n7 \\div (2v+3) \\times (2v+3) &= 2 \\times (2v+3) \\\\\n7 &= 4v + 6 \\\\\n1 &= 4v \\\\\n\\dfrac{1}{4} &= v\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-comparing-methods",
+    "href": "Autumn 1/Linear Equations.html#example-comparing-methods",
+    "title": "Linear Equations",
+    "section": "Example: Comparing Methods",
+    "text": "Example: Comparing Methods\nWith equations like \\[\n\\dfrac{2}{v} + 2 = 9\n\\] there are two possible methods, but one has a high rate of error.\n\n\n\\[\\begin{align}\n\\dfrac{2}{v}+2 &= 9\\\\\n\\dfrac{2}{v} &= 7 \\\\\n2 &= 7v \\\\\n\\dfrac{2}{7} &= v\n\\end{align}\\]\n\n\\[\\begin{align}\n\\dfrac{2}{v}+2 &= 9 \\\\\n2 + 2v &= 9v \\\\\n2 &= 7v \\\\\n\\dfrac{2}{7} &= v\n\\end{align}\\]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nA very common error in the second method is to forget to multiply the 2 by \\(v\\). Remember, when you multiply both sides of an equation, you must multiply every term. Terms are expressions separated by a plus or minus.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-4",
+    "href": "Autumn 1/Linear Equations.html#test-your-understanding-4",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\n\\(3 = \\dfrac{15}{y}\\)\n\\(\\dfrac{8}{3p}=12\\)\n\\(1=\\dfrac{5}{y+2}\\)\n\\(\\dfrac{3}{3a-4}=5\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#answers-4",
+    "href": "Autumn 1/Linear Equations.html#answers-4",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(3 = \\dfrac{15}{y} \\Rightarrow y=5\\)\n\\(\\dfrac{8}{3p}=12 \\Rightarrow p=\\dfrac{2}{9}\\)\n\\(1=\\dfrac{5}{y+2} \\Rightarrow y=3\\)\n\\(\\dfrac{3}{3a-4}=5 \\Rightarrow a=\\dfrac{23}{15}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#exercise-3",
+    "href": "Autumn 1/Linear Equations.html#exercise-3",
+    "title": "Linear Equations",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nFirst question: \\(\\dfrac{c}{2}=3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#example-unknown-on-both-sides",
+    "href": "Autumn 1/Linear Equations.html#example-unknown-on-both-sides",
+    "title": "Linear Equations",
+    "section": "Example: Unknown on Both Sides",
+    "text": "Example: Unknown on Both Sides\nWhen the unknown appears on both sides, the goal is to combine those terms together so that the unknown appears only once. Then we can solve it in the same way as the previous examples. To do this, we can add or subtract one of the terms to both sides.\n\\[\\begin{align}\n11-2x &= 6x-13 \\\\\n11-2x+2x &= 6x-13+2x \\\\\n11 &= 8x-13 \\\\\n24 &= 8x \\\\\n3 &= x\n\\end{align}\\]\n\nIf there are brackets, we can expand those first:\n\\[\\begin{align}\n2(x-4) &= 6x-28 \\\\\n2x-8 &= 6x - 28 \\\\\n-8 &= 4x - 28 \\\\\n20 &= 4x \\\\\n5 &= x\n\\end{align}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-5",
+    "href": "Autumn 1/Linear Equations.html#test-your-understanding-5",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(8-3x = 4x+22\\)\n\\(3(x+5) = 10x + 1\\)\n\\(4(x+5) = 3(3x-5)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#answers-5",
+    "href": "Autumn 1/Linear Equations.html#answers-5",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(8-3x = 4x+22 \\Rightarrow x=-2\\)\n\\(3(x+5) = 10x + 1 \\Rightarrow x=2\\)\n\\(4(x+5) = 3(3x-5) \\Rightarrow x=7\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/Linear Equations.html#exercise-4",
+    "href": "Autumn 1/Linear Equations.html#exercise-4",
+    "title": "Linear Equations",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nStart with question 3: \\(7x-2=4x+13\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  }
+]

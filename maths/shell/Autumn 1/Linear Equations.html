@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Linear Equations – Shell Mathematics Course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b2c493fdd487b110f6b1348dfd6a5174.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Linear Equations</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Shell Mathematics Course</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Autumn 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/Expanding Brackets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expanding Brackets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/Factorising with a Common Factor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factorising into a Single Bracket</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/Linear Equations.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Linear Equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#inverse-pairs" id="toc-inverse-pairs" class="nav-link active" data-scroll-target="#inverse-pairs">Inverse Pairs</a></li>
+  <li><a href="#example-one-step-equations" id="toc-example-one-step-equations" class="nav-link" data-scroll-target="#example-one-step-equations">Example: One-Step Equations</a></li>
+  <li><a href="#example-two-step-equations" id="toc-example-two-step-equations" class="nav-link" data-scroll-target="#example-two-step-equations">Example: Two-Step Equations</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test Your Understanding</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#example-equations-with-brackets" id="toc-example-equations-with-brackets" class="nav-link" data-scroll-target="#example-equations-with-brackets">Example: Equations with Brackets</a></li>
+  <li><a href="#test-your-understanding-1" id="toc-test-your-understanding-1" class="nav-link" data-scroll-target="#test-your-understanding-1">Test Your Understanding</a></li>
+  <li><a href="#answers-1" id="toc-answers-1" class="nav-link" data-scroll-target="#answers-1">Answers</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#example-equations-with-fractions" id="toc-example-equations-with-fractions" class="nav-link" data-scroll-target="#example-equations-with-fractions">Example: Equations with Fractions</a></li>
+  <li><a href="#test-your-understanding-2" id="toc-test-your-understanding-2" class="nav-link" data-scroll-target="#test-your-understanding-2">Test Your Understanding</a></li>
+  <li><a href="#answers-2" id="toc-answers-2" class="nav-link" data-scroll-target="#answers-2">Answers</a></li>
+  <li><a href="#example-multiplying-first" id="toc-example-multiplying-first" class="nav-link" data-scroll-target="#example-multiplying-first">Example: Multiplying First</a></li>
+  <li><a href="#example-fractions-on-both-sides" id="toc-example-fractions-on-both-sides" class="nav-link" data-scroll-target="#example-fractions-on-both-sides">Example: Fractions on Both Sides</a></li>
+  <li><a href="#test-your-understanding-3" id="toc-test-your-understanding-3" class="nav-link" data-scroll-target="#test-your-understanding-3">Test Your Understanding</a></li>
+  <li><a href="#answers-3" id="toc-answers-3" class="nav-link" data-scroll-target="#answers-3">Answers</a></li>
+  <li><a href="#example-variable-on-the-denominator" id="toc-example-variable-on-the-denominator" class="nav-link" data-scroll-target="#example-variable-on-the-denominator">Example: Variable on the Denominator</a></li>
+  <li><a href="#example-comparing-methods" id="toc-example-comparing-methods" class="nav-link" data-scroll-target="#example-comparing-methods">Example: Comparing Methods</a></li>
+  <li><a href="#test-your-understanding-4" id="toc-test-your-understanding-4" class="nav-link" data-scroll-target="#test-your-understanding-4">Test Your Understanding</a></li>
+  <li><a href="#answers-4" id="toc-answers-4" class="nav-link" data-scroll-target="#answers-4">Answers</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#example-unknown-on-both-sides" id="toc-example-unknown-on-both-sides" class="nav-link" data-scroll-target="#example-unknown-on-both-sides">Example: Unknown on Both Sides</a></li>
+  <li><a href="#test-your-understanding-5" id="toc-test-your-understanding-5" class="nav-link" data-scroll-target="#test-your-understanding-5">Test Your Understanding</a></li>
+  <li><a href="#answers-5" id="toc-answers-5" class="nav-link" data-scroll-target="#answers-5">Answers</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Linear-Equations.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Linear Equations</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="inverse-pairs" class="level2">
+<h2 class="anchored" data-anchor-id="inverse-pairs">Inverse Pairs</h2>
+<p>For each mathematical operation, there is an inverse operation.</p>
+<p><span class="math display">\[
+\Huge{\times \longleftrightarrow \div}
+\]</span> <span class="math display">\[
+\Huge{+ \longleftrightarrow -}
+\]</span></p>
+<p>To solve equations, we use inverse pairs to isolate the variable <span class="math inline">\(x\)</span> for which we are trying to solve.</p>
+</section>
+<section id="example-one-step-equations" class="level2">
+<h2 class="anchored" data-anchor-id="example-one-step-equations">Example: One-Step Equations</h2>
+<p>To solve one-step equations, we simply use the relevant inverse pair:</p>
+<div class="columns">
+<div class="column">
+<ol type="1">
+<li><p><span class="math display">\[\begin{align}
+x + 3 &amp;= 2 \\
+x + 3 - 3 &amp;= 2-3 \\
+x &amp;= -1
+\end{align}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align}
+y-5 &amp;= 7 \\
+y-5+5 &amp;= 7+5 \\
+y &amp;= 12
+\end{align}\]</span></p></li>
+</ol>
+</div><div class="column">
+<ol start="3" type="1">
+<li><p><span class="math display">\[\begin{align}
+3u &amp;= 12 \\
+u \times 3 \div 3 &amp;= 12 \div 3 \\
+u &amp;= 4
+\end{align}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align}
+v \div 2 &amp;= 8 \\
+v \div 2 \times 2 &amp;= 8 \times 2 \\
+v &amp;= 16
+\end{align}\]</span></p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="example-two-step-equations" class="level2">
+<h2 class="anchored" data-anchor-id="example-two-step-equations">Example: Two-Step Equations</h2>
+<p>When there is more than one step, it’s important to think about the <strong>order of operations</strong>. Drawing a diagram can help. For the equation <span class="math display">\[
+6x-2 = 16
+\]</span> we can draw the following diagram:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    X((x))
+    A["× 6"]
+    B["−2"]
+    C((16))
+
+    X --&gt; A --&gt; B --&gt; C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>We need to work backwards using inverse pairs, so we first add 2 then divide by 6:</p>
+<p><span class="math display">\[\begin{align}
+6x-2+2 &amp;= 16+2 \\
+6x &amp;= 18 \\
+x \times 6 \div 6 &amp;= 18 \div 6 \\
+x &amp;= 3
+\end{align}\]</span></p>
+<hr>
+<p><span class="math display">\[
+\frac{x+3}{2} = 5
+\]</span> The diagram for this equation is</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    X((x))
+    A["+3"]
+    B["÷2"]
+    C((5))
+
+    X --&gt; A --&gt; B --&gt; C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>We need to work backwards using inverse pairs,</p>
+<p><span class="math display">\[\begin{align}
+\frac{x+3}{2} &amp;= 5 \\
+(x+3) \div 2 \times 2 &amp;= 5 \times 2 \\
+x+3 &amp;= 10 \\
+x+3-3 &amp;= 10-3 \\
+x &amp;= 7
+\end{align}\]</span></p>
+</section>
+<section id="test-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding">Test Your Understanding</h2>
+<p>Solve these equations:</p>
+<ol type="1">
+<li><span class="math inline">\(5x-8=27\)</span>$</li>
+<li><span class="math inline">\(\frac{x}{3}+4=9\)</span></li>
+<li><span class="math inline">\(\frac{x-3}{4}=1\)</span></li>
+<li><span class="math inline">\(3-2x = 7\)</span></li>
+</ol>
+</section>
+<section id="answers" class="level2">
+<h2 class="anchored" data-anchor-id="answers">Answers</h2>
+<ol type="1">
+<li><span class="math inline">\(5x-8=27 \Rightarrow x=7\)</span></li>
+<li><span class="math inline">\(\frac{x}{3}+4=9 \Rightarrow x=15\)</span></li>
+<li><span class="math inline">\(\frac{x-3}{4}=1 \Rightarrow x=7\)</span></li>
+<li><span class="math inline">\(3-2x = 7 \Rightarrow x=-2\)</span></li>
+</ol>
+</section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>First question: <span class="math inline">\(3a-2=19\)</span></p>
+</section>
+<section id="example-equations-with-brackets" class="level2">
+<h2 class="anchored" data-anchor-id="example-equations-with-brackets">Example: Equations with Brackets</h2>
+<p>There are often two ways to solve these kinds of questions:</p>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[\begin{align}
+3(x+7) &amp;= 15 \\
+3x + 21 &amp;= 15 \\
+3x &amp;= -6 \\
+x &amp;= -2
+\end{align}\]</span></p>
+</div><div class="column">
+<p><span class="math display">\[\begin{align}
+3(x+7) &amp;= 15 \\
+x+7 &amp;= 5 \\
+x &amp;= -2
+\end{align}\]</span></p>
+</div>
+</div>
+<p>As you can see, expanding the brackets is not always the quickest method.</p>
+<hr>
+<p>But sometimes if there is more than one bracket you need to expand the brackets and simplify first:</p>
+<p><span class="math display">\[\begin{align}
+5(x+2)-3(x-4) &amp;= 28 \\
+5x+10-3x+12 &amp;= 28 \\
+2x+22 &amp;= 28 \\
+2x &amp;= 6 \\
+x &amp;= 3
+\end{align}\]</span></p>
+</section>
+<section id="test-your-understanding-1" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-1">Test Your Understanding</h2>
+<p>Solve these equations:</p>
+<ol type="1">
+<li><span class="math inline">\(6(x-3)+5=29\)</span></li>
+<li><span class="math inline">\(8(x+2)-3(2x-1)=39\)</span></li>
+</ol>
+</section>
+<section id="answers-1" class="level2">
+<h2 class="anchored" data-anchor-id="answers-1">Answers</h2>
+<ol type="1">
+<li><span class="math inline">\(6(x-3)+5=29 \Rightarrow x=7\)</span></li>
+<li><span class="math inline">\(8(x+2)-3(2x-1)=39 \Rightarrow x=10\)</span></li>
+</ol>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>First question: <span class="math inline">\(3(a+5)=36\)</span></p>
+</section>
+<section id="example-equations-with-fractions" class="level2">
+<h2 class="anchored" data-anchor-id="example-equations-with-fractions">Example: Equations with Fractions</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    X((h))
+    A["×3"]
+    B["÷2"]
+    C[+3]
+    D((12))
+
+    X --&gt; A --&gt; B --&gt; C --&gt; D
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>We can use the same method for questions like this</p>
+<p><span class="math display">\[\begin{align}
+\frac{3h}{2}+3 &amp;= 12 \\
+\frac{3h}{2} &amp;= 9 \\
+h &amp;= 6
+\end{align}\]</span></p>
+<hr>
+<p>There are two methods for questions like this:</p>
+<div class="columns">
+<div class="column">
+<p>Subtract 4 first:</p>
+<p><span class="math display">\[\begin{align}
+\frac{x}{3}+4 &amp;= 9 \\
+\frac{x}{3} &amp;= 5 \\
+x &amp;= 15
+\end{align}\]</span></p>
+</div><div class="column">
+<p>Multiply by 3 first:</p>
+<p><span class="math display">\[\begin{align}
+\frac{x}{3}+4 &amp;= 9 \\
+x+12 &amp;= 27 \\
+x = 15
+\end{align}\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you multiply both sides by 3 you must multiply <strong>every term</strong> by 3.</p>
+</div>
+</div>
+</section>
+<section id="test-your-understanding-2" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-2">Test Your Understanding</h2>
+<ol type="1">
+<li><span class="math inline">\(\dfrac{x}{2} - 8 = 16\)</span></li>
+<li><span class="math inline">\(\dfrac{2x}{5} + 6 = 19\)</span></li>
+</ol>
+</section>
+<section id="answers-2" class="level2">
+<h2 class="anchored" data-anchor-id="answers-2">Answers</h2>
+<ol type="1">
+<li><span class="math inline">\(\dfrac{x}{2} - 8 = 16 \Rightarrow x=48\)</span></li>
+<li><span class="math inline">\(\dfrac{2x}{5} + 6 = 19 \Rightarrow x=32.5\)</span></li>
+</ol>
+</section>
+<section id="example-multiplying-first" class="level2">
+<h2 class="anchored" data-anchor-id="example-multiplying-first">Example: Multiplying First</h2>
+<p><span class="math display">\[
+\frac{y-5}{3} = 4
+\]</span></p>
+<p>In some questions, you should multiply first because of the order of operations:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    X((y))
+    A["-5"]
+    B["÷3"]
+    C((4))
+
+    X --&gt; A --&gt; B --&gt; C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><span class="math display">\[\begin{align}
+\frac{y-5}{3} &amp;= 4 \\
+y - 5 &amp;= 12 \\
+y &amp;= 17
+\end{align}\]</span></p>
+</section>
+<section id="example-fractions-on-both-sides" class="level2">
+<h2 class="anchored" data-anchor-id="example-fractions-on-both-sides">Example: Fractions on Both Sides</h2>
+<p>If both sides of the equation are fractions, you can mutiply by the lowest common multiple of the denominators.</p>
+<p><span class="math display">\[\begin{align}
+\frac{3y+2}{3} &amp;= \frac{2}{5} \\
+(3y+2) \div 3 \times 15 &amp;= 2 \div 5 \times 15 \\
+(3y+2) \times 5 &amp;= 2 \times 3 \\
+15y + 10 &amp;= 6 \\
+15y &amp;= -4 \\
+y &amp;= -\frac{4}{15}
+\end{align}\]</span></p>
+</section>
+<section id="test-your-understanding-3" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-3">Test Your Understanding</h2>
+<ol type="1">
+<li><span class="math inline">\(\dfrac{a+2}{3} = 4\)</span></li>
+<li><span class="math inline">\(\dfrac{g-4}{10} = 2\)</span></li>
+<li><span class="math inline">\(6 = \dfrac{2w+4}{3}\)</span></li>
+<li><span class="math inline">\(\dfrac{4r-3}{10} = \dfrac{1}{5}\)</span></li>
+</ol>
+</section>
+<section id="answers-3" class="level2">
+<h2 class="anchored" data-anchor-id="answers-3">Answers</h2>
+<ol type="1">
+<li><span class="math inline">\(\dfrac{a+2}{3} = 4 \Rightarrow a = 10\)</span></li>
+<li><span class="math inline">\(\dfrac{g-4}{10} = 2 \Rightarrow g = 24\)</span></li>
+<li><span class="math inline">\(6 = \dfrac{2w+4}{3} \Rightarrow w = 7\)</span></li>
+<li><span class="math inline">\(\dfrac{4r-3}{10} = \dfrac{1}{5} \Rightarrow r = \dfrac{5}{4}\)</span></li>
+</ol>
+</section>
+<section id="example-variable-on-the-denominator" class="level2">
+<h2 class="anchored" data-anchor-id="example-variable-on-the-denominator">Example: Variable on the Denominator</h2>
+<p>If the variable is on the denominator, the first step is always to multiply <strong>both sides</strong> of the equation by whatever the denominator is.</p>
+<p><span class="math display">\[\begin{align}
+\dfrac{7}{z} &amp;= 42 \\
+7 \div z \times z &amp;= 42 \times z \\
+7 &amp;= 42z \\
+7 \div 42 &amp;= z \times 42 \div 42 \\
+\dfrac{1}{6} &amp;= z
+\end{align}\]</span></p>
+<hr>
+<p>This same method applies even when the denominator is more complex:</p>
+<p><span class="math display">\[\begin{align}
+\dfrac{7}{2v+3} &amp;= 2 \\
+7 \div (2v+3) \times (2v+3) &amp;= 2 \times (2v+3) \\
+7 &amp;= 4v + 6 \\
+1 &amp;= 4v \\
+\dfrac{1}{4} &amp;= v
+\end{align}\]</span></p>
+</section>
+<section id="example-comparing-methods" class="level2">
+<h2 class="anchored" data-anchor-id="example-comparing-methods">Example: Comparing Methods</h2>
+<p>With equations like <span class="math display">\[
+\dfrac{2}{v} + 2 = 9
+\]</span> there are two possible methods, but one has a high rate of error.</p>
+<div class="columns">
+<div class="column">
+<p><span class="math display">\[\begin{align}
+\dfrac{2}{v}+2 &amp;= 9\\
+\dfrac{2}{v} &amp;= 7 \\
+2 &amp;= 7v \\
+\dfrac{2}{7} &amp;= v
+\end{align}\]</span></p>
+</div><div class="column">
+<p><span class="math display">\[\begin{align}
+\dfrac{2}{v}+2 &amp;= 9 \\
+2 + 2v &amp;= 9v \\
+2 &amp;= 7v \\
+\dfrac{2}{7} &amp;= v
+\end{align}\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A very common error in the second method is to forget to multiply the 2 by <span class="math inline">\(v\)</span>. Remember, when you multiply both sides of an equation, you must multiply <strong>every term</strong>. Terms are expressions separated by a plus or minus.</p>
+</div>
+</div>
+</section>
+<section id="test-your-understanding-4" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-4">Test Your Understanding</h2>
+<ol type="1">
+<li><span class="math inline">\(3 = \dfrac{15}{y}\)</span></li>
+<li><span class="math inline">\(\dfrac{8}{3p}=12\)</span></li>
+<li><span class="math inline">\(1=\dfrac{5}{y+2}\)</span></li>
+<li><span class="math inline">\(\dfrac{3}{3a-4}=5\)</span></li>
+</ol>
+</section>
+<section id="answers-4" class="level2">
+<h2 class="anchored" data-anchor-id="answers-4">Answers</h2>
+<ol type="1">
+<li><span class="math inline">\(3 = \dfrac{15}{y} \Rightarrow y=5\)</span></li>
+<li><span class="math inline">\(\dfrac{8}{3p}=12 \Rightarrow p=\dfrac{2}{9}\)</span></li>
+<li><span class="math inline">\(1=\dfrac{5}{y+2} \Rightarrow y=3\)</span></li>
+<li><span class="math inline">\(\dfrac{3}{3a-4}=5 \Rightarrow a=\dfrac{23}{15}\)</span></li>
+</ol>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>First question: <span class="math inline">\(\dfrac{c}{2}=3\)</span></p>
+</section>
+<section id="example-unknown-on-both-sides" class="level2">
+<h2 class="anchored" data-anchor-id="example-unknown-on-both-sides">Example: Unknown on Both Sides</h2>
+<p>When the unknown appears on both sides, the goal is to combine those terms together so that the unknown appears only once. Then we can solve it in the same way as the previous examples. To do this, we can add or subtract one of the terms to both sides.</p>
+<p><span class="math display">\[\begin{align}
+11-2x &amp;= 6x-13 \\
+11-2x+2x &amp;= 6x-13+2x \\
+11 &amp;= 8x-13 \\
+24 &amp;= 8x \\
+3 &amp;= x
+\end{align}\]</span></p>
+<hr>
+<p>If there are brackets, we can expand those first:</p>
+<p><span class="math display">\[\begin{align}
+2(x-4) &amp;= 6x-28 \\
+2x-8 &amp;= 6x - 28 \\
+-8 &amp;= 4x - 28 \\
+20 &amp;= 4x \\
+5 &amp;= x
+\end{align}\]</span></p>
+</section>
+<section id="test-your-understanding-5" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-5">Test Your Understanding</h2>
+<p>Solve these equations:</p>
+<ol type="1">
+<li><span class="math inline">\(8-3x = 4x+22\)</span></li>
+<li><span class="math inline">\(3(x+5) = 10x + 1\)</span></li>
+<li><span class="math inline">\(4(x+5) = 3(3x-5)\)</span></li>
+</ol>
+</section>
+<section id="answers-5" class="level2">
+<h2 class="anchored" data-anchor-id="answers-5">Answers</h2>
+<ol type="1">
+<li><span class="math inline">\(8-3x = 4x+22 \Rightarrow x=-2\)</span></li>
+<li><span class="math inline">\(3(x+5) = 10x + 1 \Rightarrow x=2\)</span></li>
+<li><span class="math inline">\(4(x+5) = 3(3x-5) \Rightarrow x=7\)</span></li>
+</ol>
+</section>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+<p>Start with question 3: <span class="math inline">\(7x-2=4x+13\)</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
