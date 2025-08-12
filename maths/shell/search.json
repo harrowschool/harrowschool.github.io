@@ -1,62 +1,326 @@
 [
   {
-    "objectID": "Autumn 1/Factorising with a Common Factor.html",
-    "href": "Autumn 1/Factorising with a Common Factor.html",
-    "title": "Factorising with a Common Factor",
+    "objectID": "Autumn 1/4. Fractions.html",
+    "href": "Autumn 1/4. Fractions.html",
+    "title": "Fractions",
     "section": "",
-    "text": "Factorising is the opposite of expanding. There are several method of factorising, but the most basic one involves indentifying common factors. For example, in the expression\n\\[\nx^2 - 12x\n\\]\n\\(x\\) is a common factor, and so\n\\[\nx^2 - 12x = x(x - 12)\n\\]",
+    "text": "Key skill video\n\\[\n\\dfrac{2}{7} + \\dfrac{3}{5} = \\dfrac{10}{35} + \\dfrac{21}{35} = \\dfrac{31}{35}\n\\] \\[\n\\dfrac{4}{9} - \\dfrac{1}{4} = \\dfrac{16}{36} - \\dfrac{9}{36} = \\dfrac{5}{36}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Factorising with a Common Factor"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/Factorising with a Common Factor.html#example-factorising-with-a-common-factor",
-    "href": "Autumn 1/Factorising with a Common Factor.html#example-factorising-with-a-common-factor",
-    "title": "Factorising with a Common Factor",
+    "objectID": "Autumn 1/4. Fractions.html#example-adding-and-subtracting-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-adding-and-subtracting-fractions",
+    "title": "Fractions",
     "section": "",
-    "text": "Factorising is the opposite of expanding. There are several method of factorising, but the most basic one involves indentifying common factors. For example, in the expression\n\\[\nx^2 - 12x\n\\]\n\\(x\\) is a common factor, and so\n\\[\nx^2 - 12x = x(x - 12)\n\\]",
+    "text": "Key skill video\n\\[\n\\dfrac{2}{7} + \\dfrac{3}{5} = \\dfrac{10}{35} + \\dfrac{21}{35} = \\dfrac{31}{35}\n\\] \\[\n\\dfrac{4}{9} - \\dfrac{1}{4} = \\dfrac{16}{36} - \\dfrac{9}{36} = \\dfrac{5}{36}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Factorising with a Common Factor"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/Factorising with a Common Factor.html#example-more-than-one-factor",
-    "href": "Autumn 1/Factorising with a Common Factor.html#example-more-than-one-factor",
-    "title": "Factorising with a Common Factor",
-    "section": "Example: More than One Factor",
-    "text": "Example: More than One Factor\nSometimes, there is more than one common factor, and more than two terms:\n\\[\n4x^2y + 8xy^2 + 4xy= 4xy(x + 2y + 1)\n\\]\n\n\n\n\n\n\nWarning\n\n\n\nWhen you take out all the factors from a term, there is a 1 left, not a 0. This is because when you factorise, you are dividing rather than subtracting, and anything divided by itself is 1.",
+    "objectID": "Autumn 1/4. Fractions.html#method-comparison",
+    "href": "Autumn 1/4. Fractions.html#method-comparison",
+    "title": "Fractions",
+    "section": "Method Comparison",
+    "text": "Method Comparison\nTo calculate \\(\\dfrac{1}{6} + \\dfrac{3}{4}\\), there are two methods\n\n\nMultiply denominators \\[\n\\dfrac{4}{24} + \\dfrac{18}{24} = \\dfrac{22}{24} = \\dfrac{11}{12}\n\\]\n\nLowest common multiple \\[\n\\dfrac{2}{12} + \\dfrac{9}{12} = \\dfrac{11}{12}\n\\]\n\n\nWhich method do you think is better?",
     "crumbs": [
       "Autumn 1",
-      "Factorising with a Common Factor"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/Factorising with a Common Factor.html#test-your-understanding",
-    "href": "Autumn 1/Factorising with a Common Factor.html#test-your-understanding",
-    "title": "Factorising with a Common Factor",
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding",
+    "title": "Fractions",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nFactorise completely:\n\n\\((3x^2 + 9x)\\)\n\n\\((14t^2 - 21t^3)\\)\n\n\\((8y + 28y^3)\\)\n\n\\((-5h^3 - 40h^7)\\)",
+    "text": "Test Your Understanding\n\n\\(\\dfrac{8}{9} - \\dfrac{7}{15}\\)\n\\(\\dfrac{2}{15} + \\dfrac{7}{10}\\)\n\\(\\dfrac{1}{4} + \\dfrac{5}{12}\\)\n\\(\\dfrac{8}{9} - \\dfrac{3}{4}\\)\n\\(\\dfrac{1}{4} + \\dfrac{3}{10} - \\dfrac{4}{25}\\)\n\\(\\dfrac{5}{9} + \\dfrac{3}{8} + \\dfrac{5}{72}\\)",
     "crumbs": [
       "Autumn 1",
-      "Factorising with a Common Factor"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/Factorising with a Common Factor.html#answers",
-    "href": "Autumn 1/Factorising with a Common Factor.html#answers",
-    "title": "Factorising with a Common Factor",
+    "objectID": "Autumn 1/4. Fractions.html#answers",
+    "href": "Autumn 1/4. Fractions.html#answers",
+    "title": "Fractions",
     "section": "Answers",
-    "text": "Answers\n\n\\((3x^2 + 9x) = 3x(x + 3)\\)\n\n\\((14t^2 - 21t^3) = 7t^2(2 - 3t)\\)\n\n\\((8y + 28y^3) = 4y(2 + 7y^2)\\)\n\n\\((-5h^3 - 40h^7) = -5h^3(1 + 8h^4)\\)",
+    "text": "Answers\n\n\\(\\dfrac{8}{9} - \\dfrac{7}{15} = \\dfrac{19}{45}\\)\n\\(\\dfrac{2}{15} + \\dfrac{7}{10} = \\dfrac{25}{30} = \\dfrac{5}{6}\\)\n\\(\\dfrac{1}{4} + \\dfrac{5}{12} = \\dfrac{8}{12} = \\dfrac{2}{3}\\)\n\\(\\dfrac{8}{9} - \\dfrac{3}{4} = \\dfrac{32}{36} - \\dfrac{27}{36} = \\dfrac{5}{36}\\)\n\\(\\dfrac{1}{4} + \\dfrac{3}{10} - \\dfrac{4}{25} = \\dfrac{25}{100} + \\dfrac{30}{100} - \\dfrac{16}{100} = \\dfrac{39}{100}\\)\n\\(\\dfrac{5}{9} + \\dfrac{3}{8} + \\dfrac{5}{72} = \\dfrac{40}{72} + \\dfrac{27}{72} + \\dfrac{5}{72} = \\dfrac{72}{72} = 1\\)",
     "crumbs": [
       "Autumn 1",
-      "Factorising with a Common Factor"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html",
-    "href": "Autumn 1/Expanding Brackets.html",
+    "objectID": "Autumn 1/4. Fractions.html#exercise-1",
+    "href": "Autumn 1/4. Fractions.html#exercise-1",
+    "title": "Fractions",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-adding-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-adding-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Adding Mixed Numbers",
+    "text": "Example: Adding Mixed Numbers\nKey skill video\nCalculate: \\(1\\dfrac{1}{4} + 3\\dfrac{1}{12}\\)\n\n\nImproper fractions \\[\n1\\dfrac{1}{4} = \\dfrac{5}{4}\n\\] \\[\n3\\dfrac{1}{12} = \\dfrac{37}{12}\n\\] \\[\n\\dfrac{5}{4} = \\dfrac{5\\times 3}{4\\times 3} = \\dfrac{15}{12}\n\\] Add: \\[\n\\dfrac{15}{12} + \\dfrac{37}{12} = \\dfrac{52}{12} = 4\\dfrac{4}{12} = 4\\dfrac{1}{3}\n\\]\n\nPartitioning\nIntegers: \\[\n1 + 3 = 4\n\\] Fractions: \\[\n\\dfrac{1}{4} + \\dfrac{1}{12} = \\dfrac{3}{12} + \\dfrac{1}{12} = \\dfrac{4}{12} = \\dfrac{1}{3}\n\\]\nCombine: \\[\n4 + \\dfrac{1}{3} = 4\\dfrac{1}{3}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-1",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-1",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate, giving your answer as a mixed number in its simplest form:\n\n\\(2\\dfrac{4}{7} + 5\\dfrac{2}{3}\\)\n\\(6\\dfrac{2}{5} + 3\\dfrac{9}{10}\\)\n\\(8\\dfrac{7}{8} + 4\\dfrac{5}{6}\\)\n\\(7\\dfrac{7}{9} + 3\\dfrac{11}{18}\\)\n\\(12\\dfrac{6}{11} + 1\\dfrac{5}{8}\\)\n\\(3\\dfrac{13}{18} + 5\\dfrac{7}{24}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-1",
+    "href": "Autumn 1/4. Fractions.html#answers-1",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(2\\dfrac{4}{7} + 5\\dfrac{2}{3} = 8\\dfrac{5}{21}\\)\n\\(6\\dfrac{2}{5} + 3\\dfrac{9}{10} = 10\\dfrac{3}{10}\\)\n\\(8\\dfrac{7}{8} + 4\\dfrac{5}{6} = 13\\dfrac{17}{24}\\)\n\\(7\\dfrac{7}{9} + 3\\dfrac{11}{18} = 11\\dfrac{7}{18}\\)\n\\(12\\dfrac{6}{11} + 1\\dfrac{5}{8} = 14\\dfrac{15}{88}\\)\n\\(3\\dfrac{13}{18} + 5\\dfrac{7}{24} = 9\\dfrac{1}{72}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-subtracting-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-subtracting-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Subtracting Mixed Numbers",
+    "text": "Example: Subtracting Mixed Numbers\nKey skill video\nCalculate: \\(7\\dfrac{1}{12} - 5\\dfrac{3}{4}\\) Give your answer as a mixed number in its simplest form.\n\n\nImproper Fractions\n\\[\n7\\dfrac{1}{12} = \\dfrac{7\\times12 + 1}{12} = \\dfrac{85}{12}\n\\] \\[\n5\\dfrac{3}{4} = \\dfrac{5\\times4 + 3}{4} = \\dfrac{23}{4} = \\dfrac{69}{12}\n\\]\nSubtract: \\[\n\\dfrac{85}{12} - \\dfrac{69}{12} = \\dfrac{16}{12} = 1\\dfrac{4}{12} = 1\\dfrac{1}{3}\n\\]\n\nPartitioning\nSplit into whole and fractional parts:\nIntegers: \\[7 - 5 = 2\\]\nFractions: \\[\n\\dfrac{1}{12} - \\dfrac{3}{4}= \\dfrac{1}{12} - \\dfrac{9}{12} = -\\dfrac{8}{12} = -\\dfrac{2}{3}\n\\]\nCombine: \\[\n2 + \\bigl(-\\dfrac{2}{3}\\bigr) = 1\\dfrac{1}{3}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-2",
+    "href": "Autumn 1/4. Fractions.html#exercise-2",
+    "title": "Fractions",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-multiplying-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-multiplying-fractions",
+    "title": "Fractions",
+    "section": "Example: Multiplying Fractions",
+    "text": "Example: Multiplying Fractions\nKey skill video\n\\[\n\\dfrac{4}{9} \\times \\dfrac{3}{5} = \\dfrac{4 \\times 3}{9 \\times 5} = \\dfrac{12}{45} = \\dfrac{4}{15}\n\\] You can cancel after you multiply, but it’s usually better to cancel before: \\[\n\\dfrac{12}{25} \\times \\dfrac{20}{21} = \\dfrac{\\boxed{3} \\times 4}{5 \\times \\boxed{5}} \\times \\dfrac{\\boxed{5} \\times 4}{\\boxed{3} \\times 7} = \\dfrac{4}{5} \\times \\dfrac{4}{7} = \\dfrac{16}{35}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-2",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-2",
+    "title": "Fractions",
+    "section": "Test your understanding",
+    "text": "Test your understanding\nBy cancelling before you multiply, calculate the following:\n\n\\(\\dfrac{3\\times4}{8\\times5}\\)\n\\(\\dfrac{7}{9}\\times\\dfrac{4}{21}\\)\n\\(\\dfrac{8}{15}\\times\\dfrac{9}{10}\\)\n\\(\\dfrac{11}{24}\\times\\dfrac{12}{55}\\)\n\\(\\dfrac{10}{21}\\times\\dfrac{49}{60}\\)\n\\(\\dfrac{40}{63}\\times\\dfrac{27}{32}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-2",
+    "href": "Autumn 1/4. Fractions.html#answers-2",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{3}{10}\\)\n\\(\\dfrac{4}{27}\\)\n\\(\\dfrac{12}{25}\\)\n\\(\\dfrac{1}{10}\\)\n\\(\\dfrac{7}{18}\\)\n\\(\\dfrac{15}{28}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-powers-and-roots-of-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-powers-and-roots-of-fractions",
+    "title": "Fractions",
+    "section": "Example: Powers and Roots of Fractions",
+    "text": "Example: Powers and Roots of Fractions\nSquaring means multiplying by itself, so to square a fraction you simply square the numerator and square the denominator: \\[\\left(\\dfrac{3}{7}\\right)^2 = \\dfrac{3}{7} \\times \\dfrac{3}{7} = \\dfrac{3 \\times 3}{7 \\times 7} = \\dfrac{9}{49}\\]\nThe same goes for cubing: \\[\\left(\\dfrac{2}{5}\\right)^3 = \\dfrac{2}{5} \\times \\dfrac{2}{5} \\times \\dfrac{2}{5} = \\dfrac{8}{125}\\]\nTo square root, you square root the numerator and square root the denominator: \\[\\sqrt{\\dfrac{4}{25}} = \\dfrac{\\sqrt{4}}{\\sqrt{25}} = \\dfrac{2}{5}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-3",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-3",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate:\n\n\\(\\left(\\dfrac{1}{6}\\right)^2\\)\n\\(\\left(\\dfrac{2}{5}\\right)^2\\)\n\\(\\left(-\\dfrac{7}{12}\\right)^2\\)\n\\(\\left(\\dfrac{3}{4}\\right)^3\\)\n\\(\\left(\\dfrac{1}{10}\\right)^5\\)\n\\(\\sqrt{\\dfrac{81}{121}}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-3",
+    "href": "Autumn 1/4. Fractions.html#answers-3",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\left(\\dfrac{1}{6}\\right)^2 = \\dfrac{1}{36}\\)\n\\(\\left(\\dfrac{2}{5}\\right)^2 = \\dfrac{4}{25}\\)\n\\(\\left(-\\dfrac{7}{12}\\right)^2 = \\dfrac{49}{144}\\)\n\\(\\left(\\dfrac{3}{4}\\right)^3 = \\dfrac{27}{64}\\)\n\\(\\left(\\dfrac{1}{10}\\right)^5 = \\dfrac{1}{100000}\\)\n\\(\\sqrt{\\dfrac{81}{121}} = \\dfrac{9}{11}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-3",
+    "href": "Autumn 1/4. Fractions.html#exercise-3",
+    "title": "Fractions",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-multiplying-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-multiplying-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Multiplying Mixed Numbers",
+    "text": "Example: Multiplying Mixed Numbers\nKey skill video\nTo multiply mixed numbers, first convert them to improper fractions: \\[\n4\\dfrac{2}{5} \\times 1\\dfrac{7}{8} = \\dfrac{22}{5} \\times \\dfrac{15}{8} = \\dfrac{11 \\times \\boxed{2}}{\\boxed{5}} \\times \\dfrac{3 \\times \\boxed{5}}{\\boxed{2} \\times 4} = \\dfrac{11 \\times 3}{4} = \\dfrac{33}{4}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-4",
+    "href": "Autumn 1/4. Fractions.html#exercise-4",
+    "title": "Fractions",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-dividing-by-a-unit-fraction",
+    "href": "Autumn 1/4. Fractions.html#example-dividing-by-a-unit-fraction",
+    "title": "Fractions",
+    "section": "Example: Dividing by a Unit Fraction",
+    "text": "Example: Dividing by a Unit Fraction\nConsider a calculation like \\(5 \\div \\dfrac{1}{3}\\)\nThis means How many thirds go into five?\n. . .\nWe know the answer is 15, but how can we explain the method?\n. . .\nWe can explain this in terms of multiplying by the reciprocal: \\[\n5 \\div \\dfrac{1}{3} = 5 \\times \\dfrac{3}{1} = 15\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-dividing-by-other-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-dividing-by-other-fractions",
+    "title": "Fractions",
+    "section": "Example: Dividing by Other Fractions",
+    "text": "Example: Dividing by Other Fractions\nKey skill video\nTo divide by other fractions, we can use the same technique: multiplying by the reciprocal: \\[\n4 \\div \\dfrac{2}{5} = 4 \\times \\dfrac{5}{2} = \\dfrac{4}{1} \\times \\dfrac{5}{2} = \\dfrac{20}{2} = 10\n\\] Don’t forget to continue to cancel before multiplying if you can: \\[\n\\dfrac{5}{12} \\div \\dfrac{3}{8} = \\dfrac{5}{12} \\times \\dfrac{8}{3} = \\dfrac{5}{\\boxed{4} \\times 3} \\times \\dfrac{\\boxed{4} \\times 2}{3} = \\dfrac{10}{9} = 1\\dfrac{1}{9}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-4",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-4",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate:\n\n\\(\\dfrac{4}{9} \\div \\dfrac{7}{5}\\)\n\\(\\dfrac{2}{7} \\div \\dfrac{3}{11}\\)\n\\(\\dfrac{6}{7} \\div \\dfrac{3}{10}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-4",
+    "href": "Autumn 1/4. Fractions.html#answers-4",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{20}{63}\\)\n\\(1\\dfrac{1}{21}\\)\n\\(2\\dfrac{6}{7}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-5",
+    "href": "Autumn 1/4. Fractions.html#exercise-5",
+    "title": "Fractions",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-dividing-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-dividing-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Dividing Mixed Numbers",
+    "text": "Example: Dividing Mixed Numbers\nLike with multiplying mixed numbers, the first step in dividing mixed numbers is to convert them to improper fractions: \\[\n1\\dfrac{3}{7} \\div \\dfrac{1}{5} = \\dfrac{10}{7} \\div \\dfrac{1}{5} = \\dfrac{10}{7} \\times \\dfrac{5}{1} = \\dfrac{50}{7} = 7\\dfrac{1}{7}\n\\]\n\\[\n1\\dfrac{5}{9} \\div 2\\dfrac{4}{5} = \\dfrac{14}{9} \\div \\dfrac{14}{5} = \\dfrac{14}{9} \\times \\dfrac{5}{14} = \\dfrac{1}{9} \\times \\dfrac{5}{1} = \\dfrac{5}{9}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-5",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-5",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate:\n\n\\(2\\dfrac{3}{5} \\div \\dfrac{1}{4}\\)\n\\(3\\dfrac{3}{7} \\div \\dfrac{4}{5}\\)\n\\(3\\dfrac{3}{7} \\div 1\\dfrac{3}{5}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-5",
+    "href": "Autumn 1/4. Fractions.html#answers-5",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(10\\dfrac{2}{5}\\)\n\\(4\\dfrac{2}{7}\\)\n\\(2\\dfrac{1}{7}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-6",
+    "href": "Autumn 1/4. Fractions.html#exercise-6",
+    "title": "Fractions",
+    "section": "Exercise 6",
+    "text": "Exercise 6\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html",
+    "href": "Autumn 1/1. Expanding Brackets.html",
     "title": "Expanding Brackets",
     "section": "",
     "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
@@ -66,8 +330,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#learning-objectives",
-    "href": "Autumn 1/Expanding Brackets.html#learning-objectives",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#learning-objectives",
+    "href": "Autumn 1/1. Expanding Brackets.html#learning-objectives",
     "title": "Expanding Brackets",
     "section": "",
     "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
@@ -77,8 +341,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#basic-principles",
-    "href": "Autumn 1/Expanding Brackets.html#basic-principles",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#basic-principles",
+    "href": "Autumn 1/1. Expanding Brackets.html#basic-principles",
     "title": "Expanding Brackets",
     "section": "Basic Principles",
     "text": "Basic Principles\nAlgebra uses letters, often \\(x\\), to stand for numbers. Algebraic expressions can be treated in the same way as number expressions.\n\n\\(x + 3\\) means “add three to the unknown number.”\n\n\\(3x\\) means “3 times the unknown number.”\n\n\\(x^2\\) means “square the unknown number.”",
@@ -88,8 +352,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-combining-like-terms",
-    "href": "Autumn 1/Expanding Brackets.html#example-combining-like-terms",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-combining-like-terms",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-combining-like-terms",
     "title": "Expanding Brackets",
     "section": "Example: Combining Like Terms",
     "text": "Example: Combining Like Terms\n\\[\na + 3ab - 4ba = a - ab\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote: \\(ab = ba\\), so \\(3ab\\) and \\(-4ba\\) are like terms.\n\n\n\\[\n3p^3 + 2p^2 - 2p^3 + 5p^2 = (3p^3 - 2p^3) + (2p^2 + 5p^2) = p^3 + 7p^2\n\\]",
@@ -99,8 +363,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-multiplying-algebraic-terms",
-    "href": "Autumn 1/Expanding Brackets.html#example-multiplying-algebraic-terms",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-multiplying-algebraic-terms",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-multiplying-algebraic-terms",
     "title": "Expanding Brackets",
     "section": "Example: Multiplying Algebraic Terms",
     "text": "Example: Multiplying Algebraic Terms\n\\[\n4r \\times 5t = 20rt\n\\]\n\\[\n(3b)^2 \\times 3b = 9b^2 \\times 3b = 27b^3\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nThe multiplication sign is often not included between letters, e.g. \\(3ab\\) means \\(3 \\times a \\times b\\)\nWhen multiplying, add like powers: \\(3a^2b \\times 2a^5b^4 = 6a^8b^5\\). (Think of \\(a\\) as \\(a^1\\)).",
@@ -110,19 +374,19 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-expanding-brackets",
-    "href": "Autumn 1/Expanding Brackets.html#example-expanding-brackets",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
     "title": "Expanding Brackets",
     "section": "Example: Expanding Brackets",
-    "text": "Example: Expanding Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x + 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
+    "text": "Example: Expanding Brackets\nVideo: Expanding Single Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x + 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-expanding-with-indices",
-    "href": "Autumn 1/Expanding Brackets.html#example-expanding-with-indices",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-with-indices",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-with-indices",
     "title": "Expanding Brackets",
     "section": "Example: Expanding with Indices",
     "text": "Example: Expanding with Indices\nExpand \\(5x^2(12x^3 + 4x^5)\\)\n\\[\n5x^2 \\times 12x^3 + 5x^2 \\times 4x^5 = 60x^5 + 20x^7\n\\]",
@@ -132,8 +396,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding",
-    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding",
     "title": "Expanding Brackets",
     "section": "Test Your Understanding",
     "text": "Test Your Understanding\nExpand\n\n\\(4y(2y-8)\\)\n\\(3x^2(x^3+y^4)\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}})\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2})\\)",
@@ -143,8 +407,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#answers",
-    "href": "Autumn 1/Expanding Brackets.html#answers",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers",
     "title": "Expanding Brackets",
     "section": "Answers",
     "text": "Answers\n\n\\(4y(2y-8) = 8y^2 - 32y\\)\n\\(3x^2(x^3+y^4) = 3x^5 + 3x^2y^4\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}}) = c^2 - c + 1\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2}) = 30x^3 - 5x^4 + 35x^2y - 5\\)",
@@ -154,30 +418,30 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#exercise-1",
-    "href": "Autumn 1/Expanding Brackets.html#exercise-1",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-1",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-1",
     "title": "Expanding Brackets",
     "section": "Exercise 1",
-    "text": "Exercise 1\nPleae complete the worksheet",
+    "text": "Exercise 1\nPlease complete the worksheet",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-expanding-two-brackets",
-    "href": "Autumn 1/Expanding Brackets.html#example-expanding-two-brackets",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-double-brackets",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-double-brackets",
     "title": "Expanding Brackets",
-    "section": "Example: Expanding Two Brackets",
-    "text": "Example: Expanding Two Brackets\nTo expand \\((x + 3)(x + 2)\\), you can use the grid method. \\[\n\\begin{array}{c|cc}\n    & x & +2 \\\\ \\hline\nx   & x^2 & 2x \\\\\n+3   & 3x  & 6\n\\end{array}\n\\]\nSumming the terms on the inside and simplifying gives:\n\\[\nx^2 + 3x + 2x +6 = x^2 + 5x + 6\n\\]",
+    "section": "Example: Expanding Double Brackets",
+    "text": "Example: Expanding Double Brackets\nVideo: Expanding Double Brackets\nTo expand \\((x + 3)(x + 2)\\), you can use the grid method. \\[\n\\begin{array}{c|cc}\n    & x & +2 \\\\ \\hline\nx   & x^2 & 2x \\\\\n+3   & 3x  & 6\n\\end{array}\n\\]\nSumming the terms on the inside and simplifying gives:\n\\[\nx^2 + 3x + 2x +6 = x^2 + 5x + 6\n\\]",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-squared-bracket",
-    "href": "Autumn 1/Expanding Brackets.html#example-squared-bracket",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-squared-bracket",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-squared-bracket",
     "title": "Expanding Brackets",
     "section": "Example: Squared Bracket",
     "text": "Example: Squared Bracket\nA squared bracket is simply the same bracket twice. For example to expand \\[\n(2x+3)^2\n\\] the grid method is: \\[\n\\begin{array}{c|cc}\n    & 2x & +3 \\\\ \\hline\n2x  & 4x^2  & 6x \\\\\n+3  & 6x    & 9\n\\end{array}\n\\]\nAdding the terms on the inside and simplifying gives\n\\[\n4x^2 + 12x + 9\n\\]",
@@ -187,8 +451,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding-1",
-    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding-1",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-1",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-1",
     "title": "Expanding Brackets",
     "section": "Test Your Understanding",
     "text": "Test Your Understanding\nExpand and simplify:\n\n\\((2y + 3)^2\\)\n\\((4 + x)(3x - 1)\\)\n\\((4a + 3)(4a - 3)\\)\n\\((5 - 2a)(b - 6)\\)",
@@ -198,8 +462,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#answers-1",
-    "href": "Autumn 1/Expanding Brackets.html#answers-1",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-1",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers-1",
     "title": "Expanding Brackets",
     "section": "Answers",
     "text": "Answers\n\n\\((2y + 3)^2 = 4y^2 + 12y + 9\\)\n\\((4 + x)(3x - 1) = 3x^2 + 11x - 4\\)\n\\((4a + 3)(4a - 3) = 16a^2 - 9\\)\n\\((5 - 2a)(b - 6) = 5b + 12a - 2ab - 30\\)",
@@ -209,8 +473,8 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#exercise-2",
-    "href": "Autumn 1/Expanding Brackets.html#exercise-2",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-2",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-2",
     "title": "Expanding Brackets",
     "section": "Exercise 2",
     "text": "Exercise 2\nPlease complete the worksheet",
@@ -220,41 +484,41 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-2-times-3-grids",
-    "href": "Autumn 1/Expanding Brackets.html#example-2-times-3-grids",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-2-times-3-grids",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-2-times-3-grids",
     "title": "Expanding Brackets",
     "section": "Example: 2 \\(\\times\\) 3 Grids",
-    "text": "Example: 2 \\(\\times\\) 3 Grids\nExpand and simplify \\((x^2 + 6x - 3)(x-4)\\)\n\\[\n\\begin{array}{c|cc}\n     & x      & -4      \\\\ \\hline\nx^2  & x^3    & -4x^2   \\\\\n6x   & 6x^2   & -24x    \\\\\n-3   & -3x    & 12\n\\end{array}\n\\] \\[\\begin{align}\n&x ^3 + 6x^2 - 3x - 4x^2 - 24x + 12 \\\\\n=\\ &x^3 + 2x^2 - 27x + 12\n\\end{align}\\]",
+    "text": "Example: 2 \\(\\times\\) 3 Grids\nExpand and simplify \\((x^2 + 6x - 3)(x-4)\\)\n\\[\n\\begin{array}{c|cc}\n     & x      & -4      \\\\ \\hline\nx^2  & x^3    & -4x^2   \\\\\n6x   & 6x^2   & -24x    \\\\\n-3   & -3x    & 12\n\\end{array}\n\\] \\[\\begin{align*}\n&x ^3 + 6x^2 - 3x - 4x^2 - 24x + 12 \\\\\n=\\ &x^3 + 2x^2 - 27x + 12\n\\end{align*}\\]",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding-2",
-    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding-2",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-2",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-2",
     "title": "Expanding Brackets",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((a - 3b + 2c)(a + b)\\)\n\n\\((cd + 4c - 5d)(3e + 2f)\\)\n\n\\((x^2 - x + 7)(2x + 3)\\)\n\n\\((1 + 3x - 2x^2)(7x - 2)\\)",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((a - 3b + 2c)(a + b)\\)\n\\((cd + 4c - 5d)(3e + 2f)\\)\n\\((x^2 - x + 7)(2x + 3)\\)\n\\((1 + 3x - 2x^2)(7x - 2)\\)",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#answers-2",
-    "href": "Autumn 1/Expanding Brackets.html#answers-2",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-2",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers-2",
     "title": "Expanding Brackets",
     "section": "Answers",
-    "text": "Answers\n\n\\((a - 3b + 2c)(a + b) = a^2 - 2ab + 2ac + 2bc - 3b^2\\)\n\n\\((cd + 4c - 5d)(3e + 2f) = 3cde + 2cdf + 12ce + 8cf - 15de - 10df\\)\n\n\\((x^2 - x + 7)(2x + 3) = 2x^3 + x^2 + 11x + 21\\)\n\n\\((1 + 3x - 2x^2)(7x - 2) = -14x^3 + 25x^2 + x - 2\\)",
+    "text": "Answers\n\n\\((a - 3b + 2c)(a + b) = a^2 - 2ab + 2ac + 2bc - 3b^2\\)\n\\((cd + 4c - 5d)(3e + 2f) = 3cde + 2cdf + 12ce + 8cf - 15de - 10df\\)\n\\((x^2 - x + 7)(2x + 3) = 2x^3 + x^2 + 11x + 21\\)\n\\((1 + 3x - 2x^2)(7x - 2) = -14x^3 + 25x^2 + x - 2\\)",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#exercise-3",
-    "href": "Autumn 1/Expanding Brackets.html#exercise-3",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-3",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-3",
     "title": "Expanding Brackets",
     "section": "Exercise 3",
     "text": "Exercise 3\nPlease complete the worksheet.",
@@ -264,47 +528,696 @@
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#example-triple-brackets",
-    "href": "Autumn 1/Expanding Brackets.html#example-triple-brackets",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-triple-brackets",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-triple-brackets",
     "title": "Expanding Brackets",
     "section": "Example: Triple Brackets",
-    "text": "Example: Triple Brackets\nA three‐bracket expansion such as \\((x+1)(x-3)(x+2)\\) can be done in two grid‐method steps. First, expand \\((x-3)(x+2)\\):\n\\[\n\\begin{array}{c|cc}\n& x   & +2 \\\\ \\hline\nx  & x^2 & 2x  \\\\\n-3 & -3x & -6\n\\end{array}\n\\]\nThis gives a result of\n\\[\nx^2 - x - 6\n\\]\n\nThen expand \\((x+1)(x^2 - x - 6)\\) with a \\(2 \\times 3\\) grid:\n\\[\n\\begin{array}{c|ccc}\n& x^2    & -x     & -6   \\\\ \\hline\nx     & x^3    & -x^2   & -6x  \\\\\n+1    & x^2    & -x     & -6\n\\end{array}\n\\]\nSo altogether \\((x+1)(x-3)(x+2)=x^3-7x-6\\)\n\n\n\n\n\n\nTip\n\n\n\nThe order you multiply the brackets does not matter.",
+    "text": "Example: Triple Brackets\nVideo: Expanding Triple Brackets\nA three‐bracket expansion such as \\((x+1)(x-3)(x+2)\\) can be done in two grid‐method steps. First, expand \\((x-3)(x+2)\\):\n\\[\n\\begin{array}{c|cc}\n& x   & +2 \\\\ \\hline\nx  & x^2 & 2x  \\\\\n-3 & -3x & -6\n\\end{array}\n\\]\nThis gives a result of\n\\[\nx^2 - x - 6\n\\]\n\nThen expand \\((x+1)(x^2 - x - 6)\\) with a \\(2 \\times 3\\) grid:\n\\[\n\\begin{array}{c|ccc}\n& x^2    & -x     & -6   \\\\ \\hline\nx     & x^3    & -x^2   & -6x  \\\\\n+1    & x^2    & -x     & -6\n\\end{array}\n\\]\nSo altogether \\((x+1)(x-3)(x+2)=x^3-7x-6\\)\n\n\n\n\n\n\nTip\n\n\n\nThe order you multiply the brackets does not matter.",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#test-your-understanding-3",
-    "href": "Autumn 1/Expanding Brackets.html#test-your-understanding-3",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-3",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-3",
     "title": "Expanding Brackets",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((x + 2)^3\\)\n\n\\((2x + 1)(x - 1)^2\\)\n\n\\((3 + y)(3 - y)^2\\)\n\n\\((a - b x)^3\\)",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((x + 2)^3\\)\n\\((2x + 1)(x - 1)^2\\)\n\\((3 + y)(3 - y)^2\\)\n\\((a - b x)^3\\)",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#answers-3",
-    "href": "Autumn 1/Expanding Brackets.html#answers-3",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-3",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers-3",
     "title": "Expanding Brackets",
     "section": "Answers",
-    "text": "Answers\n\n\\((x + 2)^3 = x^3 + 6x^2 + 12x + 8\\)\n\n\\((2x + 1)(x - 1)^2 = 2x^3 - x^2 + 1\\)\n\n\\((3 + y)(3 - y)^2 = y^3 - 3y^2 - 9y + 27\\)\n\n\\((a - b x)^3 = a^3 - 3a^2 b x + 3a b^2 x^2 - b^3 x^3\\)",
+    "text": "Answers\n\n\\((x + 2)^3 = x^3 + 6x^2 + 12x + 8\\)\n\\((2x + 1)(x - 1)^2 = 2x^3 - x^2 + 1\\)\n\\((3 + y)(3 - y)^2 = y^3 - 3y^2 - 9y + 27\\)\n\\((a - b x)^3 = a^3 - 3a^2 b x + 3a b^2 x^2 - b^3 x^3\\)",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/Expanding Brackets.html#exercise-4",
-    "href": "Autumn 1/Expanding Brackets.html#exercise-4",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-4",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-4",
     "title": "Expanding Brackets",
     "section": "Exercise 4",
     "text": "Exercise 4\nPlease complete the worksheet.",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html",
+    "href": "Autumn 1/3. Linear Equations.html",
+    "title": "Linear Equations",
+    "section": "",
+    "text": "Solve linear equations where the unknown appears once\nSolve equations involving brackets\nSolve equations involving fractions\nSolve equations where the unknown appears more than once\nForming linear equations from word problems",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#learning-objectives",
+    "href": "Autumn 1/3. Linear Equations.html#learning-objectives",
+    "title": "Linear Equations",
+    "section": "",
+    "text": "Solve linear equations where the unknown appears once\nSolve equations involving brackets\nSolve equations involving fractions\nSolve equations where the unknown appears more than once\nForming linear equations from word problems",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#videos",
+    "href": "Autumn 1/3. Linear Equations.html#videos",
+    "title": "Linear Equations",
+    "section": "Videos",
+    "text": "Videos\nSolving Linear Equations\nUnknowns on Both Sides",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#inverse-pairs",
+    "href": "Autumn 1/3. Linear Equations.html#inverse-pairs",
+    "title": "Linear Equations",
+    "section": "Inverse Pairs",
+    "text": "Inverse Pairs\nFor each mathematical operation, there is an inverse operation.\n\\[\n\\Huge{\\boxed{\\times} \\longleftrightarrow \\boxed{\\div}}\n\\] \\[\n\\Huge{\\boxed{+} \\longleftrightarrow \\boxed{-}}\n\\]\nTo solve equations, we use inverse pairs to isolate the variable \\(x\\) for which we are trying to solve.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-one-step-equations",
+    "href": "Autumn 1/3. Linear Equations.html#example-one-step-equations",
+    "title": "Linear Equations",
+    "section": "Example: One-Step Equations",
+    "text": "Example: One-Step Equations\nTo solve one-step equations, we simply use the relevant inverse pair:\n\n\n\n\\[\\begin{align*}\nx + 3 &= 2 \\\\\nx + 3 - 3 &= 2-3 \\\\\nx &= -1\n\\end{align*}\\]\n\\[\\begin{align*}\ny-5 &= 7 \\\\\ny-5+5 &= 7+5 \\\\\ny &= 12\n\\end{align*}\\]\n\n\n\n\\[\\begin{align*}\n3u &= 12 \\\\\nu \\times 3 \\div 3 &= 12 \\div 3 \\\\\nu &= 4\n\\end{align*}\\]\n\\[\\begin{align*}\nv \\div 2 &= 8 \\\\\nv \\div 2 \\times 2 &= 8 \\times 2 \\\\\nv &= 16\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-two-step-equations",
+    "href": "Autumn 1/3. Linear Equations.html#example-two-step-equations",
+    "title": "Linear Equations",
+    "section": "Example: Two-Step Equations",
+    "text": "Example: Two-Step Equations\nWhen there is more than one step, it’s important to think about the order of operations. Drawing a diagram can help. For the equation \\[\n6x-2 = 16\n\\] we can draw the following diagram:\n\\[\nx \\longrightarrow \\boxed{\\times 6} \\longrightarrow \\boxed{-2} \\longrightarrow 16\n\\]\nWe need to work backwards using inverse pairs, so we first add 2 then divide by 6:\n\\[\\begin{align*}\n6x-2+2 &= 16+2 \\\\\n6x &= 18 \\\\\nx \\times 6 \\div 6 &= 18 \\div 6 \\\\\nx &= 3\n\\end{align*}\\]\n\n\\[\n\\dfrac{x+3}{2} = 5\n\\] The diagram for this equation is\n\\[\nx \\longrightarrow \\boxed{+3} \\longrightarrow \\boxed{\\div 2} \\longrightarrow 5\n\\]\nWe need to work backwards using inverse pairs,\n\\[\\begin{align*}\n\\dfrac{x+3}{2} &= 5 \\\\\n(x+3) \\div 2 \\times 2 &= 5 \\times 2 \\\\\nx+3 &= 10 \\\\\nx+3-3 &= 10-3 \\\\\nx &= 7\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(5x-8=27\\)\n\\(\\dfrac{x}{3}+4=9\\)\n\\(\\dfrac{x-3}{4}=1\\)\n\\(3-2x = 7\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers",
+    "href": "Autumn 1/3. Linear Equations.html#answers",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(5x-8=27 \\Rightarrow x=7\\)\n\\(\\dfrac{x}{3}+4=9 \\Rightarrow x=15\\)\n\\(\\dfrac{x-3}{4}=1 \\Rightarrow x=7\\)\n\\(3-2x = 7 \\Rightarrow x=-2\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#exercise-1",
+    "href": "Autumn 1/3. Linear Equations.html#exercise-1",
+    "title": "Linear Equations",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-equations-with-brackets",
+    "href": "Autumn 1/3. Linear Equations.html#example-equations-with-brackets",
+    "title": "Linear Equations",
+    "section": "Example: Equations with Brackets",
+    "text": "Example: Equations with Brackets\nThere are often two ways to solve these kinds of questions:\n\n\n\\[\\begin{align*}\n3(x+7) &= 15 \\\\\n3x + 21 &= 15 \\\\\n3x &= -6 \\\\\nx &= -2\n\\end{align*}\\]\n\n\\[\\begin{align*}\n3(x+7) &= 15 \\\\\nx+7 &= 5 \\\\\nx &= -2\n\\end{align*}\\]\n\n\nAs you can see, expanding the brackets is not always the quickest method.\n\nBut sometimes if there is more than one bracket you need to expand the brackets and simplify first:\n\\[\\begin{align*}\n5(x+2)-3(x-4) &= 28 \\\\\n5x+10-3x+12 &= 28 \\\\\n2x+22 &= 28 \\\\\n2x &= 6 \\\\\nx &= 3\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-1",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-1",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(6(x-3)+5=29\\)\n\\(8(x+2)-3(2x-1)=39\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-1",
+    "href": "Autumn 1/3. Linear Equations.html#answers-1",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(6(x-3)+5=29 \\Rightarrow x=7\\)\n\\(8(x+2)-3(2x-1)=39 \\Rightarrow x=10\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#exercise-2",
+    "href": "Autumn 1/3. Linear Equations.html#exercise-2",
+    "title": "Linear Equations",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-equations-with-fractions",
+    "href": "Autumn 1/3. Linear Equations.html#example-equations-with-fractions",
+    "title": "Linear Equations",
+    "section": "Example: Equations with Fractions",
+    "text": "Example: Equations with Fractions\nWe can use the same method for questions like this:\n\\[\n\\dfrac{3h}{2}+3 = 12\n\\] The diagram and working:\n\\[\nh \\longrightarrow \\boxed{\\times 3} \\longrightarrow \\boxed{\\div 2} \\longrightarrow \\boxed{+3} \\longrightarrow 12\n\\]\n\\[\\begin{align*}\n\\dfrac{3h}{2}+3 &= 12 \\\\\n\\dfrac{3h}{2} &= 9 \\\\\nh &= 6\n\\end{align*}\\]\n\nThere are two methods for questions like this:\n\n\nSubtract 4 first:\n\\[\\begin{align*}\n\\dfrac{x}{3}+4 &= 9 \\\\\n\\dfrac{x}{3} &= 5 \\\\\nx &= 15\n\\end{align*}\\]\n\nMultiply by 3 first:\n\\[\\begin{align*}\n\\dfrac{x}{3}+4 &= 9 \\\\\nx+12 &= 27 \\\\\nx = 15\n\\end{align*}\\]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWhen you multiply both sides by 3 you must multiply every term by 3.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-2",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-2",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\n\\(\\dfrac{x}{2} - 8 = 16\\)\n\\(\\dfrac{2x}{5} + 6 = 19\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-2",
+    "href": "Autumn 1/3. Linear Equations.html#answers-2",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{x}{2} - 8 = 16 \\Rightarrow x=48\\)\n\\(\\dfrac{2x}{5} + 6 = 19 \\Rightarrow x=32.5\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-multiplying-first",
+    "href": "Autumn 1/3. Linear Equations.html#example-multiplying-first",
+    "title": "Linear Equations",
+    "section": "Example: Multiplying First",
+    "text": "Example: Multiplying First\n\\[\n\\dfrac{y-5}{3} = 4\n\\]\nIn some questions, you should multiply first because of the order of operations:\n\\[\ny \\longrightarrow \\boxed{-5} \\longrightarrow \\boxed{\\div 3} \\longrightarrow 4\n\\]\n\\[\\begin{align*}\n\\dfrac{y-5}{3} &= 4 \\\\\ny - 5 &= 12 \\\\\ny &= 17\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-fractions-on-both-sides",
+    "href": "Autumn 1/3. Linear Equations.html#example-fractions-on-both-sides",
+    "title": "Linear Equations",
+    "section": "Example: Fractions on Both Sides",
+    "text": "Example: Fractions on Both Sides\nIf both sides of the equation are fractions, you can mutiply by the lowest common multiple of the denominators.\n\\[\\begin{align*}\n\\dfrac{3y+2}{3} &= \\dfrac{2}{5} \\\\\n(3y+2) \\div 3 \\times 15 &= 2 \\div 5 \\times 15 \\\\\n(3y+2) \\times 5 &= 2 \\times 3 \\\\\n15y + 10 &= 6 \\\\\n15y &= -4 \\\\\ny &= -\\dfrac{4}{15}\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-3",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-3",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\n\\(\\dfrac{a+2}{3} = 4\\)\n\\(\\dfrac{g-4}{10} = 2\\)\n\\(6 = \\dfrac{2w+4}{3}\\)\n\\(\\dfrac{4r-3}{10} = \\dfrac{1}{5}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-3",
+    "href": "Autumn 1/3. Linear Equations.html#answers-3",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{a+2}{3} = 4 \\Rightarrow a = 10\\)\n\\(\\dfrac{g-4}{10} = 2 \\Rightarrow g = 24\\)\n\\(6 = \\dfrac{2w+4}{3} \\Rightarrow w = 7\\)\n\\(\\dfrac{4r-3}{10} = \\dfrac{1}{5} \\Rightarrow r = \\dfrac{5}{4}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-variable-on-the-denominator",
+    "href": "Autumn 1/3. Linear Equations.html#example-variable-on-the-denominator",
+    "title": "Linear Equations",
+    "section": "Example: Variable on the Denominator",
+    "text": "Example: Variable on the Denominator\nIf the variable is on the denominator, the first step is always to multiply both sides of the equation by whatever the denominator is.\n\\[\\begin{align*}\n\\dfrac{7}{z} &= 42 \\\\\n7 \\div z \\times z &= 42 \\times z \\\\\n7 &= 42z \\\\\n7 \\div 42 &= z \\times 42 \\div 42 \\\\\n\\dfrac{1}{6} &= z\n\\end{align*}\\]\n\nThis same method applies even when the denominator is more complex:\n\\[\\begin{align*}\n\\dfrac{7}{2v+3} &= 2 \\\\\n7 \\div (2v+3) \\times (2v+3) &= 2 \\times (2v+3) \\\\\n7 &= 4v + 6 \\\\\n1 &= 4v \\\\\n\\dfrac{1}{4} &= v\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-comparing-methods",
+    "href": "Autumn 1/3. Linear Equations.html#example-comparing-methods",
+    "title": "Linear Equations",
+    "section": "Example: Comparing Methods",
+    "text": "Example: Comparing Methods\nIn some questions, there are two possible methods:\n\n\n\\[\\begin{align*}\n\\dfrac{2}{v}+2 &= 9\\\\\n\\dfrac{2}{v} &= 7 \\\\\n2 &= 7v \\\\\n\\dfrac{2}{7} &= v\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{2}{v}+2 &= 9 \\\\\n2 + 2v &= 9v \\\\\n2 &= 7v \\\\\n\\dfrac{2}{7} &= v\n\\end{align*}\\]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nA very common error in the second method is to forget to multiply the 2 by \\(v\\). When you multiply both sides of an equation, you must multiply every term.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-4",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-4",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\n\\(3 = \\dfrac{15}{y}\\)\n\\(\\dfrac{8}{3p}=12\\)\n\\(1=\\dfrac{5}{y+2}\\)\n\\(\\dfrac{3}{3a-4}=5\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-4",
+    "href": "Autumn 1/3. Linear Equations.html#answers-4",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(3 = \\dfrac{15}{y} \\Rightarrow y=5\\)\n\\(\\dfrac{8}{3p}=12 \\Rightarrow p=\\dfrac{2}{9}\\)\n\\(1=\\dfrac{5}{y+2} \\Rightarrow y=3\\)\n\\(\\dfrac{3}{3a-4}=5 \\Rightarrow a=\\dfrac{23}{15}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#exercise-3",
+    "href": "Autumn 1/3. Linear Equations.html#exercise-3",
+    "title": "Linear Equations",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-unknown-on-both-sides",
+    "href": "Autumn 1/3. Linear Equations.html#example-unknown-on-both-sides",
+    "title": "Linear Equations",
+    "section": "Example: Unknown on Both Sides",
+    "text": "Example: Unknown on Both Sides\nWhen the unknown appears on both sides, the goal is to combine those terms together so that the unknown appears only once. Then we can solve it in the same way as the previous examples. To do this, we can add or subtract one of the terms to both sides.\n\\[\\begin{align*}\n11-2x &= 6x-13 \\\\\n11-2x+2x &= 6x-13+2x \\\\\n11 &= 8x-13 \\\\\n24 &= 8x \\\\\n3 &= x\n\\end{align*}\\]\n\nIf there are brackets, we can expand those first:\n\\[\\begin{align*}\n2(x-4) &= 6x-28 \\\\\n2x-8 &= 6x - 28 \\\\\n-8 &= 4x - 28 \\\\\n20 &= 4x \\\\\n5 &= x\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-5",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-5",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(8-3x = 4x+22\\)\n\\(3(x+5) = 10x + 1\\)\n\\(4(x+5) = 3(3x-5)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-5",
+    "href": "Autumn 1/3. Linear Equations.html#answers-5",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(8-3x = 4x+22 \\Rightarrow x=-2\\)\n\\(3(x+5) = 10x + 1 \\Rightarrow x=2\\)\n\\(4(x+5) = 3(3x-5) \\Rightarrow x=7\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#exercise-4",
+    "href": "Autumn 1/3. Linear Equations.html#exercise-4",
+    "title": "Linear Equations",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-fractions-with-unknown-on-both-sides",
+    "href": "Autumn 1/3. Linear Equations.html#example-fractions-with-unknown-on-both-sides",
+    "title": "Linear Equations",
+    "section": "Example: Fractions with Unknown on Both Sides",
+    "text": "Example: Fractions with Unknown on Both Sides\nWhen the unknown appears on both side and there is a fraction, you should start by getting rid of the fraction by multiplying both sides by the denominator:\n\n\n\\[\\begin{align*}\n\\dfrac{7p}{4} &= p + 3 \\\\\n7p &= 4(p+3) \\\\\n7p &= 4p + 12 \\\\\n7p-4p &= 12 \\\\\n3p &= 12 \\\\\np &= 4\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{2x}{3} &= 2x - 12 \\\\\n2x &= 3(2x-12) \\\\\n2x &= 6x - 36 \\\\\n2x-6x &= -36 \\\\\n-4x &= -36 \\\\\nx &= 9\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-6",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-6",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(\\dfrac{3x}{2} = x + 1\\)\n\\(2d+6 = \\dfrac{8d}{3}\\)\n\\(\\dfrac{4t}{5} = 2t - 6\\)\n\\(\\dfrac{7a}{8} = 2a\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-6",
+    "href": "Autumn 1/3. Linear Equations.html#answers-6",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{3x}{2} = x + 1 \\Rightarrow x=2\\)\n\\(2d+6 = \\dfrac{8d}{3} \\Rightarrow d=9\\)\n\\(\\dfrac{4t}{5} = 2t - 6 \\Rightarrow t=5\\)\n\\(\\dfrac{7a}{8} = 2a \\Rightarrow a=0\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-comparing-methods-1",
+    "href": "Autumn 1/3. Linear Equations.html#example-comparing-methods-1",
+    "title": "Linear Equations",
+    "section": "Example: Comparing Methods",
+    "text": "Example: Comparing Methods\nSolve: \\[\n\\dfrac{x}{3} + 4 = x + 1\n\\]\n\n\nSubtract first:\n\\[\\begin{align*}\n\\dfrac{x}{3} + 4 &= x + 1 \\\\\n\\dfrac{x}{3} &= x - 3 \\\\\nx &= 3(x-3) \\\\\nx &= 3x - 9 \\\\\n0 &= 2x - 9 \\\\\n9 &= 2x \\\\\n\\dfrac{9}{2} &= x\n\\end{align*}\\]\n\nMultiply first:\n\\[\\begin{align*}\n\\dfrac{x}{3} + 4 &= x + 1 \\\\\n3 \\times (\\dfrac{x}{3} + 4) &= 3 \\times (x + 1) \\\\\nx + 12 &= 3x + 3 \\\\\n12 &= 2x + 3 \\\\\n9 &= 2x \\\\\n\\dfrac{9}{2} &= x\n\\end{align*}\\]\n\n\n\n\\[\\begin{align*}\n\\dfrac{x}{3} + 4 &= x + 1 \\\\\nx + 12 &= 3x + 3 \\\\\n\\end{align*}\\]\n\n\n\n\n\n\nWarning\n\n\n\nRemember, when you multiply both sides, you must multiply every term. A very common error in this question is to forget to multiply the 4 by 3.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-7",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-7",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(\\dfrac{a}{2} + 3 = a + 1\\)\n\\(\\dfrac{3e}{4} - 1 = e + 2\\)\n\\(\\dfrac{3p}{5} + 6 = 2p - 3\\)\n\\(7w - 3 = \\dfrac{2w}{3} - 4\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-7",
+    "href": "Autumn 1/3. Linear Equations.html#answers-7",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{a}{2} + 3 = a + 1 \\Rightarrow a = 4\\)\n\\(\\dfrac{3e}{4} - 1 = e + 2 \\Rightarrow e = -12\\)\n\\(\\dfrac{3p}{5} + 6 = 2p - 3 \\Rightarrow p = \\dfrac{45}{7}\\)\n\\(7w - 3 = \\dfrac{2w}{3} - 4 \\Rightarrow w = -\\dfrac{3}{19}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-equations-with-fractions-on-both-sides",
+    "href": "Autumn 1/3. Linear Equations.html#example-equations-with-fractions-on-both-sides",
+    "title": "Linear Equations",
+    "section": "Example: Equations with Fractions on Both Sides",
+    "text": "Example: Equations with Fractions on Both Sides\nWhen there are fractions on both sides, you can multiply by both denominators at once, or the lowest common multiple of both denominators if they have a common factor.\n\n\n\\[\\begin{align*}\n\\dfrac{4y-3}{4} &= \\dfrac{2y-4}{5} \\\\\n5(4y-3) &= 4(2y-4) \\\\\n20y - 15 &= 8y - 16 \\\\\n20y - 8y &= -16 + 15 \\\\\n12y &= -1 \\\\\ny &= -\\dfrac{1}{12}\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{3x+5}{3} &= \\dfrac{x-1}{5} \\\\\n5(3x+5) &= 3(x-1) \\\\\n15x + 25 &= 3x - 3 \\\\\n15x - 3x &= -3 -25 \\\\\n12x &= -28 \\\\\nx &= -\\dfrac{7}{3}\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-8",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-8",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(\\dfrac{h+1}{2} = h - 5\\)\n\\(2m+3 = \\dfrac{3m+2}{4}\\)\n\\(\\dfrac{2x+3}{5} = \\dfrac{3x+2}{3}\\)\n\\(\\dfrac{4t-2}{3} = \\dfrac{5t-2}{5}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-8",
+    "href": "Autumn 1/3. Linear Equations.html#answers-8",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{h+1}{2} = h - 5 \\Rightarrow h = 11\\)\n\\(2m+3 = \\dfrac{3m+2}{4} \\Rightarrow m = -2\\)\n\\(\\dfrac{2x+3}{5} = \\dfrac{3x+2}{3} \\Rightarrow x = -\\dfrac{1}{9}\\)\n\\(\\dfrac{4t-2}{3} = \\dfrac{5t-2}{5} \\Rightarrow t = \\dfrac{4}{5}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-equations-with-the-unknown-on-the-denominator",
+    "href": "Autumn 1/3. Linear Equations.html#example-equations-with-the-unknown-on-the-denominator",
+    "title": "Linear Equations",
+    "section": "Example: Equations with the Unknown on the Denominator",
+    "text": "Example: Equations with the Unknown on the Denominator\nIn these cases, we still begin by multiplying both sides by the denominator.\n\n\n\\[\\begin{align*}\n\\dfrac{3e+2}{e-4} &= 5 \\\\\n3e+2 &= 5(e-4) \\\\\n3e+2 &= 5e - 20 \\\\\n2 &= 2e - 20 \\\\\n22 &= 2e \\\\\n11 &= e\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{7p-2}{3p+2} &= 2 \\\\\n7p-2 &= 2(3p+2) \\\\\n7p-2 &= 6p + 4 \\\\\n7p-6p &= 4 + 2 \\\\\np &= 6\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-9",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-9",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(\\dfrac{x+5}{3x} = 4\\)\n\\(\\dfrac{7y+2}{6y} = \\dfrac{2}{3}\\)\n\\(\\dfrac{5t+4}{t+5} = 3\\)\n\\(\\dfrac{2x+5}{3x+2} = 3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-9",
+    "href": "Autumn 1/3. Linear Equations.html#answers-9",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{x+5}{3x} = 4 \\Rightarrow x = \\dfrac{5}{11}\\)\n\\(\\dfrac{7y+2}{6y} = \\dfrac{2}{3} \\Rightarrow y = -\\dfrac{2}{3}\\)\n\\(\\dfrac{5t+4}{t+5} = 3 \\Rightarrow t = \\dfrac{11}{2}\\)\n\\(\\dfrac{2x+5}{3x+2} = 3 \\Rightarrow x = -\\dfrac{1}{7}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-10",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-10",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(\\dfrac{x+5}{3x} = 4\\)\n\\(\\dfrac{7y+2}{6y} = \\dfrac{2}{3}\\)\n\\(\\dfrac{5t+4}{t+5} = 3\\)\n\\(\\dfrac{2x+5}{3x+2} = 3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-10",
+    "href": "Autumn 1/3. Linear Equations.html#answers-10",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{x+5}{3x} = 4 \\Rightarrow x = \\dfrac{5}{11}\\)\n\\(\\dfrac{7y+2}{6y} = \\dfrac{2}{3} \\Rightarrow y = -\\dfrac{2}{3}\\)\n\\(\\dfrac{5t+4}{t+5} = 3 \\Rightarrow t = \\dfrac{11}{2}\\)\n\\(\\dfrac{2x+5}{3x+2} = 3 \\Rightarrow x = -\\dfrac{1}{7}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-when-the-denominators-have-a-common-factor",
+    "href": "Autumn 1/3. Linear Equations.html#example-when-the-denominators-have-a-common-factor",
+    "title": "Linear Equations",
+    "section": "Example: When the Denominators have a Common Factor",
+    "text": "Example: When the Denominators have a Common Factor\nTo solve these questions, we first identify the lowest common multiple of the two denominators, and then multiply both sides by this.\n\n\n\\[\n\\dfrac{5}{3a} + \\dfrac{2}{5a} = 3\n\\]\nFind the LCD: \\(15a\\)\n\\[\\begin{align*}\n\\dfrac{5}{3a} + \\dfrac{2}{5a} &= 3 \\\\\n15a \\times (\\dfrac{5}{3a} + \\dfrac{2}{5a}) &= 15a \\times 3 \\\\\n25 + 6 &= 45a \\\\\n45a &= 31 \\\\\na &= \\dfrac{31}{45}\n\\end{align*}\\]\n\n\\[\n\\dfrac{5}{6b} - \\dfrac{7}{15b} = \\dfrac{1}{2}\n\\] Find the LCD: \\(30b\\)\n\\[\\begin{align*}\n\\dfrac{5}{6b} - \\dfrac{7}{15b} &= \\dfrac{1}{2} \\\\\n5 \\times 5 - 7 \\times 2 &= \\dfrac{1}{2} \\times 30b \\\\\n25 - 14 &= 15b \\\\\n15b &= 11 \\\\\nb &= \\dfrac{11}{15}\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-11",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-11",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve these equations:\n\n\\(\\dfrac{a}{3} + \\dfrac{2}{3} = 7\\)\n\\(\\dfrac{b}{2} - \\dfrac{b}{8} = 9\\)\n\\(\\dfrac{5}{t} + \\dfrac{1}{t} = 3\\)\n\\(\\dfrac{2}{3w} - \\dfrac{1}{9w} = 15\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-11",
+    "href": "Autumn 1/3. Linear Equations.html#answers-11",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{a}{3} + \\dfrac{2}{3} = 7 \\Rightarrow a = 19\\)\n\\(\\dfrac{b}{2} - \\dfrac{b}{8} = 9 \\Rightarrow b = 24\\)\n\\(\\dfrac{5}{t} + \\dfrac{1}{t} = 3 \\Rightarrow t = 2\\)\n\\(\\dfrac{2}{3w} - \\dfrac{1}{9w} = 15 \\Rightarrow w = 27\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-fractions-leading-to-brackets",
+    "href": "Autumn 1/3. Linear Equations.html#example-fractions-leading-to-brackets",
+    "title": "Linear Equations",
+    "section": "Example: Fractions Leading to Brackets",
+    "text": "Example: Fractions Leading to Brackets\nIn questions where there is more than one term within the numerator or denominator, you need to remember that there are effectively ‘invisible brackets’. As before, we multiply by the lowest common multiple of the denominators.\n\\[\\begin{align*}\n\\dfrac{k-12}{4} + \\dfrac{2k+1}{2} &= k - 2 \\\\\n(k-12) \\div 4 + (2k+1) \\div 2 &= k - 2 \\\\\n4(k-12) + 2(2k+1) &= 4(k-2) \\\\\n4k - 48 + 4k + 2 &= 4k - 8 \\\\\n8k - 46 &= 4k - 8 \\\\\n8k - 4k &= -8 + 46 \\\\\n4k &= 38 \\\\\nk &= \\dfrac{38}{4} = 2\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{5p+3}{2} - \\dfrac{3p+6}{3} &= 2p - 3 \\\\\n(5p+3) \\div 2 - (3p+6) \\div 3 &= 2p - 3 \\\\\n3(5p+3) - 2(3p+6) &= 6p - 9 \\\\\n15p + 9 - 6p - 12 &= 6p - 9 \\\\\n9p - 3 &= 6p - 9 \\\\\n9p - 6p &= -9 + 3 \\\\\n3p &= -6 \\\\\np &= -2\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#exercise-5",
+    "href": "Autumn 1/3. Linear Equations.html#exercise-5",
+    "title": "Linear Equations",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nPlease complete the worksheet. \\[\n\\dfrac{h}{2}=h-4\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-forming-simple-expressions",
+    "href": "Autumn 1/3. Linear Equations.html#example-forming-simple-expressions",
+    "title": "Linear Equations",
+    "section": "Example: Forming Simple Expressions",
+    "text": "Example: Forming Simple Expressions\n\n\n\nPhrase\nAlgebraic Expression\n\n\n\n\n3 less than \\(a\\)\n\\(a - 3\\)\n\n\n\\(b\\) divided by 4\n\\(\\dfrac{b}{4}\\)\n\n\n11 more than \\(c\\)\n\\(c + 11\\)\n\n\n\\(d\\) lots of \\(e\\)\n\\(de\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-expressions-from-context",
+    "href": "Autumn 1/3. Linear Equations.html#example-expressions-from-context",
+    "title": "Linear Equations",
+    "section": "Example: Expressions From Context",
+    "text": "Example: Expressions From Context\nBen has \\(x\\) chocolates.\nApril has twice as many chocolates as Ben.\nJonny 2 fewer chocolates than April.\nHow many chocolates do they have all together?\n\\[\nx + 2x + 2x - 2 = 5x - 2\n\\]\nThe weight of a pineapple is \\(a\\) and the weight of an orange is \\(b\\). Find the difference between the weight of 3 pineapples and 2 oranges.\n\\[\n3a - 2b\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-12",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-12",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nSolve the following:\n\nA chair costs £\\(c\\) and a table costs 4 times as much. What is the cost of 4 chairs?\nA chair costs £\\(c\\) and a table costs 4 times as much. What is the cost of 3 tables?\nViktor has \\(y\\) apples. Nathan has twice as many apples as Viktor. Maria has three more apples than Nathan. How many apples do they have all together?\nAn adult ticket costs £10. A child ticket costs £4. Write down an expression for the total cost of \\(a\\) adult tickets and \\(c\\) child tickets.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-12",
+    "href": "Autumn 1/3. Linear Equations.html#answers-12",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(4c\\)\n\\(12c\\)\n\\(5y + 3\\)\n\\(10a + 4c\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-forming-solving-equations-from-context",
+    "href": "Autumn 1/3. Linear Equations.html#example-forming-solving-equations-from-context",
+    "title": "Linear Equations",
+    "section": "Example: Forming & Solving Equations from Context",
+    "text": "Example: Forming & Solving Equations from Context\nI think of a number, I divide it by 5, then add 9 to it. The result is 42. Let the number be \\(m\\). This gives:\n\\[\n\\dfrac{m}{5} + 9 = 42\n\\]\nTo solve:\n\\[\\begin{align*}\n\\dfrac{m}{5} + 9 &= 42 \\\\\n\\dfrac{m}{5} &= 42 - 9 \\\\\n\\dfrac{m}{5} &= 33 \\\\\nm &= 33 \\times 5 \\\\\nm &= 165\n\\end{align*}\\]\n\nI think of a number, I subtract 3 from it, then I triple it. The result is 60. Let the number be \\(n\\). This gives:\n\\[\n3(n - 3) = 60\n\\]\nTo solve:\n\\[\\begin{align*}\n3(n - 3) &= 60 \\\\\nn - 3 &= 60 \\div 3 \\\\\nn - 3 &= 20 \\\\\nn &= 20 + 3 \\\\\nn &= 23\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-13",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-13",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nForm and solve an equation from each of these examples.\n\nI think of a number, I then add 5 to it. The result is 12.\nI think of a number, I then multiply it by 6. The result is 54.\nI think of a number, I double it, then add 3. The result is 19.\nI think of a number, I divide it by 3, and then subtract 11 from it. The result is \\(-2\\).\nI think of a number, I add 3 to it, then I double it. The result is 19.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-13",
+    "href": "Autumn 1/3. Linear Equations.html#answers-13",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\n\n\\(a + 5 = 12 \\;\\Rightarrow\\; a = 7\\)\n\\(6b = 54 \\;\\Rightarrow\\; b = 9\\)\n\\(2c + 3 = 19 \\;\\Rightarrow\\; 2c = 16 \\;\\Rightarrow\\; c = 8\\)\n\\(\\dfrac{d}{3} - 11 = -2 \\;\\Rightarrow\\; \\dfrac{d}{3} = 9 \\;\\Rightarrow\\; d = 27\\)\n\\(2(e + 3) = 19 \\;\\Rightarrow\\; e = \\dfrac{13}{2}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#example-more-advanced-forming",
+    "href": "Autumn 1/3. Linear Equations.html#example-more-advanced-forming",
+    "title": "Linear Equations",
+    "section": "Example: More Advanced Forming",
+    "text": "Example: More Advanced Forming\n\nJohn has \\(x\\) sweets.\n\nHenri has 4 more sweets than John.\n\nSam has 2 times as many sweets as John.\nAltogether they have 32 sweets. Find how many sweets John has.\n\nLet John’s number of sweets be \\(x\\). Then:\n\nJohn: \\(x\\)\n\nHenri: \\(x + 4\\)\n\nSam: \\(2x\\)\n\nSince the total is 32, we form:\n\\[\nx + (x + 4) + 2x = 32\n\\]\n\nCombine like terms and solve:\n\\[\\begin{align*}\n4x + 4 &= 32 \\\\\n4x &= 32 - 4 \\\\\n4x &= 28 \\\\\nx &= 28 \\div 4 \\\\\nx &= 7\n\\end{align*}\\]\nTherefore, John has 7 sweets.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#test-your-understanding-14",
+    "href": "Autumn 1/3. Linear Equations.html#test-your-understanding-14",
+    "title": "Linear Equations",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nPeter has \\(y\\) loaves.\nAndrew has 2 fewer loaves than Peter.\nJohn has 4 times as many loaves as Peter.\nAltogether they have 16 loaves. Find how many loaves Andrew has.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#answers-14",
+    "href": "Autumn 1/3. Linear Equations.html#answers-14",
+    "title": "Linear Equations",
+    "section": "Answers",
+    "text": "Answers\nLet:\n\nPeter: \\(y\\)\n\nAndrew: \\(y - 2\\)\n\nJohn: \\(4y\\)\n\nSince the total is 16: \\[\ny + (y - 2) + 4y = 16\n\\]\n\nCombine like terms and solve: \\[\\begin{align*}\n6y - 2 &= 16 \\\\\n6y &= 16 + 2 \\\\\n6y &= 18 \\\\\ny &= 3\n\\end{align*}\\]\nAs Andrew has \\(y - 2\\) loaves: \\[\n3 - 2 = 1\n\\]\nTherefore, Andrew has 1 loaf.\n\n\n\n\n\n\nBe careful\n\n\n\nThe value of \\(y\\) is not the final answer.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/3. Linear Equations.html#exercise-6",
+    "href": "Autumn 1/3. Linear Equations.html#exercise-6",
+    "title": "Linear Equations",
+    "section": "Exercise 6",
+    "text": "Exercise 6\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Linear Equations"
     ]
   },
   {
@@ -315,300 +1228,179 @@
     "text": "Welcome to the Shell Mathematics course."
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html",
-    "href": "Autumn 1/Linear Equations.html",
-    "title": "Linear Equations",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html",
+    "title": "Factorising with a Common Factor",
     "section": "",
-    "text": "For each mathematical operation, there is an inverse operation.\n\\[\n\\Huge{\\times \\longleftrightarrow \\div}\n\\] \\[\n\\Huge{+ \\longleftrightarrow -}\n\\]\nTo solve equations, we use inverse pairs to isolate the variable \\(x\\) for which we are trying to solve.",
+    "text": "Factorise out one or more common factors using a single bracket",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Factorising with a Common Factor"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#inverse-pairs",
-    "href": "Autumn 1/Linear Equations.html#inverse-pairs",
-    "title": "Linear Equations",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html#learning-objectives",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html#learning-objectives",
+    "title": "Factorising with a Common Factor",
     "section": "",
-    "text": "For each mathematical operation, there is an inverse operation.\n\\[\n\\Huge{\\times \\longleftrightarrow \\div}\n\\] \\[\n\\Huge{+ \\longleftrightarrow -}\n\\]\nTo solve equations, we use inverse pairs to isolate the variable \\(x\\) for which we are trying to solve.",
+    "text": "Factorise out one or more common factors using a single bracket",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Factorising with a Common Factor"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#example-one-step-equations",
-    "href": "Autumn 1/Linear Equations.html#example-one-step-equations",
-    "title": "Linear Equations",
-    "section": "Example: One-Step Equations",
-    "text": "Example: One-Step Equations\nTo solve one-step equations, we simply use the relevant inverse pair:\n\n\n\n\\[\\begin{align}\nx + 3 &= 2 \\\\\nx + 3 - 3 &= 2-3 \\\\\nx &= -1\n\\end{align}\\]\n\\[\\begin{align}\ny-5 &= 7 \\\\\ny-5+5 &= 7+5 \\\\\ny &= 12\n\\end{align}\\]\n\n\n\n\\[\\begin{align}\n3u &= 12 \\\\\nu \\times 3 \\div 3 &= 12 \\div 3 \\\\\nu &= 4\n\\end{align}\\]\n\\[\\begin{align}\nv \\div 2 &= 8 \\\\\nv \\div 2 \\times 2 &= 8 \\times 2 \\\\\nv &= 16\n\\end{align}\\]",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html#example-factorising-with-a-common-factor",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html#example-factorising-with-a-common-factor",
+    "title": "Factorising with a Common Factor",
+    "section": "Example: Factorising with a Common Factor",
+    "text": "Example: Factorising with a Common Factor\nVideo: Factorising\nFactorising is the opposite of expanding. There are several methods of factorising, but the most basic one involves identifying common factors. For example, in the expression\n\\[\nx^2 - 12x\n\\]\n\\(x\\) is a common factor, and so\n\\[\nx^2 - 12x = x(x - 12)\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Factorising with a Common Factor"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#example-two-step-equations",
-    "href": "Autumn 1/Linear Equations.html#example-two-step-equations",
-    "title": "Linear Equations",
-    "section": "Example: Two-Step Equations",
-    "text": "Example: Two-Step Equations\nWhen there is more than one step, it’s important to think about the order of operations. Drawing a diagram can help. For the equation \\[\n6x-2 = 16\n\\] we can draw the following diagram:\n\n\n\n\n\ngraph LR\n    X((x))\n    A[\"× 6\"]\n    B[\"−2\"]\n    C((16))\n\n    X --&gt; A --&gt; B --&gt; C\n\n\n\n\n\n\nWe need to work backwards using inverse pairs, so we first add 2 then divide by 6:\n\\[\\begin{align}\n6x-2+2 &= 16+2 \\\\\n6x &= 18 \\\\\nx \\times 6 \\div 6 &= 18 \\div 6 \\\\\nx &= 3\n\\end{align}\\]\n\n\\[\n\\frac{x+3}{2} = 5\n\\] The diagram for this equation is\n\n\n\n\n\ngraph LR\n    X((x))\n    A[\"+3\"]\n    B[\"÷2\"]\n    C((5))\n\n    X --&gt; A --&gt; B --&gt; C\n\n\n\n\n\n\nWe need to work backwards using inverse pairs,\n\\[\\begin{align}\n\\frac{x+3}{2} &= 5 \\\\\n(x+3) \\div 2 \\times 2 &= 5 \\times 2 \\\\\nx+3 &= 10 \\\\\nx+3-3 &= 10-3 \\\\\nx &= 7\n\\end{align}\\]",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html#example-more-than-one-factor",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html#example-more-than-one-factor",
+    "title": "Factorising with a Common Factor",
+    "section": "Example: More than One Factor",
+    "text": "Example: More than One Factor\nSometimes, there is more than one common factor, and more than two terms:\n\\[\n4x^2y + 8xy^2 + 4xy= 4xy(x + 2y + 1)\n\\]\n\n\n\n\n\n\nWarning\n\n\n\nWhen you take out all the factors from a term, there is a 1 left, not a 0. This is because when you factorise, you are dividing rather than subtracting, and anything divided by itself is 1.",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Factorising with a Common Factor"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding",
-    "href": "Autumn 1/Linear Equations.html#test-your-understanding",
-    "title": "Linear Equations",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html#test-your-understanding",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html#test-your-understanding",
+    "title": "Factorising with a Common Factor",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nSolve these equations:\n\n\\(5x-8=27\\)$\n\\(\\frac{x}{3}+4=9\\)\n\\(\\frac{x-3}{4}=1\\)\n\\(3-2x = 7\\)",
+    "text": "Test Your Understanding\nFactorise completely:\n\n\\((3x^2 + 9x)\\)\n\\((14t^2 - 21t^3)\\)\n\\((8y + 28y^3)\\)\n\\((-5h^3 - 40h^7)\\)",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Factorising with a Common Factor"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#answers",
-    "href": "Autumn 1/Linear Equations.html#answers",
-    "title": "Linear Equations",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html#answers",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html#answers",
+    "title": "Factorising with a Common Factor",
     "section": "Answers",
-    "text": "Answers\n\n\\(5x-8=27 \\Rightarrow x=7\\)\n\\(\\frac{x}{3}+4=9 \\Rightarrow x=15\\)\n\\(\\frac{x-3}{4}=1 \\Rightarrow x=7\\)\n\\(3-2x = 7 \\Rightarrow x=-2\\)",
+    "text": "Answers\n\n\\((3x^2 + 9x) = 3x(x + 3)\\)\n\\((14t^2 - 21t^3) = 7t^2(2 - 3t)\\)\n\\((8y + 28y^3) = 4y(2 + 7y^2)\\)\n\\((-5h^3 - 40h^7) = -5h^3(1 + 8h^4)\\)",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Factorising with a Common Factor"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#exercise-1",
-    "href": "Autumn 1/Linear Equations.html#exercise-1",
-    "title": "Linear Equations",
+    "objectID": "Autumn 1/2. Factorising with a Common Factor.html#exercise",
+    "href": "Autumn 1/2. Factorising with a Common Factor.html#exercise",
+    "title": "Factorising with a Common Factor",
+    "section": "Exercise",
+    "text": "Exercise\nPlease complete the worksheet",
+    "crumbs": [
+      "Autumn 1",
+      "Factorising with a Common Factor"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html",
+    "href": "Autumn 1/5. Recurring Decimals.html",
+    "title": "Recurring Decimals",
+    "section": "",
+    "text": "To turn fractions into decimals, we can use long division. For example, to calculate \\(\\frac{17}{8}\\):\n\n\n\n\n\nNotice that we stop when we get a remainder of zero.",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-long-division",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-long-division",
+    "title": "Recurring Decimals",
+    "section": "",
+    "text": "To turn fractions into decimals, we can use long division. For example, to calculate \\(\\frac{17}{8}\\):\n\n\n\n\n\nNotice that we stop when we get a remainder of zero.",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-fraction-to-recurring-decimal",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-fraction-to-recurring-decimal",
+    "title": "Recurring Decimals",
+    "section": "Example: Fraction to Recurring Decimal",
+    "text": "Example: Fraction to Recurring Decimal\nVideo: Converting from a fraction to a recurring decimal\nWe can also do this to find a recurring decimal. For example, to find \\(\\frac{3}{11}\\), we can do:\n\n\n\n\n\nAs soon as we get a repeated digit, we know we will be stuck in a loop, so we mark the decimal as recurring.\n\nSometimes there is a non-recurring decimal part before the recurrence begins:\n\n\n\n\n\nNotice that the vertical bar only extends over the repeating part.\n\nAnd sometimes it takes a long time to repeat:",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimal-notation",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimal-notation",
+    "title": "Recurring Decimals",
+    "section": "Example: Recurring Decimal Notation",
+    "text": "Example: Recurring Decimal Notation\nThere are actually two ways to represent recurring decimals, the bar over the repeating part or a dot above the first and last digit of the repeating part, so for example, the recurring decimal \\[\n0.3456456456456456\\ldots\n\\] Can be represented either as \\[\n0.3\\overline{456}\n\\] or as \\[\n0.3\\dot{4}5\\dot{6}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#test-your-understanding",
+    "href": "Autumn 1/5. Recurring Decimals.html#test-your-understanding",
+    "title": "Recurring Decimals",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nWrite out what each of these recurring decimals looks like:\n\n\\(0.\\dot{3}\\)\n\\(0.4\\overline{3}\\)\n\\(0.\\dot{4}\\dot{3}\\)\n\\(0.1\\overline{23}\\)\n\\(0.\\dot{1}2\\dot{3}\\)\n\\(0.12\\overline{3}\\)\n\\(0.4\\dot{3}0\\dot{3}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#answers",
+    "href": "Autumn 1/5. Recurring Decimals.html#answers",
+    "title": "Recurring Decimals",
+    "section": "Answers",
+    "text": "Answers\n\n\\(0.\\dot{3} = 0.333\\ldots\\)\n\\(0.4\\overline{3} = 0.4333\\ldots\\)\n\\(0.\\dot{4}\\dot{3} = 0.434343\\ldots\\)\n\\(0.1\\overline{23} = 0.1232323\\ldots\\)\n\\(0.\\dot{1}2\\dot{3} = 0.123123123\\ldots\\)\n\\(0.12\\overline{3} = 0.12333\\ldots\\)\n\\(0.4\\dot{3}0\\dot{3} = 0.4303303303\\ldots\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#exercise-1",
+    "href": "Autumn 1/5. Recurring Decimals.html#exercise-1",
+    "title": "Recurring Decimals",
     "section": "Exercise 1",
-    "text": "Exercise 1\nFirst question: \\(3a-2=19\\)",
+    "text": "Exercise 1\nPlease complete the worksheet.",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Recurring Decimals"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#example-equations-with-brackets",
-    "href": "Autumn 1/Linear Equations.html#example-equations-with-brackets",
-    "title": "Linear Equations",
-    "section": "Example: Equations with Brackets",
-    "text": "Example: Equations with Brackets\nThere are often two ways to solve these kinds of questions:\n\n\n\\[\\begin{align}\n3(x+7) &= 15 \\\\\n3x + 21 &= 15 \\\\\n3x &= -6 \\\\\nx &= -2\n\\end{align}\\]\n\n\\[\\begin{align}\n3(x+7) &= 15 \\\\\nx+7 &= 5 \\\\\nx &= -2\n\\end{align}\\]\n\n\nAs you can see, expanding the brackets is not always the quickest method.\n\nBut sometimes if there is more than one bracket you need to expand the brackets and simplify first:\n\\[\\begin{align}\n5(x+2)-3(x-4) &= 28 \\\\\n5x+10-3x+12 &= 28 \\\\\n2x+22 &= 28 \\\\\n2x &= 6 \\\\\nx &= 3\n\\end{align}\\]",
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimals-to-fractions",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimals-to-fractions",
+    "title": "Recurring Decimals",
+    "section": "Example: Recurring Decimals to Fractions",
+    "text": "Example: Recurring Decimals to Fractions\nVideo: Recurring Decimals to Fractions\nTo convert \\(0.\\overline{54}\\) to a fraction, we can use algebra. We let \\(x\\) equal the recurring decimal, then work out the value of \\(x\\) as fraction.\n\\[\\begin{align*}\nx = 0.&545454\\ldots & \\text{Write out the recurring decimal} \\\\\n100x = 54.&545454\\ldots & \\times 100 \\text{ because two recurring digits} \\\\\n99x = &\\ 54 & \\text{Subtract the first line from the second} \\\\\nx = &\\ \\dfrac{54}{99} = \\dfrac{6}{11} & \\text{Divide and simplify}\n\\end{align*}\\]\nThe trick here is that the recurring decimal parts cancel out when they are subtracted.\n\n\\[\\begin{align*}\nx &= 0.133333\\ldots & \\text{Write out the recurring decimal} \\\\\n10x &= 1.333333\\ldots & \\times 10 \\text{ because one recurring digit} \\\\\n9x &= 1.2 & \\text{Subtract the first line from the second} \\\\\nx &= \\dfrac{1.2}{9} = \\dfrac{12}{90} = \\dfrac{2}{15} & \\text{Divide and simplify}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\nNote here that when we subtract the first digit after the decimal point does not match, so we are effectively doing \\(1.3-0.1\\). The decimal digits after this do cancel because they are identical.\n\n\n\n\\[\\begin{align*}\nx   = 3&.0868686\\ldots \\\\\n100x = 308&.6868686\\ldots \\\\\n99x  = 305&.6 \\\\\nx = \\dfrac{305.6}{99} &= \\dfrac{3056}{990} = \\dfrac{1528}{495}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\nThe calculation this time is \\(308.6 - 3\\).\n\n\n\n\\[\\begin{align*}\nx      = 0&.5401401401\\ldots \\\\\n1000x  = 540&.1401401401\\ldots \\\\\n999x   = 539&.6 \\\\\nx      = \\dfrac{539.6}{999} &= \\dfrac{5396}{9990} = \\dfrac{2698}{4995}\n\\end{align*}\\]\n\n\n\n\n\n\nWarning\n\n\n\nBe careful here. 5 is greater than 1 so the calculation we need to do is \\(540.1-0.5\\).",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
+      "Recurring Decimals"
     ]
   },
   {
-    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-1",
-    "href": "Autumn 1/Linear Equations.html#test-your-understanding-1",
-    "title": "Linear Equations",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nSolve these equations:\n\n\\(6(x-3)+5=29\\)\n\\(8(x+2)-3(2x-1)=39\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#answers-1",
-    "href": "Autumn 1/Linear Equations.html#answers-1",
-    "title": "Linear Equations",
-    "section": "Answers",
-    "text": "Answers\n\n\\(6(x-3)+5=29 \\Rightarrow x=7\\)\n\\(8(x+2)-3(2x-1)=39 \\Rightarrow x=10\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#exercise-2",
-    "href": "Autumn 1/Linear Equations.html#exercise-2",
-    "title": "Linear Equations",
+    "objectID": "Autumn 1/5. Recurring Decimals.html#exercise-2",
+    "href": "Autumn 1/5. Recurring Decimals.html#exercise-2",
+    "title": "Recurring Decimals",
     "section": "Exercise 2",
-    "text": "Exercise 2\nFirst question: \\(3(a+5)=36\\)",
+    "text": "Exercise 2\nPlease complete the worksheet.",
     "crumbs": [
       "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#example-equations-with-fractions",
-    "href": "Autumn 1/Linear Equations.html#example-equations-with-fractions",
-    "title": "Linear Equations",
-    "section": "Example: Equations with Fractions",
-    "text": "Example: Equations with Fractions\n\n\n\n\n\ngraph LR\n    X((h))\n    A[\"×3\"]\n    B[\"÷2\"]\n    C[+3]\n    D((12))\n\n    X --&gt; A --&gt; B --&gt; C --&gt; D\n\n\n\n\n\n\nWe can use the same method for questions like this\n\\[\\begin{align}\n\\frac{3h}{2}+3 &= 12 \\\\\n\\frac{3h}{2} &= 9 \\\\\nh &= 6\n\\end{align}\\]\n\nThere are two methods for questions like this:\n\n\nSubtract 4 first:\n\\[\\begin{align}\n\\frac{x}{3}+4 &= 9 \\\\\n\\frac{x}{3} &= 5 \\\\\nx &= 15\n\\end{align}\\]\n\nMultiply by 3 first:\n\\[\\begin{align}\n\\frac{x}{3}+4 &= 9 \\\\\nx+12 &= 27 \\\\\nx = 15\n\\end{align}\\]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWhen you multiply both sides by 3 you must multiply every term by 3.",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-2",
-    "href": "Autumn 1/Linear Equations.html#test-your-understanding-2",
-    "title": "Linear Equations",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\n\\(\\dfrac{x}{2} - 8 = 16\\)\n\\(\\dfrac{2x}{5} + 6 = 19\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#answers-2",
-    "href": "Autumn 1/Linear Equations.html#answers-2",
-    "title": "Linear Equations",
-    "section": "Answers",
-    "text": "Answers\n\n\\(\\dfrac{x}{2} - 8 = 16 \\Rightarrow x=48\\)\n\\(\\dfrac{2x}{5} + 6 = 19 \\Rightarrow x=32.5\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#example-multiplying-first",
-    "href": "Autumn 1/Linear Equations.html#example-multiplying-first",
-    "title": "Linear Equations",
-    "section": "Example: Multiplying First",
-    "text": "Example: Multiplying First\n\\[\n\\frac{y-5}{3} = 4\n\\]\nIn some questions, you should multiply first because of the order of operations:\n\n\n\n\n\ngraph LR\n    X((y))\n    A[\"-5\"]\n    B[\"÷3\"]\n    C((4))\n\n    X --&gt; A --&gt; B --&gt; C\n\n\n\n\n\n\n\\[\\begin{align}\n\\frac{y-5}{3} &= 4 \\\\\ny - 5 &= 12 \\\\\ny &= 17\n\\end{align}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#example-fractions-on-both-sides",
-    "href": "Autumn 1/Linear Equations.html#example-fractions-on-both-sides",
-    "title": "Linear Equations",
-    "section": "Example: Fractions on Both Sides",
-    "text": "Example: Fractions on Both Sides\nIf both sides of the equation are fractions, you can mutiply by the lowest common multiple of the denominators.\n\\[\\begin{align}\n\\frac{3y+2}{3} &= \\frac{2}{5} \\\\\n(3y+2) \\div 3 \\times 15 &= 2 \\div 5 \\times 15 \\\\\n(3y+2) \\times 5 &= 2 \\times 3 \\\\\n15y + 10 &= 6 \\\\\n15y &= -4 \\\\\ny &= -\\frac{4}{15}\n\\end{align}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-3",
-    "href": "Autumn 1/Linear Equations.html#test-your-understanding-3",
-    "title": "Linear Equations",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\n\\(\\dfrac{a+2}{3} = 4\\)\n\\(\\dfrac{g-4}{10} = 2\\)\n\\(6 = \\dfrac{2w+4}{3}\\)\n\\(\\dfrac{4r-3}{10} = \\dfrac{1}{5}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#answers-3",
-    "href": "Autumn 1/Linear Equations.html#answers-3",
-    "title": "Linear Equations",
-    "section": "Answers",
-    "text": "Answers\n\n\\(\\dfrac{a+2}{3} = 4 \\Rightarrow a = 10\\)\n\\(\\dfrac{g-4}{10} = 2 \\Rightarrow g = 24\\)\n\\(6 = \\dfrac{2w+4}{3} \\Rightarrow w = 7\\)\n\\(\\dfrac{4r-3}{10} = \\dfrac{1}{5} \\Rightarrow r = \\dfrac{5}{4}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#example-variable-on-the-denominator",
-    "href": "Autumn 1/Linear Equations.html#example-variable-on-the-denominator",
-    "title": "Linear Equations",
-    "section": "Example: Variable on the Denominator",
-    "text": "Example: Variable on the Denominator\nIf the variable is on the denominator, the first step is always to multiply both sides of the equation by whatever the denominator is.\n\\[\\begin{align}\n\\dfrac{7}{z} &= 42 \\\\\n7 \\div z \\times z &= 42 \\times z \\\\\n7 &= 42z \\\\\n7 \\div 42 &= z \\times 42 \\div 42 \\\\\n\\dfrac{1}{6} &= z\n\\end{align}\\]\n\nThis same method applies even when the denominator is more complex:\n\\[\\begin{align}\n\\dfrac{7}{2v+3} &= 2 \\\\\n7 \\div (2v+3) \\times (2v+3) &= 2 \\times (2v+3) \\\\\n7 &= 4v + 6 \\\\\n1 &= 4v \\\\\n\\dfrac{1}{4} &= v\n\\end{align}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#example-comparing-methods",
-    "href": "Autumn 1/Linear Equations.html#example-comparing-methods",
-    "title": "Linear Equations",
-    "section": "Example: Comparing Methods",
-    "text": "Example: Comparing Methods\nWith equations like \\[\n\\dfrac{2}{v} + 2 = 9\n\\] there are two possible methods, but one has a high rate of error.\n\n\n\\[\\begin{align}\n\\dfrac{2}{v}+2 &= 9\\\\\n\\dfrac{2}{v} &= 7 \\\\\n2 &= 7v \\\\\n\\dfrac{2}{7} &= v\n\\end{align}\\]\n\n\\[\\begin{align}\n\\dfrac{2}{v}+2 &= 9 \\\\\n2 + 2v &= 9v \\\\\n2 &= 7v \\\\\n\\dfrac{2}{7} &= v\n\\end{align}\\]\n\n\n\n\n\n\n\n\nWarning\n\n\n\nA very common error in the second method is to forget to multiply the 2 by \\(v\\). Remember, when you multiply both sides of an equation, you must multiply every term. Terms are expressions separated by a plus or minus.",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-4",
-    "href": "Autumn 1/Linear Equations.html#test-your-understanding-4",
-    "title": "Linear Equations",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\n\\(3 = \\dfrac{15}{y}\\)\n\\(\\dfrac{8}{3p}=12\\)\n\\(1=\\dfrac{5}{y+2}\\)\n\\(\\dfrac{3}{3a-4}=5\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#answers-4",
-    "href": "Autumn 1/Linear Equations.html#answers-4",
-    "title": "Linear Equations",
-    "section": "Answers",
-    "text": "Answers\n\n\\(3 = \\dfrac{15}{y} \\Rightarrow y=5\\)\n\\(\\dfrac{8}{3p}=12 \\Rightarrow p=\\dfrac{2}{9}\\)\n\\(1=\\dfrac{5}{y+2} \\Rightarrow y=3\\)\n\\(\\dfrac{3}{3a-4}=5 \\Rightarrow a=\\dfrac{23}{15}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#exercise-3",
-    "href": "Autumn 1/Linear Equations.html#exercise-3",
-    "title": "Linear Equations",
-    "section": "Exercise 3",
-    "text": "Exercise 3\nFirst question: \\(\\dfrac{c}{2}=3\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#example-unknown-on-both-sides",
-    "href": "Autumn 1/Linear Equations.html#example-unknown-on-both-sides",
-    "title": "Linear Equations",
-    "section": "Example: Unknown on Both Sides",
-    "text": "Example: Unknown on Both Sides\nWhen the unknown appears on both sides, the goal is to combine those terms together so that the unknown appears only once. Then we can solve it in the same way as the previous examples. To do this, we can add or subtract one of the terms to both sides.\n\\[\\begin{align}\n11-2x &= 6x-13 \\\\\n11-2x+2x &= 6x-13+2x \\\\\n11 &= 8x-13 \\\\\n24 &= 8x \\\\\n3 &= x\n\\end{align}\\]\n\nIf there are brackets, we can expand those first:\n\\[\\begin{align}\n2(x-4) &= 6x-28 \\\\\n2x-8 &= 6x - 28 \\\\\n-8 &= 4x - 28 \\\\\n20 &= 4x \\\\\n5 &= x\n\\end{align}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#test-your-understanding-5",
-    "href": "Autumn 1/Linear Equations.html#test-your-understanding-5",
-    "title": "Linear Equations",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nSolve these equations:\n\n\\(8-3x = 4x+22\\)\n\\(3(x+5) = 10x + 1\\)\n\\(4(x+5) = 3(3x-5)\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#answers-5",
-    "href": "Autumn 1/Linear Equations.html#answers-5",
-    "title": "Linear Equations",
-    "section": "Answers",
-    "text": "Answers\n\n\\(8-3x = 4x+22 \\Rightarrow x=-2\\)\n\\(3(x+5) = 10x + 1 \\Rightarrow x=2\\)\n\\(4(x+5) = 3(3x-5) \\Rightarrow x=7\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/Linear Equations.html#exercise-4",
-    "href": "Autumn 1/Linear Equations.html#exercise-4",
-    "title": "Linear Equations",
-    "section": "Exercise 4",
-    "text": "Exercise 4\nStart with question 3: \\(7x-2=4x+13\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Linear Equations"
+      "Recurring Decimals"
     ]
   }
 ]

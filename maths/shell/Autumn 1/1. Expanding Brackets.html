@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome – Shell Mathematics Course</title>
+<title>Expanding Brackets – Shell Mathematics Course</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b2c493fdd487b110f6b1348dfd6a5174.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b2c493fdd487b110f6b1348dfd6a5174.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,8 +68,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Welcome</h1>
+          <h1 class="quarto-secondary-nav-title">Expanding Brackets</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Shell Mathematics Course</a> 
+      <a href="../">Shell Mathematics Course</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -117,31 +146,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Autumn 1/1. Expanding Brackets.html" class="sidebar-item-text sidebar-link">
+  <a href="../Autumn 1/1. Expanding Brackets.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Expanding Brackets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Autumn 1/2. Factorising with a Common Factor.html" class="sidebar-item-text sidebar-link">
+  <a href="../Autumn 1/2. Factorising with a Common Factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Factorising with a Common Factor</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Autumn 1/3. Linear Equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../Autumn 1/3. Linear Equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Autumn 1/4. Fractions.html" class="sidebar-item-text sidebar-link">
+  <a href="../Autumn 1/4. Fractions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fractions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Autumn 1/5. Recurring Decimals.html" class="sidebar-item-text sidebar-link">
+  <a href="../Autumn 1/5. Recurring Decimals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recurring Decimals</span></a>
   </div>
 </li>
@@ -153,14 +182,41 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#basic-principles" id="toc-basic-principles" class="nav-link" data-scroll-target="#basic-principles">Basic Principles</a></li>
+  <li><a href="#example-combining-like-terms" id="toc-example-combining-like-terms" class="nav-link" data-scroll-target="#example-combining-like-terms">Example: Combining Like Terms</a></li>
+  <li><a href="#example-multiplying-algebraic-terms" id="toc-example-multiplying-algebraic-terms" class="nav-link" data-scroll-target="#example-multiplying-algebraic-terms">Example: Multiplying Algebraic Terms</a></li>
+  <li><a href="#example-expanding-brackets" id="toc-example-expanding-brackets" class="nav-link" data-scroll-target="#example-expanding-brackets">Example: Expanding Brackets</a></li>
+  <li><a href="#example-expanding-with-indices" id="toc-example-expanding-with-indices" class="nav-link" data-scroll-target="#example-expanding-with-indices">Example: Expanding with Indices</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test Your Understanding</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#example-expanding-double-brackets" id="toc-example-expanding-double-brackets" class="nav-link" data-scroll-target="#example-expanding-double-brackets">Example: Expanding Double Brackets</a></li>
+  <li><a href="#example-squared-bracket" id="toc-example-squared-bracket" class="nav-link" data-scroll-target="#example-squared-bracket">Example: Squared Bracket</a></li>
+  <li><a href="#test-your-understanding-1" id="toc-test-your-understanding-1" class="nav-link" data-scroll-target="#test-your-understanding-1">Test Your Understanding</a></li>
+  <li><a href="#answers-1" id="toc-answers-1" class="nav-link" data-scroll-target="#answers-1">Answers</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#example-2-times-3-grids" id="toc-example-2-times-3-grids" class="nav-link" data-scroll-target="#example-2-times-3-grids">Example: 2 <span class="math inline">\(\times\)</span> 3 Grids</a></li>
+  <li><a href="#test-your-understanding-2" id="toc-test-your-understanding-2" class="nav-link" data-scroll-target="#test-your-understanding-2">Test Your Understanding</a></li>
+  <li><a href="#answers-2" id="toc-answers-2" class="nav-link" data-scroll-target="#answers-2">Answers</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#example-triple-brackets" id="toc-example-triple-brackets" class="nav-link" data-scroll-target="#example-triple-brackets">Example: Triple Brackets</a></li>
+  <li><a href="#test-your-understanding-3" id="toc-test-your-understanding-3" class="nav-link" data-scroll-target="#test-your-understanding-3">Test Your Understanding</a></li>
+  <li><a href="#answers-3" id="toc-answers-3" class="nav-link" data-scroll-target="#answers-3">Answers</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="1.-Expanding-Brackets.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Welcome</h1>
+<h1 class="title d-none d-lg-block">Expanding Brackets</h1>
 </div>
 
 
@@ -177,9 +233,299 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the Shell Mathematics course.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Simplify algebraic expressions</li>
+<li>Expand brackets</li>
+<li>Solve equations in which the unknown appears on both sides</li>
+</ul>
+</section>
+<section id="basic-principles" class="level2">
+<h2 class="anchored" data-anchor-id="basic-principles">Basic Principles</h2>
+<p>Algebra uses letters, often <span class="math inline">\(x\)</span>, to stand for numbers. Algebraic expressions can be treated in the same way as number expressions.</p>
+<ul>
+<li><span class="math inline">\(x + 3\)</span> means “add three to the unknown number.”<br>
+</li>
+<li><span class="math inline">\(3x\)</span> means “3 times the unknown number.”<br>
+</li>
+<li><span class="math inline">\(x^2\)</span> means “square the unknown number.”</li>
+</ul>
+</section>
+<section id="example-combining-like-terms" class="level2">
+<h2 class="anchored" data-anchor-id="example-combining-like-terms">Example: Combining Like Terms</h2>
+<p><span class="math display">\[
+a + 3ab - 4ba = a - ab
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note: <span class="math inline">\(ab = ba\)</span>, so <span class="math inline">\(3ab\)</span> and <span class="math inline">\(-4ba\)</span> are like terms.</p>
+</div>
+</div>
+<p><span class="math display">\[
+3p^3 + 2p^2 - 2p^3 + 5p^2 = (3p^3 - 2p^3) + (2p^2 + 5p^2) = p^3 + 7p^2
+\]</span></p>
+</section>
+<section id="example-multiplying-algebraic-terms" class="level2">
+<h2 class="anchored" data-anchor-id="example-multiplying-algebraic-terms">Example: Multiplying Algebraic Terms</h2>
+<p><span class="math display">\[
+4r \times 5t = 20rt
+\]</span></p>
+<p><span class="math display">\[
+(3b)^2 \times 3b = 9b^2 \times 3b = 27b^3
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The multiplication sign is often not included between letters, e.g.&nbsp;<span class="math inline">\(3ab\)</span> means <span class="math inline">\(3 \times a \times b\)</span></li>
+<li>When multiplying, add like powers: <span class="math inline">\(3a^2b \times 2a^5b^4 = 6a^8b^5\)</span>. (Think of <span class="math inline">\(a\)</span> as <span class="math inline">\(a^1\)</span>).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="example-expanding-brackets" class="level2">
+<h2 class="anchored" data-anchor-id="example-expanding-brackets">Example: Expanding Brackets</h2>
+<p><a href="https://youtu.be/WUXCFtL5G3U?si=TE2lDQTmFRe6g6yq">Video: Expanding Single Brackets</a></p>
+<p><span class="math display">\[
+2(3 + x) = 2 \times 3 + 2 \times x = 6 + 2x
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Multiply each term inside by the outside term.</li>
+<li>The multiplication sign is usually left out: <span class="math inline">\(3(x+y)\)</span> means <span class="math inline">\(3 \times (x + y) = 3 \times x + 3 \times y = 3x + 3y\)</span></li>
+<li>When multiplying, the number 1 is usually left out: <span class="math inline">\(-(2x+3)\)</span> means <span class="math inline">\(-1 \times (2x+3) = (-1) \times (2x) + (-1) \times 3 = -2x + 3\)</span></li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be very careful with negative signs outside a bracket.</p>
+</div>
+</div>
+<p><span class="math display">\[
+-2 \times (a-3) = (-2) \times a + (-2) \times (-3) = -2a + 6
+\]</span></p>
+</section>
+<section id="example-expanding-with-indices" class="level2">
+<h2 class="anchored" data-anchor-id="example-expanding-with-indices">Example: Expanding with Indices</h2>
+<p>Expand <span class="math inline">\(5x^2(12x^3 + 4x^5)\)</span></p>
+<p><span class="math display">\[
+5x^2 \times 12x^3 + 5x^2 \times 4x^5 = 60x^5 + 20x^7
+\]</span></p>
+</section>
+<section id="test-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding">Test Your Understanding</h2>
+<p>Expand</p>
+<ol type="1">
+<li><p><span class="math inline">\(4y(2y-8)\)</span></p></li>
+<li><p><span class="math inline">\(3x^2(x^3+y^4)\)</span></p></li>
+<li><p><span class="math inline">\(c^{\frac{1}{2}}(c^\frac{3}{2} - c^{\frac{1}{2}} + c^{-\frac{1}{2}})\)</span></p></li>
+<li><p><span class="math inline">\(5x^2(6x - x^2 + 7y - x^{-2})\)</span></p></li>
+</ol>
+</section>
+<section id="answers" class="level2">
+<h2 class="anchored" data-anchor-id="answers">Answers</h2>
+<ol type="1">
+<li><p><span class="math inline">\(4y(2y-8) = 8y^2 - 32y\)</span></p></li>
+<li><p><span class="math inline">\(3x^2(x^3+y^4) = 3x^5 + 3x^2y^4\)</span></p></li>
+<li><p><span class="math inline">\(c^{\frac{1}{2}}(c^\frac{3}{2} - c^{\frac{1}{2}} + c^{-\frac{1}{2}}) = c^2 - c + 1\)</span></p></li>
+<li><p><span class="math inline">\(5x^2(6x - x^2 + 7y - x^{-2}) = 30x^3 - 5x^4 + 35x^2y - 5\)</span></p></li>
+</ol>
+</section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>Please complete the <a href="https://www.drfrost.org/docs/resources/587/Expanding%20a%20Single%20Bracket%20-%20Exercise%202.pdf">worksheet</a></p>
+</section>
+<section id="example-expanding-double-brackets" class="level2">
+<h2 class="anchored" data-anchor-id="example-expanding-double-brackets">Example: Expanding Double Brackets</h2>
+<p><a href="https://youtu.be/Bhjo0x5ow5k?si=RAgQUHPUkHTNqYme">Video: Expanding Double Brackets</a></p>
+<p>To expand <span class="math inline">\((x + 3)(x + 2)\)</span>, you can use the grid method. <span class="math display">\[
+\begin{array}{c|cc}
+    &amp; x &amp; +2 \\ \hline
+x   &amp; x^2 &amp; 2x \\
++3   &amp; 3x  &amp; 6
+\end{array}
+\]</span></p>
+<p>Summing the terms on the inside and simplifying gives:</p>
+<p><span class="math display">\[
+x^2 + 3x + 2x +6 = x^2 + 5x + 6
+\]</span></p>
+</section>
+<section id="example-squared-bracket" class="level2">
+<h2 class="anchored" data-anchor-id="example-squared-bracket">Example: Squared Bracket</h2>
+<p>A squared bracket is simply the same bracket twice. For example to expand <span class="math display">\[
+(2x+3)^2
+\]</span> the grid method is: <span class="math display">\[
+\begin{array}{c|cc}
+    &amp; 2x &amp; +3 \\ \hline
+2x  &amp; 4x^2  &amp; 6x \\
++3  &amp; 6x    &amp; 9
+\end{array}
+\]</span></p>
+<p>Adding the terms on the inside and simplifying gives</p>
+<p><span class="math display">\[
+4x^2 + 12x + 9
+\]</span></p>
+</section>
+<section id="test-your-understanding-1" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-1">Test Your Understanding</h2>
+<p>Expand and simplify:</p>
+<ol type="1">
+<li><p><span class="math inline">\((2y + 3)^2\)</span></p></li>
+<li><p><span class="math inline">\((4 + x)(3x - 1)\)</span></p></li>
+<li><p><span class="math inline">\((4a + 3)(4a - 3)\)</span></p></li>
+<li><p><span class="math inline">\((5 - 2a)(b - 6)\)</span></p></li>
+</ol>
+</section>
+<section id="answers-1" class="level2">
+<h2 class="anchored" data-anchor-id="answers-1">Answers</h2>
+<ol type="1">
+<li><p><span class="math inline">\((2y + 3)^2 = 4y^2 + 12y + 9\)</span></p></li>
+<li><p><span class="math inline">\((4 + x)(3x - 1) = 3x^2 + 11x - 4\)</span></p></li>
+<li><p><span class="math inline">\((4a + 3)(4a - 3) = 16a^2 - 9\)</span></p></li>
+<li><p><span class="math inline">\((5 - 2a)(b - 6) = 5b + 12a - 2ab - 30\)</span></p></li>
+</ol>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>Please complete the <a href="https://www.drfrost.org/docs/resources/589/Expanding%20Expressions%20with%20Double%20Brackets%20-%20Exercise%201.pdf">worksheet</a></p>
+</section>
+<section id="example-2-times-3-grids" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-times-3-grids">Example: 2 <span class="math inline">\(\times\)</span> 3 Grids</h2>
+<p>Expand and simplify <span class="math inline">\((x^2 + 6x - 3)(x-4)\)</span></p>
+<p><span class="math display">\[
+\begin{array}{c|cc}
+     &amp; x      &amp; -4      \\ \hline
+x^2  &amp; x^3    &amp; -4x^2   \\
+6x   &amp; 6x^2   &amp; -24x    \\
+-3   &amp; -3x    &amp; 12
+\end{array}
+\]</span> <span class="math display">\[\begin{align*}
+&amp;x ^3 + 6x^2 - 3x - 4x^2 - 24x + 12 \\
+=\ &amp;x^3 + 2x^2 - 27x + 12
+\end{align*}\]</span></p>
+</section>
+<section id="test-your-understanding-2" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-2">Test Your Understanding</h2>
+<p>Expand and simplify:</p>
+<ol type="1">
+<li><p><span class="math inline">\((a - 3b + 2c)(a + b)\)</span></p></li>
+<li><p><span class="math inline">\((cd + 4c - 5d)(3e + 2f)\)</span></p></li>
+<li><p><span class="math inline">\((x^2 - x + 7)(2x + 3)\)</span></p></li>
+<li><p><span class="math inline">\((1 + 3x - 2x^2)(7x - 2)\)</span></p></li>
+</ol>
+</section>
+<section id="answers-2" class="level2">
+<h2 class="anchored" data-anchor-id="answers-2">Answers</h2>
+<ol type="1">
+<li><p><span class="math inline">\((a - 3b + 2c)(a + b) = a^2 - 2ab + 2ac + 2bc - 3b^2\)</span></p></li>
+<li><p><span class="math inline">\((cd + 4c - 5d)(3e + 2f) = 3cde + 2cdf + 12ce + 8cf - 15de - 10df\)</span></p></li>
+<li><p><span class="math inline">\((x^2 - x + 7)(2x + 3) = 2x^3 + x^2 + 11x + 21\)</span></p></li>
+<li><p><span class="math inline">\((1 + 3x - 2x^2)(7x - 2) = -14x^3 + 25x^2 + x - 2\)</span></p></li>
+</ol>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>Please complete the <a href="https://www.drfrost.org/docs/resources/589/Expanding%20Expressions%20with%20Double%20Brackets%20-%20Exercise%202.pdf">worksheet</a>.</p>
+</section>
+<section id="example-triple-brackets" class="level2">
+<h2 class="anchored" data-anchor-id="example-triple-brackets">Example: Triple Brackets</h2>
+<p><a href="https://youtu.be/jW6Mefzr4Uw">Video: Expanding Triple Brackets</a></p>
+<p>A three‐bracket expansion such as <span class="math inline">\((x+1)(x-3)(x+2)\)</span> can be done in two grid‐method steps. First, expand <span class="math inline">\((x-3)(x+2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{c|cc}
+&amp; x   &amp; +2 \\ \hline
+x  &amp; x^2 &amp; 2x  \\
+-3 &amp; -3x &amp; -6
+\end{array}
+\]</span></p>
+<p>This gives a result of</p>
+<p><span class="math display">\[
+x^2 - x - 6
+\]</span></p>
+<hr>
+<p>Then expand <span class="math inline">\((x+1)(x^2 - x - 6)\)</span> with a <span class="math inline">\(2 \times 3\)</span> grid:</p>
+<p><span class="math display">\[
+\begin{array}{c|ccc}
+&amp; x^2    &amp; -x     &amp; -6   \\ \hline
+x     &amp; x^3    &amp; -x^2   &amp; -6x  \\
++1    &amp; x^2    &amp; -x     &amp; -6
+\end{array}
+\]</span></p>
+<p>So altogether <span class="math inline">\((x+1)(x-3)(x+2)=x^3-7x-6\)</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The order you multiply the brackets does not matter.</p>
+</div>
+</div>
+</section>
+<section id="test-your-understanding-3" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-3">Test Your Understanding</h2>
+<p>Expand and simplify:</p>
+<ol type="1">
+<li><p><span class="math inline">\((x + 2)^3\)</span></p></li>
+<li><p><span class="math inline">\((2x + 1)(x - 1)^2\)</span></p></li>
+<li><p><span class="math inline">\((3 + y)(3 - y)^2\)</span></p></li>
+<li><p><span class="math inline">\((a - b x)^3\)</span></p></li>
+</ol>
+</section>
+<section id="answers-3" class="level2">
+<h2 class="anchored" data-anchor-id="answers-3">Answers</h2>
+<ol type="1">
+<li><p><span class="math inline">\((x + 2)^3 = x^3 + 6x^2 + 12x + 8\)</span></p></li>
+<li><p><span class="math inline">\((2x + 1)(x - 1)^2 = 2x^3 - x^2 + 1\)</span></p></li>
+<li><p><span class="math inline">\((3 + y)(3 - y)^2 = y^3 - 3y^2 - 9y + 27\)</span></p></li>
+<li><p><span class="math inline">\((a - b x)^3 = a^3 - 3a^2 b x + 3a b^2 x^2 - b^3 x^3\)</span></p></li>
+</ol>
+</section>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+<p>Please complete the <a href="https://www.drfrost.org/docs/resources/590/Expanding%20Expressions%20with%20Three%20(or%20More)%20Brackets%20-%20Exercise.pdf">worksheet</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
