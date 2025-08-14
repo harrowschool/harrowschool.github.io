@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Percentages – Shell Mathematics Course</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b2c493fdd487b110f6b1348dfd6a5174.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Percentages</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Shell Mathematics Course</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Autumn 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/1. Expanding Brackets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expanding Brackets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/2. Factorising with a Common Factor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factorising with a Common Factor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/3. Linear Equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/4. Fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fractions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/5. Recurring Decimals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recurring Decimals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Autumn 1/6. Percentages.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Percentages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#methods-for-percentages" id="toc-methods-for-percentages" class="nav-link active" data-scroll-target="#methods-for-percentages">Methods for Percentages</a></li>
+  <li><a href="#decimal-multipliers" id="toc-decimal-multipliers" class="nav-link" data-scroll-target="#decimal-multipliers">Decimal Multipliers</a></li>
+  <li><a href="#example-pocket-money" id="toc-example-pocket-money" class="nav-link" data-scroll-target="#example-pocket-money">Example: Pocket Money</a></li>
+  <li><a href="#example-finding-a-percentage-of-an-amount" id="toc-example-finding-a-percentage-of-an-amount" class="nav-link" data-scroll-target="#example-finding-a-percentage-of-an-amount">Example: Finding a Percentage of an Amount</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test Your Understanding</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
+  <li><a href="#example-percentage-increase" id="toc-example-percentage-increase" class="nav-link" data-scroll-target="#example-percentage-increase">Example: Percentage Increase</a></li>
+  <li><a href="#example-percentage-decrease" id="toc-example-percentage-decrease" class="nav-link" data-scroll-target="#example-percentage-decrease">Example: Percentage Decrease</a></li>
+  <li><a href="#test-your-understanding-1" id="toc-test-your-understanding-1" class="nav-link" data-scroll-target="#test-your-understanding-1">Test Your Understanding</a></li>
+  <li><a href="#answers-1" id="toc-answers-1" class="nav-link" data-scroll-target="#answers-1">Answers</a></li>
+  <li><a href="#example-reverse-percentage-changes" id="toc-example-reverse-percentage-changes" class="nav-link" data-scroll-target="#example-reverse-percentage-changes">Example: Reverse Percentage Changes</a></li>
+  <li><a href="#example-reverse-percentage-decrease" id="toc-example-reverse-percentage-decrease" class="nav-link" data-scroll-target="#example-reverse-percentage-decrease">Example: Reverse Percentage Decrease</a></li>
+  <li><a href="#test-your-understanding-2" id="toc-test-your-understanding-2" class="nav-link" data-scroll-target="#test-your-understanding-2">Test Your Understanding</a></li>
+  <li><a href="#answers-2" id="toc-answers-2" class="nav-link" data-scroll-target="#answers-2">Answers</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#example-compound-percentage-change" id="toc-example-compound-percentage-change" class="nav-link" data-scroll-target="#example-compound-percentage-change">Example: Compound Percentage Change</a></li>
+  <li><a href="#example-compound-percentage-decrease" id="toc-example-compound-percentage-decrease" class="nav-link" data-scroll-target="#example-compound-percentage-decrease">Example: Compound Percentage Decrease</a></li>
+  <li><a href="#code-compound-percentage-formula" id="toc-code-compound-percentage-formula" class="nav-link" data-scroll-target="#code-compound-percentage-formula">Code: Compound Percentage Formula</a></li>
+  <li><a href="#test-your-understanding-3" id="toc-test-your-understanding-3" class="nav-link" data-scroll-target="#test-your-understanding-3">Test Your Understanding</a></li>
+  <li><a href="#answers-3" id="toc-answers-3" class="nav-link" data-scroll-target="#answers-3">Answers</a></li>
+  <li><a href="#example-multiple-compound-changes" id="toc-example-multiple-compound-changes" class="nav-link" data-scroll-target="#example-multiple-compound-changes">Example: Multiple Compound Changes</a></li>
+  <li><a href="#example-reverse-compound-change" id="toc-example-reverse-compound-change" class="nav-link" data-scroll-target="#example-reverse-compound-change">Example: Reverse Compound Change</a></li>
+  <li><a href="#example-missing-interest-rate" id="toc-example-missing-interest-rate" class="nav-link" data-scroll-target="#example-missing-interest-rate">Example: Missing Interest Rate</a></li>
+  <li><a href="#example-unknown-length-of-time" id="toc-example-unknown-length-of-time" class="nav-link" data-scroll-target="#example-unknown-length-of-time">Example: Unknown Length of Time</a></li>
+  <li><a href="#test-your-understanding-4" id="toc-test-your-understanding-4" class="nav-link" data-scroll-target="#test-your-understanding-4">Test Your Understanding</a></li>
+  <li><a href="#answers-4" id="toc-answers-4" class="nav-link" data-scroll-target="#answers-4">Answers</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="6.-Percentages.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Percentages</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="methods-for-percentages" class="level2">
+<h2 class="anchored" data-anchor-id="methods-for-percentages">Methods for Percentages</h2>
+<p>Previously, when working out percentages of amounts, we would use a method called “chunking”. For example, to find 35% of 120, we might do something like: <span class="math display">\[\begin{align*}
+100\% &amp;= 120 \\
+10\% &amp;= 12 \\
+5\% &amp;= 6 \\
+20\% &amp;= 24 \\
+35\% &amp;= 20\% + 10\% + 5\% \\
+&amp;= 24 + 12 + 6 \\
+&amp;= 42
+\end{align*}\]</span></p>
+<p>This is a good <strong>non-calculator</strong> method, but with a calculator there is a far better way.</p>
+</section>
+<section id="decimal-multipliers" class="level2">
+<h2 class="anchored" data-anchor-id="decimal-multipliers">Decimal Multipliers</h2>
+<p>The key concept of this topic is the idea of <strong>decimal multipliers</strong>. In short, when we represent percentages (or percentage changes) as decimals, we can multiply to work things out.</p>
+<p>It turns out that in many cases this makes questions <strong>much easier</strong>, particularly when it comes to compound percentage changes.</p>
+<p>To see how well they work and how much they can simplify percentage problems, let’s look at an example.</p>
+</section>
+<section id="example-pocket-money" class="level2">
+<h2 class="anchored" data-anchor-id="example-pocket-money">Example: Pocket Money</h2>
+<p>You get £10 a week pocket money. Unfortunately, you get a little lazy about revising for your maths exam, and so you don’t score as well as you could have if you’d worked harder. Your parents are concerned, and so they decide to reduce your pocket money by 10% until your results improve.</p>
+<p>You pull up your socks and study hard for the next maths exam, and your score is much better. As a reward your parents increase your pocket money by 10%. <span class="math display">\[
+100\% - 10\% + 10\% = 100\%
+\]</span> All good then! Are you happy with the result?</p>
+<hr>
+<p>In fact this logic is incorrect, because the two 10%s are not 10% of the same amount. <span class="math display">\[
+\textsterling 10 \xrightarrow{-10\%} \textsterling 9 \xrightarrow{+10\%} \textsterling 9.90
+\]</span></p>
+<p><strong>Percentage changes do not add up.</strong></p>
+<p>However, they <strong>do multiply</strong>. Let’s see.</p>
+<hr>
+<p><span class="math display">\[
+10\% \text{ increase} = 100\% + 10\% = 110\% = \dfrac{110}{100} = 1.1
+\]</span> <span class="math display">\[
+10\% \text{ decrease} = 100\% - 10\% = 90\% = \dfrac{90}{100} = 0.9
+\]</span> <span class="math display">\[
+\textsterling 10 \times 1.1 \times 0.9 = \textsterling 9.90
+\]</span> The decimal multipliers give the correct result.</p>
+<p>This is the key to this whole topic. Percentages do not add up, but they <strong>do multiply</strong>.</p>
+<p>This way of calculating percentages is important in several areas of applied mathematics, particularly financial mathematics.</p>
+</section>
+<section id="example-finding-a-percentage-of-an-amount" class="level2">
+<h2 class="anchored" data-anchor-id="example-finding-a-percentage-of-an-amount">Example: Finding a Percentage of an Amount</h2>
+<p>To find a percentage <strong>of</strong> an amount, we simply convert the percentage to a decimal and multiply it by the amount.</p>
+<p>Calculate 13% of 300: <span class="math display">\[
+300 \times 0.13 = 39
+\]</span> Calculate 87% of 400: <span class="math display">\[
+400 \times 0.87 = 348
+\]</span></p>
+</section>
+<section id="test-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding">Test Your Understanding</h2>
+<p>Calculate the following. You <strong>must</strong> use a decimal multiplier.Please show your working by writing down the calculation. You may use a calculator.</p>
+<ol type="1">
+<li><p>84% of 15</p></li>
+<li><p>9% of 78</p></li>
+<li><p>70% of 33.2</p></li>
+<li><p>150% of 13</p></li>
+<li><p>317% of 2.8</p></li>
+<li><p>84.2% of 68</p></li>
+</ol>
+</section>
+<section id="answers" class="level2">
+<h2 class="anchored" data-anchor-id="answers">Answers</h2>
+<ol type="1">
+<li><p>84% of 15 = 12.6</p></li>
+<li><p>9% of 78 = 7.02</p></li>
+<li><p>70% of 33.2 = 23.24</p></li>
+<li><p>150% of 13 = 19.5</p></li>
+<li><p>317% of 2.8 = 8.876</p></li>
+<li><p>84.2% of 68 = 57.256</p></li>
+</ol>
+</section>
+<section id="example-percentage-increase" class="level2">
+<h2 class="anchored" data-anchor-id="example-percentage-increase">Example: Percentage Increase</h2>
+<p><a href="https://youtu.be/kLqvFDgdOKI?si=itbVUnKlAd6_kx7R">Video: Percentage Increase and Decrease</a></p>
+<p>When you increase something by a percentage, you keep the original 100% and add on an additional percentage. Therefore to calculate the decimal multiplier we add on to 100%.</p>
+<p>Increase 170 by 10%: <span class="math inline">\(\quad 170 \xrightarrow[\times 1.1]{100\%+10\% = 110\%} 187\)</span></p>
+<p>Increase 40 by 12%: <span class="math inline">\(\quad 40 \xrightarrow[\times 1.12]{100\% + 12\% = 112\%} 44.8\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This way of representing percentage changes on an arrow is useful, particularly for reverse percentage changes (coming up soon).</p>
+</div>
+</div>
+</section>
+<section id="example-percentage-decrease" class="level2">
+<h2 class="anchored" data-anchor-id="example-percentage-decrease">Example: Percentage Decrease</h2>
+<p>When you decrease something by a percentage, you take the original 100% and remove a percentage. Therefore to calculate the decimal multiplier we subtract from 100%.</p>
+<p>Decrease 86 by 61%: <span class="math display">\[
+86 \xrightarrow[\times 0.39]{100\%-61\% = 39\%} 33.54
+\]</span></p>
+</section>
+<section id="test-your-understanding-1" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-1">Test Your Understanding</h2>
+<p>Calculate the following. You <strong>must</strong> use decimal multipliers and write down your calculations.</p>
+<ol type="1">
+<li><p>Find 62% of 97</p></li>
+<li><p>Find 3% of 52.8</p></li>
+<li><p>Find 14.7% of 44</p></li>
+<li><p>Find 178% of 52</p></li>
+<li><p>Increase 24 by 9%</p></li>
+<li><p>Increase 5.2 by 64%</p></li>
+<li><p>Decrease 97 by 38%</p></li>
+<li><p>Decrease 540 by 8.7%</p></li>
+</ol>
+</section>
+<section id="answers-1" class="level2">
+<h2 class="anchored" data-anchor-id="answers-1">Answers</h2>
+<ol type="1">
+<li><p>60.14</p></li>
+<li><p>1.584</p></li>
+<li><p>6.468</p></li>
+<li><p>92.56</p></li>
+<li><p>26.16</p></li>
+<li><p>8.528</p></li>
+<li><p>60.14</p></li>
+<li><p>493.02</p></li>
+</ol>
+</section>
+<section id="example-reverse-percentage-changes" class="level2">
+<h2 class="anchored" data-anchor-id="example-reverse-percentage-changes">Example: Reverse Percentage Changes</h2>
+<p><a href="https://youtu.be/48KHVQJfwPc">Video: Reverse Percentage Change</a></p>
+<p>The price of an item was increased by 20% to £66. What was the original price before the increase? We can use the same arrow method as before: <span class="math display">\[
+? \xrightarrow[\times 1.2]{100\% + 20\% = 120\%} 66
+\]</span> The answer is then found by <strong>dividing</strong> by the multiplier: <span class="math inline">\(66 \div 1.2 = 79.2\)</span></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What Not To Do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Don’t find 20% of £66. The 20% is a percentage of the original unknown amount.</li>
+<li>Don’t use a decimal multiplier of 0.8. Reversing an increase is not the same as a decrease.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="example-reverse-percentage-decrease" class="level2">
+<h2 class="anchored" data-anchor-id="example-reverse-percentage-decrease">Example: Reverse Percentage Decrease</h2>
+<p>The price of an item in a sale was reduced by 18% to a new price of £60.68. What was the price before the sale? <span class="math display">\[
+? \xrightarrow[\times 0.82]{100\% - 18\% = 82\%} \textsterling 60.68
+\]</span> <span class="math display">\[
+\textsterling 60.68 \div 0.82 = \textsterling 74
+\]</span></p>
+</section>
+<section id="test-your-understanding-2" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-2">Test Your Understanding</h2>
+<p>Find the original value. You must divide by a decimal multiplier.</p>
+<ol type="1">
+<li><p>A number was increased by 64% to give a new value of 60.68. Find the original value.</p></li>
+<li><p>A number was decreased by 23% to give a new value of 37.73. Find the original value.</p></li>
+<li><p>A number was decreased by 6.3% to give a new value of 76,834. Find the original value.</p></li>
+<li><p>A number was increased by 104% to give a new value of 142.8. Find the original value.</p></li>
+</ol>
+</section>
+<section id="answers-2" class="level2">
+<h2 class="anchored" data-anchor-id="answers-2">Answers</h2>
+<ol type="1">
+<li><p>37</p></li>
+<li><p>49</p></li>
+<li><p>82,000</p></li>
+<li><p>70</p></li>
+</ol>
+</section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>Please complete the <a href="https://www.drfrost.org/docs/resources/982/Percentages%20with%20Fractional%20and%20Decimal%20Multipliers%20-%20Exercise.pdf">worksheet</a>.</p>
+</section>
+<section id="example-compound-percentage-change" class="level2">
+<h2 class="anchored" data-anchor-id="example-compound-percentage-change">Example: Compound Percentage Change</h2>
+<p><a href="https://youtu.be/ldGnUUnEnAA">Video: Compound Changes</a></p>
+<p>Matthias invests £100 in a savings account at 2% interest. How much does he have at the end of year 1, year 2, and year 3?</p>
+<p><span class="math display">\[\begin{align*}
+\text{Year 1: } &amp;\textsterling 100 \times 1.02 = \textsterling 102 \\
+\text{Year 2: } &amp;\textsterling 102 \times 1.02 = \textsterling 104.04 \\
+\text{Year 3: } &amp;\textsterling 104.04 \times 1.02 = \textsterling 106.12 \\
+\end{align*}\]</span></p>
+<p>Notice here that we are simply repeatedly multiplying by the same decimal multiplier.</p>
+<hr>
+<p>Matthew invests £3000 in a savings account with an interest rate of 3.2%. How much will he have after six years? <span class="math display">\[
+100\% + 3.2\% = 103.2\% = 1.032
+\]</span> <span class="math display">\[
+\textsterling 3000 \xrightarrow{\times 1.032} \xrightarrow{\times 1.032} \xrightarrow{\times 1.032} \xrightarrow{\times 1.032} \xrightarrow{\times 1.032} \xrightarrow{\times 1.032}\ ?
+\]</span> Once we notice that we are multiplying repeatedly, we can simplify this method using powers: <span class="math display">\[
+\textsterling 3000 \xrightarrow{\times 1.032^6} \textsterling 3624.09
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Amounts of money should always be rounded to the nearest penny or cent, i.e.&nbsp;to two decimal places.</p>
+</div>
+</div>
+</section>
+<section id="example-compound-percentage-decrease" class="level2">
+<h2 class="anchored" data-anchor-id="example-compound-percentage-decrease">Example: Compound Percentage Decrease</h2>
+<p>Thomas buys a new car for £15,690. The car depreciates at a rate of 4% each year. How much will it be worth in 11 years? <span class="math display">\[
+\textsterling 15690 \xrightarrow{\times 0.96^{11}} \textsterling 10013.98
+\]</span></p>
+</section>
+<section id="code-compound-percentage-formula" class="level2">
+<h2 class="anchored" data-anchor-id="code-compound-percentage-formula">Code: Compound Percentage Formula</h2>
+<div>
+<div id="pyodide-1" class="exercise-cell">
+
+</div>
+<script type="pyodide-1-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW5pdGlhbF9hbW91bnQgPSAxMDBcbmludGVyZXN0X3JhdGUgPSA1XG5udW1iZXJfb2ZfeWVhcnMgPSA2XG5cbm11bHRpcGxpZXIgPSAxICsgaW50ZXJlc3RfcmF0ZS8xMDBcblxuZmluYWxfYW1vdW50ID0gaW5pdGlhbF9hbW91bnQgKiAobXVsdGlwbGllciAqKiBudW1iZXJfb2ZfeWVhcnMpXG5cbnByaW50KHJvdW5kKGZpbmFsX2Ftb3VudCwgMikpIn0=
+</script>
+</div>
+</section>
+<section id="test-your-understanding-3" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-3">Test Your Understanding</h2>
+<ol type="1">
+<li><p>An investment of £500 grows by 4% each year. How much will it be worth after 5 years?</p></li>
+<li><p>A rare book increases in value by 7% each year. If it is currently worth £1,200, what will it be worth in 8 years?</p></li>
+<li><p>A car is bought for £18,000 and decreases in value by 12% each year. What will it be worth after 6 years?</p></li>
+<li><p>A population of 250,000 increases by 2.5% each year. What will the population be after 10 years?</p></li>
+<li><p>A laptop costs £900 and depreciates by 15% each year. What will it be worth after 4 years?</p></li>
+<li><p>A forest area is shrinking by 1.8% each year. If its current size is 5,000 acres, what will its size be after 12 years?</p></li>
+</ol>
+</section>
+<section id="answers-3" class="level2">
+<h2 class="anchored" data-anchor-id="answers-3">Answers</h2>
+<ol type="1">
+<li><p>608.33</p></li>
+<li><p>2060.37</p></li>
+<li><p>8042.05</p></li>
+<li><p>320634.62</p></li>
+<li><p>522.68</p></li>
+<li><p>3997.19</p></li>
+</ol>
+</section>
+<section id="example-multiple-compound-changes" class="level2">
+<h2 class="anchored" data-anchor-id="example-multiple-compound-changes">Example: Multiple Compound Changes</h2>
+<p>Andrew buys a watch for £225. It decreased in value by 3.5% for 1 year, then decreased in value by 7.5% per year for 2 years. Find the new value of the watch.</p>
+<p>Again this is a case where decimal multipliers make this <strong>much easier</strong>. <span class="math display">\[\begin{align*}
+3.5\% \text{ decrease} &amp;= 0.965 \\
+7.5\% \text{ decrease for 2 years} &amp;= 0.925^2 \\
+\text{new value} &amp;= \textsterling 225 \times 0.965 \times 0.925^2 \\
+&amp;= \textsterling 185.78
+\end{align*}\]</span></p>
+</section>
+<section id="example-reverse-compound-change" class="level2">
+<h2 class="anchored" data-anchor-id="example-reverse-compound-change">Example: Reverse Compound Change</h2>
+<p>Philip invests some savings into an account that pays 4% compound interest per year. After 4 years the savings are worth £17,075. How much did Philip have in the account at the beginning?</p>
+<p>An arrow representation will be useful here: <span class="math display">\[
+?\ \xrightarrow{\times 1.04^4} \textsterling 17075
+\]</span> This shows that we should divide: <span class="math display">\[
+17075 \div 1.04^4 = 14595.78
+\]</span></p>
+</section>
+<section id="example-missing-interest-rate" class="level2">
+<h2 class="anchored" data-anchor-id="example-missing-interest-rate">Example: Missing Interest Rate</h2>
+<p>Consider the same question but with a missing interest rate.</p>
+<p>Philip invests £14,595.78 into an savings account. After 4 years the savings are worth £17,075. What was the interest rate?</p>
+<p>In this case, we can form and solve an equation: <span class="math display">\[\begin{align*}
+14595.78 \times x^4 &amp;= 17075 \\
+x^4 &amp;= 17075 \div 14595.78 \\
+x &amp;= \sqrt[4]{17075 \div 14595.78} \\
+x &amp;= 1.04
+\end{align*}\]</span></p>
+<p>which represents a 4% increase. This is the interest rate.</p>
+</section>
+<section id="example-unknown-length-of-time" class="level2">
+<h2 class="anchored" data-anchor-id="example-unknown-length-of-time">Example: Unknown Length of Time</h2>
+<p>Consider the same question but with a missing length of time.</p>
+<p>Philip invests £14,595.78 into an savings account at an interest rate of 4%. After how many years are they worth £17,075?</p>
+<p>There is an A-Level method called a <em>logarithm</em> that can help with this, but for now we will use trial and error. You can do this on your calculator to speed things up.</p>
+<p><span class="math display">\[\begin{align*}
+14595.78 \times 1.04 = 15,179.61 \\
+14595.78 \times 1.04^2 = 15,786.80 \\
+14595.78 \times 1.04^3 = 16,418.27 \\
+14595.78 \times 1.04^4 = 17,075.00
+\end{align*}\]</span></p>
+</section>
+<section id="test-your-understanding-4" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding-4">Test Your Understanding</h2>
+<ol type="1">
+<li><p>The value of the house increases each year by 2.1%. How much is her house worth after 6 years?</p></li>
+<li><p>The value of the house increases each year by 3%. How many years will it take for her house to be worth £163,909.05?</p></li>
+<li><p>The value of the house increases each year by <span class="math inline">\(x\)</span>% and after 3 years is worth £168,729.60. Find <span class="math inline">\(x\)</span>.</p></li>
+<li><p>The value of the house increases each year by 14%. How many years will it take for her house price to double?</p></li>
+</ol>
+</section>
+<section id="answers-4" class="level2">
+<h2 class="anchored" data-anchor-id="answers-4">Answers</h2>
+<ol type="1">
+<li><p>£169,920.47</p></li>
+<li><p>3 years</p></li>
+<li><p>4</p></li>
+<li><p>6 years</p></li>
+</ol>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>Please complete the <a href="https://www.drfrost.org/docs/resources/984/Compound%20Percentage%20Change%20-%20Exercise.pdf">worksheet</a>.</p>
+
+
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yNy4wL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../Autumn 1";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
