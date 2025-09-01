@@ -47,6 +47,19 @@ layout: default
         </label>
     </fieldset>
 
+    <!-- Radio buttons for including/excluding categories -->
+    <fieldset>
+        <legend>Include Categories</legend>
+        <label>
+            <input type="radio" name="categories" value="with">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="categories" value="without" checked>
+            No
+        </label>
+    </fieldset>
+
     <!-- Dynamic text display -->
     <h3>Preview</h3>
     <div id="dynamic-text">
@@ -70,42 +83,101 @@ layout: default
 <script>
     const periodNamesRadios = document.querySelectorAll('input[name="period_names"]');
     const freeLessonsRadios = document.querySelectorAll('input[name="free_lessons"]');
+    const categoriesRadios = document.querySelectorAll('input[name="categories"]');
     const dynamicText = document.getElementById('dynamic-text');
 
     // Function to update dynamic text
     function updateDynamicText() {
         const periodNames = document.querySelector('input[name="period_names"]:checked').value;
         const freeLessons = document.querySelector('input[name="free_lessons"]:checked').value;
+        const categories = document.querySelector('input[name="categories"]:checked').value;
 
-        if (periodNames === "with" && freeLessons === "with") {
-            dynamicText.innerHTML = "<ul><li>2a: SS-MA1</li><li>2b: UC-MA4</li><li>2c</li><li>2d: Tutor Period</li><li>2e</li></ul>";
-        } else if (periodNames === "with" && freeLessons === "without") {
-            dynamicText.innerHTML = "<ul><li>2a: SS-MA1</li><li>2b: UC-MA4</li><li></li><li>2d: Tutor Period</li><li></li></ul>";
-        } else if (periodNames === "without" && freeLessons === "with") {
-            dynamicText.innerHTML = "<ul><li>SS-MA1</li><li>UC-MA4</li><li>2c</li><li>Tutor Period</li><li>2e</li></ul>";
-        } else {
-            dynamicText.innerHTML = "<ul><li>SS-MA1</li><li>UC-MA4</li><li></li><li>Tutor Period</li><li></li></ul>";
+        // Helper function to format lesson names with categories
+        function formatLesson(lesson, periodName = "", isFree = false) {
+            let result = "";
+            
+            // Add period name if enabled
+            if (periodName) {
+                result += periodName + ": ";
+            }
+            
+            // Add lesson name
+            result += lesson;
+            
+            // Add category if enabled and lesson is not empty
+            if (categories === "with" && lesson) {
+                if (lesson === "SS-MA1" || lesson === "UC-MA4") {
+                    result += " [lesson]";
+                } else if (lesson === "Tutor Period") {
+                    result += " [house]";
+                }
+            }
+            
+            return result;
         }
+
+        // Helper function to format free periods
+        function formatFreePeriod(periodName = "") {
+            if (freeLessons === "with") {
+                return periodName || "2c";
+            }
+            return "";
+        }
+
+        // Generate the preview based on all combinations
+        let html = "<ul>";
+        
+        // Period 2a
+        html += "<li>" + formatLesson("SS-MA1", periodNames === "with" ? "2a" : "") + "</li>";
+        
+        // Period 2b  
+        html += "<li>" + formatLesson("UC-MA4", periodNames === "with" ? "2b" : "") + "</li>";
+        
+        // Period 2c (free)
+        html += "<li>" + formatFreePeriod(periodNames === "with" ? "2c" : "") + "</li>";
+        
+        // Period 2d
+        html += "<li>" + formatLesson("Tutor Period", periodNames === "with" ? "2d" : "") + "</li>";
+        
+        // Period 2e (free)
+        html += "<li>" + formatFreePeriod(periodNames === "with" ? "2e" : "") + "</li>";
+        
+        html += "</ul>";
+        
+        dynamicText.innerHTML = html;
     }
 
     // Attach event listeners to update dynamic text
     periodNamesRadios.forEach(radio => radio.addEventListener('change', updateDynamicText));
     freeLessonsRadios.forEach(radio => radio.addEventListener('change', updateDynamicText));
+    categoriesRadios.forEach(radio => radio.addEventListener('change', updateDynamicText));
 
     // Download button logic
     document.getElementById('download-btn').addEventListener('click', function () {
-        // Get selected options for period names and free lessons
+        // Get selected options for period names, free lessons, and categories
         const periodNames = document.querySelector('input[name="period_names"]:checked').value;
         const freeLessons = document.querySelector('input[name="free_lessons"]:checked').value;
+        const categories = document.querySelector('input[name="categories"]:checked').value;
 
         // Map options to directory names
         let directory = "timetables";
-        if (freeLessons === "with" && periodNames === "with") {
+        
+        if (freeLessons === "with" && periodNames === "with" && categories === "with") {
+            directory = "timetables_with_free_lessons_and_period_names_and_categories";
+        } else if (freeLessons === "with" && periodNames === "with" && categories === "without") {
             directory = "timetables_with_free_lessons_and_period_names";
-        } else if (freeLessons === "with" && periodNames === "without") {
+        } else if (freeLessons === "with" && periodNames === "without" && categories === "with") {
+            directory = "timetables_with_free_lessons_and_categories";
+        } else if (freeLessons === "with" && periodNames === "without" && categories === "without") {
             directory = "timetables_with_free_lessons";
-        } else if (freeLessons === "without" && periodNames === "with") {
+        } else if (freeLessons === "without" && periodNames === "with" && categories === "with") {
+            directory = "timetables_with_period_names_and_categories";
+        } else if (freeLessons === "without" && periodNames === "with" && categories === "without") {
             directory = "timetables_with_period_names";
+        } else if (freeLessons === "without" && periodNames === "without" && categories === "with") {
+            directory = "timetables_with_categories";
+        } else {
+            directory = "timetables";
         }
 
         // Get selected initials
