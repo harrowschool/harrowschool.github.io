@@ -745,14 +745,7 @@
     "href": "8. Programming Concepts/1. Recap._rjs.html#debugging",
     "title": "1. Recap",
     "section": "Debugging",
-    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\nname = \"Billy\"\nprint(\"We want to know if you like progamming!)\nprint()\nprint(\"Do you like programming \" + Name + \"?\")\nanswer = input(\nPrint(\"Great! You said \" + anwer + \"!\")\nprint(\"Let's learn some Python today\")"
-  },
-  {
-    "objectID": "8. Programming Concepts/1. Recap._rjs.html#answers",
-    "href": "8. Programming Concepts/1. Recap._rjs.html#answers",
-    "title": "1. Recap",
-    "section": "Answers",
-    "text": "Answers\n\nMissing close quotation marks on line 2.\nWrong variable name (capitalised) on line 4.\nMissing close parentheses on line 5.\nWrong function name (capitalised) on line 6.\nWrong variable name (typo) on line 6."
+    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\n```python name = “Billy” print(“We want to know if you like progamming!) print() print(”Do you like programming ” + Name + “?”) answer = input( Print(“Great! You said” + anwer + “!”) print(“Let’s learn some Python today”)"
   },
   {
     "objectID": "8. Programming Concepts/1. Recap.html",
@@ -792,7 +785,7 @@
     "href": "8. Programming Concepts/1. Recap.html#run",
     "title": "1. Recap",
     "section": "Run",
-    "text": "Run\n\n\nWe want to know if you like programming!\n\nDo you like programming Billy?\n&gt; Yes\nGreat! You said Yes!!\nLet's learn some Python today",
+    "text": "Run\n\nname = \"Billy\"\nprint(\"We want to know if you like programming!\")\nprint()\nprint(\"Do you like programming \" + name + \"?\")\nanswer = input() # Let's say user enters \"Yes\"\nprint(\"Great! You said \" + answer + \"!!\")\nprint(\"Let's learn some Python today\")\n\nWe want to know if you like programming!\n\nDo you like programming Billy?\n&gt; Yes\nGreat! You said Yes!!\nLet's learn some Python today",
     "crumbs": [
       "8. Programming Concepts",
       "1. Recap"
@@ -836,18 +829,7 @@
     "href": "8. Programming Concepts/1. Recap.html#debugging",
     "title": "1. Recap",
     "section": "Debugging",
-    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\nname = \"Billy\"\nprint(\"We want to know if you like progamming!)\nprint()\nprint(\"Do you like programming \" + Name + \"?\")\nanswer = input(\nPrint(\"Great! You said \" + anwer + \"!\")\nprint(\"Let's learn some Python today\")",
-    "crumbs": [
-      "8. Programming Concepts",
-      "1. Recap"
-    ]
-  },
-  {
-    "objectID": "8. Programming Concepts/1. Recap.html#answers",
-    "href": "8. Programming Concepts/1. Recap.html#answers",
-    "title": "1. Recap",
-    "section": "Answers",
-    "text": "Answers\n\nMissing close quotation marks on line 2.\nWrong variable name (capitalised) on line 4.\nMissing close parentheses on line 5.\nWrong function name (capitalised) on line 6.\nWrong variable name (typo) on line 6.",
+    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\n```python name = “Billy” print(“We want to know if you like progamming!) print() print(”Do you like programming ” + Name + “?”) answer = input( Print(“Great! You said” + anwer + “!”) print(“Let’s learn some Python today”)",
     "crumbs": [
       "8. Programming Concepts",
       "1. Recap"

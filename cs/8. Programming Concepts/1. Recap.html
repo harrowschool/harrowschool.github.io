@@ -203,7 +203,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modify" id="toc-modify" class="nav-link" data-scroll-target="#modify">Modify</a></li>
   <li><a href="#extension" id="toc-extension" class="nav-link" data-scroll-target="#extension">Extension</a></li>
   <li><a href="#debugging" id="toc-debugging" class="nav-link" data-scroll-target="#debugging">Debugging</a></li>
-  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="1. Recap._rjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
@@ -254,7 +253,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="run" class="level2">
 <h2 class="anchored" data-anchor-id="run">Run</h2>
-<div id="cdc790d5" class="cell" data-execution_count="2">
+<div id="aed0e44a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Billy"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"We want to know if you like programming!"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Do you like programming "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"?"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>() <span class="co"># Let's say user enters "Yes"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Great! You said "</span> <span class="op">+</span> answer <span class="op">+</span> <span class="st">"!!"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Let's learn some Python today"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>We want to know if you like programming!
 
@@ -307,23 +313,7 @@ Let's learn some Python today</code></pre>
 <p>There are <strong>five mistakes</strong> in this code.<br>
 - Work with a partner to find and fix them.<br>
 - Explain each bug and the fix in a sentence.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Billy"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"We want to know if you like progamming!)</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="er">print</span>()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Do you like programming "</span> <span class="op">+</span> Name <span class="op">+</span> <span class="st">"?"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Print(<span class="st">"Great! You said "</span> <span class="op">+</span> anwer <span class="op">+</span> <span class="st">"!"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Let's learn some Python today"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="answers" class="level2">
-<h2 class="anchored" data-anchor-id="answers">Answers</h2>
-<ol type="1">
-<li>Missing close quotation marks on line 2.</li>
-<li>Wrong variable name (capitalised) on line 4.</li>
-<li>Missing close parentheses on line 5.</li>
-<li>Wrong function name (capitalised) on line 6.</li>
-<li>Wrong variable name (typo) on line 6.</li>
-</ol>
+<p>```python name = “Billy” print(“We want to know if you like progamming!) print() print(”Do you like programming ” + Name + “?”) answer = input( Print(“Great! You said” + anwer + “!”) print(“Let’s learn some Python today”)</p>
 
 
 <script type="ojs-module-contents">
