@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "Welcome to the Remove Computer Science course."
+    "text": "Welcome to the GCSE Computer Science course."
   },
   {
     "objectID": "8. Programming Concepts/4. Turtles and Loops.html",
@@ -399,7 +399,7 @@
     "href": "8. Programming Concepts/2. Selection._rjs.html#modify-and-make",
     "title": "2. Selection",
     "section": "Modify and Make",
-    "text": "Modify and Make\nTry these challenges: 1. Modify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.\n\nNow write a function cities() and ask “How many cities are there in England?”. Now you are asking a question with a numeric answer — use int(input(...)) to do this. The extra int() wrapped around the input will convert what you typed in into a whole number.\nWrite a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use int(input()) — see what error you get if you forget to use it.\nNow ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.\nNow ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.\nWrite a program to ask the user to enter any number. As long as the number is NOT 99 that’s OK.\nTest that the number is not 99 by using if number != 99.\n\nExtension\nWrite a program that asks the user to enter a number between 1 and 20. You can use if to check the condition.\nGive them positive feedback if it’s OK and say “too low” if it’s less than 1, and “too high” if it’s more than 20.\nMake a note of any errors that you come across and how you fixed them."
+    "text": "Modify and Make\nTry these challenges:\n\nModify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.\nNow write a function cities() and ask “How many cities are there in England?”. Now you are asking a question with a numeric answer — use int(input(...)) to do this. The extra int() wrapped around the input will convert what you typed in into a whole number.\nWrite a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use int(input()) — see what error you get if you forget to use it.\nNow ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.\nNow ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.\nWrite a program to ask the user to enter any number. As long as the number is NOT 99 that’s OK.\nTest that the number is not 99 by using if number != 99.\n\nExtension\nWrite a program that asks the user to enter a number between 1 and 20. You can use if to check the condition.\nGive them positive feedback if it’s OK and say “too low” if it’s less than 1, and “too high” if it’s more than 20.\nMake a note of any errors that you come across and how you fixed them."
   },
   {
     "objectID": "8. Programming Concepts/2. Selection._rjs.html#review",
@@ -490,7 +490,7 @@
     "href": "8. Programming Concepts/2. Selection.html#modify-and-make",
     "title": "2. Selection",
     "section": "Modify and Make",
-    "text": "Modify and Make\nTry these challenges: 1. Modify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.\n\nNow write a function cities() and ask “How many cities are there in England?”. Now you are asking a question with a numeric answer — use int(input(...)) to do this. The extra int() wrapped around the input will convert what you typed in into a whole number.\nWrite a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use int(input()) — see what error you get if you forget to use it.\nNow ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.\nNow ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.\nWrite a program to ask the user to enter any number. As long as the number is NOT 99 that’s OK.\nTest that the number is not 99 by using if number != 99.\n\n\nExtension\nWrite a program that asks the user to enter a number between 1 and 20. You can use if to check the condition.\nGive them positive feedback if it’s OK and say “too low” if it’s less than 1, and “too high” if it’s more than 20.\nMake a note of any errors that you come across and how you fixed them.",
+    "text": "Modify and Make\nTry these challenges:\n\nModify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.\nNow write a function cities() and ask “How many cities are there in England?”. Now you are asking a question with a numeric answer — use int(input(...)) to do this. The extra int() wrapped around the input will convert what you typed in into a whole number.\nWrite a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use int(input()) — see what error you get if you forget to use it.\nNow ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.\nNow ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.\nWrite a program to ask the user to enter any number. As long as the number is NOT 99 that’s OK.\nTest that the number is not 99 by using if number != 99.\n\n\nExtension\nWrite a program that asks the user to enter a number between 1 and 20. You can use if to check the condition.\nGive them positive feedback if it’s OK and say “too low” if it’s less than 1, and “too high” if it’s more than 20.\nMake a note of any errors that you come across and how you fixed them.",
     "crumbs": [
       "8. Programming Concepts",
       "2. Selection"
@@ -717,7 +717,7 @@
     "href": "8. Programming Concepts/1. Recap._rjs.html#run",
     "title": "1. Recap",
     "section": "Run",
-    "text": "Run\n\n\nWe want to know if you like programming!\n\nDo you like programming Billy?\n&gt; Yes\nGreat! You said Yes!!\nLet's learn some Python today"
+    "text": "Run\nRun the code to see if you were right."
   },
   {
     "objectID": "8. Programming Concepts/1. Recap._rjs.html#investigate",
@@ -745,7 +745,7 @@
     "href": "8. Programming Concepts/1. Recap._rjs.html#debugging",
     "title": "1. Recap",
     "section": "Debugging",
-    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\n```python name = “Billy” print(“We want to know if you like progamming!) print() print(”Do you like programming ” + Name + “?”) answer = input( Print(“Great! You said” + anwer + “!”) print(“Let’s learn some Python today”)"
+    "text": "Debugging\nThere are five mistakes in this code.\n\nWork with a partner to find and fix them.\n\nExplain each bug and the fix in a sentence.\n\nname = \"Billy\"\nprint(\"We want to know if you like progamming!)\nprint()\nprint(\"Do you like programming \" + Name + \"?\")\nanswer = input(\nPrint(\"Great! You said \" + anwer + \"!\")\nprint(\"Let's learn some Python today\")"
   },
   {
     "objectID": "8. Programming Concepts/1. Recap.html",
@@ -785,7 +785,7 @@
     "href": "8. Programming Concepts/1. Recap.html#run",
     "title": "1. Recap",
     "section": "Run",
-    "text": "Run\n\nname = \"Billy\"\nprint(\"We want to know if you like programming!\")\nprint()\nprint(\"Do you like programming \" + name + \"?\")\nanswer = input() # Let's say user enters \"Yes\"\nprint(\"Great! You said \" + answer + \"!!\")\nprint(\"Let's learn some Python today\")\n\nWe want to know if you like programming!\n\nDo you like programming Billy?\n&gt; Yes\nGreat! You said Yes!!\nLet's learn some Python today",
+    "text": "Run\nRun the code to see if you were right.",
     "crumbs": [
       "8. Programming Concepts",
       "1. Recap"
@@ -829,7 +829,7 @@
     "href": "8. Programming Concepts/1. Recap.html#debugging",
     "title": "1. Recap",
     "section": "Debugging",
-    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\n```python name = “Billy” print(“We want to know if you like progamming!) print() print(”Do you like programming ” + Name + “?”) answer = input( Print(“Great! You said” + anwer + “!”) print(“Let’s learn some Python today”)",
+    "text": "Debugging\nThere are five mistakes in this code.\n\nWork with a partner to find and fix them.\n\nExplain each bug and the fix in a sentence.\n\nname = \"Billy\"\nprint(\"We want to know if you like progamming!)\nprint()\nprint(\"Do you like programming \" + Name + \"?\")\nanswer = input(\nPrint(\"Great! You said \" + anwer + \"!\")\nprint(\"Let's learn some Python today\")",
     "crumbs": [
       "8. Programming Concepts",
       "1. Recap"

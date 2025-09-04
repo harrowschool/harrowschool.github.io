@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <title>Remove Computer Science – 1. Recap</title>
+  <title>GCSE Computer Science – 3. More on Selection</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -95,6 +95,7 @@
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../styles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,91 +194,132 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">1. Recap</h1>
+  <h1 class="title">3. More on Selection</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
 <section id="lesson-objectives" class="slide level2">
-<h2>Lesson objectives</h2>
-<p>By the end of this lesson you will be able to:</p>
+<h2>Lesson Objectives</h2>
 <ul>
-<li>Write simple Python programs<br>
+<li>To understand how to write programs that involve more than two choices<br>
 </li>
-<li>Read input from the keyboard with <code>input()</code><br>
-</li>
-<li>Write <code>print()</code> statements that include a variable</li>
+<li>To write a quiz program</li>
 </ul>
-<p>You should understand what <code>print()</code> and <code>input()</code> do and how to use them in a Python program.</p>
 </section>
 <section id="predict" class="slide level2">
 <h2>Predict</h2>
-<p>Discuss in pairs: what does this code do?</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>name <span class="op">=</span> <span class="st">"Billy"</span></span>
-<span id="cb1-2"><a></a><span class="bu">print</span>(<span class="st">"We want to know if you like programming!"</span>)</span>
-<span id="cb1-3"><a></a><span class="bu">print</span>()</span>
-<span id="cb1-4"><a></a><span class="bu">print</span>(<span class="st">"Do you like programming "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"?"</span>)</span>
-<span id="cb1-5"><a></a>answer <span class="op">=</span> <span class="bu">input</span>() <span class="co"># Let's say user enters "Yes"</span></span>
-<span id="cb1-6"><a></a><span class="bu">print</span>(<span class="st">"Great! You said "</span> <span class="op">+</span> answer <span class="op">+</span> <span class="st">"!!"</span>)</span>
-<span id="cb1-7"><a></a><span class="bu">print</span>(<span class="st">"Let's learn some Python today"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What does this code do? Show what you think will be output to the screen.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> cooking():</span>
+<span id="cb1-2"><a></a>    <span class="bu">print</span>(<span class="st">"Meal planner"</span>)</span>
+<span id="cb1-3"><a></a>    <span class="bu">print</span>()</span>
+<span id="cb1-4"><a></a>    <span class="bu">print</span>(<span class="st">"1. Chicken curry "</span>)</span>
+<span id="cb1-5"><a></a>    <span class="bu">print</span>(<span class="st">"2. Veggie lasagne"</span>)</span>
+<span id="cb1-6"><a></a>    <span class="bu">print</span>(<span class="st">"3. Burger and salad"</span>)</span>
+<span id="cb1-7"><a></a>    <span class="bu">print</span>()</span>
+<span id="cb1-8"><a></a>    <span class="bu">print</span>(<span class="st">"Which of these meals is your favourite? (1, 2 or 3) "</span>)</span>
+<span id="cb1-9"><a></a>    answer <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb1-10"><a></a>    <span class="cf">if</span> answer <span class="op">==</span> <span class="st">"1"</span>:</span>
+<span id="cb1-11"><a></a>        <span class="bu">print</span>(<span class="st">"Chicken curry coming up"</span>)</span>
+<span id="cb1-12"><a></a>    <span class="cf">elif</span> answer <span class="op">==</span> <span class="st">"2"</span>:</span>
+<span id="cb1-13"><a></a>        <span class="bu">print</span>(<span class="st">"Veggie lasagne coming up"</span>)</span>
+<span id="cb1-14"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb1-15"><a></a>        <span class="bu">print</span>(<span class="st">"Burger and salad coming up"</span>)</span>
+<span id="cb1-16"><a></a>    <span class="bu">print</span>(<span class="st">"Enjoy!"</span>)</span>
+<span id="cb1-17"><a></a></span>
+<span id="cb1-18"><a></a>cooking()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="run" class="slide level2">
-<h2>Run</h2>
-<div id="aed0e44a" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>We want to know if you like programming!
-
-Do you like programming Billy?
-&gt; Yes
-Great! You said Yes!!
-Let's learn some Python today</code></pre>
-</div>
-</div>
-</section>
-<section id="investigate" class="slide level2 scrollable">
-<h2>Investigate</h2>
-<p>Answer on the sheet or in your exercise book:</p>
-<ol type="1">
-<li>How many <strong>variables</strong> can you find in the program, and what are they used for?<br>
-</li>
-<li><code>print()</code> is a function that displays to the screen. What other function is used, and what does it do?<br>
-</li>
-<li>What is the <code>+</code> being used for in this program?<br>
-</li>
-<li>What happens when you call <code>print()</code> with <strong>nothing</strong> inside the brackets?</li>
-</ol>
-</section>
-<section id="modify" class="slide level2 scrollable">
-<h2>Modify</h2>
-<ol type="1">
-<li>Change the program so it uses <strong>your name</strong> instead of “Billy”.<br>
-</li>
-<li>Make it so the user can type the answer <strong>on the same line</strong> as the question.<br>
-</li>
-<li>Ask the user <strong>their name</strong> at the beginning of the program.<br>
-</li>
-<li>Ask the user three questions (e.g.&nbsp;name, breakfast, favourite colour). Give a suitable response after each answer.<br>
-</li>
-<li>Ask another person to try your program.</li>
-</ol>
-</section>
-<section id="extension" class="slide level2">
-<h2>Extension</h2>
+<section id="run-and-modify" class="slide level2">
+<h2>Run and Modify</h2>
+<p>On your own:</p>
 <ul>
-<li>Add simple <strong>validation</strong> (reject blank answers, ask again).<br>
+<li>Download the cooking program and check that it does what you thought it would<br>
 </li>
-<li>Personalise the final message using all three answers.<br>
+<li>Change the meals to meals that you like<br>
 </li>
-<li>Challenge: format output with <strong>f-strings</strong> instead of concatenation.</li>
+<li>Add “None of these as an option”</li>
+</ul>
+<p>Then:</p>
+<ul>
+<li>Make a new copy of your code and secretly add 5 errors to it<br>
+</li>
+<li>Swap programs with your partner<br>
+</li>
+<li>See if you can find and correct the 5 errors<br>
+</li>
+<li>Write comments in the program where you found them</li>
 </ul>
 </section>
-<section id="debugging" class="slide level2">
-<h2>Debugging</h2>
-<p>There are <strong>five mistakes</strong> in this code.<br>
-- Work with a partner to find and fix them.<br>
-- Explain each bug and the fix in a sentence.</p>
-<p>```python name = “Billy” print(“We want to know if you like progamming!) print() print(”Do you like programming ” + Name + “?”) answer = input( Print(“Great! You said” + anwer + “!”) print(“Let’s learn some Python today”)</p>
+<section id="make" class="slide level2 scrollable">
+<h2>Make</h2>
+<p>Using your Python skills so far you are going to create a 5-question quiz on Geography.</p>
+<p>Steps:</p>
+<ol type="1">
+<li>Write down 5 questions and 3 possible answers to each<br>
+</li>
+<li>Write your program<br>
+</li>
+<li>Test all the different options</li>
+</ol>
+<p>You will be scored on:</p>
+<ul>
+<li>Whether it works<br>
+</li>
+<li>Quality of your questions<br>
+</li>
+<li>How well it is presented (spacing, grammar etc.)</li>
+</ul>
+</section>
+<section id="review" class="slide level2">
+<h2>Review</h2>
+<p>Swap with someone else and ask them to test your quiz.</p>
+<p>Score the quiz as follows:</p>
+</section>
+<section id="score-sheet" class="slide level2">
+<h2>Score Sheet</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Amazing</th>
+<th style="text-align: center;">Pretty good</th>
+<th style="text-align: center;">Room for improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does it run without any errors?</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td>Do all the questions make sense?</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td>Is it well presented?</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td><strong>Comments and Total score</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

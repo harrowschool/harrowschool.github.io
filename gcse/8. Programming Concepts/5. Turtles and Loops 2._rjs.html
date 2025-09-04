@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <title>Remove Computer Science – 2. Selection</title>
+  <title>GCSE Computer Science – 5. Turtles and Loops 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -95,6 +95,7 @@
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../styles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,114 +194,183 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">2. Selection</h1>
+  <h1 class="title">5. Turtles and Loops 2</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="predict" class="slide level2">
-<h2>Predict</h2>
-<p>Here is some Python code. What would be printed on the screen?</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>flowers <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb1-2"><a></a>trees <span class="op">=</span> <span class="dv">10</span> </span>
-<span id="cb1-3"><a></a>plants <span class="op">=</span> flowers <span class="op">+</span> trees</span>
-<span id="cb1-4"><a></a>trees <span class="op">=</span> <span class="dv">20</span></span>
-<span id="cb1-5"><a></a><span class="bu">print</span>(plants)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="predict-1" class="slide level2">
-<h2>Predict</h2>
-<p>Here is some Python code. What would be printed on the screen?</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>number1 <span class="op">=</span> <span class="dv">125</span></span>
-<span id="cb2-2"><a></a>number2 <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb2-3"><a></a>number3 <span class="op">=</span> number1 <span class="op">-</span> number2</span>
-<span id="cb2-4"><a></a>number3 <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-5"><a></a>number1 <span class="op">=</span> <span class="dv">20</span></span>
-<span id="cb2-6"><a></a>number2 <span class="op">=</span> number1 <span class="op">+</span> number2 <span class="op">+</span> number3</span>
-<span id="cb2-7"><a></a><span class="bu">print</span>(number2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<p>Can you find the errors in this program?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> triangle():</span>
+<span id="cb1-2"><a></a>    <span class="co"># this function draws a triangle</span></span>
+<span id="cb1-3"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb1-4"><a></a>        forward(<span class="dv">120</span>)</span>
+<span id="cb1-5"><a></a>        right(<span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="lesson-objectives" class="slide level2">
 <h2>Lesson Objectives</h2>
-<p>Today we are using three new Python keywords: <code>def</code>, <code>if</code>, and <code>else</code>.</p>
-<p>By the end of this lesson, you should be able to:</p>
+<p>In this lesson you will:</p>
 <ul>
-<li>Write a function using <code>def</code></li>
-<li>Write programs that give different responses depending on what is typed in on the keyboard</li>
-<li>Know the difference between <code>=</code> and <code>==</code>.</li>
+<li>Make more shapes using Python turtle graphics<br>
+</li>
+<li>Practise using the <code>for</code> loop<br>
+</li>
+<li>Learn to pass data into a function using a <strong>parameter</strong><br>
+</li>
+<li>Use parameters to make more user-friendly programs</li>
 </ul>
 </section>
-<section id="predict-2" class="slide level2">
-<h2>Predict</h2>
-<p>In pairs, look at the program below and write out what you think might happen when it runs.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> conversation():</span>
-<span id="cb3-2"><a></a>    <span class="bu">print</span>(<span class="st">"Welcome to my conversation program"</span>)</span>
-<span id="cb3-3"><a></a>    <span class="bu">print</span>()</span>
-<span id="cb3-4"><a></a>    <span class="bu">print</span>(<span class="st">"Do you like cycling? Answer yes or no"</span>)</span>
-<span id="cb3-5"><a></a>    answer <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb3-6"><a></a>    <span class="cf">if</span> answer <span class="op">==</span> <span class="st">"yes"</span>:</span>
-<span id="cb3-7"><a></a>        <span class="bu">print</span>(<span class="st">"That's good - you will get very fit"</span>)</span>
-<span id="cb3-8"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb3-9"><a></a>        <span class="bu">print</span>(<span class="st">"Perhaps you like some other sport."</span>)</span>
-<span id="cb3-10"><a></a>    <span class="bu">print</span>(<span class="st">"Goodbye"</span>)</span>
-<span id="cb3-11"><a></a></span>
-<span id="cb3-12"><a></a>conversation()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="predict-and-run" class="slide level2">
+<h2>Predict and Run</h2>
+<p>Predict what diagram this code will draw.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> demo():</span>
+<span id="cb2-2"><a></a>    pencolor(<span class="st">"red"</span>)</span>
+<span id="cb2-3"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb2-4"><a></a>        forward(<span class="dv">150</span>)</span>
+<span id="cb2-5"><a></a>        right(<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you are struggling, look at the sheet for two possible options.</p>
 </section>
-<section id="run" class="slide level2">
-<h2>Run</h2>
-<p>Now run the program and see if your prediction was correct.</p>
-</section>
-<section id="investigate" class="slide level2 scrollable">
-<h2>Investigate</h2>
-<ol type="1">
-<li><p>What would happen if the program used the word <code>Print()</code> instead of <code>print()</code>?</p></li>
-<li><p>What would happen if you type “Yes” instead of “yes” or “no” when running the program? (try it and see)</p></li>
-<li><p>What is <code>def</code> used for?</p></li>
-<li><p>Why does the program include <code>conversation()</code> at the bottom of the program?</p></li>
-<li><p>Why do you need a colon <code>:</code> at the end of the <code>if</code> statement and the word <code>else</code>?</p></li>
-<li><p>What is the difference between <code>=</code> and <code>==</code>? Both are used in this program.</p></li>
-<li><p>What would be the difference between running these two lines:</p>
-<ul>
-<li><code>answer = input()</code></li>
-<li><code>answer = input("Select 1 or 2...")</code></li>
-</ul></li>
-<li><p>Why is <code>print("Goodbye")</code> a few spaces <strong>left</strong> of the lines above. What happens if you change this?</p></li>
-</ol>
-</section>
-<section id="modify-and-make" class="slide level2 scrollable">
+<section id="modify-and-make" class="slide level2">
 <h2>Modify and Make</h2>
-<p>Try these challenges: 1. Modify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.</p>
-<ol start="2" type="1">
-<li><p>Now write a function <code>cities()</code> and ask <em>“How many cities are there in England?”</em>. Now you are asking a question with a numeric answer — use <code>int(input(...))</code> to do this. The extra <code>int()</code> wrapped around the input will convert what you typed in into a whole number.</p></li>
-<li><p>Write a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use <code>int(input())</code> — see what error you get if you forget to use it.</p></li>
-<li><p>Now ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.</p></li>
-<li><p>Now ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.</p></li>
-<li><p>Write a program to ask the user to enter any number. As long as the number is <strong>NOT 99</strong> that’s OK.<br>
-Test that the number is not 99 by using <code>if number != 99</code>.</p></li>
+<p>Using the code below, complete the tasks on the next slide.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb3-2"><a></a>    </span>
+<span id="cb3-3"><a></a><span class="kw">def</span> small_square():</span>
+<span id="cb3-4"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb3-5"><a></a>        forward(<span class="dv">50</span>)</span>
+<span id="cb3-6"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a><span class="kw">def</span> large_square():</span>
+<span id="cb3-9"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb3-10"><a></a>        forward(<span class="dv">150</span>)</span>
+<span id="cb3-11"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb3-12"><a></a></span>
+<span id="cb3-13"><a></a><span class="kw">def</span> any_square(length):</span>
+<span id="cb3-14"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb3-15"><a></a>        forward(length)</span>
+<span id="cb3-16"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb3-17"><a></a>    </span>
+<span id="cb3-18"><a></a><span class="kw">def</span> main():</span>
+<span id="cb3-19"><a></a>    small_square()</span>
+<span id="cb3-20"><a></a>    large_square()</span>
+<span id="cb3-21"><a></a>    length <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter length of the square   "</span>))</span>
+<span id="cb3-22"><a></a>    any_square(length)</span>
+<span id="cb3-23"><a></a>    </span>
+<span id="cb3-24"><a></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="modify-and-make-1" class="slide level2 scrollable">
+<h2>Modify and Make</h2>
+<ol type="1">
+<li>Change the starter program to make a <strong>blue hexagon</strong> using a <code>for</code> loop<br>
+</li>
+<li>Change the angle to <strong>95°</strong> and see if you can draw the following shape<br>
+</li>
+<li>The following code will draw a petal of a flower. Use it inside a <code>for</code> loop to draw a flower</li>
 </ol>
-<h3 id="extension">Extension</h3>
-<p>Write a program that asks the user to enter a number between 1 and 20. You can use <code>if</code> to check the condition.</p>
-<p>Give them positive feedback if it’s OK and say <em>“too low”</em> if it’s less than 1, and <em>“too high”</em> if it’s more than 20.</p>
-<p>Make a note of any errors that you come across and how you fixed them.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> petal():</span>
+<span id="cb4-2"><a></a>    circle(<span class="dv">50</span>, <span class="dv">120</span>)</span>
+<span id="cb4-3"><a></a>    left(<span class="dv">60</span>)</span>
+<span id="cb4-4"><a></a>    circle(<span class="dv">50</span>, <span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li><p>Now can you make a similar flower in two colours similar to (or better than!) the one on the sheet. Use <code>begin_fill()``,</code>fillcolor(“red”)<code>and `end_fill()</code> to colour in shapes.</p></li>
+<li><p>Use the triangle function to draw more shapes. Write a function that calls the triangle function inside a loop to make the exact picture shown on the sheet.</p></li>
+</ol>
+</section>
+<section id="predict" class="slide level2">
+<h2>Predict</h2>
+<p>In pairs, predict what running the function <code>main()</code> would do.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> small_square():</span>
+<span id="cb5-2"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb5-3"><a></a>        forward(<span class="dv">50</span>)</span>
+<span id="cb5-4"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a><span class="kw">def</span> large_square():</span>
+<span id="cb5-8"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb5-9"><a></a>        forward(<span class="dv">150</span>)</span>
+<span id="cb5-10"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb5-11"><a></a></span>
+<span id="cb5-12"><a></a></span>
+<span id="cb5-13"><a></a><span class="kw">def</span> any_square(length):</span>
+<span id="cb5-14"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb5-15"><a></a>        forward(length)</span>
+<span id="cb5-16"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb5-17"><a></a></span>
+<span id="cb5-18"><a></a><span class="kw">def</span> main():</span>
+<span id="cb5-19"><a></a>    small_square()</span>
+<span id="cb5-20"><a></a>    large_square()</span>
+<span id="cb5-21"><a></a>    length <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter length of the square "</span>))</span>
+<span id="cb5-22"><a></a>    any_square(length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="using-a-parameter" class="slide level2">
+<h2>Using a Parameter</h2>
+<p>Examples:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> any_square(length):</span>
+<span id="cb6-2"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb6-3"><a></a>        forward(length)</span>
+<span id="cb6-4"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb6-5"><a></a></span>
+<span id="cb6-6"><a></a>any_square(<span class="dv">50</span>)   <span class="co"># draws a square with side length 50</span></span>
+<span id="cb6-7"><a></a>any_square(<span class="dv">150</span>)  <span class="co"># draws a square with side length 150</span></span>
+<span id="cb6-8"><a></a>any_square(<span class="dv">60</span>)   <span class="co"># draws a square with side length 60</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Length is a <strong>parameter</strong> used to pass data into the function <code>any_square</code>.</p>
+</section>
+<section id="modify-and-make-2" class="slide level2 scrollable">
+<h2>Modify and Make</h2>
+<p>Now complete these tasks:</p>
+<ol type="1">
+<li>Modify your <code>square</code> function so that you can input the length of the sides and draw squares of different sizes<br>
+</li>
+<li>Modify your <code>triangle</code> function so that you can input the length of the sides and draw triangles of different sizes</li>
+</ol>
+<p><strong>Extension:</strong><br>
+Write a general-purpose function <code>polygon(sides)</code> so that <code>polygon(4)</code> will draw a square and <code>polygon(6)</code> will draw a hexagon.</p>
 </section>
 <section id="review" class="slide level2">
 <h2>Review</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> questions():</span>
-<span id="cb4-2"><a></a>    <span class="bu">print</span>(<span class="st">"What is the capital of France?"</span>)</span>
-<span id="cb4-3"><a></a>    answer <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb4-4"><a></a>    <span class="cf">if</span> answer <span class="op">==</span> <span class="st">"Paris"</span>:</span>
-<span id="cb4-5"><a></a>        <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
-<span id="cb4-6"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb4-7"><a></a>        <span class="bu">print</span>(<span class="st">"No, that's not correct"</span>)</span>
-<span id="cb4-8"><a></a></span>
-<span id="cb4-9"><a></a>    <span class="co"># what is the difference with the question below?</span></span>
-<span id="cb4-10"><a></a>    answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is the capital of Norway? "</span>)</span>
-<span id="cb4-11"><a></a>    <span class="cf">if</span> answer <span class="op">==</span> <span class="st">"Oslo"</span>:</span>
-<span id="cb4-12"><a></a>        <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
-<span id="cb4-13"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb4-14"><a></a>        <span class="bu">print</span>(<span class="st">"No, that's not correct"</span>)</span>
-<span id="cb4-15"><a></a></span>
-<span id="cb4-16"><a></a>questions()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>What is the difference between the two questions when they appear on the screen?</p>
+<p>Write out what code you might need in <code>house()</code> to draw a house, using only the functions <code>square()</code> and <code>triangle()</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="kw">def</span> square(length):</span>
+<span id="cb7-4"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb7-5"><a></a>        forward(length)</span>
+<span id="cb7-6"><a></a>        right(<span class="dv">90</span>)</span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a><span class="kw">def</span> triangle(length):</span>
+<span id="cb7-9"><a></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb7-10"><a></a>        forward(length)</span>
+<span id="cb7-11"><a></a>        right(<span class="dv">120</span>)</span>
+<span id="cb7-12"><a></a></span>
+<span id="cb7-13"><a></a><span class="kw">def</span> house():</span>
+<span id="cb7-14"><a></a>    <span class="co"># your code goes here</span></span>
+<span id="cb7-15"><a></a></span>
+<span id="cb7-16"><a></a>house()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="key-concepts" class="slide level2 scrollable">
+<h2>Key Concepts</h2>
+<ol type="1">
+<li>The <code>for</code> loop is one kind of loop.
+<ul>
+<li>It uses a counter which takes on a value every time the loop iterates.<br>
+</li>
+<li>In the syllabus, this is called a <strong>count controlled loop</strong>.</li>
+</ul></li>
+<li>The <code>range()</code> function indicates how many times the statement will repeat. For example:
+<ul>
+<li><code>range(4)</code> means repeat 4 times<br>
+</li>
+<li><code>range(10)</code> means repeat 10 times<br>
+</li>
+</ul></li>
+<li>In fact, <code>range(4)</code> generates four numbers: <code>0, 1, 2, 3</code>.
+<ul>
+<li>The counter takes on each value one at a time.<br>
+</li>
+<li>Because there are four numbers to take the value of, there are four repeats.</li>
+</ul></li>
+</ol>
 
 
 </section>
