@@ -1,0 +1,856 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to the Remove Computer Science course."
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html",
+    "title": "4. Turtles and Loops",
+    "section": "",
+    "text": "What do you think the mystery() function does?\nfrom turtle import *\n\ndef mystery():\n    fillcolor(\"Green\")\n    begin_fill()\n    pencolor(\"Red\")\n    forward(100)\n    right(90)\n    forward(100)\n    right(90)\n    forward(100)\n    right(90)\n    forward(100)\n    end_fill()\n\nmystery()\nDraw a picture of the result on your sheet.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#predict",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#predict",
+    "title": "4. Turtles and Loops",
+    "section": "",
+    "text": "What do you think the mystery() function does?\nfrom turtle import *\n\ndef mystery():\n    fillcolor(\"Green\")\n    begin_fill()\n    pencolor(\"Red\")\n    forward(100)\n    right(90)\n    forward(100)\n    right(90)\n    forward(100)\n    right(90)\n    forward(100)\n    end_fill()\n\nmystery()\nDraw a picture of the result on your sheet.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#lesson-objectives",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#lesson-objectives",
+    "title": "4. Turtles and Loops",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nUse Python turtle graphics to draw shapes\n\nLearn for loops (iteration)\n\nModify programs that use a for loop\n\nWrite your own programs with a for loop",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#run",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#run",
+    "title": "4. Turtles and Loops",
+    "section": "Run",
+    "text": "Run\n\nRun the code. Were you right about what would happen?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#investigate",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#investigate",
+    "title": "4. Turtles and Loops",
+    "section": "Investigate",
+    "text": "Investigate\n\nIn right(90) what does the 90 mean?\nWhat does forward(100) do?\nWhat happens when you move endfill() to a place earlier in the code?\nWhat happens if you change all the right(90) lines to right(45)? Try it and see.\nWhat commands do you think can be used to go back and left?\nWhat is the word def used for?\nWhat happens if any of the lines inside the function are not indented? Try it and see.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#modify-and-make",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#modify-and-make",
+    "title": "4. Turtles and Loops",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nTry these exercises – see the commands on the sheet:\n\nRename the function square() rather than mystery and change\n\nthe colour of the lines\n\nthe fill colour\n\nthe length of the lines\n\nMake a new function called triangle() – you will need to change the angle between the lines\nUse penup() and pendown() to draw a square and a triangle with a space between them\nUse the circle() function to draw two circles, one inside the other\nDraw a regular hexagon made of six equilateral triangles (see sheet for an image).\n\nExtension: Draw some fireworks in different colours!",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#turtle-commands-reference",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#turtle-commands-reference",
+    "title": "4. Turtles and Loops",
+    "section": "Turtle Commands Reference",
+    "text": "Turtle Commands Reference\n\n\n\nforward() or fd → Go forward\n\nbackward → Go backward\n\nright → Turn right\n\nleft → Turn left\n\npenup() → Lift the pen so you can move without drawing\n\npendown() → Drop the pen back to draw again\n\nfillcolor(\"Brown\") → Change the fill colour\n\nbegin_fill() → Begin filling the shape\n\nend_fill() → End the filling sequence\n\n\n\ncircle → Draw a circle\n\nreset → Clear the screen\n\nsetposition(x, y) → Move to position (x, y)\n\npensize() → Set pen/brush width\n\nshape(\"turtle\") → Change shape to a turtle\n\nshape(\"circle\") → Change shape to a circle\n\nstamp() → Leave an impression of the shape\n\npencolor(\"Red\") → Change pen colour\n\nwrite() → Write text",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#predict-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#predict-1",
+    "title": "4. Turtles and Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat does this code do? Draw what you think the result will be on the sheet.\nfrom turtle import *\n\ndef square():\n    for counter in range(4):\n        forward(100)\n        right(90)\n\nsquare()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#predict-2",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#predict-2",
+    "title": "4. Turtles and Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat about this one? Draw what you think the result will be on the sheet.\nfrom turtle import *\n\ndef square():\n    for counter in range(4):\n        forward(100)\n        right(90)\n\nsquare()\nleft(45)\nsquare()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#run-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#run-1",
+    "title": "4. Turtles and Loops",
+    "section": "Run",
+    "text": "Run\nLet’s run the code to see if you were right.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#investigate-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#investigate-1",
+    "title": "4. Turtles and Loops",
+    "section": "Investigate",
+    "text": "Investigate\nfor counter in range(4):\n    forward(100)\n    right(90)\nIdentify which parts of the code match these descriptions:\n\nThese two lines will repeat four times\nThis is a stepper variable that goes up by one every time the code repeats\nThis tells us the code inside the loop will repeat four times\nThis word is a Python keyword used for loops (known as iteration)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#modify-and-make-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#modify-and-make-1",
+    "title": "4. Turtles and Loops",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nfrom turtle import *\n\ndef square():\n    for counter in range(4):\n        forward(100)\n        right(90)\n\nsquare()\nleft(45)\nsquare()\n\nRewrite your previous triangle function so that it uses a for loop.\n\nWrite a function pentagon() to create a pentagon (5 sides) with sides length 200.\nWrite a function hexagon() to create a blue hexagon (6 sides) with sides length 50.\n\nExtension: Create an envelope() function which draws an envelope and check it works (Hint: it will call square() and triangle().)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops.html#review",
+    "href": "8. Programming Concepts/4. Turtles and Loops.html#review",
+    "title": "4. Turtles and Loops",
+    "section": "Review",
+    "text": "Review\nFill in the SIX gaps to draw a triangle.\nBLANK triangle():\n    for counter BLANK range BLANK:\n        forward BLANK\n        right BLANK",
+    "crumbs": [
+      "8. Programming Concepts",
+      "4. Turtles and Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#predict",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#predict",
+    "title": "4. Turtles and Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat do you think the mystery() function does?\nfrom turtle import *\n\ndef mystery():\n    fillcolor(\"Green\")\n    begin_fill()\n    pencolor(\"Red\")\n    forward(100)\n    right(90)\n    forward(100)\n    right(90)\n    forward(100)\n    right(90)\n    forward(100)\n    end_fill()\n\nmystery()\nDraw a picture of the result on your sheet."
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#lesson-objectives",
+    "title": "4. Turtles and Loops",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nUse Python turtle graphics to draw shapes\n\nLearn for loops (iteration)\n\nModify programs that use a for loop\n\nWrite your own programs with a for loop"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#run",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#run",
+    "title": "4. Turtles and Loops",
+    "section": "Run",
+    "text": "Run\n\nRun the code. Were you right about what would happen?"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#investigate",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#investigate",
+    "title": "4. Turtles and Loops",
+    "section": "Investigate",
+    "text": "Investigate\n\nIn right(90) what does the 90 mean?\nWhat does forward(100) do?\nWhat happens when you move endfill() to a place earlier in the code?\nWhat happens if you change all the right(90) lines to right(45)? Try it and see.\nWhat commands do you think can be used to go back and left?\nWhat is the word def used for?\nWhat happens if any of the lines inside the function are not indented? Try it and see."
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#modify-and-make",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#modify-and-make",
+    "title": "4. Turtles and Loops",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nTry these exercises – see the commands on the sheet:\n\nRename the function square() rather than mystery and change\n\nthe colour of the lines\n\nthe fill colour\n\nthe length of the lines\n\nMake a new function called triangle() – you will need to change the angle between the lines\nUse penup() and pendown() to draw a square and a triangle with a space between them\nUse the circle() function to draw two circles, one inside the other\nDraw a regular hexagon made of six equilateral triangles (see sheet for an image).\n\nExtension: Draw some fireworks in different colours!"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#turtle-commands-reference",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#turtle-commands-reference",
+    "title": "4. Turtles and Loops",
+    "section": "Turtle Commands Reference",
+    "text": "Turtle Commands Reference\n\n\n\nforward() or fd → Go forward\n\nbackward → Go backward\n\nright → Turn right\n\nleft → Turn left\n\npenup() → Lift the pen so you can move without drawing\n\npendown() → Drop the pen back to draw again\n\nfillcolor(\"Brown\") → Change the fill colour\n\nbegin_fill() → Begin filling the shape\n\nend_fill() → End the filling sequence\n\n\n\ncircle → Draw a circle\n\nreset → Clear the screen\n\nsetposition(x, y) → Move to position (x, y)\n\npensize() → Set pen/brush width\n\nshape(\"turtle\") → Change shape to a turtle\n\nshape(\"circle\") → Change shape to a circle\n\nstamp() → Leave an impression of the shape\n\npencolor(\"Red\") → Change pen colour\n\nwrite() → Write text"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#predict-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#predict-1",
+    "title": "4. Turtles and Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat does this code do? Draw what you think the result will be on the sheet.\nfrom turtle import *\n\ndef square():\n    for counter in range(4):\n        forward(100)\n        right(90)\n\nsquare()"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#predict-2",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#predict-2",
+    "title": "4. Turtles and Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat about this one? Draw what you think the result will be on the sheet.\nfrom turtle import *\n\ndef square():\n    for counter in range(4):\n        forward(100)\n        right(90)\n\nsquare()\nleft(45)\nsquare()"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#run-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#run-1",
+    "title": "4. Turtles and Loops",
+    "section": "Run",
+    "text": "Run\nLet’s run the code to see if you were right."
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#investigate-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#investigate-1",
+    "title": "4. Turtles and Loops",
+    "section": "Investigate",
+    "text": "Investigate\nfor counter in range(4):\n    forward(100)\n    right(90)\nIdentify which parts of the code match these descriptions:\n\nThese two lines will repeat four times\nThis is a stepper variable that goes up by one every time the code repeats\nThis tells us the code inside the loop will repeat four times\nThis word is a Python keyword used for loops (known as iteration)"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#modify-and-make-1",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#modify-and-make-1",
+    "title": "4. Turtles and Loops",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nfrom turtle import *\n\ndef square():\n    for counter in range(4):\n        forward(100)\n        right(90)\n\nsquare()\nleft(45)\nsquare()\n\nRewrite your previous triangle function so that it uses a for loop.\n\nWrite a function pentagon() to create a pentagon (5 sides) with sides length 200.\nWrite a function hexagon() to create a blue hexagon (6 sides) with sides length 50.\n\nExtension: Create an envelope() function which draws an envelope and check it works (Hint: it will call square() and triangle().)"
+  },
+  {
+    "objectID": "8. Programming Concepts/4. Turtles and Loops._rjs.html#review",
+    "href": "8. Programming Concepts/4. Turtles and Loops._rjs.html#review",
+    "title": "4. Turtles and Loops",
+    "section": "Review",
+    "text": "Review\nFill in the SIX gaps to draw a triangle.\nBLANK triangle():\n    for counter BLANK range BLANK:\n        forward BLANK\n        right BLANK"
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html",
+    "href": "8. Programming Concepts/3. More on Selection.html",
+    "title": "3. More on Selection",
+    "section": "",
+    "text": "To understand how to write programs that involve more than two choices\n\nTo write a quiz program",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html#lesson-objectives",
+    "href": "8. Programming Concepts/3. More on Selection.html#lesson-objectives",
+    "title": "3. More on Selection",
+    "section": "",
+    "text": "To understand how to write programs that involve more than two choices\n\nTo write a quiz program",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html#predict",
+    "href": "8. Programming Concepts/3. More on Selection.html#predict",
+    "title": "3. More on Selection",
+    "section": "Predict",
+    "text": "Predict\nWhat does this code do? Show what you think will be output to the screen.\ndef cooking():\n    print(\"Meal planner\")\n    print()\n    print(\"1. Chicken curry \")\n    print(\"2. Veggie lasagne\")\n    print(\"3. Burger and salad\")\n    print()\n    print(\"Which of these meals is your favourite? (1, 2 or 3) \")\n    answer = input()\n    if answer == \"1\":\n        print(\"Chicken curry coming up\")\n    elif answer == \"2\":\n        print(\"Veggie lasagne coming up\")\n    else:\n        print(\"Burger and salad coming up\")\n    print(\"Enjoy!\")\n\ncooking()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html#run-and-modify",
+    "href": "8. Programming Concepts/3. More on Selection.html#run-and-modify",
+    "title": "3. More on Selection",
+    "section": "Run and Modify",
+    "text": "Run and Modify\nOn your own:\n\nDownload the cooking program and check that it does what you thought it would\n\nChange the meals to meals that you like\n\nAdd “None of these as an option”\n\nThen:\n\nMake a new copy of your code and secretly add 5 errors to it\n\nSwap programs with your partner\n\nSee if you can find and correct the 5 errors\n\nWrite comments in the program where you found them",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html#make",
+    "href": "8. Programming Concepts/3. More on Selection.html#make",
+    "title": "3. More on Selection",
+    "section": "Make",
+    "text": "Make\nUsing your Python skills so far you are going to create a 5-question quiz on Geography.\nSteps:\n\nWrite down 5 questions and 3 possible answers to each\n\nWrite your program\n\nTest all the different options\n\nYou will be scored on:\n\nWhether it works\n\nQuality of your questions\n\nHow well it is presented (spacing, grammar etc.)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html#review",
+    "href": "8. Programming Concepts/3. More on Selection.html#review",
+    "title": "3. More on Selection",
+    "section": "Review",
+    "text": "Review\nSwap with someone else and ask them to test your quiz.\nScore the quiz as follows:",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection.html#score-sheet",
+    "href": "8. Programming Concepts/3. More on Selection.html#score-sheet",
+    "title": "3. More on Selection",
+    "section": "Score Sheet",
+    "text": "Score Sheet\n\n\n\n\n\n\n\n\n\n\nAmazing\nPretty good\nRoom for improvement\n\n\n\n\nDoes it run without any errors?\n6\n4\n2\n\n\nDo all the questions make sense?\n6\n4\n2\n\n\nIs it well presented?\n6\n4\n2\n\n\nComments and Total score",
+    "crumbs": [
+      "8. Programming Concepts",
+      "3. More on Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/3. More on Selection._rjs.html#lesson-objectives",
+    "title": "3. More on Selection",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nTo understand how to write programs that involve more than two choices\n\nTo write a quiz program"
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection._rjs.html#predict",
+    "href": "8. Programming Concepts/3. More on Selection._rjs.html#predict",
+    "title": "3. More on Selection",
+    "section": "Predict",
+    "text": "Predict\nWhat does this code do? Show what you think will be output to the screen.\ndef cooking():\n    print(\"Meal planner\")\n    print()\n    print(\"1. Chicken curry \")\n    print(\"2. Veggie lasagne\")\n    print(\"3. Burger and salad\")\n    print()\n    print(\"Which of these meals is your favourite? (1, 2 or 3) \")\n    answer = input()\n    if answer == \"1\":\n        print(\"Chicken curry coming up\")\n    elif answer == \"2\":\n        print(\"Veggie lasagne coming up\")\n    else:\n        print(\"Burger and salad coming up\")\n    print(\"Enjoy!\")\n\ncooking()"
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection._rjs.html#run-and-modify",
+    "href": "8. Programming Concepts/3. More on Selection._rjs.html#run-and-modify",
+    "title": "3. More on Selection",
+    "section": "Run and Modify",
+    "text": "Run and Modify\nOn your own:\n\nDownload the cooking program and check that it does what you thought it would\n\nChange the meals to meals that you like\n\nAdd “None of these as an option”\n\nThen:\n\nMake a new copy of your code and secretly add 5 errors to it\n\nSwap programs with your partner\n\nSee if you can find and correct the 5 errors\n\nWrite comments in the program where you found them"
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection._rjs.html#make",
+    "href": "8. Programming Concepts/3. More on Selection._rjs.html#make",
+    "title": "3. More on Selection",
+    "section": "Make",
+    "text": "Make\nUsing your Python skills so far you are going to create a 5-question quiz on Geography.\nSteps:\n\nWrite down 5 questions and 3 possible answers to each\n\nWrite your program\n\nTest all the different options\n\nYou will be scored on:\n\nWhether it works\n\nQuality of your questions\n\nHow well it is presented (spacing, grammar etc.)"
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection._rjs.html#review",
+    "href": "8. Programming Concepts/3. More on Selection._rjs.html#review",
+    "title": "3. More on Selection",
+    "section": "Review",
+    "text": "Review\nSwap with someone else and ask them to test your quiz.\nScore the quiz as follows:"
+  },
+  {
+    "objectID": "8. Programming Concepts/3. More on Selection._rjs.html#score-sheet",
+    "href": "8. Programming Concepts/3. More on Selection._rjs.html#score-sheet",
+    "title": "3. More on Selection",
+    "section": "Score Sheet",
+    "text": "Score Sheet\n\n\n\n\n\n\n\n\n\n\nAmazing\nPretty good\nRoom for improvement\n\n\n\n\nDoes it run without any errors?\n6\n4\n2\n\n\nDo all the questions make sense?\n6\n4\n2\n\n\nIs it well presented?\n6\n4\n2\n\n\nComments and Total score"
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#predict",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#predict",
+    "title": "2. Selection",
+    "section": "Predict",
+    "text": "Predict\nHere is some Python code. What would be printed on the screen?\nflowers = 5\ntrees = 10 \nplants = flowers + trees\ntrees = 20\nprint(plants)"
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#predict-1",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#predict-1",
+    "title": "2. Selection",
+    "section": "Predict",
+    "text": "Predict\nHere is some Python code. What would be printed on the screen?\nnumber1 = 125\nnumber2 = 100\nnumber3 = number1 - number2\nnumber3 = 10\nnumber1 = 20\nnumber2 = number1 + number2 + number3\nprint(number2)"
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#lesson-objectives",
+    "title": "2. Selection",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\nToday we are using three new Python keywords: def, if, and else.\nBy the end of this lesson, you should be able to:\n\nWrite a function using def\nWrite programs that give different responses depending on what is typed in on the keyboard\nKnow the difference between = and ==."
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#predict-2",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#predict-2",
+    "title": "2. Selection",
+    "section": "Predict",
+    "text": "Predict\nIn pairs, look at the program below and write out what you think might happen when it runs.\ndef conversation():\n    print(\"Welcome to my conversation program\")\n    print()\n    print(\"Do you like cycling? Answer yes or no\")\n    answer = input()\n    if answer == \"yes\":\n        print(\"That's good - you will get very fit\")\n    else:\n        print(\"Perhaps you like some other sport.\")\n    print(\"Goodbye\")\n\nconversation()"
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#run",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#run",
+    "title": "2. Selection",
+    "section": "Run",
+    "text": "Run\nNow run the program and see if your prediction was correct."
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#investigate",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#investigate",
+    "title": "2. Selection",
+    "section": "Investigate",
+    "text": "Investigate\n\nWhat would happen if the program used the word Print() instead of print()?\nWhat would happen if you type “Yes” instead of “yes” or “no” when running the program? (try it and see)\nWhat is def used for?\nWhy does the program include conversation() at the bottom of the program?\nWhy do you need a colon : at the end of the if statement and the word else?\nWhat is the difference between = and ==? Both are used in this program.\nWhat would be the difference between running these two lines:\n\nanswer = input()\nanswer = input(\"Select 1 or 2...\")\n\nWhy is print(\"Goodbye\") a few spaces left of the lines above. What happens if you change this?"
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#modify-and-make",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#modify-and-make",
+    "title": "2. Selection",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nTry these challenges: 1. Modify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.\n\nNow write a function cities() and ask “How many cities are there in England?”. Now you are asking a question with a numeric answer — use int(input(...)) to do this. The extra int() wrapped around the input will convert what you typed in into a whole number.\nWrite a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use int(input()) — see what error you get if you forget to use it.\nNow ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.\nNow ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.\nWrite a program to ask the user to enter any number. As long as the number is NOT 99 that’s OK.\nTest that the number is not 99 by using if number != 99.\n\nExtension\nWrite a program that asks the user to enter a number between 1 and 20. You can use if to check the condition.\nGive them positive feedback if it’s OK and say “too low” if it’s less than 1, and “too high” if it’s more than 20.\nMake a note of any errors that you come across and how you fixed them."
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection._rjs.html#review",
+    "href": "8. Programming Concepts/2. Selection._rjs.html#review",
+    "title": "2. Selection",
+    "section": "Review",
+    "text": "Review\ndef questions():\n    print(\"What is the capital of France?\")\n    answer = input()\n    if answer == \"Paris\":\n        print(\"Correct!\")\n    else:\n        print(\"No, that's not correct\")\n\n    # what is the difference with the question below?\n    answer = input(\"What is the capital of Norway? \")\n    if answer == \"Oslo\":\n        print(\"Correct!\")\n    else:\n        print(\"No, that's not correct\")\n\nquestions()\nWhat is the difference between the two questions when they appear on the screen?"
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html",
+    "href": "8. Programming Concepts/2. Selection.html",
+    "title": "2. Selection",
+    "section": "",
+    "text": "Here is some Python code. What would be printed on the screen?\nflowers = 5\ntrees = 10 \nplants = flowers + trees\ntrees = 20\nprint(plants)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#predict",
+    "href": "8. Programming Concepts/2. Selection.html#predict",
+    "title": "2. Selection",
+    "section": "",
+    "text": "Here is some Python code. What would be printed on the screen?\nflowers = 5\ntrees = 10 \nplants = flowers + trees\ntrees = 20\nprint(plants)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#predict-1",
+    "href": "8. Programming Concepts/2. Selection.html#predict-1",
+    "title": "2. Selection",
+    "section": "Predict",
+    "text": "Predict\nHere is some Python code. What would be printed on the screen?\nnumber1 = 125\nnumber2 = 100\nnumber3 = number1 - number2\nnumber3 = 10\nnumber1 = 20\nnumber2 = number1 + number2 + number3\nprint(number2)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#lesson-objectives",
+    "href": "8. Programming Concepts/2. Selection.html#lesson-objectives",
+    "title": "2. Selection",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\nToday we are using three new Python keywords: def, if, and else.\nBy the end of this lesson, you should be able to:\n\nWrite a function using def\nWrite programs that give different responses depending on what is typed in on the keyboard\nKnow the difference between = and ==.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#predict-2",
+    "href": "8. Programming Concepts/2. Selection.html#predict-2",
+    "title": "2. Selection",
+    "section": "Predict",
+    "text": "Predict\nIn pairs, look at the program below and write out what you think might happen when it runs.\ndef conversation():\n    print(\"Welcome to my conversation program\")\n    print()\n    print(\"Do you like cycling? Answer yes or no\")\n    answer = input()\n    if answer == \"yes\":\n        print(\"That's good - you will get very fit\")\n    else:\n        print(\"Perhaps you like some other sport.\")\n    print(\"Goodbye\")\n\nconversation()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#run",
+    "href": "8. Programming Concepts/2. Selection.html#run",
+    "title": "2. Selection",
+    "section": "Run",
+    "text": "Run\nNow run the program and see if your prediction was correct.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#investigate",
+    "href": "8. Programming Concepts/2. Selection.html#investigate",
+    "title": "2. Selection",
+    "section": "Investigate",
+    "text": "Investigate\n\nWhat would happen if the program used the word Print() instead of print()?\nWhat would happen if you type “Yes” instead of “yes” or “no” when running the program? (try it and see)\nWhat is def used for?\nWhy does the program include conversation() at the bottom of the program?\nWhy do you need a colon : at the end of the if statement and the word else?\nWhat is the difference between = and ==? Both are used in this program.\nWhat would be the difference between running these two lines:\n\nanswer = input()\nanswer = input(\"Select 1 or 2...\")\n\nWhy is print(\"Goodbye\") a few spaces left of the lines above. What happens if you change this?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#modify-and-make",
+    "href": "8. Programming Concepts/2. Selection.html#modify-and-make",
+    "title": "2. Selection",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nTry these challenges: 1. Modify the program to have a conversation with somebody about sport. An example is given below but you can add your own questions.\n\nNow write a function cities() and ask “How many cities are there in England?”. Now you are asking a question with a numeric answer — use int(input(...)) to do this. The extra int() wrapped around the input will convert what you typed in into a whole number.\nWrite a new program to ask the user to enter a number bigger than 10. Give them some feedback if they have entered a valid number or not. Remember to use int(input()) — see what error you get if you forget to use it.\nNow ask the user for their score in a test. If they got less than 50 tell them that they have failed the test, otherwise tell them they have passed.\nNow ask the user of your program for their age. If they are 13 or over tell them they can have a paper round.\nWrite a program to ask the user to enter any number. As long as the number is NOT 99 that’s OK.\nTest that the number is not 99 by using if number != 99.\n\n\nExtension\nWrite a program that asks the user to enter a number between 1 and 20. You can use if to check the condition.\nGive them positive feedback if it’s OK and say “too low” if it’s less than 1, and “too high” if it’s more than 20.\nMake a note of any errors that you come across and how you fixed them.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/2. Selection.html#review",
+    "href": "8. Programming Concepts/2. Selection.html#review",
+    "title": "2. Selection",
+    "section": "Review",
+    "text": "Review\ndef questions():\n    print(\"What is the capital of France?\")\n    answer = input()\n    if answer == \"Paris\":\n        print(\"Correct!\")\n    else:\n        print(\"No, that's not correct\")\n\n    # what is the difference with the question below?\n    answer = input(\"What is the capital of Norway? \")\n    if answer == \"Oslo\":\n        print(\"Correct!\")\n    else:\n        print(\"No, that's not correct\")\n\nquestions()\nWhat is the difference between the two questions when they appear on the screen?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "2. Selection"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#recap",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#recap",
+    "title": "5. Turtles and Loops 2",
+    "section": "Recap",
+    "text": "Recap\nCan you find the errors in this program?\ndef triangle():\n    # this function draws a triangle\n    for counter in range(3):\n        forward(120)\n        right(120)"
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#lesson-objectives",
+    "title": "5. Turtles and Loops 2",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\nIn this lesson you will:\n\nMake more shapes using Python turtle graphics\n\nPractise using the for loop\n\nLearn to pass data into a function using a parameter\n\nUse parameters to make more user-friendly programs"
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#predict-and-run",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#predict-and-run",
+    "title": "5. Turtles and Loops 2",
+    "section": "Predict and Run",
+    "text": "Predict and Run\nPredict what diagram this code will draw.\ndef demo():\n    pencolor(\"red\")\n    for counter in range(20):\n        forward(150)\n        right(100)\nIf you are struggling, look at the sheet for two possible options."
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#modify-and-make",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#modify-and-make",
+    "title": "5. Turtles and Loops 2",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nUsing the code below, complete the tasks on the next slide.\nfrom turtle import *\n    \ndef small_square():\n    for counter in range(4):\n        forward(50)\n        right(90)\n\ndef large_square():\n    for counter in range(4):\n        forward(150)\n        right(90)\n\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n    \ndef main():\n    small_square()\n    large_square()\n    length = int(input(\"Enter length of the square   \"))\n    any_square(length)\n    \nmain()"
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#modify-and-make-1",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#modify-and-make-1",
+    "title": "5. Turtles and Loops 2",
+    "section": "Modify and Make",
+    "text": "Modify and Make\n\nChange the starter program to make a blue hexagon using a for loop\n\nChange the angle to 95° and see if you can draw the following shape\n\nThe following code will draw a petal of a flower. Use it inside a for loop to draw a flower\n\ndef petal():\n    circle(50, 120)\n    left(60)\n    circle(50, 120)\n\nNow can you make a similar flower in two colours similar to (or better than!) the one on the sheet. Use begin_fill()``,fillcolor(“red”)and `end_fill() to colour in shapes.\nUse the triangle function to draw more shapes. Write a function that calls the triangle function inside a loop to make the exact picture shown on the sheet."
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#predict",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#predict",
+    "title": "5. Turtles and Loops 2",
+    "section": "Predict",
+    "text": "Predict\nIn pairs, predict what running the function main() would do.\ndef small_square():\n    for counter in range(4):\n        forward(50)\n        right(90)\n\n\ndef large_square():\n    for counter in range(4):\n        forward(150)\n        right(90)\n\n\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n\ndef main():\n    small_square()\n    large_square()\n    length = int(input(\"Enter length of the square \"))\n    any_square(length)"
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#using-a-parameter",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#using-a-parameter",
+    "title": "5. Turtles and Loops 2",
+    "section": "Using a Parameter",
+    "text": "Using a Parameter\nExamples:\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n\nany_square(50)   # draws a square with side length 50\nany_square(150)  # draws a square with side length 150\nany_square(60)   # draws a square with side length 60\nLength is a parameter used to pass data into the function any_square."
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#modify-and-make-2",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#modify-and-make-2",
+    "title": "5. Turtles and Loops 2",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nNow complete these tasks:\n\nModify your square function so that you can input the length of the sides and draw squares of different sizes\n\nModify your triangle function so that you can input the length of the sides and draw triangles of different sizes\n\nExtension:\nWrite a general-purpose function polygon(sides) so that polygon(4) will draw a square and polygon(6) will draw a hexagon."
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#review",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#review",
+    "title": "5. Turtles and Loops 2",
+    "section": "Review",
+    "text": "Review\nWrite out what code you might need in house() to draw a house, using only the functions square() and triangle().\nfrom turtle import *\n\ndef square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n\ndef triangle(length):\n    for counter in range(3):\n        forward(length)\n        right(120)\n\ndef house():\n    # your code goes here\n\nhouse()"
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#key-concepts",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2._rjs.html#key-concepts",
+    "title": "5. Turtles and Loops 2",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nThe for loop is one kind of loop.\n\nIt uses a counter which takes on a value every time the loop iterates.\n\nIn the syllabus, this is called a count controlled loop.\n\nThe range() function indicates how many times the statement will repeat. For example:\n\nrange(4) means repeat 4 times\n\nrange(10) means repeat 10 times\n\n\nIn fact, range(4) generates four numbers: 0, 1, 2, 3.\n\nThe counter takes on each value one at a time.\n\nBecause there are four numbers to take the value of, there are four repeats."
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html",
+    "title": "5. Turtles and Loops 2",
+    "section": "",
+    "text": "Can you find the errors in this program?\ndef triangle():\n    # this function draws a triangle\n    for counter in range(3):\n        forward(120)\n        right(120)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#recap",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#recap",
+    "title": "5. Turtles and Loops 2",
+    "section": "",
+    "text": "Can you find the errors in this program?\ndef triangle():\n    # this function draws a triangle\n    for counter in range(3):\n        forward(120)\n        right(120)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#lesson-objectives",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#lesson-objectives",
+    "title": "5. Turtles and Loops 2",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\nIn this lesson you will:\n\nMake more shapes using Python turtle graphics\n\nPractise using the for loop\n\nLearn to pass data into a function using a parameter\n\nUse parameters to make more user-friendly programs",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#predict-and-run",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#predict-and-run",
+    "title": "5. Turtles and Loops 2",
+    "section": "Predict and Run",
+    "text": "Predict and Run\nPredict what diagram this code will draw.\ndef demo():\n    pencolor(\"red\")\n    for counter in range(20):\n        forward(150)\n        right(100)\nIf you are struggling, look at the sheet for two possible options.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#modify-and-make",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#modify-and-make",
+    "title": "5. Turtles and Loops 2",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nUsing the code below, complete the tasks on the next slide.\nfrom turtle import *\n    \ndef small_square():\n    for counter in range(4):\n        forward(50)\n        right(90)\n\ndef large_square():\n    for counter in range(4):\n        forward(150)\n        right(90)\n\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n    \ndef main():\n    small_square()\n    large_square()\n    length = int(input(\"Enter length of the square   \"))\n    any_square(length)\n    \nmain()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#modify-and-make-1",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#modify-and-make-1",
+    "title": "5. Turtles and Loops 2",
+    "section": "Modify and Make",
+    "text": "Modify and Make\n\nChange the starter program to make a blue hexagon using a for loop\n\nChange the angle to 95° and see if you can draw the following shape\n\nThe following code will draw a petal of a flower. Use it inside a for loop to draw a flower\n\ndef petal():\n    circle(50, 120)\n    left(60)\n    circle(50, 120)\n\nNow can you make a similar flower in two colours similar to (or better than!) the one on the sheet. Use begin_fill()``,fillcolor(“red”)and `end_fill() to colour in shapes.\nUse the triangle function to draw more shapes. Write a function that calls the triangle function inside a loop to make the exact picture shown on the sheet.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#predict",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#predict",
+    "title": "5. Turtles and Loops 2",
+    "section": "Predict",
+    "text": "Predict\nIn pairs, predict what running the function main() would do.\ndef small_square():\n    for counter in range(4):\n        forward(50)\n        right(90)\n\n\ndef large_square():\n    for counter in range(4):\n        forward(150)\n        right(90)\n\n\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n\ndef main():\n    small_square()\n    large_square()\n    length = int(input(\"Enter length of the square \"))\n    any_square(length)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#using-a-parameter",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#using-a-parameter",
+    "title": "5. Turtles and Loops 2",
+    "section": "Using a Parameter",
+    "text": "Using a Parameter\nExamples:\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n\nany_square(50)   # draws a square with side length 50\nany_square(150)  # draws a square with side length 150\nany_square(60)   # draws a square with side length 60\nLength is a parameter used to pass data into the function any_square.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#modify-and-make-2",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#modify-and-make-2",
+    "title": "5. Turtles and Loops 2",
+    "section": "Modify and Make",
+    "text": "Modify and Make\nNow complete these tasks:\n\nModify your square function so that you can input the length of the sides and draw squares of different sizes\n\nModify your triangle function so that you can input the length of the sides and draw triangles of different sizes\n\nExtension:\nWrite a general-purpose function polygon(sides) so that polygon(4) will draw a square and polygon(6) will draw a hexagon.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#review",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#review",
+    "title": "5. Turtles and Loops 2",
+    "section": "Review",
+    "text": "Review\nWrite out what code you might need in house() to draw a house, using only the functions square() and triangle().\nfrom turtle import *\n\ndef square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\n\ndef triangle(length):\n    for counter in range(3):\n        forward(length)\n        right(120)\n\ndef house():\n    # your code goes here\n\nhouse()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/5. Turtles and Loops 2.html#key-concepts",
+    "href": "8. Programming Concepts/5. Turtles and Loops 2.html#key-concepts",
+    "title": "5. Turtles and Loops 2",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nThe for loop is one kind of loop.\n\nIt uses a counter which takes on a value every time the loop iterates.\n\nIn the syllabus, this is called a count controlled loop.\n\nThe range() function indicates how many times the statement will repeat. For example:\n\nrange(4) means repeat 4 times\n\nrange(10) means repeat 10 times\n\n\nIn fact, range(4) generates four numbers: 0, 1, 2, 3.\n\nThe counter takes on each value one at a time.\n\nBecause there are four numbers to take the value of, there are four repeats.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "5. Turtles and Loops 2"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#lesson-objectives",
+    "title": "1. Recap",
+    "section": "Lesson objectives",
+    "text": "Lesson objectives\nBy the end of this lesson you will be able to:\n\nWrite simple Python programs\n\nRead input from the keyboard with input()\n\nWrite print() statements that include a variable\n\nYou should understand what print() and input() do and how to use them in a Python program."
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#predict",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#predict",
+    "title": "1. Recap",
+    "section": "Predict",
+    "text": "Predict\nDiscuss in pairs: what does this code do?\nname = \"Billy\"\nprint(\"We want to know if you like programming!\")\nprint()\nprint(\"Do you like programming \" + name + \"?\")\nanswer = input() # Let's say user enters \"Yes\"\nprint(\"Great! You said \" + answer + \"!!\")\nprint(\"Let's learn some Python today\")"
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#run",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#run",
+    "title": "1. Recap",
+    "section": "Run",
+    "text": "Run\n\n\nWe want to know if you like programming!\n\nDo you like programming Billy?\n&gt; Yes\nGreat! You said Yes!!\nLet's learn some Python today"
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#investigate",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#investigate",
+    "title": "1. Recap",
+    "section": "Investigate",
+    "text": "Investigate\nAnswer on the sheet or in your exercise book:\n\nHow many variables can you find in the program, and what are they used for?\n\nprint() is a function that displays to the screen. What other function is used, and what does it do?\n\nWhat is the + being used for in this program?\n\nWhat happens when you call print() with nothing inside the brackets?"
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#modify",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#modify",
+    "title": "1. Recap",
+    "section": "Modify",
+    "text": "Modify\n\nChange the program so it uses your name instead of “Billy”.\n\nMake it so the user can type the answer on the same line as the question.\n\nAsk the user their name at the beginning of the program.\n\nAsk the user three questions (e.g. name, breakfast, favourite colour). Give a suitable response after each answer.\n\nAsk another person to try your program."
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#extension",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#extension",
+    "title": "1. Recap",
+    "section": "Extension",
+    "text": "Extension\n\nAdd simple validation (reject blank answers, ask again).\n\nPersonalise the final message using all three answers.\n\nChallenge: format output with f-strings instead of concatenation."
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#debugging",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#debugging",
+    "title": "1. Recap",
+    "section": "Debugging",
+    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\nname = \"Billy\"\nprint(\"We want to know if you like progamming!)\nprint()\nprint(\"Do you like programming \" + Name + \"?\")\nanswer = input(\nPrint(\"Great! You said \" + anwer + \"!\")\nprint(\"Let's learn some Python today\")"
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap._rjs.html#answers",
+    "href": "8. Programming Concepts/1. Recap._rjs.html#answers",
+    "title": "1. Recap",
+    "section": "Answers",
+    "text": "Answers\n\nMissing close quotation marks on line 2.\nWrong variable name (capitalised) on line 4.\nMissing close parentheses on line 5.\nWrong function name (capitalised) on line 6.\nWrong variable name (typo) on line 6."
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html",
+    "href": "8. Programming Concepts/1. Recap.html",
+    "title": "1. Recap",
+    "section": "",
+    "text": "By the end of this lesson you will be able to:\n\nWrite simple Python programs\n\nRead input from the keyboard with input()\n\nWrite print() statements that include a variable\n\nYou should understand what print() and input() do and how to use them in a Python program.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#lesson-objectives",
+    "href": "8. Programming Concepts/1. Recap.html#lesson-objectives",
+    "title": "1. Recap",
+    "section": "",
+    "text": "By the end of this lesson you will be able to:\n\nWrite simple Python programs\n\nRead input from the keyboard with input()\n\nWrite print() statements that include a variable\n\nYou should understand what print() and input() do and how to use them in a Python program.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#predict",
+    "href": "8. Programming Concepts/1. Recap.html#predict",
+    "title": "1. Recap",
+    "section": "Predict",
+    "text": "Predict\nDiscuss in pairs: what does this code do?\nname = \"Billy\"\nprint(\"We want to know if you like programming!\")\nprint()\nprint(\"Do you like programming \" + name + \"?\")\nanswer = input() # Let's say user enters \"Yes\"\nprint(\"Great! You said \" + answer + \"!!\")\nprint(\"Let's learn some Python today\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#run",
+    "href": "8. Programming Concepts/1. Recap.html#run",
+    "title": "1. Recap",
+    "section": "Run",
+    "text": "Run\n\n\nWe want to know if you like programming!\n\nDo you like programming Billy?\n&gt; Yes\nGreat! You said Yes!!\nLet's learn some Python today",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#investigate",
+    "href": "8. Programming Concepts/1. Recap.html#investigate",
+    "title": "1. Recap",
+    "section": "Investigate",
+    "text": "Investigate\nAnswer on the sheet or in your exercise book:\n\nHow many variables can you find in the program, and what are they used for?\n\nprint() is a function that displays to the screen. What other function is used, and what does it do?\n\nWhat is the + being used for in this program?\n\nWhat happens when you call print() with nothing inside the brackets?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#modify",
+    "href": "8. Programming Concepts/1. Recap.html#modify",
+    "title": "1. Recap",
+    "section": "Modify",
+    "text": "Modify\n\nChange the program so it uses your name instead of “Billy”.\n\nMake it so the user can type the answer on the same line as the question.\n\nAsk the user their name at the beginning of the program.\n\nAsk the user three questions (e.g. name, breakfast, favourite colour). Give a suitable response after each answer.\n\nAsk another person to try your program.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#extension",
+    "href": "8. Programming Concepts/1. Recap.html#extension",
+    "title": "1. Recap",
+    "section": "Extension",
+    "text": "Extension\n\nAdd simple validation (reject blank answers, ask again).\n\nPersonalise the final message using all three answers.\n\nChallenge: format output with f-strings instead of concatenation.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#debugging",
+    "href": "8. Programming Concepts/1. Recap.html#debugging",
+    "title": "1. Recap",
+    "section": "Debugging",
+    "text": "Debugging\nThere are five mistakes in this code.\n- Work with a partner to find and fix them.\n- Explain each bug and the fix in a sentence.\nname = \"Billy\"\nprint(\"We want to know if you like progamming!)\nprint()\nprint(\"Do you like programming \" + Name + \"?\")\nanswer = input(\nPrint(\"Great! You said \" + anwer + \"!\")\nprint(\"Let's learn some Python today\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/1. Recap.html#answers",
+    "href": "8. Programming Concepts/1. Recap.html#answers",
+    "title": "1. Recap",
+    "section": "Answers",
+    "text": "Answers\n\nMissing close quotation marks on line 2.\nWrong variable name (capitalised) on line 4.\nMissing close parentheses on line 5.\nWrong function name (capitalised) on line 6.\nWrong variable name (typo) on line 6.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "1. Recap"
+    ]
+  }
+]
