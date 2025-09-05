@@ -834,5 +834,539 @@
       "8. Programming Concepts",
       "1. Recap"
     ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html",
+    "href": "8. Programming Concepts/6. While Loops.html",
+    "title": "6. While Loops",
+    "section": "",
+    "text": "What does this code do? Write down the output.\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#predict",
+    "href": "8. Programming Concepts/6. While Loops.html#predict",
+    "title": "6. While Loops",
+    "section": "",
+    "text": "What does this code do? Write down the output.\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#run",
+    "href": "8. Programming Concepts/6. While Loops.html#run",
+    "title": "6. While Loops",
+    "section": "Run",
+    "text": "Run\nNow run it. Were you correct?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#lesson-objectives",
+    "href": "8. Programming Concepts/6. While Loops.html#lesson-objectives",
+    "title": "6. While Loops",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nIntroduce the while loop in Python\n\nLearn to use a while loop in a program\n\nLearn to trace a program to keep track of what it is doing",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#invesigate",
+    "href": "8. Programming Concepts/6. While Loops.html#invesigate",
+    "title": "6. While Loops",
+    "section": "Invesigate",
+    "text": "Invesigate\nTo work out what a program will do, it can be helpful to perform a trace.\ncounter = 1\nwhile counter &lt; 4:\n    print(\"Happy days\")\n    counter = counter + 1\nprint(\"End of program\")\nThis means doing the following:\n\nCreating a trace table for the values of variables\nDrawing arrows to show the order of execution\nWriting down what is printed at each step",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#your-turn",
+    "href": "8. Programming Concepts/6. While Loops.html#your-turn",
+    "title": "6. While Loops",
+    "section": "Your Turn",
+    "text": "Your Turn\nWhat is printed?\ndef input_name():\n    name = input(\"What is your name? \")\n    counter = 1\n    while counter &lt;= 4:\n        print(\"Hello \" + name)\n        counter = counter + 1\n    print(\"Goodbye \" + name)",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#make",
+    "href": "8. Programming Concepts/6. While Loops.html#make",
+    "title": "6. While Loops",
+    "section": "Make",
+    "text": "Make\n\nWrite a program that writes “Today is Monday” one hundred times using a while loop. Compare this to the way that we might have done this last week with a for loop.\nWrite a program that asks the user for the name of the recent storm and keeps asking until they put in the name “Doris”. Here is some code to get your started.\n\nprint(\"What is the name of the recent storm? \")\nanswer = input()\nOR\nanswer = input(\"What is the name of the recent storm? \")\n\nWrite a program that asks the user for a number until they put in 99. When they put in 99 the program stops.\nWrite a function bored() using a while loop that has the output shown to the right. Start with:\n\ndef bored():\nExample run:\n&gt;&gt;&gt; bored()\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? y\nGot to you in the end!!\n\nWrite a program that prints 1 to 10 on separate lines. You can do this with a while loop or a for loop. Try to do it both ways.\nNow change your program from (5) so that it prints the numbers from 10–1.\nThe program below asks the user for a password. When does the program stop? Run it and see.\n\nNext add some code to count how many tries the user has had and print that out at the end of the program.\nHow else might you improve this program?\ndef logging_in():\n    print(\"Enter your password on the next line \")\n    password = input()\n    while password != \"secret\":\n        print(\"That password is not the one stored \")\n        print(\"Try again!\")\n        password = input()\n    print(\"Yes that's the correct password!\")\n\nImprove the quiz you wrote in week 3 by adding a while loop. Keep asking the question until the user gets it right.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops.html#review",
+    "href": "8. Programming Concepts/6. While Loops.html#review",
+    "title": "6. While Loops",
+    "section": "Review",
+    "text": "Review\nMatch the keyword to the code\nA. Iteration\nB. Selection\nC. Sequence\nNow write three more examples of sequence, selection, iteration.\n#1\nwhile number &lt;= 5:\n    print(\"Hello\")\n    number = number + 1\n\n#2\nnumber1 = 5\nnumber2 = 10\nsum_add = number1 + number2\nsum_mult = number1 * number2\n\n#3\nif weather == \"raining\":\n    print(\"Take an umbrella!\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "6. While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#predict",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#predict",
+    "title": "6. While Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat does this code do? Write down the output.\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()"
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#run",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#run",
+    "title": "6. While Loops",
+    "section": "Run",
+    "text": "Run\nNow run it. Were you correct?"
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#lesson-objectives",
+    "title": "6. While Loops",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nIntroduce the while loop in Python\n\nLearn to use a while loop in a program\n\nLearn to trace a program to keep track of what it is doing"
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#invesigate",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#invesigate",
+    "title": "6. While Loops",
+    "section": "Invesigate",
+    "text": "Invesigate\nTo work out what a program will do, it can be helpful to perform a trace.\ncounter = 1\nwhile counter &lt; 4:\n    print(\"Happy days\")\n    counter = counter + 1\nprint(\"End of program\")\nThis means doing the following:\n\nCreating a trace table for the values of variables\nDrawing arrows to show the order of execution\nWriting down what is printed at each step"
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#your-turn",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#your-turn",
+    "title": "6. While Loops",
+    "section": "Your Turn",
+    "text": "Your Turn\nWhat is printed?\ndef input_name():\n    name = input(\"What is your name? \")\n    counter = 1\n    while counter &lt;= 4:\n        print(\"Hello \" + name)\n        counter = counter + 1\n    print(\"Goodbye \" + name)"
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#make",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#make",
+    "title": "6. While Loops",
+    "section": "Make",
+    "text": "Make\n\nWrite a program that writes “Today is Monday” one hundred times using a while loop. Compare this to the way that we might have done this last week with a for loop.\nWrite a program that asks the user for the name of the recent storm and keeps asking until they put in the name “Doris”. Here is some code to get your started.\n\nprint(\"What is the name of the recent storm? \")\nanswer = input()\nOR\nanswer = input(\"What is the name of the recent storm? \")\n\nWrite a program that asks the user for a number until they put in 99. When they put in 99 the program stops.\nWrite a function bored() using a while loop that has the output shown to the right. Start with:\n\ndef bored():\nExample run:\n&gt;&gt;&gt; bored()\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? n\nAre you bored yet? y\nGot to you in the end!!\n\nWrite a program that prints 1 to 10 on separate lines. You can do this with a while loop or a for loop. Try to do it both ways.\nNow change your program from (5) so that it prints the numbers from 10–1.\nThe program below asks the user for a password. When does the program stop? Run it and see.\n\nNext add some code to count how many tries the user has had and print that out at the end of the program.\nHow else might you improve this program?\ndef logging_in():\n    print(\"Enter your password on the next line \")\n    password = input()\n    while password != \"secret\":\n        print(\"That password is not the one stored \")\n        print(\"Try again!\")\n        password = input()\n    print(\"Yes that's the correct password!\")\n\nImprove the quiz you wrote in week 3 by adding a while loop. Keep asking the question until the user gets it right."
+  },
+  {
+    "objectID": "8. Programming Concepts/6. While Loops._rjs.html#review",
+    "href": "8. Programming Concepts/6. While Loops._rjs.html#review",
+    "title": "6. While Loops",
+    "section": "Review",
+    "text": "Review\nMatch the keyword to the code\nA. Iteration\nB. Selection\nC. Sequence\nNow write three more examples of sequence, selection, iteration.\n#1\nwhile number &lt;= 5:\n    print(\"Hello\")\n    number = number + 1\n\n#2\nnumber1 = 5\nnumber2 = 10\nsum_add = number1 + number2\nsum_mult = number1 * number2\n\n#3\nif weather == \"raining\":\n    print(\"Take an umbrella!\")"
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html",
+    "href": "8. Programming Concepts/7. More While Loops.html",
+    "title": "7. More While Loops",
+    "section": "",
+    "text": "What does this code do?\ndef pizza():\n    print(\"What toppings would you like on your pizza? All pizzas have cheese.\")\n    print(\"Enter X when you have finished adding toppings.\")\n    toppings = \"\"\n    next_topping = \"\"\n\n    while next_topping != \"X\":\n        print(\"So far you have a pizza with cheese \" + toppings)\n        next_topping = input(\"Enter topping ... \")\n        toppings = toppings + \" and \" + next_topping\n        print(\"Add your next topping (X when finished)\")\n\n    print(\"Your pizza will have cheese \" + toppings + \". Enjoy!\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#investigate",
+    "href": "8. Programming Concepts/7. More While Loops.html#investigate",
+    "title": "7. More While Loops",
+    "section": "",
+    "text": "Spot the errors in this program. How many can you find?\ndef example():\n    more_pets = \"y\"\n    print(\"Tell me about the pets do you have at home?\")\n    print()\n    while more_pets == \"y\":\n        next_pet = input(\"Enter your dog's name \")\n        print(\"Thanks for adding \" + next_pet)\n        more_pets = input(\"Do you have any more pets? (y/n)\")\n\n    print(\"End of program\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#lesson-objectives",
+    "href": "8. Programming Concepts/7. More While Loops.html#lesson-objectives",
+    "title": "7. More While Loops",
+    "section": "Lesson objectives",
+    "text": "Lesson objectives\n\nPractise more while loops in bigger programs\n\nAdd an if statement to make a while loop program more user-friendly\n\nKeep adding to a string variable while the program is running\n\n(Extension) Use a random function to generate a random number in a program",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#investigate-1",
+    "href": "8. Programming Concepts/7. More While Loops.html#investigate-1",
+    "title": "7. More While Loops",
+    "section": "Investigate",
+    "text": "Investigate\nWhat did these programs do?\nFor loop\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\nWhile loop\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()\nWhat is the difference between the two types of loop?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#for-loops-and-while-loops",
+    "href": "8. Programming Concepts/7. More While Loops.html#for-loops-and-while-loops",
+    "title": "7. More While Loops",
+    "section": "For Loops and While Loops",
+    "text": "For Loops and While Loops\n\nCount Controlled: repeats a group of statements a set number of times, for example, a for loop.\nCondition Controlled: repeats a group of statements until a condition is met, for example a while loop.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#predict",
+    "href": "8. Programming Concepts/7. More While Loops.html#predict",
+    "title": "7. More While Loops",
+    "section": "",
+    "text": "What does this code do?\ndef pizza():\n    print(\"What toppings would you like on your pizza? All pizzas have cheese.\")\n    print(\"Enter X when you have finished adding toppings.\")\n    toppings = \"\"\n    next_topping = \"\"\n\n    while next_topping != \"X\":\n        print(\"So far you have a pizza with cheese \" + toppings)\n        next_topping = input(\"Enter topping ... \")\n        toppings = toppings + \" and \" + next_topping\n        print(\"Add your next topping (X when finished)\")\n\n    print(\"Your pizza will have cheese \" + toppings + \". Enjoy!\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#run",
+    "href": "8. Programming Concepts/7. More While Loops.html#run",
+    "title": "7. More While Loops",
+    "section": "Run",
+    "text": "Run\nRun the program to see if you were correct.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#investigate-2",
+    "href": "8. Programming Concepts/7. More While Loops.html#investigate-2",
+    "title": "7. More While Loops",
+    "section": "Investigate",
+    "text": "Investigate\n\nHow many times will this program repeat?\n\nWhat would happen if you entered “3” as a choice?\n\nGive an example of a count controlled loop used in this program.\n\nGive an example of a condition controlled loop used in this program.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#modify-and-make",
+    "href": "8. Programming Concepts/7. More While Loops.html#modify-and-make",
+    "title": "7. More While Loops",
+    "section": "Modify and Make",
+    "text": "Modify and Make\n\nImprove the pizza program so that it doesn’t print out “and X” at the end. Add an if statement to do this.\nWrite a version of the game “I went shopping and …”. Then try it on somebody who can’t see the computer to test if they can remember everything the computer has stored. The game should stop when the user presses the enter key rather than adding another item. See the sheet for example output.\nImprove the version so that it doesn’t end with “and”. (This exercise is similar to exercise 1.)\nBelow is a program for a guess the number game that will only run once. The computer comes up with a random number and the user has to guess it.\n\n# guessing game starter\nimport random\n\ndef guessing():\n    print(\"The computer is thinking of a number ... \")\n    computer_number = random.randint(1, 100)\n    print(\"Can you guess the computer’s number? \")\n    guess = int(input(\"Enter your guess here: \"))\n    if guess == computer_number:\n        print(\"Yes! You guessed it! \")\n    else:\n        print(\"No, sorry that wasn't it.\")\nModify this program using a while loop so that it keeps asking the user for another number until they guess it correctly. If they guess the number correctly it should display a well done message which includes their name.\n\nIf they guess a number that is higher than the actual number, output “Too high”.\nIf they guess a number that is lower than the actual number, output “Too low”.\nEnsure you add comments explaining your code.\n\nExtension Task: Try the following statements out in the Python shell (not in a new file).\n&gt;&gt;&gt; ord(\"a\")\n97\n&gt;&gt;&gt; ord(\"A\")\n65\n&gt;&gt;&gt; chr(97)\n'a'\n&gt;&gt;&gt; chr(65)\n'A'\n&gt;&gt;&gt; chr(66)\n'B'\n&gt;&gt;&gt; chr(67)\n'C'\nord() and chr() are functions that you can use to work out the ASCII code in decimal for characters that are entered in the keyboard.\n\nWrite a program that will write out all the letters from “a” to “z” using the chr function and either a for loop or a while loop.\nWrite a program that will ask the user for a character and output its ASCII value.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#review",
+    "href": "8. Programming Concepts/7. More While Loops.html#review",
+    "title": "7. More While Loops",
+    "section": "Review",
+    "text": "Review\nWould you use a for loop or a while loop for these programs?\n\nTo input 10 numbers\n\nTo ask the user to enter names of their brothers and sisters\n\nTo calculate the average of 7 numbers\n\nTo input the names of a team of netball players\n\nTo let the user enter their password until it is correct",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#investigate",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#investigate",
+    "title": "More While Loops",
+    "section": "Investigate",
+    "text": "Investigate\nSpot the errors in this program. How many can you find?\ndef example():\n    more_pets = \"y\"\n    print(\"Tell me about the pets do you have at home?\")\n    print()\n    while more_pets == \"y\":\n        next_pet = input(\"Enter your dog's name \")\n        print(\"Thanks for adding \" + next_pet)\n        more_pets = input(\"Do you have any more pets? (y/n)\")\n\n    print(\"End of program\")"
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#lesson-objectives",
+    "title": "7. More While Loops",
+    "section": "Lesson objectives",
+    "text": "Lesson objectives\n\nPractise more while loops in bigger programs\n\nAdd an if statement to make a while loop program more user-friendly\n\nKeep adding to a string variable while the program is running\n\n(Extension) Use a random function to generate a random number in a program"
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#investigate-1",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#investigate-1",
+    "title": "More While Loops",
+    "section": "Investigate",
+    "text": "Investigate\nWhat did these programs do?\nFor loop\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\nWhile loop\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()\nWhat is the difference between the two types of loop?"
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#for-loops-and-while-loops",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#for-loops-and-while-loops",
+    "title": "More While Loops",
+    "section": "For Loops and While Loops",
+    "text": "For Loops and While Loops\n\nCount Controlled: repeats a group of statements a set number of times, for example, a for loop.\nCondition Controlled: repeats a group of statements until a condition is met, for example a while loop."
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#predict",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#predict",
+    "title": "7. More While Loops",
+    "section": "Predict",
+    "text": "Predict\nWhat does this code do?\ndef pizza():\n    print(\"What toppings would you like on your pizza? All pizzas have cheese.\")\n    print(\"Enter X when you have finished adding toppings.\")\n    toppings = \"\"\n    next_topping = \"\"\n\n    while next_topping != \"X\":\n        print(\"So far you have a pizza with cheese \" + toppings)\n        next_topping = input(\"Enter topping ... \")\n        toppings = toppings + \" and \" + next_topping\n        print(\"Add your next topping (X when finished)\")\n\n    print(\"Your pizza will have cheese \" + toppings + \". Enjoy!\")"
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#run",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#run",
+    "title": "More While Loops",
+    "section": "Run",
+    "text": "Run\nRun the program to see if you were correct."
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#investigate-2",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#investigate-2",
+    "title": "More While Loops",
+    "section": "Investigate",
+    "text": "Investigate\n\nHow many times will this program repeat?\n\nWhat would happen if you entered “3” as a choice?\n\nGive an example of a count controlled loop used in this program.\n\nGive an example of a condition controlled loop used in this program."
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#modify-and-make",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#modify-and-make",
+    "title": "7. More While Loops",
+    "section": "Modify and Make",
+    "text": "Modify and Make\n\nImprove the pizza program so that it doesn’t print out “and X” at the end. Add an if statement to do this.\nWrite a version of the game “I went shopping and …”. Then try it on somebody who can’t see the computer to test if they can remember everything the computer has stored. The game should stop when the user presses the enter key rather than adding another item. See the sheet for example output.\nImprove the version so that it doesn’t end with “and”. (This exercise is similar to exercise 1.)\nBelow is a program for a guess the number game that will only run once. The computer comes up with a random number and the user has to guess it.\n\n# guessing game starter\nimport random\n\ndef guessing():\n    print(\"The computer is thinking of a number ... \")\n    computer_number = random.randint(1, 100)\n    print(\"Can you guess the computer’s number? \")\n    guess = int(input(\"Enter your guess here: \"))\n    if guess == computer_number:\n        print(\"Yes! You guessed it! \")\n    else:\n        print(\"No, sorry that wasn't it.\")\nModify this program using a while loop so that it keeps asking the user for another number until they guess it correctly. If they guess the number correctly it should display a well done message which includes their name.\n\nIf they guess a number that is higher than the actual number, output “Too high”.\nIf they guess a number that is lower than the actual number, output “Too low”.\nEnsure you add comments explaining your code.\n\nExtension Task: Try the following statements out in the Python shell (not in a new file).\n&gt;&gt;&gt; ord(\"a\")\n97\n&gt;&gt;&gt; ord(\"A\")\n65\n&gt;&gt;&gt; chr(97)\n'a'\n&gt;&gt;&gt; chr(65)\n'A'\n&gt;&gt;&gt; chr(66)\n'B'\n&gt;&gt;&gt; chr(67)\n'C'\nord() and chr() are functions that you can use to work out the ASCII code in decimal for characters that are entered in the keyboard.\n\nWrite a program that will write out all the letters from “a” to “z” using the chr function and either a for loop or a while loop.\nWrite a program that will ask the user for a character and output its ASCII value."
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#review",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#review",
+    "title": "More While Loops",
+    "section": "Review",
+    "text": "Review\nWould you use a for loop or a while loop for these programs?\n\nTo input 10 numbers\n\nTo ask the user to enter names of their brothers and sisters\n\nTo calculate the average of 7 numbers\n\nTo input the names of a team of netball players\n\nTo let the user enter their password until it is correct"
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#run-and-investigate",
+    "href": "8. Programming Concepts/7. More While Loops.html#run-and-investigate",
+    "title": "7. More While Loops",
+    "section": "Run and Investigate",
+    "text": "Run and Investigate\nRun the code and see if your prediction was correct. Then answer the questions below.\n\nWhat happens if you don’t add any toppings?\nIf you run this program and the user wants to add pineapple, olives and mushrooms, fill in the table on the sheet.\nWhy do you need a while loop?\nWhat would happen if you didn’t have the line next_topping = \"\"? (Try it and see.)\nWhat would happen if you didn’t have the line toppings = \"\"? (Try it and see.)\nWhat does this line do?\n\ntoppings = toppings + \" and \" + next_topping\n\nHow would you like to improve this program?\nNow add comments (beginning with #) to the program to make sure everything you understand is included in your program for future reference. When you think you understand how this program works then go on to the exercises.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#answers",
+    "href": "8. Programming Concepts/7. More While Loops.html#answers",
+    "title": "7. More While Loops",
+    "section": "Answers",
+    "text": "Answers\n\nWhat happens if you don’t add any toppings? Fill in the table\n\nWhy do you need a while loop?\n\nWhat would happen if you didn’t have the line next_topping = \"\" ?\n\nWhat would happen if you didn’t have the line toppings = \"\" ?\n\nWhat does this line do?\n\nHow would you like to improve this program?\n\n\n\n\nplaceholder",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#tasks-in-pairs-20-mins",
+    "href": "8. Programming Concepts/7. More While Loops.html#tasks-in-pairs-20-mins",
+    "title": "7. More While Loops",
+    "section": "Tasks in pairs – 20 mins",
+    "text": "Tasks in pairs – 20 mins\nDo the programming exercises in pairs from the sheet (Task 4):\n\nImprove the pizza program so that it doesn’t print out “and X” at the end.\n\nAdd an if statement to do this.\n\nWrite a version of the game “I went shopping and …”.\n\nThen try it on somebody who can’t see the computer to test if they can remember everything the computer has stored.\n\nThe game should stop when the user presses the enter key rather than adding another item.\n\n\n(There are extension exercises if you finish early.)\n\n\n\nplaceholder",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops.html#review-10-mins",
+    "href": "8. Programming Concepts/7. More While Loops.html#review-10-mins",
+    "title": "7. More While Loops",
+    "section": "Review – 10 mins",
+    "text": "Review – 10 mins\nIn the last few lessons you have learned about if statements, for loops, and while loops – these are the most useful and important elements of any programming language.\nTask: Imagine you are writing a letter to somebody in the year below who is just starting to learn programming. Write down 5 tips you would give them.\n\nWhat sometimes goes wrong?\n\nHow can you fix it?\n\nHow can you get better at programming?\n\nWhat do you do if you get stuck?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "7. More While Loops"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html",
+    "href": "8. Programming Concepts/8 Menus.html",
+    "title": "8. Menus",
+    "section": "",
+    "text": "Spot the errors in this program. How many can you find?\ndef example():\n    more_pets = \"y\"\n    print(\"Tell me about the pets do you have at home?\")\n    print()\n    while more_pets == \"y\":\n        next_pet = input(\"Enter your dog's name \")\n        print(\"Thanks for adding \" + next_pet)\n        more_pets = input(\"Do you have any more pets? (y/n)\")\n\n    print(\"End of program\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#investigate",
+    "href": "8. Programming Concepts/8 Menus.html#investigate",
+    "title": "8. Menus",
+    "section": "",
+    "text": "Spot the errors in this program. How many can you find?\ndef example():\n    more_pets = \"y\"\n    print(\"Tell me about the pets do you have at home?\")\n    print()\n    while more_pets == \"y\":\n        next_pet = input(\"Enter your dog's name \")\n        print(\"Thanks for adding \" + next_pet)\n        more_pets = input(\"Do you have any more pets? (y/n)\")\n\n    print(\"End of program\")",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#lesson-objectives",
+    "href": "8. Programming Concepts/8 Menus.html#lesson-objectives",
+    "title": "8. Menus",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nLook at the differences between for loops and while loops\n\nUse a while loop to develop a menu to run a selection of different Python programs",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#investigate-1",
+    "href": "8. Programming Concepts/8 Menus.html#investigate-1",
+    "title": "8. Menus",
+    "section": "Investigate",
+    "text": "Investigate\nWhat did these programs do?\nFor loop\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\nWhile loop\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()\nWhat is the difference between the two types of loop?",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#for-loops-and-while-loops",
+    "href": "8. Programming Concepts/8 Menus.html#for-loops-and-while-loops",
+    "title": "8. Menus",
+    "section": "For Loops and While Loops",
+    "text": "For Loops and While Loops\n\nCount Controlled: repeats a group of statements a set number of times, for example, a for loop.\nCondition Controlled: repeats a group of statements until a condition is met, for example a while loop.\nTechnically a while loop is called a pre-condition loop because it checks the condition before the first iteration. Other langugages also have post-condition loops where one iteration always happens before the condition is first checked.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#predict",
+    "href": "8. Programming Concepts/8 Menus.html#predict",
+    "title": "8. Menus",
+    "section": "Predict",
+    "text": "Predict\nWork out what this program does – there is a lot going on!\ndef message():\n    message = input(\"Enter your message: \")\n    for i in range(10):\n        print(message)\n\ndef timesTable():\n    num = int(input(\"Enter a number: \"))\n    for i in range(1, 11):\n        print(i * num)\n\ndef main():\n    choice = \"\"\n    while choice != \"3\":\n        print(\"1. Message Repeater\")\n        print(\"2. Time Table\")\n        print(\"3. Exit\")\n        print(\"Enter your choice:  \")\n        choice = input()\n        if choice == \"1\":\n            message()\n        elif choice == \"2\":\n            timesTable()\n    print(\"Goodbye\")\n\nmain()",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#run",
+    "href": "8. Programming Concepts/8 Menus.html#run",
+    "title": "8. Menus",
+    "section": "Run",
+    "text": "Run\nRun the program to see if you were correct.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#investigate-2",
+    "href": "8. Programming Concepts/8 Menus.html#investigate-2",
+    "title": "8. Menus",
+    "section": "Investigate",
+    "text": "Investigate\n\nHow many times will this program repeat?\n\nWhat would happen if you entered “3” as a choice?\n\nGive an example of a count controlled loop used in this program.\n\nGive an example of a condition controlled loop used in this program.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#modify-and-make",
+    "href": "8. Programming Concepts/8 Menus.html#modify-and-make",
+    "title": "8. Menus",
+    "section": "Modify and Make",
+    "text": "Modify and Make\n\nUpdate the message function to allow the user to choose how many times their message is repeated.\n\nExtend the timetable program to enable a given number to be multiplied to the power of numbers 1 to 5.\n\nAdd a new function and update the if statement to allow the user to choose the new 3rd option.\n\nUse the ** exponent operator in your calculation.",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus.html#review",
+    "href": "8. Programming Concepts/8 Menus.html#review",
+    "title": "8. Menus",
+    "section": "Review",
+    "text": "Review\nWould you use a for loop or a while loop for these programs?\n\nTo input 10 numbers\n\nTo ask the user to enter names of their brothers and sisters\n\nTo calculate the average of 7 numbers\n\nTo input the names of a team of netball players\n\nTo let the user enter their password until it is correct",
+    "crumbs": [
+      "8. Programming Concepts",
+      "8. Menus"
+    ]
+  },
+  {
+    "objectID": "8. Programming Concepts/7. More While Loops._rjs.html#run-and-investigate",
+    "href": "8. Programming Concepts/7. More While Loops._rjs.html#run-and-investigate",
+    "title": "7. More While Loops",
+    "section": "Run and Investigate",
+    "text": "Run and Investigate\nRun the code and see if your prediction was correct. Then answer the questions below.\n\nWhat happens if you don’t add any toppings?\nIf you run this program and the user wants to add pineapple, olives and mushrooms, fill in the table on the sheet.\nWhy do you need a while loop?\nWhat would happen if you didn’t have the line next_topping = \"\"? (Try it and see.)\nWhat would happen if you didn’t have the line toppings = \"\"? (Try it and see.)\nWhat does this line do?\n\ntoppings = toppings + \" and \" + next_topping\n\nHow would you like to improve this program?\nNow add comments (beginning with #) to the program to make sure everything you understand is included in your program for future reference. When you think you understand how this program works then go on to the exercises."
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#investigate",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#investigate",
+    "title": "8. Menus",
+    "section": "Investigate",
+    "text": "Investigate\nSpot the errors in this program. How many can you find?\ndef example():\n    more_pets = \"y\"\n    print(\"Tell me about the pets do you have at home?\")\n    print()\n    while more_pets == \"y\":\n        next_pet = input(\"Enter your dog's name \")\n        print(\"Thanks for adding \" + next_pet)\n        more_pets = input(\"Do you have any more pets? (y/n)\")\n\n    print(\"End of program\")"
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#lesson-objectives",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#lesson-objectives",
+    "title": "8. Menus",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nLook at the differences between for loops and while loops\n\nUse a while loop to develop a menu to run a selection of different Python programs"
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#investigate-1",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#investigate-1",
+    "title": "8. Menus",
+    "section": "Investigate",
+    "text": "Investigate\nWhat did these programs do?\nFor loop\ndef any_square(length):\n    for counter in range(4):\n        forward(length)\n        right(90)\nWhile loop\ndef starter():\n    number = 0\n    while number &lt;= 5:\n        print(\"Hello\")\n        number = number + 1\n    print(\"Goodbye\")\n\nstarter()\nWhat is the difference between the two types of loop?"
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#for-loops-and-while-loops",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#for-loops-and-while-loops",
+    "title": "8. Menus",
+    "section": "For Loops and While Loops",
+    "text": "For Loops and While Loops\n\nCount Controlled: repeats a group of statements a set number of times, for example, a for loop.\nCondition Controlled: repeats a group of statements until a condition is met, for example a while loop."
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#predict",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#predict",
+    "title": "8. Menus",
+    "section": "Predict",
+    "text": "Predict\nWork out what this program does – there is a lot going on!\ndef message():\n    message = input(\"Enter your message: \")\n    for i in range(10):\n        print(message)\n\ndef timesTable():\n    num = int(input(\"Enter a number: \"))\n    for i in range(1, 11):\n        print(i * num)\n\ndef main():\n    choice = \"\"\n    while choice != \"3\":\n        print(\"1. Message Repeater\")\n        print(\"2. Time Table\")\n        print(\"3. Exit\")\n        print(\"Enter your choice:  \")\n        choice = input()\n        if choice == \"1\":\n            message()\n        elif choice == \"2\":\n            timesTable()\n    print(\"Goodbye\")\n\nmain()"
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#run",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#run",
+    "title": "8. Menus",
+    "section": "Run",
+    "text": "Run\nRun the program to see if you were correct."
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#investigate-2",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#investigate-2",
+    "title": "8. Menus",
+    "section": "Investigate",
+    "text": "Investigate\n\nHow many times will this program repeat?\n\nWhat would happen if you entered “3” as a choice?\n\nGive an example of a count controlled loop used in this program.\n\nGive an example of a condition controlled loop used in this program."
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#modify-and-make",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#modify-and-make",
+    "title": "8. Menus",
+    "section": "Modify and Make",
+    "text": "Modify and Make\n\nUpdate the message function to allow the user to choose how many times their message is repeated.\n\nExtend the timetable program to enable a given number to be multiplied to the power of numbers 1 to 5.\n\nAdd a new function and update the if statement to allow the user to choose the new 3rd option.\n\nUse the ** exponent operator in your calculation."
+  },
+  {
+    "objectID": "8. Programming Concepts/8 Menus._rjs.html#review",
+    "href": "8. Programming Concepts/8 Menus._rjs.html#review",
+    "title": "8. Menus",
+    "section": "Review",
+    "text": "Review\nWould you use a for loop or a while loop for these programs?\n\nTo input 10 numbers\n\nTo ask the user to enter names of their brothers and sisters\n\nTo calculate the average of 7 numbers\n\nTo input the names of a team of netball players\n\nTo let the user enter their password until it is correct"
   }
 ]

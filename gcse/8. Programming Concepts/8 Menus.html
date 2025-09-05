@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5. Turtles and Loops 2 – GCSE Computer Science</title>
+<title>8. Menus – GCSE Computer Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">5. Turtles and Loops 2</h1>
+          <h1 class="quarto-secondary-nav-title">8. Menus</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -179,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../8. Programming Concepts/5. Turtles and Loops 2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../8. Programming Concepts/5. Turtles and Loops 2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">5. Turtles and Loops 2</span></a>
   </div>
 </li>
@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../8. Programming Concepts/8 Menus.html" class="sidebar-item-text sidebar-link">
+  <a href="../8. Programming Concepts/8 Menus.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">8. Menus</span></a>
   </div>
 </li>
@@ -213,25 +213,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recap" id="toc-recap" class="nav-link active" data-scroll-target="#recap">Recap</a></li>
+  <li><a href="#investigate" id="toc-investigate" class="nav-link active" data-scroll-target="#investigate">Investigate</a></li>
   <li><a href="#lesson-objectives" id="toc-lesson-objectives" class="nav-link" data-scroll-target="#lesson-objectives">Lesson Objectives</a></li>
-  <li><a href="#predict-and-run" id="toc-predict-and-run" class="nav-link" data-scroll-target="#predict-and-run">Predict and Run</a></li>
-  <li><a href="#modify-and-make" id="toc-modify-and-make" class="nav-link" data-scroll-target="#modify-and-make">Modify and Make</a></li>
-  <li><a href="#modify-and-make-1" id="toc-modify-and-make-1" class="nav-link" data-scroll-target="#modify-and-make-1">Modify and Make</a></li>
+  <li><a href="#investigate-1" id="toc-investigate-1" class="nav-link" data-scroll-target="#investigate-1">Investigate</a></li>
+  <li><a href="#for-loops-and-while-loops" id="toc-for-loops-and-while-loops" class="nav-link" data-scroll-target="#for-loops-and-while-loops">For Loops and While Loops</a></li>
   <li><a href="#predict" id="toc-predict" class="nav-link" data-scroll-target="#predict">Predict</a></li>
-  <li><a href="#using-a-parameter" id="toc-using-a-parameter" class="nav-link" data-scroll-target="#using-a-parameter">Using a Parameter</a></li>
-  <li><a href="#modify-and-make-2" id="toc-modify-and-make-2" class="nav-link" data-scroll-target="#modify-and-make-2">Modify and Make</a></li>
+  <li><a href="#run" id="toc-run" class="nav-link" data-scroll-target="#run">Run</a></li>
+  <li><a href="#investigate-2" id="toc-investigate-2" class="nav-link" data-scroll-target="#investigate-2">Investigate</a></li>
+  <li><a href="#modify-and-make" id="toc-modify-and-make" class="nav-link" data-scroll-target="#modify-and-make">Modify and Make</a></li>
   <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">Review</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="5. Turtles and Loops 2._rjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="8 Menus._rjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">5. Turtles and Loops 2</h1>
+<h1 class="title d-none d-lg-block">8. Menus</h1>
 </div>
 
 
@@ -248,176 +247,125 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<p>Can you find the errors in this program?</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> triangle():</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># this function draws a triangle</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">120</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="investigate" class="level2">
+<h2 class="anchored" data-anchor-id="investigate">Investigate</h2>
+<p>Spot the errors in this program. How many can you find?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> example():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    more_pets <span class="op">=</span> <span class="st">"y"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Tell me about the pets do you have at home?"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> more_pets <span class="op">==</span> <span class="st">"y"</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        next_pet <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your dog's name "</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Thanks for adding "</span> <span class="op">+</span> next_pet)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        more_pets <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Do you have any more pets? (y/n)"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"End of program"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="lesson-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-objectives">Lesson Objectives</h2>
-<p>In this lesson you will:</p>
 <ul>
-<li>Make more shapes using Python turtle graphics<br>
+<li>Look at the differences between <strong>for loops</strong> and <strong>while loops</strong><br>
 </li>
-<li>Practise using the <code>for</code> loop<br>
-</li>
-<li>Learn to pass data into a function using a <strong>parameter</strong><br>
-</li>
-<li>Use parameters to make more user-friendly programs</li>
+<li>Use a while loop to develop a <strong>menu</strong> to run a selection of different Python programs</li>
 </ul>
 </section>
-<section id="predict-and-run" class="level2">
-<h2 class="anchored" data-anchor-id="predict-and-run">Predict and Run</h2>
-<p>Predict what diagram this code will draw.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> demo():</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    pencolor(<span class="st">"red"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">150</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you are struggling, look at the sheet for two possible options.</p>
-</section>
-<section id="modify-and-make" class="level2">
-<h2 class="anchored" data-anchor-id="modify-and-make">Modify and Make</h2>
-<p>Using the code below, complete the tasks on the next slide.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> small_square():</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">50</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
+<section id="investigate-1" class="level2">
+<h2 class="anchored" data-anchor-id="investigate-1">Investigate</h2>
+<p>What did these programs do?</p>
+<p>For loop</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>While loop</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> starter():</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    number <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> number <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hello"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        number <span class="op">=</span> number <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Goodbye"</span>)</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> large_square():</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">150</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    small_square()</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    large_square()</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter length of the square   "</span>))</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    any_square(length)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>starter()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What is the difference between the two types of loop?</p>
 </section>
-<section id="modify-and-make-1" class="level2">
-<h2 class="anchored" data-anchor-id="modify-and-make-1">Modify and Make</h2>
-<ol type="1">
-<li>Change the starter program to make a <strong>blue hexagon</strong> using a <code>for</code> loop<br>
-</li>
-<li>Change the angle to <strong>95°</strong> and see if you can draw the following shape<br>
-</li>
-<li>The following code will draw a petal of a flower. Use it inside a <code>for</code> loop to draw a flower</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> petal():</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    circle(<span class="dv">50</span>, <span class="dv">120</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    left(<span class="dv">60</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    circle(<span class="dv">50</span>, <span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li><p>Now can you make a similar flower in two colours similar to (or better than!) the one on the sheet. Use <code>begin_fill()``,</code>fillcolor(“red”)<code>and `end_fill()</code> to colour in shapes.</p></li>
-<li><p>Use the triangle function to draw more shapes. Write a function that calls the triangle function inside a loop to make the exact picture shown on the sheet.</p></li>
-</ol>
+<section id="for-loops-and-while-loops" class="level2">
+<h2 class="anchored" data-anchor-id="for-loops-and-while-loops">For Loops and While Loops</h2>
+<ul>
+<li><p><strong>Count Controlled</strong>: repeats a group of statements a set number of times, for example, a <code>for</code> loop.</p></li>
+<li><p><strong>Condition Controlled</strong>: repeats a group of statements until a condition is met, for example a <code>while</code> loop.</p></li>
+<li><p>Technically a <code>while</code> loop is called a <strong>pre-condition</strong> loop because it checks the condition before the first iteration. Other langugages also have <strong>post-condition loops</strong> where one iteration always happens before the condition is first checked.</p></li>
+</ul>
 </section>
 <section id="predict" class="level2">
 <h2 class="anchored" data-anchor-id="predict">Predict</h2>
-<p>In pairs, predict what running the function <code>main()</code> would do.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> small_square():</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">50</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> large_square():</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">150</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    small_square()</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    large_square()</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter length of the square "</span>))</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    any_square(length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Work out what this program does – there is a lot going on!</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> message():</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    message <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your message: "</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(message)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> timesTable():</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    num <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i <span class="op">*</span> num)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    choice <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> choice <span class="op">!=</span> <span class="st">"3"</span>:</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"1. Message Repeater"</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"2. Time Table"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"3. Exit"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Enter your choice:  "</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        choice <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> choice <span class="op">==</span> <span class="st">"1"</span>:</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>            message()</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> choice <span class="op">==</span> <span class="st">"2"</span>:</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>            timesTable()</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Goodbye"</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="using-a-parameter" class="level2">
-<h2 class="anchored" data-anchor-id="using-a-parameter">Using a Parameter</h2>
-<p>Examples:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>any_square(<span class="dv">50</span>)   <span class="co"># draws a square with side length 50</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>any_square(<span class="dv">150</span>)  <span class="co"># draws a square with side length 150</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>any_square(<span class="dv">60</span>)   <span class="co"># draws a square with side length 60</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Length is a <strong>parameter</strong> used to pass data into the function <code>any_square</code>.</p>
+<section id="run" class="level2">
+<h2 class="anchored" data-anchor-id="run">Run</h2>
+<p>Run the program to see if you were correct.</p>
 </section>
-<section id="modify-and-make-2" class="level2">
-<h2 class="anchored" data-anchor-id="modify-and-make-2">Modify and Make</h2>
-<p>Now complete these tasks:</p>
-<ol type="1">
-<li>Modify your <code>square</code> function so that you can input the length of the sides and draw squares of different sizes<br>
+<section id="investigate-2" class="level2">
+<h2 class="anchored" data-anchor-id="investigate-2">Investigate</h2>
+<ul>
+<li>How many times will this program repeat?<br>
 </li>
-<li>Modify your <code>triangle</code> function so that you can input the length of the sides and draw triangles of different sizes</li>
-</ol>
-<p><strong>Extension:</strong><br>
-Write a general-purpose function <code>polygon(sides)</code> so that <code>polygon(4)</code> will draw a square and <code>polygon(6)</code> will draw a hexagon.</p>
+<li>What would happen if you entered “3” as a choice?<br>
+</li>
+<li>Give an example of a <strong>count controlled loop</strong> used in this program.<br>
+</li>
+<li>Give an example of a <strong>condition controlled loop</strong> used in this program.</li>
+</ul>
+</section>
+<section id="modify-and-make" class="level2">
+<h2 class="anchored" data-anchor-id="modify-and-make">Modify and Make</h2>
+<ul>
+<li>Update the <strong>message function</strong> to allow the user to choose how many times their message is repeated.<br>
+</li>
+<li>Extend the <strong>timetable program</strong> to enable a given number to be multiplied to the power of numbers 1 to 5.<br>
+</li>
+<li>Add a new function and update the <code>if</code> statement to allow the user to choose the new 3rd option.<br>
+</li>
+<li>Use the <code>**</code> exponent operator in your calculation.</li>
+</ul>
 </section>
 <section id="review" class="level2">
 <h2 class="anchored" data-anchor-id="review">Review</h2>
-<p>Write out what code you might need in <code>house()</code> to draw a house, using only the functions <code>square()</code> and <code>triangle()</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(length):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> triangle(length):</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">120</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> house():</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># your code goes here</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>house()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
+<p>Would you use a <strong>for loop</strong> or a <strong>while loop</strong> for these programs?</p>
 <ol type="1">
-<li>The <code>for</code> loop is one kind of loop.
-<ul>
-<li>It uses a counter which takes on a value every time the loop iterates.<br>
+<li>To input 10 numbers<br>
 </li>
-<li>In the syllabus, this is called a <strong>count controlled loop</strong>.</li>
-</ul></li>
-<li>The <code>range()</code> function indicates how many times the statement will repeat. For example:
-<ul>
-<li><code>range(4)</code> means repeat 4 times<br>
+<li>To ask the user to enter names of their brothers and sisters<br>
 </li>
-<li><code>range(10)</code> means repeat 10 times<br>
+<li>To calculate the average of 7 numbers<br>
 </li>
-</ul></li>
-<li>In fact, <code>range(4)</code> generates four numbers: <code>0, 1, 2, 3</code>.
-<ul>
-<li>The counter takes on each value one at a time.<br>
+<li>To input the names of a team of netball players<br>
 </li>
-<li>Because there are four numbers to take the value of, there are four repeats.</li>
-</ul></li>
+<li>To let the user enter their password until it is correct</li>
 </ol>
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5. Turtles and Loops 2 – GCSE Computer Science</title>
+<title>7. More While Loops – GCSE Computer Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">5. Turtles and Loops 2</h1>
+          <h1 class="quarto-secondary-nav-title">7. More While Loops</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -179,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../8. Programming Concepts/5. Turtles and Loops 2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../8. Programming Concepts/5. Turtles and Loops 2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">5. Turtles and Loops 2</span></a>
   </div>
 </li>
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../8. Programming Concepts/7. More While Loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../8. Programming Concepts/7. More While Loops.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">7. More While Loops</span></a>
   </div>
 </li>
@@ -213,25 +213,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recap" id="toc-recap" class="nav-link active" data-scroll-target="#recap">Recap</a></li>
-  <li><a href="#lesson-objectives" id="toc-lesson-objectives" class="nav-link" data-scroll-target="#lesson-objectives">Lesson Objectives</a></li>
-  <li><a href="#predict-and-run" id="toc-predict-and-run" class="nav-link" data-scroll-target="#predict-and-run">Predict and Run</a></li>
+  <li><a href="#predict" id="toc-predict" class="nav-link active" data-scroll-target="#predict">Predict</a></li>
+  <li><a href="#lesson-objectives" id="toc-lesson-objectives" class="nav-link" data-scroll-target="#lesson-objectives">Lesson objectives</a></li>
+  <li><a href="#run-and-investigate" id="toc-run-and-investigate" class="nav-link" data-scroll-target="#run-and-investigate">Run and Investigate</a></li>
   <li><a href="#modify-and-make" id="toc-modify-and-make" class="nav-link" data-scroll-target="#modify-and-make">Modify and Make</a></li>
-  <li><a href="#modify-and-make-1" id="toc-modify-and-make-1" class="nav-link" data-scroll-target="#modify-and-make-1">Modify and Make</a></li>
-  <li><a href="#predict" id="toc-predict" class="nav-link" data-scroll-target="#predict">Predict</a></li>
-  <li><a href="#using-a-parameter" id="toc-using-a-parameter" class="nav-link" data-scroll-target="#using-a-parameter">Using a Parameter</a></li>
-  <li><a href="#modify-and-make-2" id="toc-modify-and-make-2" class="nav-link" data-scroll-target="#modify-and-make-2">Modify and Make</a></li>
-  <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">Review</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="5. Turtles and Loops 2._rjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="7. More While Loops._rjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">5. Turtles and Loops 2</h1>
+<h1 class="title d-none d-lg-block">7. More While Loops</h1>
 </div>
 
 
@@ -248,176 +242,95 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<p>Can you find the errors in this program?</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> triangle():</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># this function draws a triangle</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">120</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="predict" class="level2">
+<h2 class="anchored" data-anchor-id="predict">Predict</h2>
+<p>What does this code do?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pizza():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"What toppings would you like on your pizza? All pizzas have cheese."</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Enter X when you have finished adding toppings."</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    toppings <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    next_topping <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> next_topping <span class="op">!=</span> <span class="st">"X"</span>:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"So far you have a pizza with cheese "</span> <span class="op">+</span> toppings)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        next_topping <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter topping ... "</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        toppings <span class="op">=</span> toppings <span class="op">+</span> <span class="st">" and "</span> <span class="op">+</span> next_topping</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Add your next topping (X when finished)"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Your pizza will have cheese "</span> <span class="op">+</span> toppings <span class="op">+</span> <span class="st">". Enjoy!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="lesson-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="lesson-objectives">Lesson Objectives</h2>
-<p>In this lesson you will:</p>
+<h2 class="anchored" data-anchor-id="lesson-objectives">Lesson objectives</h2>
 <ul>
-<li>Make more shapes using Python turtle graphics<br>
+<li>Practise more while loops in bigger programs<br>
 </li>
-<li>Practise using the <code>for</code> loop<br>
+<li>Add an <strong>if statement</strong> to make a while loop program more user-friendly<br>
 </li>
-<li>Learn to pass data into a function using a <strong>parameter</strong><br>
+<li>Keep adding to a string variable while the program is running<br>
 </li>
-<li>Use parameters to make more user-friendly programs</li>
+<li>(Extension) Use a <strong>random function</strong> to generate a random number in a program</li>
 </ul>
 </section>
-<section id="predict-and-run" class="level2">
-<h2 class="anchored" data-anchor-id="predict-and-run">Predict and Run</h2>
-<p>Predict what diagram this code will draw.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> demo():</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    pencolor(<span class="st">"red"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">150</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you are struggling, look at the sheet for two possible options.</p>
+<section id="run-and-investigate" class="level2">
+<h2 class="anchored" data-anchor-id="run-and-investigate">Run and Investigate</h2>
+<p>Run the code and see if your prediction was correct. Then answer the questions below.</p>
+<ol type="1">
+<li><p>What happens if you don’t add any toppings?</p></li>
+<li><p>If you run this program and the user wants to add pineapple, olives and mushrooms, fill in the table on the sheet.</p></li>
+<li><p>Why do you need a while loop?</p></li>
+<li><p>What would happen if you didn’t have the line <code>next_topping = ""</code>? (Try it and see.)</p></li>
+<li><p>What would happen if you didn’t have the line <code>toppings = ""</code>? (Try it and see.)</p></li>
+<li><p>What does this line do?</p></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>toppings <span class="op">=</span> toppings <span class="op">+</span> <span class="st">" and "</span> <span class="op">+</span> next_topping</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="7" type="1">
+<li><p>How would you like to improve this program?</p></li>
+<li><p>Now add comments (beginning with #) to the program to make sure everything you understand is included in your program for future reference. When you think you understand how this program works then go on to the exercises.</p></li>
+</ol>
 </section>
 <section id="modify-and-make" class="level2">
 <h2 class="anchored" data-anchor-id="modify-and-make">Modify and Make</h2>
-<p>Using the code below, complete the tasks on the next slide.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> small_square():</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">50</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> large_square():</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">150</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    small_square()</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    large_square()</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter length of the square   "</span>))</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    any_square(length)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="modify-and-make-1" class="level2">
-<h2 class="anchored" data-anchor-id="modify-and-make-1">Modify and Make</h2>
 <ol type="1">
-<li>Change the starter program to make a <strong>blue hexagon</strong> using a <code>for</code> loop<br>
-</li>
-<li>Change the angle to <strong>95°</strong> and see if you can draw the following shape<br>
-</li>
-<li>The following code will draw a petal of a flower. Use it inside a <code>for</code> loop to draw a flower</li>
+<li><p>Improve the <strong>pizza program</strong> so that it doesn’t print out “and X” at the end. Add an <code>if</code> statement to do this.</p></li>
+<li><p>Write a version of the game <strong>“I went shopping and …”</strong>. Then try it on somebody who can’t see the computer to test if they can remember everything the computer has stored. The game should stop when the user presses the enter key rather than adding another item. See the sheet for example output.</p></li>
+<li><p>Improve the version so that it doesn’t end with “and”. (This exercise is similar to exercise 1.)</p></li>
+<li><p>Below is a program for a guess the number game that will only run once. The computer comes up with a random number and the user has to guess it.</p></li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> petal():</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    circle(<span class="dv">50</span>, <span class="dv">120</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    left(<span class="dv">60</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    circle(<span class="dv">50</span>, <span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li><p>Now can you make a similar flower in two colours similar to (or better than!) the one on the sheet. Use <code>begin_fill()``,</code>fillcolor(“red”)<code>and `end_fill()</code> to colour in shapes.</p></li>
-<li><p>Use the triangle function to draw more shapes. Write a function that calls the triangle function inside a loop to make the exact picture shown on the sheet.</p></li>
-</ol>
-</section>
-<section id="predict" class="level2">
-<h2 class="anchored" data-anchor-id="predict">Predict</h2>
-<p>In pairs, predict what running the function <code>main()</code> would do.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> small_square():</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">50</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> large_square():</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        forward(<span class="dv">150</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    small_square()</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    large_square()</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter length of the square "</span>))</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    any_square(length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="using-a-parameter" class="level2">
-<h2 class="anchored" data-anchor-id="using-a-parameter">Using a Parameter</h2>
-<p>Examples:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> any_square(length):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>any_square(<span class="dv">50</span>)   <span class="co"># draws a square with side length 50</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>any_square(<span class="dv">150</span>)  <span class="co"># draws a square with side length 150</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>any_square(<span class="dv">60</span>)   <span class="co"># draws a square with side length 60</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Length is a <strong>parameter</strong> used to pass data into the function <code>any_square</code>.</p>
-</section>
-<section id="modify-and-make-2" class="level2">
-<h2 class="anchored" data-anchor-id="modify-and-make-2">Modify and Make</h2>
-<p>Now complete these tasks:</p>
-<ol type="1">
-<li>Modify your <code>square</code> function so that you can input the length of the sides and draw squares of different sizes<br>
-</li>
-<li>Modify your <code>triangle</code> function so that you can input the length of the sides and draw triangles of different sizes</li>
-</ol>
-<p><strong>Extension:</strong><br>
-Write a general-purpose function <code>polygon(sides)</code> so that <code>polygon(4)</code> will draw a square and <code>polygon(6)</code> will draw a hexagon.</p>
-</section>
-<section id="review" class="level2">
-<h2 class="anchored" data-anchor-id="review">Review</h2>
-<p>Write out what code you might need in <code>house()</code> to draw a house, using only the functions <code>square()</code> and <code>triangle()</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(length):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">90</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> triangle(length):</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> counter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        forward(length)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        right(<span class="dv">120</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> house():</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># your code goes here</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>house()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
-<ol type="1">
-<li>The <code>for</code> loop is one kind of loop.
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># guessing game starter</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> guessing():</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The computer is thinking of a number ... "</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    computer_number <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Can you guess the computer’s number? "</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    guess <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter your guess here: "</span>))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> guess <span class="op">==</span> computer_number:</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Yes! You guessed it! "</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"No, sorry that wasn't it."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Modify this program using a while loop so that it keeps asking the user for another number until they guess it correctly. If they guess the number correctly it should display a well done message which includes their name.</p>
 <ul>
-<li>It uses a counter which takes on a value every time the loop iterates.<br>
-</li>
-<li>In the syllabus, this is called a <strong>count controlled loop</strong>.</li>
-</ul></li>
-<li>The <code>range()</code> function indicates how many times the statement will repeat. For example:
-<ul>
-<li><code>range(4)</code> means repeat 4 times<br>
-</li>
-<li><code>range(10)</code> means repeat 10 times<br>
-</li>
-</ul></li>
-<li>In fact, <code>range(4)</code> generates four numbers: <code>0, 1, 2, 3</code>.
-<ul>
-<li>The counter takes on each value one at a time.<br>
-</li>
-<li>Because there are four numbers to take the value of, there are four repeats.</li>
-</ul></li>
+<li>If they guess a number that is higher than the actual number, output “Too high”.</li>
+<li>If they guess a number that is lower than the actual number, output “Too low”.</li>
+<li>Ensure you add comments explaining your code.</li>
+</ul>
+<p><strong>Extension Task:</strong> Try the following statements out in the Python shell (not in a new file).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">"a"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">97</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">"A"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">65</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">97</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">'a'</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">65</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">'A'</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">66</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">'B'</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">67</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">'C'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>ord()</code> and <code>chr()</code> are functions that you can use to work out the ASCII code in decimal for characters that are entered in the keyboard.</p>
+<ol start="5" type="1">
+<li><p>Write a program that will write out all the letters from “a” to “z” using the chr function and either a for loop or a while loop.</p></li>
+<li><p>Write a program that will ask the user for a character and output its ASCII value.</p></li>
 </ol>
 
 
