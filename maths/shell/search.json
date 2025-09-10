@@ -1001,7 +1001,7 @@
     "href": "Autumn 1/3. Linear Equations.html#example-fractions-leading-to-brackets",
     "title": "Linear Equations",
     "section": "Example: Fractions Leading to Brackets",
-    "text": "Example: Fractions Leading to Brackets\nIn questions where there is more than one term within the numerator or denominator, you need to remember that there are effectively ‘invisible brackets’. As before, we multiply by the lowest common multiple of the denominators.\n\\[\\begin{align*}\n\\dfrac{k-12}{4} + \\dfrac{2k+1}{2} &= k - 2 \\\\\n(k-12) \\div 4 + (2k+1) \\div 2 &= k - 2 \\\\\n4(k-12) + 2(2k+1) &= 4(k-2) \\\\\n4k - 48 + 4k + 2 &= 4k - 8 \\\\\n8k - 46 &= 4k - 8 \\\\\n8k - 4k &= -8 + 46 \\\\\n4k &= 38 \\\\\nk &= \\dfrac{38}{4} = 2\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{5p+3}{2} - \\dfrac{3p+6}{3} &= 2p - 3 \\\\\n(5p+3) \\div 2 - (3p+6) \\div 3 &= 2p - 3 \\\\\n3(5p+3) - 2(3p+6) &= 6p - 9 \\\\\n15p + 9 - 6p - 12 &= 6p - 9 \\\\\n9p - 3 &= 6p - 9 \\\\\n9p - 6p &= -9 + 3 \\\\\n3p &= -6 \\\\\np &= -2\n\\end{align*}\\]",
+    "text": "Example: Fractions Leading to Brackets\nIn questions where there is more than one term within the numerator or denominator, you need to remember that there are effectively ‘invisible brackets’. As before, we multiply by the lowest common multiple of the denominators.\n\\[\\begin{align*}\n\\dfrac{k-12}{4} + \\dfrac{2k+1}{2} &= k - 2 \\\\\n(k-12) \\div 4 + (2k+1) \\div 2 &= k - 2 \\\\\nk - 12 + 2(2k+1) &= 4(k-2) \\\\\nk - 12 + 4k + 2 &= 4k - 8 \\\\\n5k - 10 &= 4k - 8 \\\\\n5k - 4k &= -8 + 10 \\\\\nk &= 2 \\\\\n\\end{align*}\\]\n\n\\[\\begin{align*}\n\\dfrac{5p+3}{2} - \\dfrac{3p+6}{3} &= 2p - 3 \\\\\n(5p+3) \\div 2 - (3p+6) \\div 3 &= 2p - 3 \\\\\n3(5p+3) - 2(3p+6) &= 12p - 18 \\\\\n15p + 9 - 6p - 12 &= 12p - 18 \\\\\n9p - 3 &= 12p - 18 \\\\\n-3 + 18 &= 12p - 9p \\\\\n15 &= 3p \\\\\np &= 5\n\\end{align*}\\]",
     "crumbs": [
       "Autumn 1",
       "Linear Equations"
@@ -1709,6 +1709,116 @@
     "crumbs": [
       "Autumn 1",
       "Fractions"
+    ]
+  },
+  {
+    "objectID": "Spring 1/13. Straight Line Graphs.html",
+    "href": "Spring 1/13. Straight Line Graphs.html",
+    "title": "Straight Line Graphs",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
+    "crumbs": [
+      "Spring 1",
+      "Straight Line Graphs"
+    ]
+  },
+  {
+    "objectID": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
+    "href": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
+    "title": "Straight Line Graphs",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
+    "crumbs": [
+      "Spring 1",
+      "Straight Line Graphs"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html",
+    "href": "Autumn 1/7. Rounding and Estimation.html",
+    "title": "Rounding and Estimation",
+    "section": "",
+    "text": "Question: Round 3.44 to 1 decimal place.\nWhen rounding to a given number of decimal places, we are always rounding to a number with at most this number of decimal places.\n. . .\nIn this case, that means the answer must have 1 decimal place. What are the possible answers therefore?\n. . .\nIt has to be one of the two closest numbers with 1 decimal place: \\[\n3.4 &lt; 3.44 &lt; 3.5\n\\] . . .\nThe first decimal place will either round up to 5 or down to 4. This is called the rounding digit.\n. . .\nHow we decide depends on the following digit, which we call the deciding digit.\n. . .\n\\[3.(4)\\underline{4} \\longrightarrow 3.4\\]\nHere we circle the rounding digit and underline the deciding digit. When the deciding digit is less than 5, we round down.",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#example-rounding-to-decimal-places",
+    "href": "Autumn 1/7. Rounding and Estimation.html#example-rounding-to-decimal-places",
+    "title": "Rounding and Estimation",
+    "section": "",
+    "text": "Question: Round 3.44 to 1 decimal place.\nWhen rounding to a given number of decimal places, we are always rounding to a number with at most this number of decimal places.\n. . .\nIn this case, that means the answer must have 1 decimal place. What are the possible answers therefore?\n. . .\nIt has to be one of the two closest numbers with 1 decimal place: \\[\n3.4 &lt; 3.44 &lt; 3.5\n\\] . . .\nThe first decimal place will either round up to 5 or down to 4. This is called the rounding digit.\n. . .\nHow we decide depends on the following digit, which we call the deciding digit.\n. . .\n\\[3.(4)\\underline{4} \\longrightarrow 3.4\\]\nHere we circle the rounding digit and underline the deciding digit. When the deciding digit is less than 5, we round down.",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#example-rounding-to-more-decimal-places",
+    "href": "Autumn 1/7. Rounding and Estimation.html#example-rounding-to-more-decimal-places",
+    "title": "Rounding and Estimation",
+    "section": "Example: Rounding to More Decimal Places",
+    "text": "Example: Rounding to More Decimal Places\nWhen we round to a particular number of decimal places we just need to circle the corresponding rounding digit, and then we deciding digit is always the one immediately following.\nRound 4.650712 to 4 decimal places:\n\\[4.650(7)\\underline{1}2 \\longrightarrow 4.6507\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#test-your-understanding",
+    "href": "Autumn 1/7. Rounding and Estimation.html#test-your-understanding",
+    "title": "Rounding and Estimation",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\nRound 5.453 to 2 decimal places\n\nRound 8.7915 to 3 decimal places\n\nRound 0.99724 to 4 decimal places\n\nRound 57.445945 to 3 decimal places\n\nRound 2.264899 to 5 decimal places\n\nRound 579.999 to 2 decimal places",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#answers",
+    "href": "Autumn 1/7. Rounding and Estimation.html#answers",
+    "title": "Rounding and Estimation",
+    "section": "Answers",
+    "text": "Answers\n\n5.45\n\n8.792\n\n0.9972\n\n57.446\n\n2.26490\n\n580.00",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#significant-figures",
+    "href": "Autumn 1/7. Rounding and Estimation.html#significant-figures",
+    "title": "Rounding and Estimation",
+    "section": "Significant Figures",
+    "text": "Significant Figures\nIn a number like 27,593, each digit is worth a different amount:\n\nThe 2 is worth 20,000\nThe 7 is worth 7,000\nThe 5 is worth 500\nThe 9 is worth 90\nThe 3 is worth 3\n\nThe first significant figure is 2, the second is 7 etc.\n\nIn a number like 4.678,\n\nThe 4 is worth 4\nThe 6 is worth \\(\\dfrac{6}{10}\\)\nThe 7 is worth \\(\\dfrac{7}{100}\\)\nThe 8 is worth \\(\\dfrac{8}{1000}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#example-rounding-to-1-significant-figure",
+    "href": "Autumn 1/7. Rounding and Estimation.html#example-rounding-to-1-significant-figure",
+    "title": "Rounding and Estimation",
+    "section": "Example: Rounding to 1 Significant Figure",
+    "text": "Example: Rounding to 1 Significant Figure\nWhen rounding with siginificant figures, the way we round depends on the size of the number.\nRound 647 to 1 s.f. \\[\n(6)\\underline{4}7 \\longrightarrow 600\n\\]\nIn this case, we are rounding to the nearest hundred because the first significant figure is 6, which has a place value of 600.\n\nRound 0.27 to 1 s.f. \\[\n0.(2)\\underline{7} \\longrightarrow 0.3\n\\]\nIn this case, we are rounding to the nearest tenth (1 d.p.) because the first significant figure is 2, which is worth 2 tenths.\n\nRound 6,378,527 to 1 s.f. \\[\n(6)\\underline{3}78527\n\\]\nIn this case we are rounding to the nearest one million because the first significant figure is 6, which is worth 6 million.",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/7. Rounding and Estimation.html#example-more-than-one-significant-figure",
+    "href": "Autumn 1/7. Rounding and Estimation.html#example-more-than-one-significant-figure",
+    "title": "Rounding and Estimation",
+    "section": "Example: More than One Significant Figure",
+    "text": "Example: More than One Significant Figure\nRound 647 to 2 s.f. \\[\n6(4)\\underline{7} \\longrightarrow 650\n\\]\nRound 0.5472 to 3 s.f. \\[\n0.54(7)\\underline{2} \\longrightarrow 0.547\n\\]\n\n\n\n\n\n\nNote\n\n\n\nInitial zeros do not count as significant figures because they merely show the place value of the other digits. Zeros between non-zero digits do count, however.",
+    "crumbs": [
+      "Autumn 1",
+      "Rounding and Estimation"
     ]
   }
 ]

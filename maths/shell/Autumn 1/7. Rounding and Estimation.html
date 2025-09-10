@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recurring Decimals – Shell Mathematics Course</title>
+<title>Rounding and Estimation – Shell Mathematics Course</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Recurring Decimals</h1>
+          <h1 class="quarto-secondary-nav-title">Rounding and Estimation</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -174,7 +174,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Autumn 1/5. Recurring Decimals.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Autumn 1/5. Recurring Decimals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recurring Decimals</span></a>
   </div>
 </li>
@@ -186,7 +186,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Autumn 1/7. Rounding and Estimation.html" class="sidebar-item-text sidebar-link">
+  <a href="../Autumn 1/7. Rounding and Estimation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Rounding and Estimation</span></a>
   </div>
 </li>
@@ -219,23 +219,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example-long-division" id="toc-example-long-division" class="nav-link active" data-scroll-target="#example-long-division">Example: Long Division</a></li>
-  <li><a href="#example-fraction-to-recurring-decimal" id="toc-example-fraction-to-recurring-decimal" class="nav-link" data-scroll-target="#example-fraction-to-recurring-decimal">Example: Fraction to Recurring Decimal</a></li>
-  <li><a href="#example-recurring-decimal-notation" id="toc-example-recurring-decimal-notation" class="nav-link" data-scroll-target="#example-recurring-decimal-notation">Example: Recurring Decimal Notation</a></li>
+  <li><a href="#example-rounding-to-decimal-places" id="toc-example-rounding-to-decimal-places" class="nav-link active" data-scroll-target="#example-rounding-to-decimal-places">Example: Rounding to Decimal Places</a></li>
+  <li><a href="#example-rounding-to-more-decimal-places" id="toc-example-rounding-to-more-decimal-places" class="nav-link" data-scroll-target="#example-rounding-to-more-decimal-places">Example: Rounding to More Decimal Places</a></li>
   <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test Your Understanding</a></li>
   <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#example-recurring-decimals-to-fractions" id="toc-example-recurring-decimals-to-fractions" class="nav-link" data-scroll-target="#example-recurring-decimals-to-fractions">Example: Recurring Decimals to Fractions</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#significant-figures" id="toc-significant-figures" class="nav-link" data-scroll-target="#significant-figures">Significant Figures</a></li>
+  <li><a href="#example-rounding-to-1-significant-figure" id="toc-example-rounding-to-1-significant-figure" class="nav-link" data-scroll-target="#example-rounding-to-1-significant-figure">Example: Rounding to 1 Significant Figure</a></li>
+  <li><a href="#example-more-than-one-significant-figure" id="toc-example-more-than-one-significant-figure" class="nav-link" data-scroll-target="#example-more-than-one-significant-figure">Example: More than One Significant Figure</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="5.-Recurring-Decimals.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="7.-Rounding-and-Estimation.pdf"><i class="bi bi-file-pdf"></i>Beamer</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Recurring Decimals</h1>
+<h1 class="title d-none d-lg-block">Rounding and Estimation</h1>
 </div>
 
 
@@ -252,99 +251,107 @@ window.Quarto = {
 </header>
 
 
-<section id="example-long-division" class="level2">
-<h2 class="anchored" data-anchor-id="example-long-division">Example: Long Division</h2>
-<p>To turn fractions into decimals, we can use long division. For example, to calculate <span class="math inline">\(\frac{17}{8}\)</span>:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="longdivision1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
-<p>Notice that we stop when we get a remainder of zero.</p>
+<section id="example-rounding-to-decimal-places" class="level2">
+<h2 class="anchored" data-anchor-id="example-rounding-to-decimal-places">Example: Rounding to Decimal Places</h2>
+<p><strong>Question:</strong> Round 3.44 to 1 decimal place.</p>
+<p>When rounding to a given number of decimal places, we are always rounding to a number with at most this number of decimal places.</p>
+<p>. . .</p>
+<p>In this case, that means the answer must have 1 decimal place. What are the possible answers therefore?</p>
+<p>. . .</p>
+<p>It has to be one of the two closest numbers with 1 decimal place: <span class="math display">\[
+3.4 &lt; 3.44 &lt; 3.5
+\]</span> . . .</p>
+<p>The first decimal place will either round up to 5 or down to 4. This is called the <strong>rounding digit</strong>.</p>
+<p>. . .</p>
+<p>How we decide depends on the following digit, which we call the <strong>deciding digit</strong>.</p>
+<p>. . .</p>
+<p><span class="math display">\[3.(4)\underline{4} \longrightarrow 3.4\]</span></p>
+<p>Here we circle the rounding digit and underline the deciding digit. When the deciding digit is less than 5, we round down.</p>
 </section>
-<section id="example-fraction-to-recurring-decimal" class="level2">
-<h2 class="anchored" data-anchor-id="example-fraction-to-recurring-decimal">Example: Fraction to Recurring Decimal</h2>
-<p><a href="https://youtu.be/O04JAIm5HXY">Video: Converting from a fraction to a recurring decimal</a></p>
-<p>We can also do this to find a recurring decimal. For example, to find <span class="math inline">\(\frac{3}{11}\)</span>, we can do:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="longdivision2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
-<p>As soon as we get a repeated digit, we know we will be stuck in a loop, so we mark the decimal as recurring.</p>
-<hr>
-<p>Sometimes there is a non-recurring decimal part before the recurrence begins:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="longdivision3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
-<p>Notice that the vertical bar only extends over the repeating part.</p>
-<hr>
-<p>And sometimes it takes a long time to repeat:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="longdivision4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:25.0%"></p>
-</figure>
-</div>
-</section>
-<section id="example-recurring-decimal-notation" class="level2">
-<h2 class="anchored" data-anchor-id="example-recurring-decimal-notation">Example: Recurring Decimal Notation</h2>
-<p>There are actually two ways to represent recurring decimals, the bar over the repeating part or a dot above the first and last digit of the repeating part, so for example, the recurring decimal <span class="math display">\[
-0.3456456456456456\ldots
-\]</span> Can be represented either as <span class="math display">\[
-0.3\overline{456}
-\]</span> or as <span class="math display">\[
-0.3\dot{4}5\dot{6}
-\]</span></p>
+<section id="example-rounding-to-more-decimal-places" class="level2">
+<h2 class="anchored" data-anchor-id="example-rounding-to-more-decimal-places">Example: Rounding to More Decimal Places</h2>
+<p>When we round to a particular number of decimal places we just need to circle the corresponding rounding digit, and then we deciding digit is always the one immediately following.</p>
+<p>Round 4.650712 to 4 decimal places:</p>
+<p><span class="math display">\[4.650(7)\underline{1}2 \longrightarrow 4.6507\]</span></p>
 </section>
 <section id="test-your-understanding" class="level2">
 <h2 class="anchored" data-anchor-id="test-your-understanding">Test Your Understanding</h2>
-<p>Write out what each of these recurring decimals looks like:</p>
 <ol type="1">
-<li><p><span class="math inline">\(0.\dot{3}\)</span></p></li>
-<li><p><span class="math inline">\(0.4\overline{3}\)</span></p></li>
-<li><p><span class="math inline">\(0.\dot{4}\dot{3}\)</span></p></li>
-<li><p><span class="math inline">\(0.1\overline{23}\)</span></p></li>
-<li><p><span class="math inline">\(0.\dot{1}2\dot{3}\)</span></p></li>
-<li><p><span class="math inline">\(0.12\overline{3}\)</span></p></li>
-<li><p><span class="math inline">\(0.4\dot{3}0\dot{3}\)</span></p></li>
+<li>Round 5.453 to 2 decimal places<br>
+</li>
+<li>Round 8.7915 to 3 decimal places<br>
+</li>
+<li>Round 0.99724 to 4 decimal places<br>
+</li>
+<li>Round 57.445945 to 3 decimal places<br>
+</li>
+<li>Round 2.264899 to 5 decimal places<br>
+</li>
+<li>Round 579.999 to 2 decimal places</li>
 </ol>
 </section>
 <section id="answers" class="level2">
 <h2 class="anchored" data-anchor-id="answers">Answers</h2>
 <ol type="1">
-<li><p><span class="math inline">\(0.\dot{3} = 0.333\ldots\)</span></p></li>
-<li><p><span class="math inline">\(0.4\overline{3} = 0.4333\ldots\)</span></p></li>
-<li><p><span class="math inline">\(0.\dot{4}\dot{3} = 0.434343\ldots\)</span></p></li>
-<li><p><span class="math inline">\(0.1\overline{23} = 0.1232323\ldots\)</span></p></li>
-<li><p><span class="math inline">\(0.\dot{1}2\dot{3} = 0.123123123\ldots\)</span></p></li>
-<li><p><span class="math inline">\(0.12\overline{3} = 0.12333\ldots\)</span></p></li>
-<li><p><span class="math inline">\(0.4\dot{3}0\dot{3} = 0.4303303303\ldots\)</span></p></li>
+<li>5.45<br>
+</li>
+<li>8.792<br>
+</li>
+<li>0.9972<br>
+</li>
+<li>57.446<br>
+</li>
+<li>2.26490<br>
+</li>
+<li>580.00</li>
 </ol>
 </section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p>Please complete the <a href="https://www.drfrost.org/uploads/users/1/r568/DFM-AllInOne-FDPCorrespondences7-FractionsToRecurringDecimals.pdf">worksheet</a>.</p>
-</section>
-<section id="example-recurring-decimals-to-fractions" class="level2">
-<h2 class="anchored" data-anchor-id="example-recurring-decimals-to-fractions">Example: Recurring Decimals to Fractions</h2>
-<p><a href="https://youtu.be/Je9sKSmPThE">Video: Recurring Decimals to Fractions</a></p>
-<p>To convert <span class="math inline">\(0.\overline{54}\)</span> to a fraction, we can use algebra. We let <span class="math inline">\(x\)</span> equal the recurring decimal, then work out the value of <span class="math inline">\(x\)</span> as fraction.</p>
-<p><span class="math display">\[\begin{align*}
-x = 0.&amp;545454\ldots &amp; \text{Write out the recurring decimal} \\
-100x = 54.&amp;545454\ldots &amp; \times 100 \text{ because two recurring digits} \\
-99x = &amp;\ 54 &amp; \text{Subtract the first line from the second} \\
-x = &amp;\ \dfrac{54}{99} = \dfrac{6}{11} &amp; \text{Divide and simplify}
-\end{align*}\]</span></p>
-<p>The trick here is that the recurring decimal parts cancel out when they are subtracted.</p>
+<section id="significant-figures" class="level2">
+<h2 class="anchored" data-anchor-id="significant-figures">Significant Figures</h2>
+<p>In a number like 27,593, each digit is worth a different amount:</p>
+<ul>
+<li>The 2 is worth 20,000</li>
+<li>The 7 is worth 7,000</li>
+<li>The 5 is worth 500</li>
+<li>The 9 is worth 90</li>
+<li>The 3 is worth 3</li>
+</ul>
+<p>The first <strong>significant figure</strong> is 2, the second is 7 etc.</p>
 <hr>
-<p><span class="math display">\[\begin{align*}
-x &amp;= 0.133333\ldots &amp; \text{Write out the recurring decimal} \\
-10x &amp;= 1.333333\ldots &amp; \times 10 \text{ because one recurring digit} \\
-9x &amp;= 1.2 &amp; \text{Subtract the first line from the second} \\
-x &amp;= \dfrac{1.2}{9} = \dfrac{12}{90} = \dfrac{2}{15} &amp; \text{Divide and simplify}
-\end{align*}\]</span></p>
+<p>In a number like 4.678,</p>
+<ul>
+<li>The 4 is worth 4</li>
+<li>The 6 is worth <span class="math inline">\(\dfrac{6}{10}\)</span></li>
+<li>The 7 is worth <span class="math inline">\(\dfrac{7}{100}\)</span></li>
+<li>The 8 is worth <span class="math inline">\(\dfrac{8}{1000}\)</span></li>
+</ul>
+</section>
+<section id="example-rounding-to-1-significant-figure" class="level2">
+<h2 class="anchored" data-anchor-id="example-rounding-to-1-significant-figure">Example: Rounding to 1 Significant Figure</h2>
+<p>When rounding with siginificant figures, the way we round depends on the size of the number.</p>
+<p>Round 647 to 1 s.f. <span class="math display">\[
+(6)\underline{4}7 \longrightarrow 600
+\]</span></p>
+<p>In this case, we are rounding to the nearest hundred because the first significant figure is 6, which has a place value of 600.</p>
+<hr>
+<p>Round 0.27 to 1 s.f. <span class="math display">\[
+0.(2)\underline{7} \longrightarrow 0.3
+\]</span></p>
+<p>In this case, we are rounding to the nearest tenth (1 d.p.) because the first significant figure is 2, which is worth 2 tenths.</p>
+<hr>
+<p>Round 6,378,527 to 1 s.f. <span class="math display">\[
+(6)\underline{3}78527
+\]</span></p>
+<p>In this case we are rounding to the nearest one million because the first significant figure is 6, which is worth 6 million.</p>
+</section>
+<section id="example-more-than-one-significant-figure" class="level2">
+<h2 class="anchored" data-anchor-id="example-more-than-one-significant-figure">Example: More than One Significant Figure</h2>
+<p>Round 647 to 2 s.f. <span class="math display">\[
+6(4)\underline{7} \longrightarrow 650
+\]</span></p>
+<p>Round 0.5472 to 3 s.f. <span class="math display">\[
+0.54(7)\underline{2} \longrightarrow 0.547
+\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -355,53 +362,9 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note here that when we subtract the first digit after the decimal point does not match, so we are effectively doing <span class="math inline">\(1.3-0.1\)</span>. The decimal digits after this <em>do</em> cancel because they are identical.</p>
+<p>Initial zeros do not count as significant figures because they merely show the place value of the other digits. Zeros between non-zero digits <strong>do</strong> count, however.</p>
 </div>
 </div>
-<hr>
-<p><span class="math display">\[\begin{align*}
-x   = 3&amp;.0868686\ldots \\
-100x = 308&amp;.6868686\ldots \\
-99x  = 305&amp;.6 \\
-x = \dfrac{305.6}{99} &amp;= \dfrac{3056}{990} = \dfrac{1528}{495}
-\end{align*}\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The calculation this time is <span class="math inline">\(308.6 - 3\)</span>.</p>
-</div>
-</div>
-<hr>
-<p><span class="math display">\[\begin{align*}
-x      = 0&amp;.5401401401\ldots \\
-1000x  = 540&amp;.1401401401\ldots \\
-999x   = 539&amp;.6 \\
-x      = \dfrac{539.6}{999} &amp;= \dfrac{5396}{9990} = \dfrac{2698}{4995}
-\end{align*}\]</span></p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be careful here. 5 is greater than 1 so the calculation we need to do is <span class="math inline">\(540.1-0.5\)</span>.</p>
-</div>
-</div>
-</section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>Please complete the <a href="https://www.drfrost.org/uploads/users/1/r545/DFM-AllInOne-FDPCorrespondences8-RecurringDecimalsToFractions.pdf">worksheet</a>.</p>
 
 
 <script type="ojs-module-contents">

@@ -1,1 +1,0 @@
-As an additional file, this could contain data which could then be read from within the python code (at the root level of the python runtime environment). In this particular example however it will be overwritten with the requested output values.

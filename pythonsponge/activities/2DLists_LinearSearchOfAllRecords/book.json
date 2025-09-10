@@ -1,1 +1,0 @@
-{"name":"Contents","id":"78b0e8c2-a483-495f-82c3-daffdc1add0d","children":[{"id":"d43db968-a71f-4cc1-b4c5-ddf9c57ff556","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"23","out":".*Amaan\nFelix\nPeter"},{"in":"21","out":".*Benjamin\nMarie\nTrevor"},{"in":"20","out":".*NO MATCHES.*"}]}],"bookMainUrl":"edit://edit/book.json"}

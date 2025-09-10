@@ -1,1 +1,0 @@
-{"name":"Contents","id":"b8977ace-0441-4312-88c8-f94ff13aaca5","children":[{"id":"9a35d3bc-bfdd-4159-a437-356b80186f01","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"Benjamin","out":".*44"},{"in":"Mary","out":".*220"},{"in":"William","out":".*220"},{"in":"Amaan","out":".*23"}]}],"bookMainUrl":"edit://edit/book.json"}

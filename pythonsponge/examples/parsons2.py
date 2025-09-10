@@ -1,5 +1,0 @@
-print("triangle")
-print("rectangle")
-print("pentagon")
-print("hexagon")
-print("heptagon")

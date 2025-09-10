@@ -1,1 +1,0 @@
-{"name":"Contents","id":"d4ffa332-0dca-4b73-b635-a94c23dd22da","children":[{"id":"843b3f31-e3d3-448a-a624-029afc490da3","name":"Task","guide":"c01.md","py":"c01.py","bookMainUrl":"edit://edit/book.json","tests":[{"in":"Phil\nJackson","out":".*JACPH"},{"in":"angie\ncates","out":".*CATAN"}]}],"bookMainUrl":"edit://edit/book.json"}

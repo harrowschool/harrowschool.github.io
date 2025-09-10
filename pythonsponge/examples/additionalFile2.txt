@@ -1,1 +1,0 @@
-This is additionalFile2.txt
