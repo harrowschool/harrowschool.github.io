@@ -1,409 +1,596 @@
 [
   {
-    "objectID": "Autumn 1/6. Percentages.html",
-    "href": "Autumn 1/6. Percentages.html",
-    "title": "Percentages",
+    "objectID": "Spring 1/13. Straight Line Graphs.html",
+    "href": "Spring 1/13. Straight Line Graphs.html",
+    "title": "Straight Line Graphs",
     "section": "",
-    "text": "Previously, when working out percentages of amounts, we would use a method called “chunking”. For example, to find 35% of 120, we might do something like: \\[\\begin{align*}\n100\\% &= 120 \\\\\n10\\% &= 12 \\\\\n5\\% &= 6 \\\\\n20\\% &= 24 \\\\\n35\\% &= 20\\% + 10\\% + 5\\% \\\\\n&= 24 + 12 + 6 \\\\\n&= 42\n\\end{align*}\\]\nThis is a good non-calculator method, but with a calculator there is a far better way.",
+    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
     "crumbs": [
-      "Autumn 1",
-      "Percentages"
+      "Spring 1",
+      "Straight Line Graphs"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#methods-for-percentages",
-    "href": "Autumn 1/6. Percentages.html#methods-for-percentages",
-    "title": "Percentages",
+    "objectID": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
+    "href": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
+    "title": "Straight Line Graphs",
     "section": "",
-    "text": "Previously, when working out percentages of amounts, we would use a method called “chunking”. For example, to find 35% of 120, we might do something like: \\[\\begin{align*}\n100\\% &= 120 \\\\\n10\\% &= 12 \\\\\n5\\% &= 6 \\\\\n20\\% &= 24 \\\\\n35\\% &= 20\\% + 10\\% + 5\\% \\\\\n&= 24 + 12 + 6 \\\\\n&= 42\n\\end{align*}\\]\nThis is a good non-calculator method, but with a calculator there is a far better way.",
+    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
     "crumbs": [
-      "Autumn 1",
-      "Percentages"
+      "Spring 1",
+      "Straight Line Graphs"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#decimal-multipliers",
-    "href": "Autumn 1/6. Percentages.html#decimal-multipliers",
-    "title": "Percentages",
-    "section": "Decimal Multipliers",
-    "text": "Decimal Multipliers\nThe key concept of this topic is the idea of decimal multipliers. In short, when we represent percentages (or percentage changes) as decimals, we can multiply to work things out.\nIt turns out that in many cases this makes questions much easier, particularly when it comes to compound percentage changes.\nTo see how well they work and how much they can simplify percentage problems, let’s look at an example.",
+    "objectID": "Autumn 1/4. Fractions.html",
+    "href": "Autumn 1/4. Fractions.html",
+    "title": "Fractions",
+    "section": "",
+    "text": "Key skill video\n\\[\n\\dfrac{2}{7} + \\dfrac{3}{5} = \\dfrac{10}{35} + \\dfrac{21}{35} = \\dfrac{31}{35}\n\\] \\[\n\\dfrac{4}{9} - \\dfrac{1}{4} = \\dfrac{16}{36} - \\dfrac{9}{36} = \\dfrac{5}{36}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-pocket-money",
-    "href": "Autumn 1/6. Percentages.html#example-pocket-money",
-    "title": "Percentages",
-    "section": "Example: Pocket Money",
-    "text": "Example: Pocket Money\nYou get £10 a week pocket money. Unfortunately, you get a little lazy about revising for your maths exam, and so you don’t score as well as you could have if you’d worked harder. Your parents are concerned, and so they decide to reduce your pocket money by 10% until your results improve.\nYou pull up your socks and study hard for the next maths exam, and your score is much better. As a reward your parents increase your pocket money by 10%. \\[\n100\\% - 10\\% + 10\\% = 100\\%\n\\] All good then! Are you happy with the result?\n\nIn fact this logic is incorrect, because the two 10%s are not 10% of the same amount. \\[\n\\textsterling 10 \\xrightarrow{-10\\%} \\textsterling 9 \\xrightarrow{+10\\%} \\textsterling 9.90\n\\]\nPercentage changes do not add up.\nHowever, they do multiply. Let’s see.\n\n\\[\n10\\% \\text{ increase} = 100\\% + 10\\% = 110\\% = \\dfrac{110}{100} = 1.1\n\\] \\[\n10\\% \\text{ decrease} = 100\\% - 10\\% = 90\\% = \\dfrac{90}{100} = 0.9\n\\] \\[\n\\textsterling 10 \\times 1.1 \\times 0.9 = \\textsterling 9.90\n\\] The decimal multipliers give the correct result.\nThis is the key to this whole topic. Percentages do not add up, but they do multiply.\nThis way of calculating percentages is important in several areas of applied mathematics, particularly financial mathematics.",
+    "objectID": "Autumn 1/4. Fractions.html#example-adding-and-subtracting-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-adding-and-subtracting-fractions",
+    "title": "Fractions",
+    "section": "",
+    "text": "Key skill video\n\\[\n\\dfrac{2}{7} + \\dfrac{3}{5} = \\dfrac{10}{35} + \\dfrac{21}{35} = \\dfrac{31}{35}\n\\] \\[\n\\dfrac{4}{9} - \\dfrac{1}{4} = \\dfrac{16}{36} - \\dfrac{9}{36} = \\dfrac{5}{36}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-finding-a-percentage-of-an-amount",
-    "href": "Autumn 1/6. Percentages.html#example-finding-a-percentage-of-an-amount",
-    "title": "Percentages",
-    "section": "Example: Finding a Percentage of an Amount",
-    "text": "Example: Finding a Percentage of an Amount\nTo find a percentage of an amount, we simply convert the percentage to a decimal and multiply it by the amount.\nCalculate 13% of 300: \\[\n300 \\times 0.13 = 39\n\\] Calculate 87% of 400: \\[\n400 \\times 0.87 = 348\n\\]",
+    "objectID": "Autumn 1/4. Fractions.html#method-comparison",
+    "href": "Autumn 1/4. Fractions.html#method-comparison",
+    "title": "Fractions",
+    "section": "Method Comparison",
+    "text": "Method Comparison\nTo calculate \\(\\dfrac{1}{6} + \\dfrac{3}{4}\\), there are two methods\n\n\nMultiply denominators \\[\n\\dfrac{4}{24} + \\dfrac{18}{24} = \\dfrac{22}{24} = \\dfrac{11}{12}\n\\]\n\nLowest common multiple \\[\n\\dfrac{2}{12} + \\dfrac{9}{12} = \\dfrac{11}{12}\n\\]\n\n\nWhich method do you think is better?",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding",
-    "href": "Autumn 1/6. Percentages.html#test-your-understanding",
-    "title": "Percentages",
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding",
+    "title": "Fractions",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nCalculate the following. You must use a decimal multiplier.Please show your working by writing down the calculation. You may use a calculator.\n\n84% of 15\n9% of 78\n70% of 33.2\n150% of 13\n317% of 2.8\n84.2% of 68",
+    "text": "Test Your Understanding\n\n\\(\\dfrac{8}{9} - \\dfrac{7}{15}\\)\n\\(\\dfrac{2}{15} + \\dfrac{7}{10}\\)\n\\(\\dfrac{1}{4} + \\dfrac{5}{12}\\)\n\\(\\dfrac{8}{9} - \\dfrac{3}{4}\\)\n\\(\\dfrac{1}{4} + \\dfrac{3}{10} - \\dfrac{4}{25}\\)\n\\(\\dfrac{5}{9} + \\dfrac{3}{8} + \\dfrac{5}{72}\\)",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#answers",
-    "href": "Autumn 1/6. Percentages.html#answers",
-    "title": "Percentages",
+    "objectID": "Autumn 1/4. Fractions.html#answers",
+    "href": "Autumn 1/4. Fractions.html#answers",
+    "title": "Fractions",
     "section": "Answers",
-    "text": "Answers\n\n84% of 15 = 12.6\n9% of 78 = 7.02\n70% of 33.2 = 23.24\n150% of 13 = 19.5\n317% of 2.8 = 8.876\n84.2% of 68 = 57.256",
+    "text": "Answers\n\n\\(\\dfrac{8}{9} - \\dfrac{7}{15} = \\dfrac{19}{45}\\)\n\\(\\dfrac{2}{15} + \\dfrac{7}{10} = \\dfrac{25}{30} = \\dfrac{5}{6}\\)\n\\(\\dfrac{1}{4} + \\dfrac{5}{12} = \\dfrac{8}{12} = \\dfrac{2}{3}\\)\n\\(\\dfrac{8}{9} - \\dfrac{3}{4} = \\dfrac{32}{36} - \\dfrac{27}{36} = \\dfrac{5}{36}\\)\n\\(\\dfrac{1}{4} + \\dfrac{3}{10} - \\dfrac{4}{25} = \\dfrac{25}{100} + \\dfrac{30}{100} - \\dfrac{16}{100} = \\dfrac{39}{100}\\)\n\\(\\dfrac{5}{9} + \\dfrac{3}{8} + \\dfrac{5}{72} = \\dfrac{40}{72} + \\dfrac{27}{72} + \\dfrac{5}{72} = \\dfrac{72}{72} = 1\\)",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-percentage-increase",
-    "href": "Autumn 1/6. Percentages.html#example-percentage-increase",
-    "title": "Percentages",
-    "section": "Example: Percentage Increase",
-    "text": "Example: Percentage Increase\nVideo: Percentage Increase and Decrease\nWhen you increase something by a percentage, you keep the original 100% and add on an additional percentage. Therefore to calculate the decimal multiplier we add on to 100%.\nIncrease 170 by 10%: \\(\\quad 170 \\xrightarrow[\\times 1.1]{100\\%+10\\% = 110\\%} 187\\)\nIncrease 40 by 12%: \\(\\quad 40 \\xrightarrow[\\times 1.12]{100\\% + 12\\% = 112\\%} 44.8\\)\n\n\n\n\n\n\nNote\n\n\n\nThis way of representing percentage changes on an arrow is useful, particularly for reverse percentage changes (coming up soon).",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#example-percentage-decrease",
-    "href": "Autumn 1/6. Percentages.html#example-percentage-decrease",
-    "title": "Percentages",
-    "section": "Example: Percentage Decrease",
-    "text": "Example: Percentage Decrease\nWhen you decrease something by a percentage, you take the original 100% and remove a percentage. Therefore to calculate the decimal multiplier we subtract from 100%.\nDecrease 86 by 61%: \\[\n86 \\xrightarrow[\\times 0.39]{100\\%-61\\% = 39\\%} 33.54\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-1",
-    "href": "Autumn 1/6. Percentages.html#test-your-understanding-1",
-    "title": "Percentages",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nCalculate the following. You must use decimal multipliers and write down your calculations.\n\nFind 62% of 97\nFind 3% of 52.8\nFind 14.7% of 44\nFind 178% of 52\nIncrease 24 by 9%\nIncrease 5.2 by 64%\nDecrease 97 by 38%\nDecrease 540 by 8.7%",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#answers-1",
-    "href": "Autumn 1/6. Percentages.html#answers-1",
-    "title": "Percentages",
-    "section": "Answers",
-    "text": "Answers\n\n60.14\n1.584\n6.468\n92.56\n26.16\n8.528\n60.14\n493.02",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#example-reverse-percentage-changes",
-    "href": "Autumn 1/6. Percentages.html#example-reverse-percentage-changes",
-    "title": "Percentages",
-    "section": "Example: Reverse Percentage Changes",
-    "text": "Example: Reverse Percentage Changes\nVideo: Reverse Percentage Change\nThe price of an item was increased by 20% to £66. What was the original price before the increase? We can use the same arrow method as before: \\[\n? \\xrightarrow[\\times 1.2]{100\\% + 20\\% = 120\\%} 66\n\\] The answer is then found by dividing by the multiplier: \\(66 \\div 1.2 = 79.2\\)\n\n\n\n\n\n\nWhat Not To Do\n\n\n\n\nDon’t find 20% of £66. The 20% is a percentage of the original unknown amount.\nDon’t use a decimal multiplier of 0.8. Reversing an increase is not the same as a decrease.",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#example-reverse-percentage-decrease",
-    "href": "Autumn 1/6. Percentages.html#example-reverse-percentage-decrease",
-    "title": "Percentages",
-    "section": "Example: Reverse Percentage Decrease",
-    "text": "Example: Reverse Percentage Decrease\nThe price of an item in a sale was reduced by 18% to a new price of £60.68. What was the price before the sale? \\[\n? \\xrightarrow[\\times 0.82]{100\\% - 18\\% = 82\\%} \\textsterling 60.68\n\\] \\[\n\\textsterling 60.68 \\div 0.82 = \\textsterling 74\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-2",
-    "href": "Autumn 1/6. Percentages.html#test-your-understanding-2",
-    "title": "Percentages",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nFind the original value. You must divide by a decimal multiplier.\n\nA number was increased by 64% to give a new value of 60.68. Find the original value.\nA number was decreased by 23% to give a new value of 37.73. Find the original value.\nA number was decreased by 6.3% to give a new value of 76,834. Find the original value.\nA number was increased by 104% to give a new value of 142.8. Find the original value.",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#answers-2",
-    "href": "Autumn 1/6. Percentages.html#answers-2",
-    "title": "Percentages",
-    "section": "Answers",
-    "text": "Answers\n\n37\n49\n82,000\n70",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#exercise-1",
-    "href": "Autumn 1/6. Percentages.html#exercise-1",
-    "title": "Percentages",
+    "objectID": "Autumn 1/4. Fractions.html#exercise-1",
+    "href": "Autumn 1/4. Fractions.html#exercise-1",
+    "title": "Fractions",
     "section": "Exercise 1",
     "text": "Exercise 1\nPlease complete the worksheet.",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-compound-percentage-change",
-    "href": "Autumn 1/6. Percentages.html#example-compound-percentage-change",
-    "title": "Percentages",
-    "section": "Example: Compound Percentage Change",
-    "text": "Example: Compound Percentage Change\nVideo: Compound Changes\nMatthias invests £100 in a savings account at 2% interest. How much does he have at the end of year 1, year 2, and year 3?\n\\[\\begin{align*}\n\\text{Year 1: } &\\textsterling 100 \\times 1.02 = \\textsterling 102 \\\\\n\\text{Year 2: } &\\textsterling 102 \\times 1.02 = \\textsterling 104.04 \\\\\n\\text{Year 3: } &\\textsterling 104.04 \\times 1.02 = \\textsterling 106.12 \\\\\n\\end{align*}\\]\nNotice here that we are simply repeatedly multiplying by the same decimal multiplier.\n\nMatthew invests £3000 in a savings account with an interest rate of 3.2%. How much will he have after six years? \\[\n100\\% + 3.2\\% = 103.2\\% = 1.032\n\\] \\[\n\\textsterling 3000 \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032}\\ ?\n\\] Once we notice that we are multiplying repeatedly, we can simplify this method using powers: \\[\n\\textsterling 3000 \\xrightarrow{\\times 1.032^6} \\textsterling 3624.09\n\\]\n\n\n\n\n\n\nNote\n\n\n\nAmounts of money should always be rounded to the nearest penny or cent, i.e. to two decimal places.",
+    "objectID": "Autumn 1/4. Fractions.html#example-adding-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-adding-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Adding Mixed Numbers",
+    "text": "Example: Adding Mixed Numbers\nKey skill video\nCalculate: \\(1\\dfrac{1}{4} + 3\\dfrac{1}{12}\\)\n\n\nImproper fractions \\[\n1\\dfrac{1}{4} = \\dfrac{5}{4}\n\\] \\[\n3\\dfrac{1}{12} = \\dfrac{37}{12}\n\\] \\[\n\\dfrac{5}{4} = \\dfrac{5\\times 3}{4\\times 3} = \\dfrac{15}{12}\n\\] Add: \\[\n\\dfrac{15}{12} + \\dfrac{37}{12} = \\dfrac{52}{12} = 4\\dfrac{4}{12} = 4\\dfrac{1}{3}\n\\]\n\nPartitioning\nIntegers: \\[\n1 + 3 = 4\n\\] Fractions: \\[\n\\dfrac{1}{4} + \\dfrac{1}{12} = \\dfrac{3}{12} + \\dfrac{1}{12} = \\dfrac{4}{12} = \\dfrac{1}{3}\n\\]\nCombine: \\[\n4 + \\dfrac{1}{3} = 4\\dfrac{1}{3}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-compound-percentage-decrease",
-    "href": "Autumn 1/6. Percentages.html#example-compound-percentage-decrease",
-    "title": "Percentages",
-    "section": "Example: Compound Percentage Decrease",
-    "text": "Example: Compound Percentage Decrease\nThomas buys a new car for £15,690. The car depreciates at a rate of 4% each year. How much will it be worth in 11 years? \\[\n\\textsterling 15690 \\xrightarrow{\\times 0.96^{11}} \\textsterling 10013.98\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#code-compound-percentage-formula",
-    "href": "Autumn 1/6. Percentages.html#code-compound-percentage-formula",
-    "title": "Percentages",
-    "section": "Code: Compound Percentage Formula",
-    "text": "Code: Compound Percentage Formula",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-3",
-    "href": "Autumn 1/6. Percentages.html#test-your-understanding-3",
-    "title": "Percentages",
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-1",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-1",
+    "title": "Fractions",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\nAn investment of £500 grows by 4% each year. How much will it be worth after 5 years?\nA rare book increases in value by 7% each year. If it is currently worth £1,200, what will it be worth in 8 years?\nA car is bought for £18,000 and decreases in value by 12% each year. What will it be worth after 6 years?\nA population of 250,000 increases by 2.5% each year. What will the population be after 10 years?\nA laptop costs £900 and depreciates by 15% each year. What will it be worth after 4 years?\nA forest area is shrinking by 1.8% each year. If its current size is 5,000 acres, what will its size be after 12 years?",
+    "text": "Test Your Understanding\nCalculate, giving your answer as a mixed number in its simplest form:\n\n\\(2\\dfrac{4}{7} + 5\\dfrac{2}{3}\\)\n\\(6\\dfrac{2}{5} + 3\\dfrac{9}{10}\\)\n\\(8\\dfrac{7}{8} + 4\\dfrac{5}{6}\\)\n\\(7\\dfrac{7}{9} + 3\\dfrac{11}{18}\\)\n\\(12\\dfrac{6}{11} + 1\\dfrac{5}{8}\\)\n\\(3\\dfrac{13}{18} + 5\\dfrac{7}{24}\\)",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#answers-3",
-    "href": "Autumn 1/6. Percentages.html#answers-3",
-    "title": "Percentages",
+    "objectID": "Autumn 1/4. Fractions.html#answers-1",
+    "href": "Autumn 1/4. Fractions.html#answers-1",
+    "title": "Fractions",
     "section": "Answers",
-    "text": "Answers\n\n608.33\n2060.37\n8042.05\n320634.62\n522.68\n3997.19",
+    "text": "Answers\n\n\\(2\\dfrac{4}{7} + 5\\dfrac{2}{3} = 8\\dfrac{5}{21}\\)\n\\(6\\dfrac{2}{5} + 3\\dfrac{9}{10} = 10\\dfrac{3}{10}\\)\n\\(8\\dfrac{7}{8} + 4\\dfrac{5}{6} = 13\\dfrac{17}{24}\\)\n\\(7\\dfrac{7}{9} + 3\\dfrac{11}{18} = 11\\dfrac{7}{18}\\)\n\\(12\\dfrac{6}{11} + 1\\dfrac{5}{8} = 14\\dfrac{15}{88}\\)\n\\(3\\dfrac{13}{18} + 5\\dfrac{7}{24} = 9\\dfrac{1}{72}\\)",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-multiple-compound-changes",
-    "href": "Autumn 1/6. Percentages.html#example-multiple-compound-changes",
-    "title": "Percentages",
-    "section": "Example: Multiple Compound Changes",
-    "text": "Example: Multiple Compound Changes\nAndrew buys a watch for £225. It decreased in value by 3.5% for 1 year, then decreased in value by 7.5% per year for 2 years. Find the new value of the watch.\nAgain this is a case where decimal multipliers make this much easier. \\[\\begin{align*}\n3.5\\% \\text{ decrease} &= 0.965 \\\\\n7.5\\% \\text{ decrease for 2 years} &= 0.925^2 \\\\\n\\text{new value} &= \\textsterling 225 \\times 0.965 \\times 0.925^2 \\\\\n&= \\textsterling 185.78\n\\end{align*}\\]",
+    "objectID": "Autumn 1/4. Fractions.html#example-subtracting-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-subtracting-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Subtracting Mixed Numbers",
+    "text": "Example: Subtracting Mixed Numbers\nKey skill video\nCalculate: \\(7\\dfrac{1}{12} - 5\\dfrac{3}{4}\\) Give your answer as a mixed number in its simplest form.\n\n\nImproper Fractions\n\\[\n7\\dfrac{1}{12} = \\dfrac{7\\times12 + 1}{12} = \\dfrac{85}{12}\n\\] \\[\n5\\dfrac{3}{4} = \\dfrac{5\\times4 + 3}{4} = \\dfrac{23}{4} = \\dfrac{69}{12}\n\\]\nSubtract: \\[\n\\dfrac{85}{12} - \\dfrac{69}{12} = \\dfrac{16}{12} = 1\\dfrac{4}{12} = 1\\dfrac{1}{3}\n\\]\n\nPartitioning\nSplit into whole and fractional parts:\nIntegers: \\[7 - 5 = 2\\]\nFractions: \\[\n\\dfrac{1}{12} - \\dfrac{3}{4}= \\dfrac{1}{12} - \\dfrac{9}{12} = -\\dfrac{8}{12} = -\\dfrac{2}{3}\n\\]\nCombine: \\[\n2 + \\bigl(-\\dfrac{2}{3}\\bigr) = 1\\dfrac{1}{3}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/6. Percentages.html#example-reverse-compound-change",
-    "href": "Autumn 1/6. Percentages.html#example-reverse-compound-change",
-    "title": "Percentages",
-    "section": "Example: Reverse Compound Change",
-    "text": "Example: Reverse Compound Change\nPhilip invests some savings into an account that pays 4% compound interest per year. After 4 years the savings are worth £17,075. How much did Philip have in the account at the beginning?\nAn arrow representation will be useful here: \\[\n?\\ \\xrightarrow{\\times 1.04^4} \\textsterling 17075\n\\] This shows that we should divide: \\[\n17075 \\div 1.04^4 = 14595.78\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#example-missing-interest-rate",
-    "href": "Autumn 1/6. Percentages.html#example-missing-interest-rate",
-    "title": "Percentages",
-    "section": "Example: Missing Interest Rate",
-    "text": "Example: Missing Interest Rate\nConsider the same question but with a missing interest rate.\nPhilip invests £14,595.78 into an savings account. After 4 years the savings are worth £17,075. What was the interest rate?\nIn this case, we can form and solve an equation: \\[\\begin{align*}\n14595.78 \\times x^4 &= 17075 \\\\\nx^4 &= 17075 \\div 14595.78 \\\\\nx &= \\sqrt[4]{17075 \\div 14595.78} \\\\\nx &= 1.04\n\\end{align*}\\]\nwhich represents a 4% increase. This is the interest rate.",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#example-unknown-length-of-time",
-    "href": "Autumn 1/6. Percentages.html#example-unknown-length-of-time",
-    "title": "Percentages",
-    "section": "Example: Unknown Length of Time",
-    "text": "Example: Unknown Length of Time\nConsider the same question but with a missing length of time.\nPhilip invests £14,595.78 into an savings account at an interest rate of 4%. After how many years are they worth £17,075?\nThere is an A-Level method called a logarithm that can help with this, but for now we will use trial and error. You can do this on your calculator to speed things up.\n\\[\\begin{align*}\n14595.78 \\times 1.04 = 15,179.61 \\\\\n14595.78 \\times 1.04^2 = 15,786.80 \\\\\n14595.78 \\times 1.04^3 = 16,418.27 \\\\\n14595.78 \\times 1.04^4 = 17,075.00\n\\end{align*}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-4",
-    "href": "Autumn 1/6. Percentages.html#test-your-understanding-4",
-    "title": "Percentages",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\nThe value of the house increases each year by 2.1%. How much is her house worth after 6 years?\nThe value of the house increases each year by 3%. How many years will it take for her house to be worth £163,909.05?\nThe value of the house increases each year by \\(x\\)% and after 3 years is worth £168,729.60. Find \\(x\\).\nThe value of the house increases each year by 14%. How many years will it take for her house price to double?",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#answers-4",
-    "href": "Autumn 1/6. Percentages.html#answers-4",
-    "title": "Percentages",
-    "section": "Answers",
-    "text": "Answers\n\n£169,920.47\n3 years\n4\n6 years",
-    "crumbs": [
-      "Autumn 1",
-      "Percentages"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/6. Percentages.html#exercise-2",
-    "href": "Autumn 1/6. Percentages.html#exercise-2",
-    "title": "Percentages",
+    "objectID": "Autumn 1/4. Fractions.html#exercise-2",
+    "href": "Autumn 1/4. Fractions.html#exercise-2",
+    "title": "Fractions",
     "section": "Exercise 2",
     "text": "Exercise 2\nPlease complete the worksheet.",
     "crumbs": [
       "Autumn 1",
-      "Percentages"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/5. Recurring Decimals.html",
-    "href": "Autumn 1/5. Recurring Decimals.html",
-    "title": "Recurring Decimals",
-    "section": "",
-    "text": "To turn fractions into decimals, we can use long division. For example, to calculate \\(\\frac{17}{8}\\):\n\n\n\n\n\nNotice that we stop when we get a remainder of zero.",
+    "objectID": "Autumn 1/4. Fractions.html#example-multiplying-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-multiplying-fractions",
+    "title": "Fractions",
+    "section": "Example: Multiplying Fractions",
+    "text": "Example: Multiplying Fractions\nKey skill video\n\\[\n\\dfrac{4}{9} \\times \\dfrac{3}{5} = \\dfrac{4 \\times 3}{9 \\times 5} = \\dfrac{12}{45} = \\dfrac{4}{15}\n\\] You can cancel after you multiply, but it’s usually better to cancel before: \\[\n\\dfrac{12}{25} \\times \\dfrac{20}{21} = \\dfrac{\\boxed{3} \\times 4}{5 \\times \\boxed{5}} \\times \\dfrac{\\boxed{5} \\times 4}{\\boxed{3} \\times 7} = \\dfrac{4}{5} \\times \\dfrac{4}{7} = \\dfrac{16}{35}\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Recurring Decimals"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#example-long-division",
-    "href": "Autumn 1/5. Recurring Decimals.html#example-long-division",
-    "title": "Recurring Decimals",
-    "section": "",
-    "text": "To turn fractions into decimals, we can use long division. For example, to calculate \\(\\frac{17}{8}\\):\n\n\n\n\n\nNotice that we stop when we get a remainder of zero.",
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-2",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-2",
+    "title": "Fractions",
+    "section": "Test your understanding",
+    "text": "Test your understanding\nBy cancelling before you multiply, calculate the following:\n\n\\(\\dfrac{3\\times4}{8\\times5}\\)\n\\(\\dfrac{7}{9}\\times\\dfrac{4}{21}\\)\n\\(\\dfrac{8}{15}\\times\\dfrac{9}{10}\\)\n\\(\\dfrac{11}{24}\\times\\dfrac{12}{55}\\)\n\\(\\dfrac{10}{21}\\times\\dfrac{49}{60}\\)\n\\(\\dfrac{40}{63}\\times\\dfrac{27}{32}\\)",
     "crumbs": [
       "Autumn 1",
-      "Recurring Decimals"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#example-fraction-to-recurring-decimal",
-    "href": "Autumn 1/5. Recurring Decimals.html#example-fraction-to-recurring-decimal",
-    "title": "Recurring Decimals",
-    "section": "Example: Fraction to Recurring Decimal",
-    "text": "Example: Fraction to Recurring Decimal\nVideo: Converting from a fraction to a recurring decimal\nWe can also do this to find a recurring decimal. For example, to find \\(\\frac{3}{11}\\), we can do:\n\n\n\n\n\nAs soon as we get a repeated digit, we know we will be stuck in a loop, so we mark the decimal as recurring.\n\nSometimes there is a non-recurring decimal part before the recurrence begins:\n\n\n\n\n\nNotice that the vertical bar only extends over the repeating part.\n\nAnd sometimes it takes a long time to repeat:",
-    "crumbs": [
-      "Autumn 1",
-      "Recurring Decimals"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimal-notation",
-    "href": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimal-notation",
-    "title": "Recurring Decimals",
-    "section": "Example: Recurring Decimal Notation",
-    "text": "Example: Recurring Decimal Notation\nThere are actually two ways to represent recurring decimals, the bar over the repeating part or a dot above the first and last digit of the repeating part, so for example, the recurring decimal \\[\n0.3456456456456456\\ldots\n\\] Can be represented either as \\[\n0.3\\overline{456}\n\\] or as \\[\n0.3\\dot{4}5\\dot{6}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Recurring Decimals"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#test-your-understanding",
-    "href": "Autumn 1/5. Recurring Decimals.html#test-your-understanding",
-    "title": "Recurring Decimals",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nWrite out what each of these recurring decimals looks like:\n\n\\(0.\\dot{3}\\)\n\\(0.4\\overline{3}\\)\n\\(0.\\dot{4}\\dot{3}\\)\n\\(0.1\\overline{23}\\)\n\\(0.\\dot{1}2\\dot{3}\\)\n\\(0.12\\overline{3}\\)\n\\(0.4\\dot{3}0\\dot{3}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Recurring Decimals"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#answers",
-    "href": "Autumn 1/5. Recurring Decimals.html#answers",
-    "title": "Recurring Decimals",
+    "objectID": "Autumn 1/4. Fractions.html#answers-2",
+    "href": "Autumn 1/4. Fractions.html#answers-2",
+    "title": "Fractions",
     "section": "Answers",
-    "text": "Answers\n\n\\(0.\\dot{3} = 0.333\\ldots\\)\n\\(0.4\\overline{3} = 0.4333\\ldots\\)\n\\(0.\\dot{4}\\dot{3} = 0.434343\\ldots\\)\n\\(0.1\\overline{23} = 0.1232323\\ldots\\)\n\\(0.\\dot{1}2\\dot{3} = 0.123123123\\ldots\\)\n\\(0.12\\overline{3} = 0.12333\\ldots\\)\n\\(0.4\\dot{3}0\\dot{3} = 0.4303303303\\ldots\\)",
+    "text": "Answers\n\n\\(\\dfrac{3}{10}\\)\n\\(\\dfrac{4}{27}\\)\n\\(\\dfrac{12}{25}\\)\n\\(\\dfrac{1}{10}\\)\n\\(\\dfrac{7}{18}\\)\n\\(\\dfrac{15}{28}\\)",
     "crumbs": [
       "Autumn 1",
-      "Recurring Decimals"
+      "Fractions"
     ]
   },
   {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#exercise-1",
-    "href": "Autumn 1/5. Recurring Decimals.html#exercise-1",
-    "title": "Recurring Decimals",
+    "objectID": "Autumn 1/4. Fractions.html#example-powers-and-roots-of-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-powers-and-roots-of-fractions",
+    "title": "Fractions",
+    "section": "Example: Powers and Roots of Fractions",
+    "text": "Example: Powers and Roots of Fractions\nSquaring means multiplying by itself, so to square a fraction you simply square the numerator and square the denominator: \\[\\left(\\dfrac{3}{7}\\right)^2 = \\dfrac{3}{7} \\times \\dfrac{3}{7} = \\dfrac{3 \\times 3}{7 \\times 7} = \\dfrac{9}{49}\\]\nThe same goes for cubing: \\[\\left(\\dfrac{2}{5}\\right)^3 = \\dfrac{2}{5} \\times \\dfrac{2}{5} \\times \\dfrac{2}{5} = \\dfrac{8}{125}\\]\nTo square root, you square root the numerator and square root the denominator: \\[\\sqrt{\\dfrac{4}{25}} = \\dfrac{\\sqrt{4}}{\\sqrt{25}} = \\dfrac{2}{5}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-3",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-3",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate:\n\n\\(\\left(\\dfrac{1}{6}\\right)^2\\)\n\\(\\left(\\dfrac{2}{5}\\right)^2\\)\n\\(\\left(-\\dfrac{7}{12}\\right)^2\\)\n\\(\\left(\\dfrac{3}{4}\\right)^3\\)\n\\(\\left(\\dfrac{1}{10}\\right)^5\\)\n\\(\\sqrt{\\dfrac{81}{121}}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-3",
+    "href": "Autumn 1/4. Fractions.html#answers-3",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\left(\\dfrac{1}{6}\\right)^2 = \\dfrac{1}{36}\\)\n\\(\\left(\\dfrac{2}{5}\\right)^2 = \\dfrac{4}{25}\\)\n\\(\\left(-\\dfrac{7}{12}\\right)^2 = \\dfrac{49}{144}\\)\n\\(\\left(\\dfrac{3}{4}\\right)^3 = \\dfrac{27}{64}\\)\n\\(\\left(\\dfrac{1}{10}\\right)^5 = \\dfrac{1}{100000}\\)\n\\(\\sqrt{\\dfrac{81}{121}} = \\dfrac{9}{11}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-3",
+    "href": "Autumn 1/4. Fractions.html#exercise-3",
+    "title": "Fractions",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-multiplying-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-multiplying-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Multiplying Mixed Numbers",
+    "text": "Example: Multiplying Mixed Numbers\nKey skill video\nTo multiply mixed numbers, first convert them to improper fractions: \\[\n4\\dfrac{2}{5} \\times 1\\dfrac{7}{8} = \\dfrac{22}{5} \\times \\dfrac{15}{8} = \\dfrac{11 \\times \\boxed{2}}{\\boxed{5}} \\times \\dfrac{3 \\times \\boxed{5}}{\\boxed{2} \\times 4} = \\dfrac{11 \\times 3}{4} = \\dfrac{33}{4}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-4",
+    "href": "Autumn 1/4. Fractions.html#exercise-4",
+    "title": "Fractions",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-dividing-by-a-unit-fraction",
+    "href": "Autumn 1/4. Fractions.html#example-dividing-by-a-unit-fraction",
+    "title": "Fractions",
+    "section": "Example: Dividing by a Unit Fraction",
+    "text": "Example: Dividing by a Unit Fraction\nConsider a calculation like \\(5 \\div \\dfrac{1}{3}\\)\nThis means How many thirds go into five?\n. . .\nWe know the answer is 15, but how can we explain the method?\n. . .\nWe can explain this in terms of multiplying by the reciprocal: \\[\n5 \\div \\dfrac{1}{3} = 5 \\times \\dfrac{3}{1} = 15\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-dividing-by-other-fractions",
+    "href": "Autumn 1/4. Fractions.html#example-dividing-by-other-fractions",
+    "title": "Fractions",
+    "section": "Example: Dividing by Other Fractions",
+    "text": "Example: Dividing by Other Fractions\nKey skill video\nTo divide by other fractions, we can use the same technique: multiplying by the reciprocal: \\[\n4 \\div \\dfrac{2}{5} = 4 \\times \\dfrac{5}{2} = \\dfrac{4}{1} \\times \\dfrac{5}{2} = \\dfrac{20}{2} = 10\n\\] Don’t forget to continue to cancel before multiplying if you can: \\[\n\\dfrac{5}{12} \\div \\dfrac{3}{8} = \\dfrac{5}{12} \\times \\dfrac{8}{3} = \\dfrac{5}{\\boxed{4} \\times 3} \\times \\dfrac{\\boxed{4} \\times 2}{3} = \\dfrac{10}{9} = 1\\dfrac{1}{9}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-4",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-4",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate:\n\n\\(\\dfrac{4}{9} \\div \\dfrac{7}{5}\\)\n\\(\\dfrac{2}{7} \\div \\dfrac{3}{11}\\)\n\\(\\dfrac{6}{7} \\div \\dfrac{3}{10}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-4",
+    "href": "Autumn 1/4. Fractions.html#answers-4",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(\\dfrac{20}{63}\\)\n\\(1\\dfrac{1}{21}\\)\n\\(2\\dfrac{6}{7}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-5",
+    "href": "Autumn 1/4. Fractions.html#exercise-5",
+    "title": "Fractions",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#example-dividing-mixed-numbers",
+    "href": "Autumn 1/4. Fractions.html#example-dividing-mixed-numbers",
+    "title": "Fractions",
+    "section": "Example: Dividing Mixed Numbers",
+    "text": "Example: Dividing Mixed Numbers\nLike with multiplying mixed numbers, the first step in dividing mixed numbers is to convert them to improper fractions: \\[\n1\\dfrac{3}{7} \\div \\dfrac{1}{5} = \\dfrac{10}{7} \\div \\dfrac{1}{5} = \\dfrac{10}{7} \\times \\dfrac{5}{1} = \\dfrac{50}{7} = 7\\dfrac{1}{7}\n\\]\n\\[\n1\\dfrac{5}{9} \\div 2\\dfrac{4}{5} = \\dfrac{14}{9} \\div \\dfrac{14}{5} = \\dfrac{14}{9} \\times \\dfrac{5}{14} = \\dfrac{1}{9} \\times \\dfrac{5}{1} = \\dfrac{5}{9}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-5",
+    "href": "Autumn 1/4. Fractions.html#test-your-understanding-5",
+    "title": "Fractions",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate:\n\n\\(2\\dfrac{3}{5} \\div \\dfrac{1}{4}\\)\n\\(3\\dfrac{3}{7} \\div \\dfrac{4}{5}\\)\n\\(3\\dfrac{3}{7} \\div 1\\dfrac{3}{5}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#answers-5",
+    "href": "Autumn 1/4. Fractions.html#answers-5",
+    "title": "Fractions",
+    "section": "Answers",
+    "text": "Answers\n\n\\(10\\dfrac{2}{5}\\)\n\\(4\\dfrac{2}{7}\\)\n\\(2\\dfrac{1}{7}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/4. Fractions.html#exercise-6",
+    "href": "Autumn 1/4. Fractions.html#exercise-6",
+    "title": "Fractions",
+    "section": "Exercise 6",
+    "text": "Exercise 6\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Fractions"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html",
+    "href": "Autumn 1/1. Expanding Brackets.html",
+    "title": "Expanding Brackets",
+    "section": "",
+    "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#learning-objectives",
+    "href": "Autumn 1/1. Expanding Brackets.html#learning-objectives",
+    "title": "Expanding Brackets",
+    "section": "",
+    "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#basic-principles",
+    "href": "Autumn 1/1. Expanding Brackets.html#basic-principles",
+    "title": "Expanding Brackets",
+    "section": "Basic Principles",
+    "text": "Basic Principles\nAlgebra uses letters, often \\(x\\), to stand for numbers. Algebraic expressions can be treated in the same way as number expressions.\n\n\\(x + 3\\) means “add three to the unknown number.”\n\n\\(3x\\) means “3 times the unknown number.”\n\n\\(x^2\\) means “square the unknown number.”",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-combining-like-terms",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-combining-like-terms",
+    "title": "Expanding Brackets",
+    "section": "Example: Combining Like Terms",
+    "text": "Example: Combining Like Terms\n\\[\na + 3ab - 4ba = a - ab\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote: \\(ab = ba\\), so \\(3ab\\) and \\(-4ba\\) are like terms.\n\n\n\\[\n3p^3 + 2p^2 - 2p^3 + 5p^2 = (3p^3 - 2p^3) + (2p^2 + 5p^2) = p^3 + 7p^2\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-multiplying-algebraic-terms",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-multiplying-algebraic-terms",
+    "title": "Expanding Brackets",
+    "section": "Example: Multiplying Algebraic Terms",
+    "text": "Example: Multiplying Algebraic Terms\n\\[\n4r \\times 5t = 20rt\n\\]\n\\[\n(3b)^2 \\times 3b = 9b^2 \\times 3b = 27b^3\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nThe multiplication sign is often not included between letters, e.g. \\(3ab\\) means \\(3 \\times a \\times b\\)\nWhen multiplying, add like powers: \\(3a^2b \\times 2a^5b^4 = 6a^8b^5\\). (Think of \\(a\\) as \\(a^1\\)).",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
+    "title": "Expanding Brackets",
+    "section": "Example: Expanding Brackets",
+    "text": "Example: Expanding Brackets\nVideo: Expanding Single Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x + 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-with-indices",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-with-indices",
+    "title": "Expanding Brackets",
+    "section": "Example: Expanding with Indices",
+    "text": "Example: Expanding with Indices\nExpand \\(5x^2(12x^3 + 4x^5)\\)\n\\[\n5x^2 \\times 12x^3 + 5x^2 \\times 4x^5 = 60x^5 + 20x^7\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand\n\n\\(4y(2y-8)\\)\n\\(3x^2(x^3+y^4)\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}})\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2})\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\(4y(2y-8) = 8y^2 - 32y\\)\n\\(3x^2(x^3+y^4) = 3x^5 + 3x^2y^4\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}}) = c^2 - c + 1\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2}) = 30x^3 - 5x^4 + 35x^2y - 5\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-1",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-1",
+    "title": "Expanding Brackets",
     "section": "Exercise 1",
-    "text": "Exercise 1\nPlease complete the worksheet.",
+    "text": "Exercise 1\nPlease complete the worksheet",
     "crumbs": [
       "Autumn 1",
-      "Recurring Decimals"
+      "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimals-to-fractions",
-    "href": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimals-to-fractions",
-    "title": "Recurring Decimals",
-    "section": "Example: Recurring Decimals to Fractions",
-    "text": "Example: Recurring Decimals to Fractions\nVideo: Recurring Decimals to Fractions\nTo convert \\(0.\\overline{54}\\) to a fraction, we can use algebra. We let \\(x\\) equal the recurring decimal, then work out the value of \\(x\\) as fraction.\n\\[\\begin{align*}\nx = 0.&545454\\ldots & \\text{Write out the recurring decimal} \\\\\n100x = 54.&545454\\ldots & \\times 100 \\text{ because two recurring digits} \\\\\n99x = &\\ 54 & \\text{Subtract the first line from the second} \\\\\nx = &\\ \\dfrac{54}{99} = \\dfrac{6}{11} & \\text{Divide and simplify}\n\\end{align*}\\]\nThe trick here is that the recurring decimal parts cancel out when they are subtracted.\n\n\\[\\begin{align*}\nx &= 0.133333\\ldots & \\text{Write out the recurring decimal} \\\\\n10x &= 1.333333\\ldots & \\times 10 \\text{ because one recurring digit} \\\\\n9x &= 1.2 & \\text{Subtract the first line from the second} \\\\\nx &= \\dfrac{1.2}{9} = \\dfrac{12}{90} = \\dfrac{2}{15} & \\text{Divide and simplify}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\nNote here that when we subtract the first digit after the decimal point does not match, so we are effectively doing \\(1.3-0.1\\). The decimal digits after this do cancel because they are identical.\n\n\n\n\\[\\begin{align*}\nx   = 3&.0868686\\ldots \\\\\n100x = 308&.6868686\\ldots \\\\\n99x  = 305&.6 \\\\\nx = \\dfrac{305.6}{99} &= \\dfrac{3056}{990} = \\dfrac{1528}{495}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\nThe calculation this time is \\(308.6 - 3\\).\n\n\n\n\\[\\begin{align*}\nx      = 0&.5401401401\\ldots \\\\\n1000x  = 540&.1401401401\\ldots \\\\\n999x   = 539&.6 \\\\\nx      = \\dfrac{539.6}{999} &= \\dfrac{5396}{9990} = \\dfrac{2698}{4995}\n\\end{align*}\\]\n\n\n\n\n\n\nWarning\n\n\n\nBe careful here. 5 is greater than 1 so the calculation we need to do is \\(540.1-0.5\\).",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-double-brackets",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-double-brackets",
+    "title": "Expanding Brackets",
+    "section": "Example: Expanding Double Brackets",
+    "text": "Example: Expanding Double Brackets\nVideo: Expanding Double Brackets\nTo expand \\((x + 3)(x + 2)\\), you can use the grid method. \\[\n\\begin{array}{c|cc}\n    & x & +2 \\\\ \\hline\nx   & x^2 & 2x \\\\\n+3   & 3x  & 6\n\\end{array}\n\\]\nSumming the terms on the inside and simplifying gives:\n\\[\nx^2 + 3x + 2x +6 = x^2 + 5x + 6\n\\]",
     "crumbs": [
       "Autumn 1",
-      "Recurring Decimals"
+      "Expanding Brackets"
     ]
   },
   {
-    "objectID": "Autumn 1/5. Recurring Decimals.html#exercise-2",
-    "href": "Autumn 1/5. Recurring Decimals.html#exercise-2",
-    "title": "Recurring Decimals",
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-squared-bracket",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-squared-bracket",
+    "title": "Expanding Brackets",
+    "section": "Example: Squared Bracket",
+    "text": "Example: Squared Bracket\nA squared bracket is simply the same bracket twice. For example to expand \\[\n(2x+3)^2\n\\] the grid method is: \\[\n\\begin{array}{c|cc}\n    & 2x & +3 \\\\ \\hline\n2x  & 4x^2  & 6x \\\\\n+3  & 6x    & 9\n\\end{array}\n\\]\nAdding the terms on the inside and simplifying gives\n\\[\n4x^2 + 12x + 9\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-1",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-1",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((2y + 3)^2\\)\n\\((4 + x)(3x - 1)\\)\n\\((4a + 3)(4a - 3)\\)\n\\((5 - 2a)(b - 6)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-1",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers-1",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\((2y + 3)^2 = 4y^2 + 12y + 9\\)\n\\((4 + x)(3x - 1) = 3x^2 + 11x - 4\\)\n\\((4a + 3)(4a - 3) = 16a^2 - 9\\)\n\\((5 - 2a)(b - 6) = 5b + 12a - 2ab - 30\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-2",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-2",
+    "title": "Expanding Brackets",
     "section": "Exercise 2",
-    "text": "Exercise 2\nPlease complete the worksheet.",
+    "text": "Exercise 2\nPlease complete the worksheet",
     "crumbs": [
       "Autumn 1",
-      "Recurring Decimals"
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-2-times-3-grids",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-2-times-3-grids",
+    "title": "Expanding Brackets",
+    "section": "Example: 2 \\(\\times\\) 3 Grids",
+    "text": "Example: 2 \\(\\times\\) 3 Grids\nExpand and simplify \\((x^2 + 6x - 3)(x-4)\\)\n\\[\n\\begin{array}{c|cc}\n     & x      & -4      \\\\ \\hline\nx^2  & x^3    & -4x^2   \\\\\n6x   & 6x^2   & -24x    \\\\\n-3   & -3x    & 12\n\\end{array}\n\\] \\[\\begin{align*}\n&x ^3 + 6x^2 - 3x - 4x^2 - 24x + 12 \\\\\n=\\ &x^3 + 2x^2 - 27x + 12\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-2",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-2",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((a - 3b + 2c)(a + b)\\)\n\\((cd + 4c - 5d)(3e + 2f)\\)\n\\((x^2 - x + 7)(2x + 3)\\)\n\\((1 + 3x - 2x^2)(7x - 2)\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-2",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers-2",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\((a - 3b + 2c)(a + b) = a^2 - 2ab + 2ac + 2bc - 3b^2\\)\n\\((cd + 4c - 5d)(3e + 2f) = 3cde + 2cdf + 12ce + 8cf - 15de - 10df\\)\n\\((x^2 - x + 7)(2x + 3) = 2x^3 + x^2 + 11x + 21\\)\n\\((1 + 3x - 2x^2)(7x - 2) = -14x^3 + 25x^2 + x - 2\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-3",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-3",
+    "title": "Expanding Brackets",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#example-triple-brackets",
+    "href": "Autumn 1/1. Expanding Brackets.html#example-triple-brackets",
+    "title": "Expanding Brackets",
+    "section": "Example: Triple Brackets",
+    "text": "Example: Triple Brackets\nVideo: Expanding Triple Brackets\nA three‐bracket expansion such as \\((x+1)(x-3)(x+2)\\) can be done in two grid‐method steps. First, expand \\((x-3)(x+2)\\):\n\\[\n\\begin{array}{c|cc}\n& x   & +2 \\\\ \\hline\nx  & x^2 & 2x  \\\\\n-3 & -3x & -6\n\\end{array}\n\\]\nThis gives a result of\n\\[\nx^2 - x - 6\n\\]\n\nThen expand \\((x+1)(x^2 - x - 6)\\) with a \\(2 \\times 3\\) grid:\n\\[\n\\begin{array}{c|ccc}\n& x^2    & -x     & -6   \\\\ \\hline\nx     & x^3    & -x^2   & -6x  \\\\\n+1    & x^2    & -x     & -6\n\\end{array}\n\\]\nSo altogether \\((x+1)(x-3)(x+2)=x^3-7x-6\\)\n\n\n\n\n\n\nTip\n\n\n\nThe order you multiply the brackets does not matter.",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-3",
+    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-3",
+    "title": "Expanding Brackets",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((x + 2)^3\\)\n\\((2x + 1)(x - 1)^2\\)\n\\((3 + y)(3 - y)^2\\)\n\\((a - b x)^3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-3",
+    "href": "Autumn 1/1. Expanding Brackets.html#answers-3",
+    "title": "Expanding Brackets",
+    "section": "Answers",
+    "text": "Answers\n\n\\((x + 2)^3 = x^3 + 6x^2 + 12x + 8\\)\n\\((2x + 1)(x - 1)^2 = 2x^3 - 3x^2 + 1\\)\n\\((3 + y)(3 - y)^2 = y^3 - 3y^2 - 9y + 27\\)\n\\((a - b x)^3 = a^3 - 3a^2 b x + 3a b^2 x^2 - b^3 x^3\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-4",
+    "href": "Autumn 1/1. Expanding Brackets.html#exercise-4",
+    "title": "Expanding Brackets",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Expanding Brackets"
     ]
   },
   {
@@ -1140,600 +1327,6 @@
     ]
   },
   {
-    "objectID": "Autumn 1/1. Expanding Brackets.html",
-    "href": "Autumn 1/1. Expanding Brackets.html",
-    "title": "Expanding Brackets",
-    "section": "",
-    "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#learning-objectives",
-    "href": "Autumn 1/1. Expanding Brackets.html#learning-objectives",
-    "title": "Expanding Brackets",
-    "section": "",
-    "text": "Simplify algebraic expressions\nExpand brackets\nSolve equations in which the unknown appears on both sides",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#basic-principles",
-    "href": "Autumn 1/1. Expanding Brackets.html#basic-principles",
-    "title": "Expanding Brackets",
-    "section": "Basic Principles",
-    "text": "Basic Principles\nAlgebra uses letters, often \\(x\\), to stand for numbers. Algebraic expressions can be treated in the same way as number expressions.\n\n\\(x + 3\\) means “add three to the unknown number.”\n\n\\(3x\\) means “3 times the unknown number.”\n\n\\(x^2\\) means “square the unknown number.”",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-combining-like-terms",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-combining-like-terms",
-    "title": "Expanding Brackets",
-    "section": "Example: Combining Like Terms",
-    "text": "Example: Combining Like Terms\n\\[\na + 3ab - 4ba = a - ab\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote: \\(ab = ba\\), so \\(3ab\\) and \\(-4ba\\) are like terms.\n\n\n\\[\n3p^3 + 2p^2 - 2p^3 + 5p^2 = (3p^3 - 2p^3) + (2p^2 + 5p^2) = p^3 + 7p^2\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-multiplying-algebraic-terms",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-multiplying-algebraic-terms",
-    "title": "Expanding Brackets",
-    "section": "Example: Multiplying Algebraic Terms",
-    "text": "Example: Multiplying Algebraic Terms\n\\[\n4r \\times 5t = 20rt\n\\]\n\\[\n(3b)^2 \\times 3b = 9b^2 \\times 3b = 27b^3\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nThe multiplication sign is often not included between letters, e.g. \\(3ab\\) means \\(3 \\times a \\times b\\)\nWhen multiplying, add like powers: \\(3a^2b \\times 2a^5b^4 = 6a^8b^5\\). (Think of \\(a\\) as \\(a^1\\)).",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
-    "title": "Expanding Brackets",
-    "section": "Example: Expanding Brackets",
-    "text": "Example: Expanding Brackets\nVideo: Expanding Single Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x + 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-with-indices",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-with-indices",
-    "title": "Expanding Brackets",
-    "section": "Example: Expanding with Indices",
-    "text": "Example: Expanding with Indices\nExpand \\(5x^2(12x^3 + 4x^5)\\)\n\\[\n5x^2 \\times 12x^3 + 5x^2 \\times 4x^5 = 60x^5 + 20x^7\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding",
-    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding",
-    "title": "Expanding Brackets",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nExpand\n\n\\(4y(2y-8)\\)\n\\(3x^2(x^3+y^4)\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}})\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2})\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#answers",
-    "href": "Autumn 1/1. Expanding Brackets.html#answers",
-    "title": "Expanding Brackets",
-    "section": "Answers",
-    "text": "Answers\n\n\\(4y(2y-8) = 8y^2 - 32y\\)\n\\(3x^2(x^3+y^4) = 3x^5 + 3x^2y^4\\)\n\\(c^{\\frac{1}{2}}(c^\\frac{3}{2} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}}) = c^2 - c + 1\\)\n\\(5x^2(6x - x^2 + 7y - x^{-2}) = 30x^3 - 5x^4 + 35x^2y - 5\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-1",
-    "href": "Autumn 1/1. Expanding Brackets.html#exercise-1",
-    "title": "Expanding Brackets",
-    "section": "Exercise 1",
-    "text": "Exercise 1\nPlease complete the worksheet",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-expanding-double-brackets",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-double-brackets",
-    "title": "Expanding Brackets",
-    "section": "Example: Expanding Double Brackets",
-    "text": "Example: Expanding Double Brackets\nVideo: Expanding Double Brackets\nTo expand \\((x + 3)(x + 2)\\), you can use the grid method. \\[\n\\begin{array}{c|cc}\n    & x & +2 \\\\ \\hline\nx   & x^2 & 2x \\\\\n+3   & 3x  & 6\n\\end{array}\n\\]\nSumming the terms on the inside and simplifying gives:\n\\[\nx^2 + 3x + 2x +6 = x^2 + 5x + 6\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-squared-bracket",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-squared-bracket",
-    "title": "Expanding Brackets",
-    "section": "Example: Squared Bracket",
-    "text": "Example: Squared Bracket\nA squared bracket is simply the same bracket twice. For example to expand \\[\n(2x+3)^2\n\\] the grid method is: \\[\n\\begin{array}{c|cc}\n    & 2x & +3 \\\\ \\hline\n2x  & 4x^2  & 6x \\\\\n+3  & 6x    & 9\n\\end{array}\n\\]\nAdding the terms on the inside and simplifying gives\n\\[\n4x^2 + 12x + 9\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-1",
-    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-1",
-    "title": "Expanding Brackets",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((2y + 3)^2\\)\n\\((4 + x)(3x - 1)\\)\n\\((4a + 3)(4a - 3)\\)\n\\((5 - 2a)(b - 6)\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-1",
-    "href": "Autumn 1/1. Expanding Brackets.html#answers-1",
-    "title": "Expanding Brackets",
-    "section": "Answers",
-    "text": "Answers\n\n\\((2y + 3)^2 = 4y^2 + 12y + 9\\)\n\\((4 + x)(3x - 1) = 3x^2 + 11x - 4\\)\n\\((4a + 3)(4a - 3) = 16a^2 - 9\\)\n\\((5 - 2a)(b - 6) = 5b + 12a - 2ab - 30\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-2",
-    "href": "Autumn 1/1. Expanding Brackets.html#exercise-2",
-    "title": "Expanding Brackets",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nPlease complete the worksheet",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-2-times-3-grids",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-2-times-3-grids",
-    "title": "Expanding Brackets",
-    "section": "Example: 2 \\(\\times\\) 3 Grids",
-    "text": "Example: 2 \\(\\times\\) 3 Grids\nExpand and simplify \\((x^2 + 6x - 3)(x-4)\\)\n\\[\n\\begin{array}{c|cc}\n     & x      & -4      \\\\ \\hline\nx^2  & x^3    & -4x^2   \\\\\n6x   & 6x^2   & -24x    \\\\\n-3   & -3x    & 12\n\\end{array}\n\\] \\[\\begin{align*}\n&x ^3 + 6x^2 - 3x - 4x^2 - 24x + 12 \\\\\n=\\ &x^3 + 2x^2 - 27x + 12\n\\end{align*}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-2",
-    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-2",
-    "title": "Expanding Brackets",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((a - 3b + 2c)(a + b)\\)\n\\((cd + 4c - 5d)(3e + 2f)\\)\n\\((x^2 - x + 7)(2x + 3)\\)\n\\((1 + 3x - 2x^2)(7x - 2)\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-2",
-    "href": "Autumn 1/1. Expanding Brackets.html#answers-2",
-    "title": "Expanding Brackets",
-    "section": "Answers",
-    "text": "Answers\n\n\\((a - 3b + 2c)(a + b) = a^2 - 2ab + 2ac + 2bc - 3b^2\\)\n\\((cd + 4c - 5d)(3e + 2f) = 3cde + 2cdf + 12ce + 8cf - 15de - 10df\\)\n\\((x^2 - x + 7)(2x + 3) = 2x^3 + x^2 + 11x + 21\\)\n\\((1 + 3x - 2x^2)(7x - 2) = -14x^3 + 25x^2 + x - 2\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-3",
-    "href": "Autumn 1/1. Expanding Brackets.html#exercise-3",
-    "title": "Expanding Brackets",
-    "section": "Exercise 3",
-    "text": "Exercise 3\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#example-triple-brackets",
-    "href": "Autumn 1/1. Expanding Brackets.html#example-triple-brackets",
-    "title": "Expanding Brackets",
-    "section": "Example: Triple Brackets",
-    "text": "Example: Triple Brackets\nVideo: Expanding Triple Brackets\nA three‐bracket expansion such as \\((x+1)(x-3)(x+2)\\) can be done in two grid‐method steps. First, expand \\((x-3)(x+2)\\):\n\\[\n\\begin{array}{c|cc}\n& x   & +2 \\\\ \\hline\nx  & x^2 & 2x  \\\\\n-3 & -3x & -6\n\\end{array}\n\\]\nThis gives a result of\n\\[\nx^2 - x - 6\n\\]\n\nThen expand \\((x+1)(x^2 - x - 6)\\) with a \\(2 \\times 3\\) grid:\n\\[\n\\begin{array}{c|ccc}\n& x^2    & -x     & -6   \\\\ \\hline\nx     & x^3    & -x^2   & -6x  \\\\\n+1    & x^2    & -x     & -6\n\\end{array}\n\\]\nSo altogether \\((x+1)(x-3)(x+2)=x^3-7x-6\\)\n\n\n\n\n\n\nTip\n\n\n\nThe order you multiply the brackets does not matter.",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-3",
-    "href": "Autumn 1/1. Expanding Brackets.html#test-your-understanding-3",
-    "title": "Expanding Brackets",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nExpand and simplify:\n\n\\((x + 2)^3\\)\n\\((2x + 1)(x - 1)^2\\)\n\\((3 + y)(3 - y)^2\\)\n\\((a - b x)^3\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#answers-3",
-    "href": "Autumn 1/1. Expanding Brackets.html#answers-3",
-    "title": "Expanding Brackets",
-    "section": "Answers",
-    "text": "Answers\n\n\\((x + 2)^3 = x^3 + 6x^2 + 12x + 8\\)\n\\((2x + 1)(x - 1)^2 = 2x^3 - x^2 + 1\\)\n\\((3 + y)(3 - y)^2 = y^3 - 3y^2 - 9y + 27\\)\n\\((a - b x)^3 = a^3 - 3a^2 b x + 3a b^2 x^2 - b^3 x^3\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/1. Expanding Brackets.html#exercise-4",
-    "href": "Autumn 1/1. Expanding Brackets.html#exercise-4",
-    "title": "Expanding Brackets",
-    "section": "Exercise 4",
-    "text": "Exercise 4\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Expanding Brackets"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html",
-    "href": "Autumn 1/4. Fractions.html",
-    "title": "Fractions",
-    "section": "",
-    "text": "Key skill video\n\\[\n\\dfrac{2}{7} + \\dfrac{3}{5} = \\dfrac{10}{35} + \\dfrac{21}{35} = \\dfrac{31}{35}\n\\] \\[\n\\dfrac{4}{9} - \\dfrac{1}{4} = \\dfrac{16}{36} - \\dfrac{9}{36} = \\dfrac{5}{36}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-adding-and-subtracting-fractions",
-    "href": "Autumn 1/4. Fractions.html#example-adding-and-subtracting-fractions",
-    "title": "Fractions",
-    "section": "",
-    "text": "Key skill video\n\\[\n\\dfrac{2}{7} + \\dfrac{3}{5} = \\dfrac{10}{35} + \\dfrac{21}{35} = \\dfrac{31}{35}\n\\] \\[\n\\dfrac{4}{9} - \\dfrac{1}{4} = \\dfrac{16}{36} - \\dfrac{9}{36} = \\dfrac{5}{36}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#method-comparison",
-    "href": "Autumn 1/4. Fractions.html#method-comparison",
-    "title": "Fractions",
-    "section": "Method Comparison",
-    "text": "Method Comparison\nTo calculate \\(\\dfrac{1}{6} + \\dfrac{3}{4}\\), there are two methods\n\n\nMultiply denominators \\[\n\\dfrac{4}{24} + \\dfrac{18}{24} = \\dfrac{22}{24} = \\dfrac{11}{12}\n\\]\n\nLowest common multiple \\[\n\\dfrac{2}{12} + \\dfrac{9}{12} = \\dfrac{11}{12}\n\\]\n\n\nWhich method do you think is better?",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding",
-    "href": "Autumn 1/4. Fractions.html#test-your-understanding",
-    "title": "Fractions",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\n\\(\\dfrac{8}{9} - \\dfrac{7}{15}\\)\n\\(\\dfrac{2}{15} + \\dfrac{7}{10}\\)\n\\(\\dfrac{1}{4} + \\dfrac{5}{12}\\)\n\\(\\dfrac{8}{9} - \\dfrac{3}{4}\\)\n\\(\\dfrac{1}{4} + \\dfrac{3}{10} - \\dfrac{4}{25}\\)\n\\(\\dfrac{5}{9} + \\dfrac{3}{8} + \\dfrac{5}{72}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#answers",
-    "href": "Autumn 1/4. Fractions.html#answers",
-    "title": "Fractions",
-    "section": "Answers",
-    "text": "Answers\n\n\\(\\dfrac{8}{9} - \\dfrac{7}{15} = \\dfrac{19}{45}\\)\n\\(\\dfrac{2}{15} + \\dfrac{7}{10} = \\dfrac{25}{30} = \\dfrac{5}{6}\\)\n\\(\\dfrac{1}{4} + \\dfrac{5}{12} = \\dfrac{8}{12} = \\dfrac{2}{3}\\)\n\\(\\dfrac{8}{9} - \\dfrac{3}{4} = \\dfrac{32}{36} - \\dfrac{27}{36} = \\dfrac{5}{36}\\)\n\\(\\dfrac{1}{4} + \\dfrac{3}{10} - \\dfrac{4}{25} = \\dfrac{25}{100} + \\dfrac{30}{100} - \\dfrac{16}{100} = \\dfrac{39}{100}\\)\n\\(\\dfrac{5}{9} + \\dfrac{3}{8} + \\dfrac{5}{72} = \\dfrac{40}{72} + \\dfrac{27}{72} + \\dfrac{5}{72} = \\dfrac{72}{72} = 1\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#exercise-1",
-    "href": "Autumn 1/4. Fractions.html#exercise-1",
-    "title": "Fractions",
-    "section": "Exercise 1",
-    "text": "Exercise 1\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-adding-mixed-numbers",
-    "href": "Autumn 1/4. Fractions.html#example-adding-mixed-numbers",
-    "title": "Fractions",
-    "section": "Example: Adding Mixed Numbers",
-    "text": "Example: Adding Mixed Numbers\nKey skill video\nCalculate: \\(1\\dfrac{1}{4} + 3\\dfrac{1}{12}\\)\n\n\nImproper fractions \\[\n1\\dfrac{1}{4} = \\dfrac{5}{4}\n\\] \\[\n3\\dfrac{1}{12} = \\dfrac{37}{12}\n\\] \\[\n\\dfrac{5}{4} = \\dfrac{5\\times 3}{4\\times 3} = \\dfrac{15}{12}\n\\] Add: \\[\n\\dfrac{15}{12} + \\dfrac{37}{12} = \\dfrac{52}{12} = 4\\dfrac{4}{12} = 4\\dfrac{1}{3}\n\\]\n\nPartitioning\nIntegers: \\[\n1 + 3 = 4\n\\] Fractions: \\[\n\\dfrac{1}{4} + \\dfrac{1}{12} = \\dfrac{3}{12} + \\dfrac{1}{12} = \\dfrac{4}{12} = \\dfrac{1}{3}\n\\]\nCombine: \\[\n4 + \\dfrac{1}{3} = 4\\dfrac{1}{3}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-1",
-    "href": "Autumn 1/4. Fractions.html#test-your-understanding-1",
-    "title": "Fractions",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nCalculate, giving your answer as a mixed number in its simplest form:\n\n\\(2\\dfrac{4}{7} + 5\\dfrac{2}{3}\\)\n\\(6\\dfrac{2}{5} + 3\\dfrac{9}{10}\\)\n\\(8\\dfrac{7}{8} + 4\\dfrac{5}{6}\\)\n\\(7\\dfrac{7}{9} + 3\\dfrac{11}{18}\\)\n\\(12\\dfrac{6}{11} + 1\\dfrac{5}{8}\\)\n\\(3\\dfrac{13}{18} + 5\\dfrac{7}{24}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#answers-1",
-    "href": "Autumn 1/4. Fractions.html#answers-1",
-    "title": "Fractions",
-    "section": "Answers",
-    "text": "Answers\n\n\\(2\\dfrac{4}{7} + 5\\dfrac{2}{3} = 8\\dfrac{5}{21}\\)\n\\(6\\dfrac{2}{5} + 3\\dfrac{9}{10} = 10\\dfrac{3}{10}\\)\n\\(8\\dfrac{7}{8} + 4\\dfrac{5}{6} = 13\\dfrac{17}{24}\\)\n\\(7\\dfrac{7}{9} + 3\\dfrac{11}{18} = 11\\dfrac{7}{18}\\)\n\\(12\\dfrac{6}{11} + 1\\dfrac{5}{8} = 14\\dfrac{15}{88}\\)\n\\(3\\dfrac{13}{18} + 5\\dfrac{7}{24} = 9\\dfrac{1}{72}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-subtracting-mixed-numbers",
-    "href": "Autumn 1/4. Fractions.html#example-subtracting-mixed-numbers",
-    "title": "Fractions",
-    "section": "Example: Subtracting Mixed Numbers",
-    "text": "Example: Subtracting Mixed Numbers\nKey skill video\nCalculate: \\(7\\dfrac{1}{12} - 5\\dfrac{3}{4}\\) Give your answer as a mixed number in its simplest form.\n\n\nImproper Fractions\n\\[\n7\\dfrac{1}{12} = \\dfrac{7\\times12 + 1}{12} = \\dfrac{85}{12}\n\\] \\[\n5\\dfrac{3}{4} = \\dfrac{5\\times4 + 3}{4} = \\dfrac{23}{4} = \\dfrac{69}{12}\n\\]\nSubtract: \\[\n\\dfrac{85}{12} - \\dfrac{69}{12} = \\dfrac{16}{12} = 1\\dfrac{4}{12} = 1\\dfrac{1}{3}\n\\]\n\nPartitioning\nSplit into whole and fractional parts:\nIntegers: \\[7 - 5 = 2\\]\nFractions: \\[\n\\dfrac{1}{12} - \\dfrac{3}{4}= \\dfrac{1}{12} - \\dfrac{9}{12} = -\\dfrac{8}{12} = -\\dfrac{2}{3}\n\\]\nCombine: \\[\n2 + \\bigl(-\\dfrac{2}{3}\\bigr) = 1\\dfrac{1}{3}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#exercise-2",
-    "href": "Autumn 1/4. Fractions.html#exercise-2",
-    "title": "Fractions",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-multiplying-fractions",
-    "href": "Autumn 1/4. Fractions.html#example-multiplying-fractions",
-    "title": "Fractions",
-    "section": "Example: Multiplying Fractions",
-    "text": "Example: Multiplying Fractions\nKey skill video\n\\[\n\\dfrac{4}{9} \\times \\dfrac{3}{5} = \\dfrac{4 \\times 3}{9 \\times 5} = \\dfrac{12}{45} = \\dfrac{4}{15}\n\\] You can cancel after you multiply, but it’s usually better to cancel before: \\[\n\\dfrac{12}{25} \\times \\dfrac{20}{21} = \\dfrac{\\boxed{3} \\times 4}{5 \\times \\boxed{5}} \\times \\dfrac{\\boxed{5} \\times 4}{\\boxed{3} \\times 7} = \\dfrac{4}{5} \\times \\dfrac{4}{7} = \\dfrac{16}{35}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-2",
-    "href": "Autumn 1/4. Fractions.html#test-your-understanding-2",
-    "title": "Fractions",
-    "section": "Test your understanding",
-    "text": "Test your understanding\nBy cancelling before you multiply, calculate the following:\n\n\\(\\dfrac{3\\times4}{8\\times5}\\)\n\\(\\dfrac{7}{9}\\times\\dfrac{4}{21}\\)\n\\(\\dfrac{8}{15}\\times\\dfrac{9}{10}\\)\n\\(\\dfrac{11}{24}\\times\\dfrac{12}{55}\\)\n\\(\\dfrac{10}{21}\\times\\dfrac{49}{60}\\)\n\\(\\dfrac{40}{63}\\times\\dfrac{27}{32}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#answers-2",
-    "href": "Autumn 1/4. Fractions.html#answers-2",
-    "title": "Fractions",
-    "section": "Answers",
-    "text": "Answers\n\n\\(\\dfrac{3}{10}\\)\n\\(\\dfrac{4}{27}\\)\n\\(\\dfrac{12}{25}\\)\n\\(\\dfrac{1}{10}\\)\n\\(\\dfrac{7}{18}\\)\n\\(\\dfrac{15}{28}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-powers-and-roots-of-fractions",
-    "href": "Autumn 1/4. Fractions.html#example-powers-and-roots-of-fractions",
-    "title": "Fractions",
-    "section": "Example: Powers and Roots of Fractions",
-    "text": "Example: Powers and Roots of Fractions\nSquaring means multiplying by itself, so to square a fraction you simply square the numerator and square the denominator: \\[\\left(\\dfrac{3}{7}\\right)^2 = \\dfrac{3}{7} \\times \\dfrac{3}{7} = \\dfrac{3 \\times 3}{7 \\times 7} = \\dfrac{9}{49}\\]\nThe same goes for cubing: \\[\\left(\\dfrac{2}{5}\\right)^3 = \\dfrac{2}{5} \\times \\dfrac{2}{5} \\times \\dfrac{2}{5} = \\dfrac{8}{125}\\]\nTo square root, you square root the numerator and square root the denominator: \\[\\sqrt{\\dfrac{4}{25}} = \\dfrac{\\sqrt{4}}{\\sqrt{25}} = \\dfrac{2}{5}\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-3",
-    "href": "Autumn 1/4. Fractions.html#test-your-understanding-3",
-    "title": "Fractions",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nCalculate:\n\n\\(\\left(\\dfrac{1}{6}\\right)^2\\)\n\\(\\left(\\dfrac{2}{5}\\right)^2\\)\n\\(\\left(-\\dfrac{7}{12}\\right)^2\\)\n\\(\\left(\\dfrac{3}{4}\\right)^3\\)\n\\(\\left(\\dfrac{1}{10}\\right)^5\\)\n\\(\\sqrt{\\dfrac{81}{121}}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#answers-3",
-    "href": "Autumn 1/4. Fractions.html#answers-3",
-    "title": "Fractions",
-    "section": "Answers",
-    "text": "Answers\n\n\\(\\left(\\dfrac{1}{6}\\right)^2 = \\dfrac{1}{36}\\)\n\\(\\left(\\dfrac{2}{5}\\right)^2 = \\dfrac{4}{25}\\)\n\\(\\left(-\\dfrac{7}{12}\\right)^2 = \\dfrac{49}{144}\\)\n\\(\\left(\\dfrac{3}{4}\\right)^3 = \\dfrac{27}{64}\\)\n\\(\\left(\\dfrac{1}{10}\\right)^5 = \\dfrac{1}{100000}\\)\n\\(\\sqrt{\\dfrac{81}{121}} = \\dfrac{9}{11}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#exercise-3",
-    "href": "Autumn 1/4. Fractions.html#exercise-3",
-    "title": "Fractions",
-    "section": "Exercise 3",
-    "text": "Exercise 3\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-multiplying-mixed-numbers",
-    "href": "Autumn 1/4. Fractions.html#example-multiplying-mixed-numbers",
-    "title": "Fractions",
-    "section": "Example: Multiplying Mixed Numbers",
-    "text": "Example: Multiplying Mixed Numbers\nKey skill video\nTo multiply mixed numbers, first convert them to improper fractions: \\[\n4\\dfrac{2}{5} \\times 1\\dfrac{7}{8} = \\dfrac{22}{5} \\times \\dfrac{15}{8} = \\dfrac{11 \\times \\boxed{2}}{\\boxed{5}} \\times \\dfrac{3 \\times \\boxed{5}}{\\boxed{2} \\times 4} = \\dfrac{11 \\times 3}{4} = \\dfrac{33}{4}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#exercise-4",
-    "href": "Autumn 1/4. Fractions.html#exercise-4",
-    "title": "Fractions",
-    "section": "Exercise 4",
-    "text": "Exercise 4\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-dividing-by-a-unit-fraction",
-    "href": "Autumn 1/4. Fractions.html#example-dividing-by-a-unit-fraction",
-    "title": "Fractions",
-    "section": "Example: Dividing by a Unit Fraction",
-    "text": "Example: Dividing by a Unit Fraction\nConsider a calculation like \\(5 \\div \\dfrac{1}{3}\\)\nThis means How many thirds go into five?\n. . .\nWe know the answer is 15, but how can we explain the method?\n. . .\nWe can explain this in terms of multiplying by the reciprocal: \\[\n5 \\div \\dfrac{1}{3} = 5 \\times \\dfrac{3}{1} = 15\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-dividing-by-other-fractions",
-    "href": "Autumn 1/4. Fractions.html#example-dividing-by-other-fractions",
-    "title": "Fractions",
-    "section": "Example: Dividing by Other Fractions",
-    "text": "Example: Dividing by Other Fractions\nKey skill video\nTo divide by other fractions, we can use the same technique: multiplying by the reciprocal: \\[\n4 \\div \\dfrac{2}{5} = 4 \\times \\dfrac{5}{2} = \\dfrac{4}{1} \\times \\dfrac{5}{2} = \\dfrac{20}{2} = 10\n\\] Don’t forget to continue to cancel before multiplying if you can: \\[\n\\dfrac{5}{12} \\div \\dfrac{3}{8} = \\dfrac{5}{12} \\times \\dfrac{8}{3} = \\dfrac{5}{\\boxed{4} \\times 3} \\times \\dfrac{\\boxed{4} \\times 2}{3} = \\dfrac{10}{9} = 1\\dfrac{1}{9}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-4",
-    "href": "Autumn 1/4. Fractions.html#test-your-understanding-4",
-    "title": "Fractions",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nCalculate:\n\n\\(\\dfrac{4}{9} \\div \\dfrac{7}{5}\\)\n\\(\\dfrac{2}{7} \\div \\dfrac{3}{11}\\)\n\\(\\dfrac{6}{7} \\div \\dfrac{3}{10}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#answers-4",
-    "href": "Autumn 1/4. Fractions.html#answers-4",
-    "title": "Fractions",
-    "section": "Answers",
-    "text": "Answers\n\n\\(\\dfrac{20}{63}\\)\n\\(1\\dfrac{1}{21}\\)\n\\(2\\dfrac{6}{7}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#exercise-5",
-    "href": "Autumn 1/4. Fractions.html#exercise-5",
-    "title": "Fractions",
-    "section": "Exercise 5",
-    "text": "Exercise 5\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#example-dividing-mixed-numbers",
-    "href": "Autumn 1/4. Fractions.html#example-dividing-mixed-numbers",
-    "title": "Fractions",
-    "section": "Example: Dividing Mixed Numbers",
-    "text": "Example: Dividing Mixed Numbers\nLike with multiplying mixed numbers, the first step in dividing mixed numbers is to convert them to improper fractions: \\[\n1\\dfrac{3}{7} \\div \\dfrac{1}{5} = \\dfrac{10}{7} \\div \\dfrac{1}{5} = \\dfrac{10}{7} \\times \\dfrac{5}{1} = \\dfrac{50}{7} = 7\\dfrac{1}{7}\n\\]\n\\[\n1\\dfrac{5}{9} \\div 2\\dfrac{4}{5} = \\dfrac{14}{9} \\div \\dfrac{14}{5} = \\dfrac{14}{9} \\times \\dfrac{5}{14} = \\dfrac{1}{9} \\times \\dfrac{5}{1} = \\dfrac{5}{9}\n\\]",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#test-your-understanding-5",
-    "href": "Autumn 1/4. Fractions.html#test-your-understanding-5",
-    "title": "Fractions",
-    "section": "Test Your Understanding",
-    "text": "Test Your Understanding\nCalculate:\n\n\\(2\\dfrac{3}{5} \\div \\dfrac{1}{4}\\)\n\\(3\\dfrac{3}{7} \\div \\dfrac{4}{5}\\)\n\\(3\\dfrac{3}{7} \\div 1\\dfrac{3}{5}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#answers-5",
-    "href": "Autumn 1/4. Fractions.html#answers-5",
-    "title": "Fractions",
-    "section": "Answers",
-    "text": "Answers\n\n\\(10\\dfrac{2}{5}\\)\n\\(4\\dfrac{2}{7}\\)\n\\(2\\dfrac{1}{7}\\)",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Autumn 1/4. Fractions.html#exercise-6",
-    "href": "Autumn 1/4. Fractions.html#exercise-6",
-    "title": "Fractions",
-    "section": "Exercise 6",
-    "text": "Exercise 6\nPlease complete the worksheet.",
-    "crumbs": [
-      "Autumn 1",
-      "Fractions"
-    ]
-  },
-  {
-    "objectID": "Spring 1/13. Straight Line Graphs.html",
-    "href": "Spring 1/13. Straight Line Graphs.html",
-    "title": "Straight Line Graphs",
-    "section": "",
-    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
-    "crumbs": [
-      "Spring 1",
-      "Straight Line Graphs"
-    ]
-  },
-  {
-    "objectID": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
-    "href": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
-    "title": "Straight Line Graphs",
-    "section": "",
-    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
-    "crumbs": [
-      "Spring 1",
-      "Straight Line Graphs"
-    ]
-  },
-  {
     "objectID": "Autumn 1/7. Rounding and Estimation.html",
     "href": "Autumn 1/7. Rounding and Estimation.html",
     "title": "Rounding and Estimation",
@@ -1819,6 +1412,413 @@
     "crumbs": [
       "Autumn 1",
       "Rounding and Estimation"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html",
+    "href": "Autumn 1/5. Recurring Decimals.html",
+    "title": "Recurring Decimals",
+    "section": "",
+    "text": "To turn fractions into decimals, we can use long division. For example, to calculate \\(\\frac{17}{8}\\):\n\n\n\n\n\nNotice that we stop when we get a remainder of zero.",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-long-division",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-long-division",
+    "title": "Recurring Decimals",
+    "section": "",
+    "text": "To turn fractions into decimals, we can use long division. For example, to calculate \\(\\frac{17}{8}\\):\n\n\n\n\n\nNotice that we stop when we get a remainder of zero.",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-fraction-to-recurring-decimal",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-fraction-to-recurring-decimal",
+    "title": "Recurring Decimals",
+    "section": "Example: Fraction to Recurring Decimal",
+    "text": "Example: Fraction to Recurring Decimal\nVideo: Converting from a fraction to a recurring decimal\nWe can also do this to find a recurring decimal. For example, to find \\(\\frac{3}{11}\\), we can do:\n\n\n\n\n\nAs soon as we get a repeated digit, we know we will be stuck in a loop, so we mark the decimal as recurring.\n\nSometimes there is a non-recurring decimal part before the recurrence begins:\n\n\n\n\n\nNotice that the vertical bar only extends over the repeating part.\n\nAnd sometimes it takes a long time to repeat:",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimal-notation",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimal-notation",
+    "title": "Recurring Decimals",
+    "section": "Example: Recurring Decimal Notation",
+    "text": "Example: Recurring Decimal Notation\nThere are actually two ways to represent recurring decimals, the bar over the repeating part or a dot above the first and last digit of the repeating part, so for example, the recurring decimal \\[\n0.3456456456456456\\ldots\n\\] Can be represented either as \\[\n0.3\\overline{456}\n\\] or as \\[\n0.3\\dot{4}5\\dot{6}\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#test-your-understanding",
+    "href": "Autumn 1/5. Recurring Decimals.html#test-your-understanding",
+    "title": "Recurring Decimals",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nWrite out what each of these recurring decimals looks like:\n\n\\(0.\\dot{3}\\)\n\\(0.4\\overline{3}\\)\n\\(0.\\dot{4}\\dot{3}\\)\n\\(0.1\\overline{23}\\)\n\\(0.\\dot{1}2\\dot{3}\\)\n\\(0.12\\overline{3}\\)\n\\(0.4\\dot{3}0\\dot{3}\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#answers",
+    "href": "Autumn 1/5. Recurring Decimals.html#answers",
+    "title": "Recurring Decimals",
+    "section": "Answers",
+    "text": "Answers\n\n\\(0.\\dot{3} = 0.333\\ldots\\)\n\\(0.4\\overline{3} = 0.4333\\ldots\\)\n\\(0.\\dot{4}\\dot{3} = 0.434343\\ldots\\)\n\\(0.1\\overline{23} = 0.1232323\\ldots\\)\n\\(0.\\dot{1}2\\dot{3} = 0.123123123\\ldots\\)\n\\(0.12\\overline{3} = 0.12333\\ldots\\)\n\\(0.4\\dot{3}0\\dot{3} = 0.4303303303\\ldots\\)",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#exercise-1",
+    "href": "Autumn 1/5. Recurring Decimals.html#exercise-1",
+    "title": "Recurring Decimals",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimals-to-fractions",
+    "href": "Autumn 1/5. Recurring Decimals.html#example-recurring-decimals-to-fractions",
+    "title": "Recurring Decimals",
+    "section": "Example: Recurring Decimals to Fractions",
+    "text": "Example: Recurring Decimals to Fractions\nVideo: Recurring Decimals to Fractions\nTo convert \\(0.\\overline{54}\\) to a fraction, we can use algebra. We let \\(x\\) equal the recurring decimal, then work out the value of \\(x\\) as fraction.\n\\[\\begin{align*}\nx = 0.&545454\\ldots & \\text{Write out the recurring decimal} \\\\\n100x = 54.&545454\\ldots & \\times 100 \\text{ because two recurring digits} \\\\\n99x = &\\ 54 & \\text{Subtract the first line from the second} \\\\\nx = &\\ \\dfrac{54}{99} = \\dfrac{6}{11} & \\text{Divide and simplify}\n\\end{align*}\\]\nThe trick here is that the recurring decimal parts cancel out when they are subtracted.\n\n\\[\\begin{align*}\nx &= 0.133333\\ldots & \\text{Write out the recurring decimal} \\\\\n10x &= 1.333333\\ldots & \\times 10 \\text{ because one recurring digit} \\\\\n9x &= 1.2 & \\text{Subtract the first line from the second} \\\\\nx &= \\dfrac{1.2}{9} = \\dfrac{12}{90} = \\dfrac{2}{15} & \\text{Divide and simplify}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\nNote here that when we subtract the first digit after the decimal point does not match, so we are effectively doing \\(1.3-0.1\\). The decimal digits after this do cancel because they are identical.\n\n\n\n\\[\\begin{align*}\nx   = 3&.0868686\\ldots \\\\\n100x = 308&.6868686\\ldots \\\\\n99x  = 305&.6 \\\\\nx = \\dfrac{305.6}{99} &= \\dfrac{3056}{990} = \\dfrac{1528}{495}\n\\end{align*}\\]\n\n\n\n\n\n\nNote\n\n\n\nThe calculation this time is \\(308.6 - 3\\).\n\n\n\n\\[\\begin{align*}\nx      = 0&.5401401401\\ldots \\\\\n1000x  = 540&.1401401401\\ldots \\\\\n999x   = 539&.6 \\\\\nx      = \\dfrac{539.6}{999} &= \\dfrac{5396}{9990} = \\dfrac{2698}{4995}\n\\end{align*}\\]\n\n\n\n\n\n\nWarning\n\n\n\nBe careful here. 5 is greater than 1 so the calculation we need to do is \\(540.1-0.5\\).",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/5. Recurring Decimals.html#exercise-2",
+    "href": "Autumn 1/5. Recurring Decimals.html#exercise-2",
+    "title": "Recurring Decimals",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Recurring Decimals"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html",
+    "href": "Autumn 1/6. Percentages.html",
+    "title": "Percentages",
+    "section": "",
+    "text": "Previously, when working out percentages of amounts, we would use a method called “chunking”. For example, to find 35% of 120, we might do something like: \\[\\begin{align*}\n100\\% &= 120 \\\\\n10\\% &= 12 \\\\\n5\\% &= 6 \\\\\n20\\% &= 24 \\\\\n35\\% &= 20\\% + 10\\% + 5\\% \\\\\n&= 24 + 12 + 6 \\\\\n&= 42\n\\end{align*}\\]\nThis is a good non-calculator method, but with a calculator there is a far better way.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#methods-for-percentages",
+    "href": "Autumn 1/6. Percentages.html#methods-for-percentages",
+    "title": "Percentages",
+    "section": "",
+    "text": "Previously, when working out percentages of amounts, we would use a method called “chunking”. For example, to find 35% of 120, we might do something like: \\[\\begin{align*}\n100\\% &= 120 \\\\\n10\\% &= 12 \\\\\n5\\% &= 6 \\\\\n20\\% &= 24 \\\\\n35\\% &= 20\\% + 10\\% + 5\\% \\\\\n&= 24 + 12 + 6 \\\\\n&= 42\n\\end{align*}\\]\nThis is a good non-calculator method, but with a calculator there is a far better way.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#decimal-multipliers",
+    "href": "Autumn 1/6. Percentages.html#decimal-multipliers",
+    "title": "Percentages",
+    "section": "Decimal Multipliers",
+    "text": "Decimal Multipliers\nThe key concept of this topic is the idea of decimal multipliers. In short, when we represent percentages (or percentage changes) as decimals, we can multiply to work things out.\nIt turns out that in many cases this makes questions much easier, particularly when it comes to compound percentage changes.\nTo see how well they work and how much they can simplify percentage problems, let’s look at an example.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-pocket-money",
+    "href": "Autumn 1/6. Percentages.html#example-pocket-money",
+    "title": "Percentages",
+    "section": "Example: Pocket Money",
+    "text": "Example: Pocket Money\nYou get £10 a week pocket money. Unfortunately, you get a little lazy about revising for your maths exam, and so you don’t score as well as you could have if you’d worked harder. Your parents are concerned, and so they decide to reduce your pocket money by 10% until your results improve.\nYou pull up your socks and study hard for the next maths exam, and your score is much better. As a reward your parents increase your pocket money by 10%. \\[\n100\\% - 10\\% + 10\\% = 100\\%\n\\] All good then! Are you happy with the result?\n\nIn fact this logic is incorrect, because the two 10%s are not 10% of the same amount. \\[\n\\textsterling 10 \\xrightarrow{-10\\%} \\textsterling 9 \\xrightarrow{+10\\%} \\textsterling 9.90\n\\]\nPercentage changes do not add up.\nHowever, they do multiply. Let’s see.\n\n\\[\n10\\% \\text{ increase} = 100\\% + 10\\% = 110\\% = \\dfrac{110}{100} = 1.1\n\\] \\[\n10\\% \\text{ decrease} = 100\\% - 10\\% = 90\\% = \\dfrac{90}{100} = 0.9\n\\] \\[\n\\textsterling 10 \\times 1.1 \\times 0.9 = \\textsterling 9.90\n\\] The decimal multipliers give the correct result.\nThis is the key to this whole topic. Percentages do not add up, but they do multiply.\nThis way of calculating percentages is important in several areas of applied mathematics, particularly financial mathematics.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-finding-a-percentage-of-an-amount",
+    "href": "Autumn 1/6. Percentages.html#example-finding-a-percentage-of-an-amount",
+    "title": "Percentages",
+    "section": "Example: Finding a Percentage of an Amount",
+    "text": "Example: Finding a Percentage of an Amount\nTo find a percentage of an amount, we simply convert the percentage to a decimal and multiply it by the amount.\nCalculate 13% of 300: \\[\n300 \\times 0.13 = 39\n\\] Calculate 87% of 400: \\[\n400 \\times 0.87 = 348\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding",
+    "href": "Autumn 1/6. Percentages.html#test-your-understanding",
+    "title": "Percentages",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate the following. You must use a decimal multiplier.Please show your working by writing down the calculation. You may use a calculator.\n\n84% of 15\n9% of 78\n70% of 33.2\n150% of 13\n317% of 2.8\n84.2% of 68",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#answers",
+    "href": "Autumn 1/6. Percentages.html#answers",
+    "title": "Percentages",
+    "section": "Answers",
+    "text": "Answers\n\n84% of 15 = 12.6\n9% of 78 = 7.02\n70% of 33.2 = 23.24\n150% of 13 = 19.5\n317% of 2.8 = 8.876\n84.2% of 68 = 57.256",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-percentage-increase",
+    "href": "Autumn 1/6. Percentages.html#example-percentage-increase",
+    "title": "Percentages",
+    "section": "Example: Percentage Increase",
+    "text": "Example: Percentage Increase\nVideo: Percentage Increase and Decrease\nWhen you increase something by a percentage, you keep the original 100% and add on an additional percentage. Therefore to calculate the decimal multiplier we add on to 100%.\nIncrease 170 by 10%: \\(\\quad 170 \\xrightarrow[\\times 1.1]{100\\%+10\\% = 110\\%} 187\\)\nIncrease 40 by 12%: \\(\\quad 40 \\xrightarrow[\\times 1.12]{100\\% + 12\\% = 112\\%} 44.8\\)\n\n\n\n\n\n\nNote\n\n\n\nThis way of representing percentage changes on an arrow is useful, particularly for reverse percentage changes (coming up soon).",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-percentage-decrease",
+    "href": "Autumn 1/6. Percentages.html#example-percentage-decrease",
+    "title": "Percentages",
+    "section": "Example: Percentage Decrease",
+    "text": "Example: Percentage Decrease\nWhen you decrease something by a percentage, you take the original 100% and remove a percentage. Therefore to calculate the decimal multiplier we subtract from 100%.\nDecrease 86 by 61%: \\[\n86 \\xrightarrow[\\times 0.39]{100\\%-61\\% = 39\\%} 33.54\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-1",
+    "href": "Autumn 1/6. Percentages.html#test-your-understanding-1",
+    "title": "Percentages",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nCalculate the following. You must use decimal multipliers and write down your calculations.\n\nFind 62% of 97\nFind 3% of 52.8\nFind 14.7% of 44\nFind 178% of 52\nIncrease 24 by 9%\nIncrease 5.2 by 64%\nDecrease 97 by 38%\nDecrease 540 by 8.7%",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#answers-1",
+    "href": "Autumn 1/6. Percentages.html#answers-1",
+    "title": "Percentages",
+    "section": "Answers",
+    "text": "Answers\n\n60.14\n1.584\n6.468\n92.56\n26.16\n8.528\n60.14\n493.02",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-reverse-percentage-changes",
+    "href": "Autumn 1/6. Percentages.html#example-reverse-percentage-changes",
+    "title": "Percentages",
+    "section": "Example: Reverse Percentage Changes",
+    "text": "Example: Reverse Percentage Changes\nVideo: Reverse Percentage Change\nThe price of an item was increased by 20% to £66. What was the original price before the increase? We can use the same arrow method as before: \\[\n? \\xrightarrow[\\times 1.2]{100\\% + 20\\% = 120\\%} 66\n\\] The answer is then found by dividing by the multiplier: \\(66 \\div 1.2 = 79.2\\)\n\n\n\n\n\n\nWhat Not To Do\n\n\n\n\nDon’t find 20% of £66. The 20% is a percentage of the original unknown amount.\nDon’t use a decimal multiplier of 0.8. Reversing an increase is not the same as a decrease.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-reverse-percentage-decrease",
+    "href": "Autumn 1/6. Percentages.html#example-reverse-percentage-decrease",
+    "title": "Percentages",
+    "section": "Example: Reverse Percentage Decrease",
+    "text": "Example: Reverse Percentage Decrease\nThe price of an item in a sale was reduced by 18% to a new price of £60.68. What was the price before the sale? \\[\n? \\xrightarrow[\\times 0.82]{100\\% - 18\\% = 82\\%} \\textsterling 60.68\n\\] \\[\n\\textsterling 60.68 \\div 0.82 = \\textsterling 74\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-2",
+    "href": "Autumn 1/6. Percentages.html#test-your-understanding-2",
+    "title": "Percentages",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\nFind the original value. You must divide by a decimal multiplier.\n\nA number was increased by 64% to give a new value of 60.68. Find the original value.\nA number was decreased by 23% to give a new value of 37.73. Find the original value.\nA number was decreased by 6.3% to give a new value of 76,834. Find the original value.\nA number was increased by 104% to give a new value of 142.8. Find the original value.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#answers-2",
+    "href": "Autumn 1/6. Percentages.html#answers-2",
+    "title": "Percentages",
+    "section": "Answers",
+    "text": "Answers\n\n37\n49\n82,000\n70",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#exercise-1",
+    "href": "Autumn 1/6. Percentages.html#exercise-1",
+    "title": "Percentages",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-compound-percentage-change",
+    "href": "Autumn 1/6. Percentages.html#example-compound-percentage-change",
+    "title": "Percentages",
+    "section": "Example: Compound Percentage Change",
+    "text": "Example: Compound Percentage Change\nVideo: Compound Changes\nMatthias invests £100 in a savings account at 2% interest. How much does he have at the end of year 1, year 2, and year 3?\n\\[\\begin{align*}\n\\text{Year 1: } &\\textsterling 100 \\times 1.02 = \\textsterling 102 \\\\\n\\text{Year 2: } &\\textsterling 102 \\times 1.02 = \\textsterling 104.04 \\\\\n\\text{Year 3: } &\\textsterling 104.04 \\times 1.02 = \\textsterling 106.12 \\\\\n\\end{align*}\\]\nNotice here that we are simply repeatedly multiplying by the same decimal multiplier.\n\nMatthew invests £3000 in a savings account with an interest rate of 3.2%. How much will he have after six years? \\[\n100\\% + 3.2\\% = 103.2\\% = 1.032\n\\] \\[\n\\textsterling 3000 \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032} \\xrightarrow{\\times 1.032}\\ ?\n\\] Once we notice that we are multiplying repeatedly, we can simplify this method using powers: \\[\n\\textsterling 3000 \\xrightarrow{\\times 1.032^6} \\textsterling 3624.09\n\\]\n\n\n\n\n\n\nNote\n\n\n\nAmounts of money should always be rounded to the nearest penny or cent, i.e. to two decimal places.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-compound-percentage-decrease",
+    "href": "Autumn 1/6. Percentages.html#example-compound-percentage-decrease",
+    "title": "Percentages",
+    "section": "Example: Compound Percentage Decrease",
+    "text": "Example: Compound Percentage Decrease\nThomas buys a new car for £15,690. The car depreciates at a rate of 4% each year. How much will it be worth in 11 years? \\[\n\\textsterling 15690 \\xrightarrow{\\times 0.96^{11}} \\textsterling 10013.98\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#code-compound-percentage-formula",
+    "href": "Autumn 1/6. Percentages.html#code-compound-percentage-formula",
+    "title": "Percentages",
+    "section": "Code: Compound Percentage Formula",
+    "text": "Code: Compound Percentage Formula",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-3",
+    "href": "Autumn 1/6. Percentages.html#test-your-understanding-3",
+    "title": "Percentages",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\nAn investment of £500 grows by 4% each year. How much will it be worth after 5 years?\nA rare book increases in value by 7% each year. If it is currently worth £1,200, what will it be worth in 8 years?\nA car is bought for £18,000 and decreases in value by 12% each year. What will it be worth after 6 years?\nA population of 250,000 increases by 2.5% each year. What will the population be after 10 years?\nA laptop costs £900 and depreciates by 15% each year. What will it be worth after 4 years?\nA forest area is shrinking by 1.8% each year. If its current size is 5,000 acres, what will its size be after 12 years?",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#answers-3",
+    "href": "Autumn 1/6. Percentages.html#answers-3",
+    "title": "Percentages",
+    "section": "Answers",
+    "text": "Answers\n\n608.33\n2060.37\n8042.05\n320634.62\n522.68\n3997.19",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-multiple-compound-changes",
+    "href": "Autumn 1/6. Percentages.html#example-multiple-compound-changes",
+    "title": "Percentages",
+    "section": "Example: Multiple Compound Changes",
+    "text": "Example: Multiple Compound Changes\nAndrew buys a watch for £225. It decreased in value by 3.5% for 1 year, then decreased in value by 7.5% per year for 2 years. Find the new value of the watch.\nAgain this is a case where decimal multipliers make this much easier. \\[\\begin{align*}\n3.5\\% \\text{ decrease} &= 0.965 \\\\\n7.5\\% \\text{ decrease for 2 years} &= 0.925^2 \\\\\n\\text{new value} &= \\textsterling 225 \\times 0.965 \\times 0.925^2 \\\\\n&= \\textsterling 185.78\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-reverse-compound-change",
+    "href": "Autumn 1/6. Percentages.html#example-reverse-compound-change",
+    "title": "Percentages",
+    "section": "Example: Reverse Compound Change",
+    "text": "Example: Reverse Compound Change\nPhilip invests some savings into an account that pays 4% compound interest per year. After 4 years the savings are worth £17,075. How much did Philip have in the account at the beginning?\nAn arrow representation will be useful here: \\[\n?\\ \\xrightarrow{\\times 1.04^4} \\textsterling 17075\n\\] This shows that we should divide: \\[\n17075 \\div 1.04^4 = 14595.78\n\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-missing-interest-rate",
+    "href": "Autumn 1/6. Percentages.html#example-missing-interest-rate",
+    "title": "Percentages",
+    "section": "Example: Missing Interest Rate",
+    "text": "Example: Missing Interest Rate\nConsider the same question but with a missing interest rate.\nPhilip invests £14,595.78 into an savings account. After 4 years the savings are worth £17,075. What was the interest rate?\nIn this case, we can form and solve an equation: \\[\\begin{align*}\n14595.78 \\times x^4 &= 17075 \\\\\nx^4 &= 17075 \\div 14595.78 \\\\\nx &= \\sqrt[4]{17075 \\div 14595.78} \\\\\nx &= 1.04\n\\end{align*}\\]\nwhich represents a 4% increase. This is the interest rate.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#example-unknown-length-of-time",
+    "href": "Autumn 1/6. Percentages.html#example-unknown-length-of-time",
+    "title": "Percentages",
+    "section": "Example: Unknown Length of Time",
+    "text": "Example: Unknown Length of Time\nConsider the same question but with a missing length of time.\nPhilip invests £14,595.78 into an savings account at an interest rate of 4%. After how many years are they worth £17,075?\nThere is an A-Level method called a logarithm that can help with this, but for now we will use trial and error. You can do this on your calculator to speed things up.\n\\[\\begin{align*}\n14595.78 \\times 1.04 = 15,179.61 \\\\\n14595.78 \\times 1.04^2 = 15,786.80 \\\\\n14595.78 \\times 1.04^3 = 16,418.27 \\\\\n14595.78 \\times 1.04^4 = 17,075.00\n\\end{align*}\\]",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#test-your-understanding-4",
+    "href": "Autumn 1/6. Percentages.html#test-your-understanding-4",
+    "title": "Percentages",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\nThe value of the house increases each year by 2.1%. How much is her house worth after 6 years?\nThe value of the house increases each year by 3%. How many years will it take for her house to be worth £163,909.05?\nThe value of the house increases each year by \\(x\\)% and after 3 years is worth £168,729.60. Find \\(x\\).\nThe value of the house increases each year by 14%. How many years will it take for her house price to double?",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#answers-4",
+    "href": "Autumn 1/6. Percentages.html#answers-4",
+    "title": "Percentages",
+    "section": "Answers",
+    "text": "Answers\n\n£169,920.47\n3 years\n4\n6 years",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
+    ]
+  },
+  {
+    "objectID": "Autumn 1/6. Percentages.html#exercise-2",
+    "href": "Autumn 1/6. Percentages.html#exercise-2",
+    "title": "Percentages",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nPlease complete the worksheet.",
+    "crumbs": [
+      "Autumn 1",
+      "Percentages"
     ]
   }
 ]
