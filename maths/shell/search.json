@@ -1,24 +1,211 @@
 [
   {
-    "objectID": "Spring 1/13. Straight Line Graphs.html",
-    "href": "Spring 1/13. Straight Line Graphs.html",
-    "title": "Straight Line Graphs",
+    "objectID": "Spring 1/11. Prime Factors and Powers.html",
+    "href": "Spring 1/11. Prime Factors and Powers.html",
+    "title": "Prime Factors and Powers",
     "section": "",
-    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
+    "text": "What is the definition of a prime number?\n. . .\nA prime number is a number with exactly two factors: 1 and itself.\nExamples:\n\n2, 3, 5, 7, 11, 13, …\n\nA prime factorisation writes a number as a product of prime numbers.",
     "crumbs": [
       "Spring 1",
-      "Straight Line Graphs"
+      "Prime Factors and Powers"
     ]
   },
   {
-    "objectID": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
-    "href": "Spring 1/13. Straight Line Graphs.html#gradient-of-a-straight-line",
-    "title": "Straight Line Graphs",
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#prime-factors-definition",
+    "href": "Spring 1/11. Prime Factors and Powers.html#prime-factors-definition",
+    "title": "Prime Factors and Powers",
     "section": "",
-    "text": "import matplotlib.pyplot as plt\n\n# Points that define the main segment (slope 3)\nA = (1, 0)   # bottom point\nB = (3, 6)   # top point\nC = (2, 3)   # mid-step point (1 across, 3 up)\n\nfig, ax = plt.subplots(figsize=(4, 8))\n\n# Main line segment\nax.plot([A[0], B[0]], [A[1], B[1]], linewidth=3, color=\"black\")\n\n# Arrow at the top end of the line\nax.annotate(\n    \"\",\n    xy=B, xytext=(B[0] - 0.05, B[1] - 0.3),\n    arrowprops=dict(arrowstyle=\"-&gt;\", linewidth=3, color=\"black\")\n)\n\n# --- Small rise/run rectangle (A→C) ---\n# horizontal bottom\nax.plot([A[0], C[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n# vertical right\nax.plot([C[0], C[0]], [A[1], C[1]], linestyle=\"--\", linewidth=2, color=\"green\")\n\n# double-headed arrows\nax.annotate(\"\", xy=(C[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(C[0], C[1]), xytext=(C[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# --- Large rise/run rectangle (A→B) ---\nax.plot([A[0], B[0]], [A[1], A[1]], linestyle=\"--\", linewidth=2, color=\"green\")\nax.plot([B[0], B[0]], [A[1], B[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\nax.annotate(\"\", xy=(B[0], A[1]), xytext=(A[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"green\"))\nax.annotate(\"\", xy=(B[0], B[1]), xytext=(B[0], A[1]),\n            arrowprops=dict(arrowstyle=\"&lt;-&gt;\", color=\"teal\"))\n\n# Midline horizontal guide at y=3\nax.plot([A[0], B[0]], [C[1], C[1]], linestyle=\"--\", linewidth=2, color=\"teal\")\n\n# Labels\nax.text((A[0]+C[0])/2, A[1]-0.35, \"1\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(C[0]+0.15, (A[1]+C[1])/2, \"3\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\nax.text((A[0]+B[0])/2, A[1]-0.35, \"2\", ha=\"center\", va=\"top\", fontsize=14, color=\"green\")\nax.text(B[0]+0.15, (A[1]+B[1])/2, \"6\", ha=\"left\", va=\"center\", fontsize=14, color=\"teal\")\n\n# Axes styling to resemble squared paper\nax.set_xlim(0, 4)\nax.set_ylim(-1, 8)\nax.set_aspect('equal', adjustable='box')\nax.set_xticks(range(0, 5))\nax.set_yticks(range(-1, 9))\nax.grid(True, which='both', linewidth=0.8, alpha=0.5)\n\n# Hide spines and ticks for a clean look\nfor spine in [\"top\", \"right\", \"left\", \"bottom\"]:\n    ax.spines[spine].set_visible(False)\nax.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)\n\nplt.tight_layout()\nplt.show()",
+    "text": "What is the definition of a prime number?\n. . .\nA prime number is a number with exactly two factors: 1 and itself.\nExamples:\n\n2, 3, 5, 7, 11, 13, …\n\nA prime factorisation writes a number as a product of prime numbers.",
     "crumbs": [
       "Spring 1",
-      "Straight Line Graphs"
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#example-prime-factorisation",
+    "href": "Spring 1/11. Prime Factors and Powers.html#example-prime-factorisation",
+    "title": "Prime Factors and Powers",
+    "section": "Example: Prime Factorisation",
+    "text": "Example: Prime Factorisation\nWrite 84 as a product of prime factors.\n\\[\\begin{align*}\n84 &= 2 \\times 42 \\\\\n   &= 2 \\times 2 \\times 21 \\\\\n   &= 2^2 \\times 3 \\times 7\n\\end{align*}\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#calculator-check",
+    "href": "Spring 1/11. Prime Factors and Powers.html#calculator-check",
+    "title": "Prime Factors and Powers",
+    "section": "Calculator Check",
+    "text": "Calculator Check\nYou should always check your prime factorisation using a calculator.\nMost scientific calculators have a FACT function which lists the prime factors of a number.\nThe prime factors must multiply back to the original number.",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#prime-factorisation-with-algebra",
+    "href": "Spring 1/11. Prime Factors and Powers.html#prime-factorisation-with-algebra",
+    "title": "Prime Factors and Powers",
+    "section": "Prime Factorisation with Algebra",
+    "text": "Prime Factorisation with Algebra\nWe can also factorise algebraic expressions.\n\\[\n7a^2b = 7 \\times a^2 \\times b\n\\]\n\\[\n49ab^3 = 7^2 \\times a \\times b^3\n\\]\nThis will be useful when finding HCF and LCM of algebraic terms.",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#highest-common-factor-hcf",
+    "href": "Spring 1/11. Prime Factors and Powers.html#highest-common-factor-hcf",
+    "title": "Prime Factors and Powers",
+    "section": "Highest Common Factor (HCF)",
+    "text": "Highest Common Factor (HCF)\nThe HCF is the largest number that divides exactly into both numbers.\nMethod:\n\nWrite each number as a product of prime factors.\nWrite down who loses for each prime factor.\n\n\n\n\n\n\n\nNote\n\n\n\nNone of a prime factor loses against one or more of a prime factor, e.g. no 7s loses to 7.",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#example-hcf",
+    "href": "Spring 1/11. Prime Factors and Powers.html#example-hcf",
+    "title": "Prime Factors and Powers",
+    "section": "Example: HCF",
+    "text": "Example: HCF\nFind the HCF of 84 and 360.\n\\[\\begin{align*}\n84 &= 2^2 \\times 3 \\times 7 \\\\\n360 &= 2^3 \\times 3^2 \\times 5\n\\end{align*}\\]\nCommon factors:\n\\[\n2^2 \\times 3\n\\]\n\\[\n\\text{HCF} = 12\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#lowest-common-multiple-lcm",
+    "href": "Spring 1/11. Prime Factors and Powers.html#lowest-common-multiple-lcm",
+    "title": "Prime Factors and Powers",
+    "section": "Lowest Common Multiple (LCM)",
+    "text": "Lowest Common Multiple (LCM)\nThe LCM is the smallest number that both numbers divide into exactly.\nMethod:\n\nWrite each number as a product of prime factors.\nWrite down who wins for each prime factor.",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#example-lcm",
+    "href": "Spring 1/11. Prime Factors and Powers.html#example-lcm",
+    "title": "Prime Factors and Powers",
+    "section": "Example: LCM",
+    "text": "Example: LCM\nUsing the same factorisations:\n\\[\\begin{align*}\n84 &= 2^2 \\times 3 \\times 7 \\\\\n360 &= 2^3 \\times 3^2 \\times 5\n\\end{align*}\\] \\[\n\\text{LCM} = 2^3 \\times 3^2 \\times 5 \\times 7 = 2520\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#hcf-and-lcm-check",
+    "href": "Spring 1/11. Prime Factors and Powers.html#hcf-and-lcm-check",
+    "title": "Prime Factors and Powers",
+    "section": "HCF and LCM Check",
+    "text": "HCF and LCM Check\nFor two positive integers \\(a\\) and \\(b\\):\n\\[\n\\text{HCF}(a,b)\\times \\text{LCM}(a,b) = a \\times b\n\\]\nHere:\n\\[\n12 \\times 2520 = 84 \\times 360\n\\]\nThis confirms the answers are correct.",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#laws-of-indices",
+    "href": "Spring 1/11. Prime Factors and Powers.html#laws-of-indices",
+    "title": "Prime Factors and Powers",
+    "section": "Laws of Indices",
+    "text": "Laws of Indices\nFor \\(a \\neq 0\\):\n\\[\na^m \\times a^n = a^{m+n}\n\\]\n\\[\na^m \\div a^n = a^{m-n}\n\\]\n\\[\n(a^m)^n = a^{mn}\n\\]\n\\[\n(ab)^n = a^n b^n\n\\]\n\\[\n\\left(\\frac{a}{b}\\right)^n = \\frac{a^n}{b^n}\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#example-using-the-laws-of-indices",
+    "href": "Spring 1/11. Prime Factors and Powers.html#example-using-the-laws-of-indices",
+    "title": "Prime Factors and Powers",
+    "section": "Example: Using the Laws of Indices",
+    "text": "Example: Using the Laws of Indices\nSimplify:\n\\[\n(3x^2y^5)^3\n\\]\n\\[\\begin{align*}\n(3x^2y^5)^3 &= 3^3 (x^2)^3 (y^5)^3 \\\\\n&= 27x^6y^{15}\n\\end{align*}\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#powers-of-zero",
+    "href": "Spring 1/11. Prime Factors and Powers.html#powers-of-zero",
+    "title": "Prime Factors and Powers",
+    "section": "Powers of Zero",
+    "text": "Powers of Zero\nConsider:\n\\[\n\\frac{5^3}{5^3}\n\\]\nUsing the laws of indices:\n\\[\n5^{3-3} = 5^0\n\\]\nBut:\n\\[\n\\frac{5^3}{5^3} = 1\n\\]\nSo:\n\\[\na^0 = 1 \\qquad (a \\neq 0)\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#negative-indices",
+    "href": "Spring 1/11. Prime Factors and Powers.html#negative-indices",
+    "title": "Prime Factors and Powers",
+    "section": "Negative Indices",
+    "text": "Negative Indices\nUsing division:\n\\[\n3^5 \\div 3^7 = 3^{-2}\n\\]\nBut:\n\\[\n\\frac{3^5}{3^7} = \\frac{1}{3^2}\n\\]\nSo:\n\\[\na^{-n} = \\frac{1}{a^n}\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#common-pitfall-with-negative-indices",
+    "href": "Spring 1/11. Prime Factors and Powers.html#common-pitfall-with-negative-indices",
+    "title": "Prime Factors and Powers",
+    "section": "Common Pitfall with Negative Indices",
+    "text": "Common Pitfall with Negative Indices\nCompare:\n\\[\n\\frac{1}{2x} = \\frac{1}{2}x^{-1}\n\\]\nand\n\\[\n\\frac{2}{x} = 2x^{-1}\n\\]\nOnly the variable is affected by the negative index, not the coefficient.",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#fractional-indices",
+    "href": "Spring 1/11. Prime Factors and Powers.html#fractional-indices",
+    "title": "Prime Factors and Powers",
+    "section": "Fractional Indices",
+    "text": "Fractional Indices\nFractional indices represent roots.\n\\[\na^{\\frac{1}{n}} = \\sqrt[n]{a}\n\\]\n\\[\na^{\\frac{m}{n}} = \\sqrt[n]{a^m}\n\\]\nExample:\n\\[\nx^{\\frac{2}{3}} = \\sqrt[3]{x^2}\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#example-fractional-indices",
+    "href": "Spring 1/11. Prime Factors and Powers.html#example-fractional-indices",
+    "title": "Prime Factors and Powers",
+    "section": "Example: Fractional Indices",
+    "text": "Example: Fractional Indices\nSimplify:\n\\[\nc^{\\frac{1}{2}}\\left(c^{\\frac{3}{2}} - c^{\\frac{1}{2}} + c^{-\\frac{1}{2}}\\right)\n\\]\n\\[\\begin{align*}\n&= c^{2} - c + 1\n\\end{align*}\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#test-your-understanding",
+    "href": "Spring 1/11. Prime Factors and Powers.html#test-your-understanding",
+    "title": "Prime Factors and Powers",
+    "section": "Test Your Understanding",
+    "text": "Test Your Understanding\n\nWrite 540 as a product of prime factors.\nFind the HCF of 72 and 90.\nFind the LCM of 24 and 60.\nSimplify: \\[\n(2p^3q^{-2})^2\n\\]\nSimplify: \\[\ny^{-\\frac{1}{2}} \\times y^{\\frac{3}{2}}\n\\]",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
+    ]
+  },
+  {
+    "objectID": "Spring 1/11. Prime Factors and Powers.html#answers",
+    "href": "Spring 1/11. Prime Factors and Powers.html#answers",
+    "title": "Prime Factors and Powers",
+    "section": "Answers",
+    "text": "Answers\n\n\\(540 = 2^2 \\times 3^3 \\times 5\\)\nHCF \\(= 18\\)\nLCM \\(= 120\\)\n\\(4p^6q^{-4} = \\dfrac{4p^6}{q^4}\\)\n\\(y\\)",
+    "crumbs": [
+      "Spring 1",
+      "Prime Factors and Powers"
     ]
   },
   {
@@ -400,7 +587,7 @@
     "href": "Autumn 1/1. Expanding Brackets.html#example-expanding-brackets",
     "title": "Expanding Brackets",
     "section": "Example: Expanding Brackets",
-    "text": "Example: Expanding Brackets\nVideo: Expanding Single Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x + 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
+    "text": "Example: Expanding Brackets\nVideo: Expanding Single Brackets\n\\[\n2(3 + x) = 2 \\times 3 + 2 \\times x = 6 + 2x\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\nMultiply each term inside by the outside term.\nThe multiplication sign is usually left out: \\(3(x+y)\\) means \\(3 \\times (x + y) = 3 \\times x + 3 \\times y = 3x + 3y\\)\nWhen multiplying, the number 1 is usually left out: \\(-(2x+3)\\) means \\(-1 \\times (2x+3) = (-1) \\times (2x) + (-1) \\times 3 = -2x - 3\\)\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe very careful with negative signs outside a bracket.\n\n\n\\[\n-2 \\times (a-3) = (-2) \\times a + (-2) \\times (-3) = -2a + 6\n\\]",
     "crumbs": [
       "Autumn 1",
       "Expanding Brackets"
@@ -869,7 +1056,7 @@
     "href": "Autumn 1/3. Linear Equations.html#example-fractions-on-both-sides",
     "title": "Linear Equations",
     "section": "Example: Fractions on Both Sides",
-    "text": "Example: Fractions on Both Sides\nIf both sides of the equation are fractions, you can mutiply by the lowest common multiple of the denominators.\n\\[\\begin{align*}\n\\dfrac{3y+2}{3} &= \\dfrac{2}{5} \\\\\n(3y+2) \\div 3 \\times 15 &= 2 \\div 5 \\times 15 \\\\\n(3y+2) \\times 5 &= 2 \\times 3 \\\\\n15y + 10 &= 6 \\\\\n15y &= -4 \\\\\ny &= -\\dfrac{4}{15}\n\\end{align*}\\]",
+    "text": "Example: Fractions on Both Sides\nIf both sides of the equation are fractions, you can multiply by the lowest common multiple of the denominators.\n\\[\\begin{align*}\n\\dfrac{3y+2}{3} &= \\dfrac{2}{5} \\\\\n(3y+2) \\div 3 \\times 15 &= 2 \\div 5 \\times 15 \\\\\n(3y+2) \\times 5 &= 2 \\times 3 \\\\\n15y + 10 &= 6 \\\\\n15y &= -4 \\\\\ny &= -\\dfrac{4}{15}\n\\end{align*}\\]",
     "crumbs": [
       "Autumn 1",
       "Linear Equations"
@@ -1639,7 +1826,7 @@
     "href": "Autumn 1/6. Percentages.html#example-reverse-percentage-changes",
     "title": "Percentages",
     "section": "Example: Reverse Percentage Changes",
-    "text": "Example: Reverse Percentage Changes\nVideo: Reverse Percentage Change\nThe price of an item was increased by 20% to £66. What was the original price before the increase? We can use the same arrow method as before: \\[\n? \\xrightarrow[\\times 1.2]{100\\% + 20\\% = 120\\%} 66\n\\] The answer is then found by dividing by the multiplier: \\(66 \\div 1.2 = 79.2\\)\n\n\n\n\n\n\nWhat Not To Do\n\n\n\n\nDon’t find 20% of £66. The 20% is a percentage of the original unknown amount.\nDon’t use a decimal multiplier of 0.8. Reversing an increase is not the same as a decrease.",
+    "text": "Example: Reverse Percentage Changes\nVideo: Reverse Percentage Change\nThe price of an item was increased by 20% to £66. What was the original price before the increase? We can use the same arrow method as before: \\[\n? \\xrightarrow[\\times 1.2]{100\\% + 20\\% = 120\\%} 66\n\\] The answer is then found by dividing by the multiplier: \\(66 \\div 1.2 = 55\\)\n\n\n\n\n\n\nWhat Not To Do\n\n\n\n\nDon’t find 20% of £66. The 20% is a percentage of the original unknown amount.\nDon’t use a decimal multiplier of 0.8. Reversing an increase is not the same as a decrease.",
     "crumbs": [
       "Autumn 1",
       "Percentages"
@@ -1771,7 +1958,7 @@
     "href": "Autumn 1/6. Percentages.html#example-missing-interest-rate",
     "title": "Percentages",
     "section": "Example: Missing Interest Rate",
-    "text": "Example: Missing Interest Rate\nConsider the same question but with a missing interest rate.\nPhilip invests £14,595.78 into an savings account. After 4 years the savings are worth £17,075. What was the interest rate?\nIn this case, we can form and solve an equation: \\[\\begin{align*}\n14595.78 \\times x^4 &= 17075 \\\\\nx^4 &= 17075 \\div 14595.78 \\\\\nx &= \\sqrt[4]{17075 \\div 14595.78} \\\\\nx &= 1.04\n\\end{align*}\\]\nwhich represents a 4% increase. This is the interest rate.",
+    "text": "Example: Missing Interest Rate\nConsider the same question but with a missing interest rate.\nPhilip invests £14,595.78 into a savings account. After 4 years the savings are worth £17,075. What was the interest rate?\nIn this case, we can form and solve an equation: \\[\\begin{align*}\n14595.78 \\times x^4 &= 17075 \\\\\nx^4 &= 17075 \\div 14595.78 \\\\\nx &= \\sqrt[4]{17075 \\div 14595.78} \\\\\nx &= 1.04\n\\end{align*}\\]\nwhich represents a 4% increase. This is the interest rate.",
     "crumbs": [
       "Autumn 1",
       "Percentages"
@@ -1782,7 +1969,7 @@
     "href": "Autumn 1/6. Percentages.html#example-unknown-length-of-time",
     "title": "Percentages",
     "section": "Example: Unknown Length of Time",
-    "text": "Example: Unknown Length of Time\nConsider the same question but with a missing length of time.\nPhilip invests £14,595.78 into an savings account at an interest rate of 4%. After how many years are they worth £17,075?\nThere is an A-Level method called a logarithm that can help with this, but for now we will use trial and error. You can do this on your calculator to speed things up.\n\\[\\begin{align*}\n14595.78 \\times 1.04 = 15,179.61 \\\\\n14595.78 \\times 1.04^2 = 15,786.80 \\\\\n14595.78 \\times 1.04^3 = 16,418.27 \\\\\n14595.78 \\times 1.04^4 = 17,075.00\n\\end{align*}\\]",
+    "text": "Example: Unknown Length of Time\nConsider the same question but with a missing length of time.\nPhilip invests £14,595.78 into a savings account at an interest rate of 4%. After how many years are they worth £17,075?\nThere is an A-Level method called a logarithm that can help with this, but for now we will use trial and error. You can do this on your calculator to speed things up.\n\\[\\begin{align*}\n14595.78 \\times 1.04 = 15,179.61 \\\\\n14595.78 \\times 1.04^2 = 15,786.80 \\\\\n14595.78 \\times 1.04^3 = 16,418.27 \\\\\n14595.78 \\times 1.04^4 = 17,075.00\n\\end{align*}\\]",
     "crumbs": [
       "Autumn 1",
       "Percentages"
@@ -1793,7 +1980,7 @@
     "href": "Autumn 1/6. Percentages.html#test-your-understanding-4",
     "title": "Percentages",
     "section": "Test Your Understanding",
-    "text": "Test Your Understanding\n\nThe value of the house increases each year by 2.1%. How much is her house worth after 6 years?\nThe value of the house increases each year by 3%. How many years will it take for her house to be worth £163,909.05?\nThe value of the house increases each year by \\(x\\)% and after 3 years is worth £168,729.60. Find \\(x\\).\nThe value of the house increases each year by 14%. How many years will it take for her house price to double?",
+    "text": "Test Your Understanding\nStephen buys a house for £150,000.\n\nThe value of the house increases each year by 2.1%. How much is her house worth after 6 years?\nThe value of the house increases each year by 3%. How many years will it take for her house to be worth £163,909.05?\nThe value of the house increases each year by \\(x\\)% and after 3 years is worth £168,729.60. Find \\(x\\).\nThe value of the house increases each year by 14%. How many years will it take for her house price to double?",
     "crumbs": [
       "Autumn 1",
       "Percentages"
